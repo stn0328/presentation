@@ -1,0 +1,872 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+            <style></style>
+        </head>
+        <body>
+            
+
+
+            <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2c3e50;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .presentation-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh; /* Ensures slide takes full viewport height */
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align content to the top */
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(100px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #ffffff;
+            overflow-y: auto; /* Allows scrolling within a slide if content overflows */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .slide-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .slide-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .slide-subtitle {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            font-weight: 400;
+        }
+
+        .website-info {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #3498db;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #ecf0f1;
+            border-radius: 8px;
+            border: 1px solid #bdc3c7;
+            font-weight: 600;
+        }
+
+        .month-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 1.5rem;
+            flex: 1; /* Allows grid to take available space, helps with scrolling */
+        }
+
+        .section {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid #e0e6ed;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #3498db;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-item {
+            padding: 0.7rem 0;
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1rem;
+            color: #34495e;
+            line-height: 1.6;
+            border-bottom: 1px solid #f8f9fa;
+        }
+
+        .task-item:last-child {
+            border-bottom: none;
+        }
+
+        .task-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0.7rem;
+            color: #27ae60;
+            font-weight: bold;
+            /* font-size for checkmark character is below */
+            width: 20px;
+            height: 20px;
+            background: #d5f4e6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem; /* Font size of the checkmark icon */
+        }
+
+        .highlight {
+            color: #00000;
+            font-weight: 650;
+            background: #ffeaa7;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .sub-task {
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 0.3rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .sub-task::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .navigation {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .nav-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #bdc3c7;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-dot.active {
+            background: #3498db;
+            transform: scale(1.3);
+            border-color: #3498db;
+        }
+
+        .nav-dot:hover {
+            background: #5dade2;
+            transform: scale(1.1);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20%; /* Initial width, JS updates this */
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            transition: width 0.5s ease;
+            z-index: 1001;
+        }
+
+        .slide-counter {
+            position: fixed;
+            bottom: 1rem;
+            left: 1rem;
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 0.2rem 0.3rem;
+            border-radius: 6px;
+            font-size: 0.6rem;
+            z-index: 1000;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide-controls {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .control-btn {
+            background: #ffffff;
+            border: 2px solid #3498db;
+            color: #3498db;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .control-btn:hover {
+            background: #3498db;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .control-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #ecf0f1;
+            color: #95a5a6;
+            border-color: #bdc3c7;
+        }
+
+        .control-btn:disabled:hover {
+            background: #ecf0f1;
+            color: #95a5a6;
+            transform: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-logo {
+            position: absolute;
+            top: 0.5rem;
+            left: 2rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #3498db;
+            z-index: 1000;
+            background: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            background: #3498db;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .intro-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 2rem 0;
+            gap: 1rem;
+        }
+
+        .stat-box {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e6ed;
+            flex: 1;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3498db;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #3498db;
+            z-index: 1;
+            transform: translateY(-50%); /* Vertically center the line */
+        }
+
+        .timeline-item {
+            background: #ffffff;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid #3498db;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            margin: 0 0.5rem;
+        }
+        .timeline-item:first-child { margin-left: 0; }
+        .timeline-item:last-child { margin-right: 0; }
+
+
+        .timeline-month {
+            font-weight: 700;
+            color: #3498db;
+            font-size: 1.1rem;
+        }
+
+        .timeline-focus {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        /* START: Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .slide-title {
+                font-size: 2rem; /* Reduced from 3rem */
+                margin-bottom: 0.8rem; 
+            }
+            .slide-subtitle {
+                font-size: 1.1rem; /* Reduced from 1.3rem */
+                margin-bottom: 1.5rem;
+            }
+            
+            .month-title {
+                font-size: 1.8rem; /* Reduced from 2.5rem */
+                margin-bottom: 1.5rem;
+            }
+            
+            .slide {
+                padding: 1.5rem 1rem; /* Adjusted padding for more vertical space if needed */
+            }
+            
+            .navigation {
+                display: none;
+            }
+            
+            .slide-controls {
+                bottom: 1rem;
+                right: 1rem;
+                gap: 0.5rem;
+                /* Ensure controls don't overlap slide counter if screen is very short */
+                padding-bottom: env(safe-area-inset-bottom, 0.5rem); 
+            }
+            
+            .control-btn {
+                padding: 0.6rem 1.2rem; /* Slightly adjusted */
+                font-size: 0.85rem; /* Slightly adjusted */
+            }
+
+            .header-logo,
+            .slide-number {
+                display: none;
+            }
+
+            /* Enhanced Mobile Styles */
+            .slide-header {
+                margin-bottom: 1.5rem; 
+                padding-bottom: 1rem; 
+            }
+
+            .website-info {
+                font-size: 1.1rem; 
+                padding: 1rem; 
+                margin: 1.5rem 0; 
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr; /* Single column layout */
+                gap: 1rem; 
+            }
+
+            .section {
+                padding: 1rem; 
+            }
+            .section:hover {
+                 transform: none; /* Disable hover transform on touch devices */
+                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Keep base shadow */
+            }
+
+            .section-title {
+                font-size: 1.3rem; 
+                margin-bottom: 0.8rem; 
+            }
+
+            .task-item {
+                font-size: 0.9rem; /* Reduced from 1rem */
+                padding-left: 1.8rem; 
+                padding-top: 0.6rem; 
+                padding-bottom: 0.6rem;
+            }
+
+            .task-item::before {
+                left: 0.1rem; /* Ensure it's within the padding */
+                top: 0.6rem; 
+                width: 18px; 
+                height: 18px; 
+                font-size: 0.75rem; /* Size of checkmark character */
+            }
+
+            .sub-task {
+                font-size: 0.85rem; 
+                margin-left: 1.2rem; /* Adjusted from 2rem */
+                padding-left: 1.2rem; 
+            }
+            
+            .intro-stats {
+                flex-direction: column; /* Stack vertically */
+                gap: 1rem; 
+                margin: 1.5rem 0; 
+            }
+
+            .stat-box {
+                padding: 1rem; 
+                width: 100%; /* Ensure full width when stacked */
+            }
+
+            .stat-number {
+                font-size: 1.8rem; 
+            }
+
+            .stat-label {
+                font-size: 0.8rem; 
+            }
+
+            .timeline {
+                flex-direction: column; /* Stack vertically */
+                gap: 1rem;
+                margin: 1.5rem 0; 
+            }
+
+            .timeline::before {
+                display: none; /* Hide horizontal line when stacked */
+            }
+
+            .timeline-item {
+                margin: 0 0 0.5rem 0; /* Remove horizontal margins, add some bottom margin */
+                padding: 0.8rem; 
+                width: 100%; /* Ensure full width when stacked */
+            }
+            .timeline-item:last-child {
+                margin-bottom: 0;
+            }
+
+            .timeline-month {
+                font-size: 1rem; 
+            }
+
+            .timeline-focus {
+                font-size: 0.85rem; 
+            }
+
+            .slide-counter {
+                font-size: 0.7rem; 
+                padding: 0.3rem 0.5rem; 
+                bottom: 1rem;
+                left: 1rem;
+                /* Add safe area padding for notch devices */
+                padding-bottom: env(safe-area-inset-bottom, 0.1rem);
+            }
+        }
+        /* END: Mobile Responsive Styles */
+
+    </style>
+        
+        
+            
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Month SEO Plan - bdycontourlounge.com.au</title>
+    
+    <div class="header-logo">SEO Strategy Plan</div>
+    
+    <div class="progress-bar" id="progressBar" style="width: 20%;"></div>
+    
+    <div class="navigation" id="navigation">
+        <div class="nav-dot active" onclick="goToSlide(0)"></div>
+        <div class="nav-dot" onclick="goToSlide(1)"></div>
+        <div class="nav-dot" onclick="goToSlide(2)"></div>
+        <div class="nav-dot" onclick="goToSlide(3)"></div>
+        <div class="nav-dot" onclick="goToSlide(4)"></div>
+    </div>
+
+    <div class="slide-counter" id="slideCounter">1 / 5</div>
+
+    <div class="slide-controls">
+        <button class="control-btn" id="prevBtn" onclick="previousSlide()" disabled="">← Previous</button>
+        <button class="control-btn" id="nextBtn" onclick="nextSlide()">Next →</button>
+    </div>
+
+    <div class="presentation-container">
+        <!-- Slide 1: Title Slide -->
+        <div class="slide active" id="slide-0">
+            <div class="slide-number">01</div>
+            <div class="slide-header">
+                <h1 class="slide-title">3-Month SEO Plan</h1>
+                <p class="slide-subtitle">Comprehensive Digital Marketing Strategy</p>
+            </div>
+            <div class="website-info">
+                <strong>Client Website:</strong> bdycontourlounge.com.au
+            </div>
+            
+            <div class="intro-stats">
+                <div class="stat-box">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Months</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Key Areas</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Deliverables</span>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-month">Month 1</div>
+                    <div class="timeline-focus">Foundation &amp; Technical SEO</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-month">Month 2</div>
+                    <div class="timeline-focus">Content &amp; Local SEO</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-month">Month 3</div>
+                    <div class="timeline-focus">Growth &amp; Link Building</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Month 1 Part 1 -->
+        <div class="slide" id="slide-1">
+            <div class="slide-number">02</div>
+            <h2 class="month-title">Month 1 – Foundation &amp; Technical SEO Fixes</h2>
+            
+            <div class="content-grid">
+                <div class="section">
+                    <h3 class="section-title">1. Website Audit Report</h3>
+                    <ul class="task-list">
+                        <li class="task-item">Run full <span class="highlight">technical SEO audit</span></li>
+                        <li class="task-item">Identify <span class="highlight">crawl errors, broken links</span>, redirect chains</li>
+                        <li class="task-item">Set up &amp; configure <span class="highlight">Yoast SEO</span></li>
+                        <li class="task-item">Improve <span class="highlight">load speed</span> (enable <span class="highlight">caching</span>, compress scripts/images)</li>
+                        <li class="task-item">Mobile-friendliness check</li>
+                        <li class="task-item">Check for <span class="highlight">schema markup</span> issues</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-title">2. Keyword Research Report</h3>
+                    <ul class="task-list">
+                        <li class="task-item">Detailed business and competitor analysis</li>
+                        <li class="task-item">Find <span class="highlight">primary, long-tail</span>, and <span class="highlight">geo-based keywords</span></li>
+                        <li class="task-item">Map keywords to pages (local &amp; national focus)</li>
+                        <li class="task-item">Create a keyword targeting sheet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Month 1 Part 2 -->
+        <div class="slide" id="slide-2">
+            <div class="slide-number">03</div>
+            <h2 class="month-title">Month 1 – Page Optimization &amp; Tracking</h2>
+            
+            <div class="content-grid">
+                <div class="section">
+                    <h3 class="section-title">3. Page Optimization (3 pages)</h3>
+                    <ul class="task-list">
+                        <li class="task-item">Add keywords to <span class="highlight">title tags, H1s, meta descriptions, image alt text, and body text</span></li>
+                        <li class="task-item"><span class="highlight">Compress images</span> and add <span class="highlight">Alt text</span> with relevant keywords</li>
+                        <li class="task-item">Write SEO-friendly <span class="highlight">meta descriptions</span> under <span class="highlight">155 characters</span></li>
+                        <li class="task-item">Ensure <span class="highlight">300+ words per page</span> with subheadings and proper structure</li>
+                        <li class="task-item">Use <span class="highlight">Yoast readability suggestions</span> for tone and clarity:
+                            <div class="sub-task">Active voice</div>
+                            <div class="sub-task">Proper heading structure</div>
+                            <div class="sub-task">Simple words</div>
+                        </li>
+                        <li class="task-item">Add <span class="highlight">internal links</span> to other pages</li>
+                        <li class="task-item">Link to trustworthy <span class="highlight">external</span> sources</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-title">4. Tracking Setup</h3>
+                    <ul class="task-list">
+                        <li class="task-item">Connect MS Clarity (email: ksikandarali76@gmail.com)</li>
+                        <li class="task-item">Install <span class="highlight">event tracking</span> for <span class="highlight">phone clicks</span>, <span class="highlight">form submissions</span>, <span class="highlight">booking</span> actions</li>
+                        <li class="task-item">Create a basic <span class="highlight">performance Report</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Month 2 -->
+        <div class="slide" id="slide-3">
+            <div class="slide-number">04</div>
+            <h2 class="month-title">Month 2 – Content Growth &amp; Local SEO</h2>
+            
+            <div class="content-grid">
+                <div class="section">
+                    <h3 class="section-title">1. Google My Business Optimization</h3>
+                    <ul class="task-list">
+                        <li class="task-item">Add <span class="highlight">keyword-rich</span> business description</li>
+                        <li class="task-item">Add <span class="highlight">services &amp; products</span> with clear categories</li>
+                        <li class="task-item">Upload <span class="highlight">geotagged images</span> of staff, rooms, services</li>
+                        <li class="task-item">Ensure all business info (<span class="highlight">NAP</span>) is consistent</li>
+                        <li class="task-item">Post <span class="highlight">2 GMB posts per month</span> (specials, FAQs, updates)</li>
+                        <li class="task-item">Add FAQs directly in the GMB profile</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-title">2. Local SEO: Location-Based Pages (1st page)</h3>
+                    <ul class="task-list">
+                        <li class="task-item">Create 1 <span class="highlight">suburb-targeted service page</span> (e.g. Body Contouring in Southport)</li>
+                        <li class="task-item">Use <span class="highlight">geo keywords</span> in title, H1, meta tags, and throughout content</li>
+                        <li class="task-item">Write <span class="highlight">500+ words</span> with clear service details</li>
+                        <li class="task-item">Add embedded <span class="highlight">Google Map</span> and <span class="highlight">structured data</span> (LocalBusiness schema)</li>
+                        <li class="task-item">Add <span class="highlight">reviews/testimonials</span> from clients in that area</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-title">3. Basic Content Marketing</h3>
+                    <ul class="task-list">
+                        <li class="task-item">Plan <span class="highlight">3 blog ideas</span> based on keyword gaps (draft titles/topics)</li>
+                        <li class="task-item">Complete <span class="highlight">3 Blogs</span> Content</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Month 3 -->
+        <div class="slide" id="slide-4">
+            <div class="slide-number">05</div>
+            <h2 class="month-title">Month 3 – Content Growth &amp; More Local SEO</h2>
+            
+            <div class="content-grid">
+                <div class="section">
+                    <h3 class="section-title">1. Google My Business (Ongoing)</h3>
+                    <ul class="task-list">
+                        <li class="task-item">Post <span class="highlight">2 more GMB updates</span> (before/after photos, promos)</li>
+                        <li class="task-item">Monitor insights (calls, direction requests, views)</li>
+                        <li class="task-item">Respond to GMB reviews</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-title">2. Local SEO: Second Location Page</h3>
+                    <ul class="task-list">
+                        <li class="task-item">Create 1 more <span class="highlight">location-specific service page</span> (e.g. Cryotherapy in Broadbeach)</li>
+                        <li class="task-item">Target <span class="highlight">suburb-focused</span> keywords</li>
+                        <li class="task-item">Include embedded map, geo images, and testimonials</li>
+                        <li class="task-item">Add <span class="highlight">schema markup</span> and <span class="highlight">optimize metadata</span></li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-title">3. Publish 3 Blogs</h3>
+                    <ul class="task-list">
+                        <li class="task-item">Finalize &amp; publish blog posts (focus on a <span class="highlight">long-tail transactional keyword</span>)</li>
+                        <li class="task-item">Add images, <span class="highlight">alt text</span>, <span class="highlight">meta title</span> &amp; <span class="highlight">meta description</span></li>
+                        <li class="task-item"><span class="highlight">Interlink</span> with service/location pages</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-title">4. Link Building</h3>
+                    <ul class="task-list">
+                        <li class="task-item">List business on <span class="highlight">5–10 local directories</span> (True Local, StartLocal, Yelp AU)</li>
+                        <li class="task-item">Request 1–2 backlinks from niche/local blogs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 5; // document.querySelectorAll('.slide').length;
+
+        function updateUI() {
+            // Update progress bar
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = ((currentSlide + 1) / totalSlides) * 100 + '%';
+
+            // Update slide counter
+            const slideCounter = document.getElementById('slideCounter');
+            slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+
+            // Update navigation dots
+            const navDots = document.querySelectorAll('.nav-dot');
+            navDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+
+            // Update button states
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+
+            // Show/hide slides
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function goToSlide(slideIndex) {
+            if (slideIndex >= 0 && slideIndex < totalSlides) {
+                currentSlide = slideIndex;
+                updateUI();
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateUI();
+            }
+        }
+
+        function previousSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateUI();
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' || event.key === ' ') {
+                event.preventDefault();
+                nextSlide();
+            } else if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                previousSlide();
+            }
+        });
+
+        // Touch/swipe navigation for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const presentationContainer = document.querySelector('.presentation-container');
+
+        presentationContainer.addEventListener('touchstart', function(event) {
+            touchStartX = event.changedTouches[0].screenX;
+        }, { passive: true }); // Use passive for better scroll performance if swipe is not primary
+
+        presentationContainer.addEventListener('touchend', function(event) {
+            touchEndX = event.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50; // Minimum distance for a swipe
+            const diffX = touchEndX - touchStartX;
+            
+            if (Math.abs(diffX) > swipeThreshold) {
+                if (diffX < 0) { // Swiped left
+                    nextSlide();
+                } else { // Swiped right
+                    previousSlide();
+                }
+            }
+        }
+
+        // Initialize the presentation
+        // Ensure DOM is fully loaded if totalSlides relies on querySelectorAll at load time
+        document.addEventListener('DOMContentLoaded', function() {
+            // const totalSlides = document.querySelectorAll('.slide').length; // This is correct if slides are static
+            updateUI();
+        });
+    </script>
+
+
+            <script></script>
+        
+    
+
+
+            <script></script>
+        
+    
+</body>
