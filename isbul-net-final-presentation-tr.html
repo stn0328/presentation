@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<!-- saved from url=(0115)file:///C:/Users/USER/Downloads/isbul.net%20_%20SEO%20İndeksation%20&%20Googlebot%20Analiz%20Proposal_updated.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>isbul.net | SEO İndeksleme veamp; Googlebot Analiz Proposal</title>
+<style>
+  :root{
+    --ink:#132238;
+    --muted:#66758a;
+    --paper:#ffffff;
+    --bg:#eef2f6;
+    --line:#dce3eb;
+    --navy:#102a43;
+    --blue:#2f6fed;
+    --cyan:#23a6d5;
+    --green:#16a085;
+    --red:#d9485f;
+    --amber:#d99000;
+    --soft-blue:#edf4ff;
+    --soft-green:#eaf8f4;
+    --soft-red:#fff0f2;
+    --soft-amber:#fff7e6;
+    --shadow:0 18px 50px rgba(16,42,67,.10);
+    --radius:28px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background:linear-gradient(180deg,#e9eef4 0%,#f6f8fb 100%);
+    color:var(--ink);
+    line-height:1.45;
+  }
+
+  .deck{
+    width:min(100%, 1120px);
+    margin:0 auto;
+    padding:40px 22px 80px;
+  }
+
+  .slide{
+    position:relative;
+    width:100%;
+    min-height:1120px;
+    margin:0 auto 28px;
+    padding:70px 72px;
+    background:var(--paper);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    page-break-after:always;
+  }
+
+  .slide::before{
+    content:"";
+    position:absolute;
+    width:360px;height:360px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(47,111,237,.10) 0%, rgba(47,111,237,0) 70%);
+    top:-150px;right:-120px;
+    pointer-events:none;
+  }
+
+  .slide.dark{
+    background:linear-gradient(145deg,#0e2238 0%,#173a5c 60%,#1f4d72 100%);
+    color:white;
+  }
+  .slide.dark::before{
+    background:radial-gradient(circle, rgba(61,183,255,.22) 0%, rgba(61,183,255,0) 70%);
+  }
+
+  .slide.green{
+    background:linear-gradient(145deg,#0d6b59 0%,#108c70 60%,#15a17f 100%);
+    color:white;
+  }
+
+  .topline{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:36px;
+  }
+
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:12px;
+    font-weight:800;
+    color:var(--blue);
+  }
+  .dark .eyebrow,.green .eyebrow{color:#a9dcff}
+
+  .slide-no{
+    font-size:13px;
+    font-weight:700;
+    color:var(--muted);
+  }
+  .dark .slide-no,.green .slide-no{color:rgba(255,255,255,.68)}
+
+  h1,h2,h3,p{margin-top:0}
+  h1{font-size:58px;line-height:1.03;letter-spacing:-.04em;margin-bottom:20px}
+  h2{font-size:42px;line-height:1.08;letter-spacing:-.03em;margin-bottom:16px}
+  h3{font-size:21px;line-height:1.2;margin-bottom:10px}
+  .lead{font-size:19px;color:var(--muted);max-width:850px}
+  .dark .lead,.green .lead{color:rgba(255,255,255,.78)}
+
+  .hero-meta{
+    display:flex;gap:12px;flex-wrap:wrap;margin-top:28px
+  }
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 13px;border:1px solid var(--line);
+    border-radius:999px;font-size:13px;font-weight:700;
+    background:#fff;
+  }
+  .dark .pill,.green .pill{
+    color:white;background:rgba(255,255,255,.08);
+    border-color:rgba(255,255,255,.18);
+  }
+
+  .grid{display:grid;gap:18px}
+  .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+  .card{
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:22px;
+    background:#fff;
+  }
+  .card.soft-blue{background:var(--soft-blue);border-color:#cfe0ff}
+  .card.soft-green{background:var(--soft-green);border-color:#c8ebdf}
+  .card.soft-red{background:var(--soft-red);border-color:#f4cad2}
+  .card.soft-amber{background:var(--soft-amber);border-color:#f0dbad}
+
+  .dark .card,.green .card{
+    background:rgba(255,255,255,.08);
+    border-color:rgba(255,255,255,.14);
+    color:white;
+  }
+
+  .metric{
+    font-size:42px;font-weight:850;letter-spacing:-.04em;
+    margin-bottom:5px;
+  }
+  .metric-label{font-size:13px;color:var(--muted);font-weight:700}
+  .dark .metric-label,.green .metric-label{color:rgba(255,255,255,.72)}
+
+  .stat-row{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+    margin:34px 0 24px;
+  }
+  .stat{
+    padding:26px;border-radius:22px;
+    background:#f7f9fc;border:1px solid var(--line);
+  }
+  .stat.primary{background:var(--soft-blue);border-color:#cfe0ff}
+  .stat.alert{background:var(--soft-red);border-color:#f4cad2}
+
+  .table-wrap{
+    overflow:hidden;border:1px solid var(--line);border-radius:20px;
+    background:#fff;
+  }
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{padding:14px 15px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{background:#f7f9fc;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#5e6c7f}
+  tr:last-child td{border-bottom:0}
+  .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:800}
+
+  .bar-row{margin:16px 0}
+  .bar-head{display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-bottom:7px}
+  .bar{height:10px;background:#e8edf3;border-radius:999px;overflow:hidden}
+  .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+
+  .process{
+    display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin-top:30px
+  }
+  .step{
+    position:relative;padding:17px 10px;border:1px solid var(--line);
+    border-radius:16px;background:#fff;text-align:center;
+  }
+  .step .n{
+    width:28px;height:28px;border-radius:50%;
+    display:grid;place-items:center;margin:0 auto 9px;
+    background:var(--navy);color:#fff;font-size:12px;font-weight:800
+  }
+  .step b{font-size:12px;display:block;line-height:1.25}
+
+  .flow{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:24px
+  }
+  .flow .node{
+    padding:14px 16px;border-radius:16px;background:var(--soft-blue);
+    border:1px solid #cfe0ff;font-weight:800;font-size:14px
+  }
+  .flow .arrow{font-size:24px;color:#8ca0b5}
+
+  .code{
+    font-family:"SFMono-Regular",Consolas,monospace;
+    font-size:13px;line-height:1.55;
+    background:#0f1d2e;color:#d9e9ff;
+    border-radius:18px;padding:20px;overflow:auto;
+    border:1px solid rgba(255,255,255,.08)
+  }
+
+  .callout{
+    margin-top:20px;padding:18px 20px;border-left:4px solid var(--blue);
+    background:var(--soft-blue);border-radius:0 16px 16px 0;
+  }
+  .callout strong{display:block;margin-bottom:5px}
+
+  .checklist{display:grid;gap:10px;margin-top:12px}
+  .check{
+    display:flex;gap:11px;align-items:flex-start;
+    font-size:15px
+  }
+  .check .dot{
+    flex:0 0 auto;width:22px;height:22px;border-radius:50%;
+    background:var(--soft-green);color:var(--green);
+    display:grid;place-items:center;font-size:12px;font-weight:900;
+    border:1px solid #c8ebdf;margin-top:1px
+  }
+
+  .small{font-size:13px;color:var(--muted)}
+  .dark .small,.green .small{color:rgba(255,255,255,.68)}
+
+  .footer{
+    position:absolute;left:72px;right:72px;bottom:34px;
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:12px;color:#8493a6
+  }
+  .dark .footer,.green .footer{color:rgba(255,255,255,.52)}
+
+  .quote{
+    font-size:34px;font-weight:800;line-height:1.18;letter-spacing:-.025em;
+    max-width:920px;
+  }
+
+  .mini{
+    font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+    color:#76869a
+  }
+
+  .sitemap-tree{
+    font-family:"SFMono-Regular",Consolas,monospace;
+    font-size:14px;line-height:1.8;
+    padding:18px 20px;background:#f7f9fc;border:1px solid var(--line);
+    border-radius:18px;white-space:pre-wrap;
+  }
+
+  .phase-card h3{margin-bottom:8px}
+  .phase-card p{font-size:14px;color:var(--muted)}
+  .phase-tag{
+    display:inline-block;font-size:11px;font-weight:900;
+    text-transform:uppercase;letter-spacing:.08em;
+    padding:6px 8px;border-radius:999px;background:#eef4ff;color:#315fae;margin-bottom:12px
+  }
+
+  .closing{
+    text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center
+  }
+
+  .accent-line{
+    width:86px;height:6px;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--cyan));
+    margin-bottom:24px
+  }
+
+  /* Responsive overrides: content and desktop styling remain unchanged above. */
+  @media (max-width:1100px){
+    .deck{width:min(100%,1020px);padding-left:18px;padding-right:18px}
+    .slide{padding-left:54px;padding-right:54px}
+    .footer{left:54px;right:54px}
+  }
+
+  @media (max-width:850px){
+    .deck{width:100%;padding:18px 12px 42px}
+    .slide{padding:42px 30px 92px;min-height:0;margin-bottom:18px;border-radius:22px}
+    .topline{gap:16px;margin-bottom:28px}
+    h1{font-size:44px;line-height:1.05}
+    h2{font-size:34px;line-height:1.1}
+    h3{font-size:20px}
+    .lead{font-size:18px}
+    .g4,.g3,.g2{grid-template-columns:1fr}
+    .stat-row{grid-template-columns:1fr}
+    .process{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .process .step{padding:15px 9px}
+    .footer{position:relative;left:auto;right:auto;bottom:auto;margin-top:28px;gap:12px;align-items:flex-start;flex-wrap:wrap}
+    .hero-meta{gap:8px}
+    .pill{font-size:12px;padding:8px 11px}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    table{min-width:680px}
+    .flow{gap:8px}
+    .flow .node{font-size:13px;padding:12px 14px}
+    .sitemap-tree{overflow-x:auto;white-space:pre;max-width:100%}
+    .code{max-width:100%;overflow-x:auto}
+  }
+
+  @media (max-width:600px){
+    .deck{padding:10px 8px 28px}
+    .slide{padding:30px 18px 82px;border-radius:18px}
+    .slide::before{width:240px;height:240px;top:-110px;right:-90px}
+    .topline{margin-bottom:22px}
+    .eyebrow{font-size:10px;letter-spacing:.11em;max-width:75%}
+    .slide-no{font-size:11px;white-space:nowrap}
+    h1{font-size:35px;letter-spacing:-.035em}
+    h2{font-size:29px;letter-spacing:-.025em}
+    h3{font-size:19px}
+    .lead{font-size:16px}
+    .metric{font-size:34px}
+    .stat{padding:20px}
+    .card{padding:18px;border-radius:16px}
+    .callout{padding:15px 16px}
+    .quote{font-size:25px}
+    .flow{align-items:stretch}
+    .flow .node{font-size:12px;padding:10px 12px}
+    .flow .arrow{font-size:20px;align-self:center}
+    .process{grid-template-columns:1fr 1fr}
+    .step .n{width:26px;height:26px}
+    .step b{font-size:11px}
+    .hero-meta{margin-top:22px}
+    .footer{font-size:11px;line-height:1.35}
+  }
+
+  @media (max-width:420px){
+    .slide{padding:26px 15px 78px}
+    h1{font-size:31px}
+    h2{font-size:26px}
+    .lead{font-size:15px}
+    .metric{font-size:31px}
+    .stat-row{gap:12px}
+    .process{grid-template-columns:1fr}
+    .flow{flex-direction:column;align-items:stretch}
+    .flow .arrow{text-align:center;line-height:1}
+    .flow .node{text-align:center}
+    .quote{font-size:22px}
+  }
+
+  @media print{
+    body{background:#fff}
+    .deck{width:100%;padding:0}
+    .slide{min-height:100vh;margin:0;border-radius:0;box-shadow:none}
+  }
+</style>
+</head>
+<body>
+<main class="deck">
+
+  <section class="slide dark">
+    <div class="topline">
+      <div class="eyebrow">SEO Analiz Teklifi</div>
+      <div class="slide-no">01 / 16</div>
+    </div>
+    <div style="margin-top:120px;max-width:900px">
+      <div class="accent-line"></div>
+      <h1>SEO İndeksleme veamp;<br>Googlebot Tarama Analiz</h1>
+      <p class="lead">isbul.net için hazırlanan bu çalışma planı, sitenin mevcut Google Search Console verileri, site haritası yapısı ve URL davranışı üzerine kuruludur.</p>
+      <div class="hero-meta">
+        <span class="pill">isbul.net için hazırlandı</span>
+        <span class="pill">SEO Uzmanı Teklifi</span>
+        <span class="pill">Teknik SEO + İndeksleme</span>
+      </div>
+    </div>
+    <div class="footer"><span>Ön araştırmaya dayalı teklif</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">01 · Mevcut durum</div><div class="slide-no">02 / 16</div>
+    </div>
+    <h2>Neden daha detaylı incelenmeli?</h2>
+    <p class="lead">Google şu anda çok büyük sayıda URL biliyor, ancak bunların yalnızca küçük bir bölümü indekslenmiş durumda. Değişiklik yapmadan önce önemli olan, bu URL'lerin gerçekte ne olduğunu anlamaktır.</p>
+
+    <div class="stat-row">
+      <div class="stat primary">
+        <div class="metric">69.6K</div>
+        <div class="metric-label">İndekslenmiş URL'ler</div>
+      </div>
+      <div class="stat alert">
+        <div class="metric">299K</div>
+        <div class="metric-label">İndekslenmemiş URL'ler</div>
+      </div>
+      <div class="stat">
+        <div class="metric">~368.6K</div>
+        <div class="metric-label">Google'ın bildiği URL'ler</div>
+      </div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card soft-blue">
+        <div class="mini">Mevcut indeksleme oranı</div>
+        <div class="metric" style="color:var(--blue)">~18.9%</div>
+        <p class="small">Google'ın bildiği yaklaşık her beş URL'den yalnızca biri şu anda indekslenmiş durumda.</p>
+      </div>
+      <div class="card">
+        <div class="mini">Asıl soru</div>
+        <h3 style="margin-top:9px">İndekslenmemiş her URL bir sorun değildir.</h3>
+        <p class="small">Denetim; değerli sayfaları yinelenen, filtrelenmiş, süresi dolmuş, engellenmiş veya başka nedenlerle indekslenemeyen URL'lerden ayıracaktır.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Temel soru</strong>
+      Hangi URL türleri indekslenmeli, hangileri indeks dışında kalmalı ve Google neden her gruba farklı şekilde davranıyor?
+    </div>
+    <div class="footer"><span>Tekliften önce ön GSC incelemesi tamamlandı</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">02 · GSC görünümü</div><div class="slide-no">03 / 16</div>
+    </div>
+    <h2>Google birden fazla farklı hariç bırakma sinyali raporluyor</h2>
+    <p class="lead">İndekslenmeyen toplam URL sayısı tek bir teknik sorundan kaynaklanmıyor. GSC, sitenin gerçek URL yapısıyla ilişkilendirilmesi gereken birkaç farklı kategori gösteriyor.</p>
+
+    <div class="grid g2">
+      <div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Tarandı - şu anda indekslenmemiş</span><span>90,217</span></div>
+          <div class="bar"><div class="fill" style="width:100%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Yönlendirmeli sayfa</span><span>79,786</span></div>
+          <div class="bar"><div class="fill" style="width:88.5%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Noindex nedeniyle hariç bırakıldı</span><span>50,165</span></div>
+          <div class="bar"><div class="fill" style="width:55.6%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Bulunamadı (404)</span><span>41,743</span></div>
+          <div class="bar"><div class="fill" style="width:46.3%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>robots.txt tarafından engellendi</span><span>26,435</span></div>
+          <div class="bar"><div class="fill" style="width:29.3%"></div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Keşfedildi - şu anda indekslenmemiş</span><span>7,017</span></div>
+          <div class="bar"><div class="fill" style="width:7.8%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Yinelenen, Google farklı bir canonical seçti</span><span>1,475</span></div>
+          <div class="bar"><div class="fill" style="width:1.6%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Kullanıcı tarafından seçilmiş canonical olmadan yinelenen</span><span>1,229</span></div>
+          <div class="bar"><div class="fill" style="width:1.4%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Sunucu hatası (5xx)</span><span>426</span></div>
+          <div class="bar"><div class="fill" style="width:.5%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Doğru canonical'a sahip alternatif sayfa</span><span>396</span></div>
+          <div class="bar"><div class="fill" style="width:.44%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:34px">
+      <strong>Bu ne gösteriyor?</strong>
+      URL çoğaltma, filtreleme, yönlendirme, tarama yönetimi, eksik sayfalar ve sunucu hatalarına dair işaretler var. Tam çalışma, bunların hangilerinin beklenen durumlar olduğunu ve hangilerinin değerli sayfaları olumsuz etkilediğini belirleyecektir.
+    </div>
+    <div class="footer"><span>Ön incelemede sunulan GSC görünümü</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">03 · URL kalıpları</div><div class="slide-no">04 / 16</div>
+    </div>
+    <h2>Birden fazla URL grubu tekrar tekrar etkileniyor</h2>
+    <p class="lead">Şimdiye kadar incelenen URL örnekleri, daha yakından incelenmesi gereken birkaç ana bölüme işaret ediyor.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>URL Kalıbı</th><th>Anlamı</th><th>Gözlemlenen GSC Sorunları</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>/is-ilani/</strong></td><td>İş İlanı</td><td>404, robots.txt, duplicate / canonical</td></tr>
+          <tr><td><strong>/is-ilanlari/</strong></td><td>İş İlanları</td><td>Yönlendirme, noindex, robots.txt, yinelenen</td></tr>
+          <tr><td><strong>/firma/</strong></td><td>Şirketler</td><td>Tarandı / keşfedildi ancak indekslenmedi</td></tr>
+          <tr><td><strong>/pozisyonlar/</strong></td><td>Pozisyonlar</td><td>Tarandı / keşfedildi / noindex</td></tr>
+          <tr><td><strong>/bolum/</strong></td><td>Departmanlar</td><td>Tarandı ancak indekslenmedi</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid g2" style="margin-top:24px">
+      <div class="card soft-amber">
+        <div class="mini">Filtre örnekleri</div>
+        <div class="code" style="margin-top:10px">
+?experience-levels=deneyimsiz<br>
+?work-preferences=uzaktan<br>
+?work-preferences=uzaktan,hibrit
+        </div>
+        <p style="margin-top:12px" class="small">Bu kombinasyonlar çok sayıda URL varyasyonu oluşturabilir. Denetim, hangi kombinasyonların arama değeri taşıdığını ve hangilerinin indeks dışında kalması gerektiğini belirleyecektir.</p>
+      </div>
+      <div class="card soft-blue">
+        <div class="mini">İnceleme modeli</div>
+        <h3 style="margin-top:9px">URL → Tarama → İndeks</h3>
+        <p class="small">Her önemli URL grubu için analiz; gerçek URL'yi, teknik sinyallerini, Googlebot etkinliğini, site haritası durumunu ve GSC sonucunu birbirine bağlayacaktır.</p>
+        <div class="flow">
+          <span class="node">URL</span><span class="arrow">→</span>
+          <span class="node">Tarandı mı?</span><span class="arrow">→</span>
+          <span class="node">İndekslendi mi?</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>Ön GSC incelemesinde belirlenen URL kalıpları</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">04 · Site haritası</div><div class="slide-no">05 / 16</div>
+    </div>
+    <h2>Site haritası ile Google'ın URL keşfi ölçek olarak çok farklı</h2>
+    <p class="lead">Mevcut XML site haritası yaklaşık 40K URL içeriyor; GSC ise Google'ın bildiği yaklaşık 368,6K URL raporluyor.</p>
+
+    <div class="stat-row">
+      <div class="stat primary"><div class="metric">40,279</div><div class="metric-label">Mevcut XML site haritasındaki URL'ler</div></div>
+      <div class="stat"><div class="metric">~368.6K</div><div class="metric-label">Google'ın bildiği URL'ler</div></div>
+      <div class="stat alert"><div class="metric">~328K</div><div class="metric-label">İncelenmesi gereken fark</div></div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="mini">Mevcut site haritası yapısı</div>
+        <div class="sitemap-tree" style="margin-top:10px">sitemap.xml
+├── main.xml ........................ 16,652
+├── adverts_listing.xml ............... 628
+├── adverts_details.xml
+│   └── adverts_details_1.xml ......... 350
+├── companies_index.xml
+│   ├── companies_1.xml ............. 19,898
+│   └── companies_2.xml ............... 995
+└── blog.xml ........................ 1,756
+
+TOTAL .............................. 40,279</div>
+      </div>
+      <div class="card soft-red">
+        <div class="mini">Temel soru</div>
+        <h3 style="margin-top:9px">Diğer URL'ler nereden geliyor?</h3>
+        <div class="checklist">
+          <div class="check"><span class="dot">✓</span><span>Veritabanı / CMS tarafından oluşturulan URL'ler</span></div>
+          <div class="check"><span class="dot">✓</span><span>Filtre ve parametre kombinasyonları</span></div>
+          <div class="check"><span class="dot">✓</span><span>Eski veya süresi dolmuş URL'ler</span></div>
+          <div class="check"><span class="dot">✓</span><span>Site haritası dışındaki iç bağlantılar</span></div>
+          <div class="check"><span class="dot">✓</span><span>Harici bağlantılardan keşfedilen URL'ler</span></div>
+        </div>
+        <p style="margin-top:16px" class="small">Tam URL envanteri, bunların hangilerinin gerçek, bilinçli olarak oluşturulmuş ve indekslenmeye değer olduğunu ortaya koyacaktır.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Ön araştırma sırasında ilk site haritası sayımı tamamlandı</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide dark">
+    <div class="topline">
+      <div class="eyebrow">05 · Googlebot</div><div class="slide-no">06 / 16</div>
+    </div>
+    <h2>Sunucu logları Google'ın gerçekte neyi taradığını gösterecek</h2>
+    <p class="lead">GSC, Google'ın indeksleme hakkında ne raporladığını gösterir. Sunucu veya CDN logları ise Googlebot'un hangi URL'leri gerçekten istediğini ve bunları ne sıklıkla istediğini gösterebilir.</p>
+
+    <div class="grid g2" style="margin-top:34px">
+      <div class="card">
+        <div class="mini">Talep edilen veriler</div>
+        <div class="checklist">
+          <div class="check"><span class="dot">✓</span><span>Tarih ve saat</span></div>
+          <div class="check"><span class="dot">✓</span><span>İstenen URL</span></div>
+          <div class="check"><span class="dot">✓</span><span>User-agent</span></div>
+          <div class="check"><span class="dot">✓</span><span>HTTP durumu</span></div>
+          <div class="check"><span class="dot">✓</span><span>Yanıt süresi</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="mini">Yanıtlanacak sorular</div>
+        <div class="checklist">
+          <div class="check"><span class="dot">✓</span><span>Googlebot en çok hangi bölümleri tarıyor?</span></div>
+          <div class="check"><span class="dot">✓</span><span>Hangi bölümlere nadiren ulaşıyor?</span></div>
+          <div class="check"><span class="dot">✓</span><span>Tarama etkinliğinin ne kadarı filtrelere veya yönlendirmelere gidiyor?</span></div>
+          <div class="check"><span class="dot">✓</span><span>Googlebot 404 / 5xx URL'lere ne sıklıkla ulaşıyor?</span></div>
+          <div class="check"><span class="dot">✓</span><span>Önemli sayfalar yeterince taranıyor mu?</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,255,255,.08);border-left-color:#8ed7ff;margin-top:30px">
+      <strong style="color:white">Sonuç örneği</strong>
+      <span style="color:rgba(255,255,255,.8)">Filtre URL'leri yüz binlerce Googlebot isteği alırken önemli şirket veya pozisyon sayfaları çok az istek alıyorsa, tarama verileri URL ve iç bağlantı yapısını düzeltmek için kanıt sağlar.</span>
+    </div>
+    <div class="footer"><span>Hedef log dönemi: yaklaşık 30 gün</span><span>isbul.net</span></div>
+  </section>
+
+<section class="slide">
+  <div class="topline">
+    <div class="eyebrow">06 · API kurulumu</div>
+    <div class="slide-no">07 / 16</div>
+  </div>
+
+  <h2>Google Search Console API Kurulumu</h2>
+
+  <p class="lead">
+    The Google Search Console API; arama ve indeksleme verilerini geniş ölçekte toplamak ve analiz etmek,
+    manuel kontrolleri azaltmak ve analizi tekrarlanabilir hale getirmek için kullanılacaktır.
+  </p>
+
+  <div class="flow" style="margin-top:34px">
+    <span class="node">Google Search Console</span>
+    <span class="arrow">→</span>
+    <span class="node">Google Cloud Projesi</span>
+    <span class="arrow">→</span>
+    <span class="node">OAuth Yetkilendirmesi</span>
+    <span class="arrow">→</span>
+    <span class="node">Search Console API</span>
+  </div>
+
+  <div class="grid g2" style="margin-top:30px">
+
+    <div class="card soft-blue">
+      <div class="mini">URL Inspection API</div>
+      <h3 style="margin-top:9px">İndeksleme Verileri</h3>
+      <p class="small">
+        Seçilen URL'leri incelemek ve Google'ın bildirdiği indeks durumunu,
+        canonical bilgilerini ve URL düzeyindeki diğer indeksleme sinyallerini toplamak için kullanılır.
+      </p>
+    </div>
+
+    <div class="card soft-green">
+      <div class="mini">Search Analytics API</div>
+      <h3 style="margin-top:9px">Arama Performansı</h3>
+      <p class="small">
+        Farklı URL grupları için tıklamalar, gösterimler, sorgular, sayfalar ve arama görünürlüğünü
+        analiz etmek için kullanılır.
+      </p>
+    </div>
+
+    <div class="card soft-amber">
+      <div class="mini">Site haritaları</div>
+      <h3 style="margin-top:9px">Site Haritası Verileri</h3>
+      <p class="small">
+        Gönderilen site haritası bilgilerini incelemek ve site haritası kapsamını sitenin daha geniş URL
+        envanteriyle karşılaştırmak için kullanılır.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="mini">Sites API</div>
+      <h3 style="margin-top:9px">Mülk Bilgileri</h3>
+      <p class="small">
+        Doğrulanmış Search Console mülkü ve mevcut Search Console verileriyle
+        çalışmak için kullanılır.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="callout">
+    <strong>Bu çalışma nasıl yardımcı olur?</strong>
+    API access will allow selected URL groups to be analyzed systematically instead of relying only on
+    manual GSC screenshots and individual checks.
+  </div>
+
+  <div class="footer">
+    <span>Google Search Console API daha derin analizi destekleyecek</span>
+    <span>isbul.net</span>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="topline">
+    <div class="eyebrow">07 · API sınırlamaları</div>
+    <div class="slide-no">08 / 16</div>
+  </div>
+
+  <h2>URL Inspection API'nin günlük sabit bir limiti vardır</h2>
+
+  <p class="lead">
+    URL Inspection API, URL düzeyinde doğrulama için kullanışlıdır ancak 368K+ URL içeren bir web sitesinin tamamını URL URL
+    incelemek için tasarlanmamıştır.
+  </p>
+
+  <div class="stat-row">
+
+    <div class="stat primary">
+      <div class="metric">2,000</div>
+      <div class="metric-label">
+        Search Console mülkü başına günlük URL incelemesi
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="metric">600</div>
+      <div class="metric-label">
+        Search Console mülkü başına dakika başına URL incelemesi
+      </div>
+    </div>
+
+    <div class="stat alert">
+      <div class="metric">368.6K+</div>
+      <div class="metric-label">
+        isbul.net üzerinde Google'ın bildiği URL'ler
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid g2" style="margin-top:30px">
+
+    <div class="card soft-red">
+      <div class="mini">Yapmayacağım şey</div>
+      <h3 style="margin-top:9px">Her URL'yi körü körüne incelemek</h3>
+      <p class="small">
+        Günlük API limiti, URL URL tam incelemeyi verimsiz ve gereksiz hale getirir.
+        Kotayı rastgele kullanmak faydalı bir teşhis üretmez.
+      </p>
+    </div>
+
+    <div class="card soft-blue">
+      <div class="mini">Yapacağım şey</div>
+      <h3 style="margin-top:9px">Temsili URL gruplarını incelemek</h3>
+      <p class="small">
+        Sonuçların kalıpları ortaya çıkarması için API'yi her ana sayfa türünden ve
+        her önemli GSC sorunundan dikkatle seçilmiş URL'ler üzerinde kullanacağım.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="card" style="margin-top:24px">
+
+    <div class="mini">Örnek örnekleme yaklaşımı</div>
+
+    <div class="table-wrap" style="margin-top:12px">
+      <table>
+        <thead>
+          <tr>
+            <th>URL Grubu</th>
+            <th>İnceleme Odağı</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><strong>/is-ilani/</strong></td>
+            <td>Temsili iş URL'leri, yinelenen durumlar, 404 ve robots durumları</td>
+          </tr>
+
+          <tr>
+            <td><strong>/is-ilanlari/</strong></td>
+            <td>Konum, kategori, filtre ve yönlendirme varyasyonları</td>
+          </tr>
+
+          <tr>
+            <td><strong>/firma/</strong></td>
+            <td>Farklı indeksleme sonuçlarına sahip şirket sayfaları</td>
+          </tr>
+
+          <tr>
+            <td><strong>/pozisyonlar/</strong></td>
+            <td>Taranmış / keşfedilmiş / noindex durumları gösteren pozisyon sayfaları</td>
+          </tr>
+
+          <tr>
+            <td><strong>/bolum/</strong></td>
+            <td>Farklı tarama ve indeksleme davranışlarına sahip departman sayfaları</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="callout">
+    <strong>Örneklemenin amacı</strong>
+    The API will be used to identify repeatable patterns across URL families,
+    while the complete site analysis will also use GSC reports, sitemap data,
+    URL inventory and server logs.
+  </div>
+
+  <div class="footer">
+    <span>API kotası rastgele değil, seçici şekilde kullanılacak</span>
+    <span>isbul.net</span>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="topline">
+    <div class="eyebrow">08 · Veri kaynakları</div>
+    <div class="slide-no">09 / 16</div>
+  </div>
+
+  <h2>Tek bir API sorunun tamamını açıklayamaz</h2>
+
+  <p class="lead">
+    Her veri kaynağı farklı bir soruya yanıt verir. Değer, bunların birleştirilmesinden ve sonuçların karşılaştırılmasından gelir.
+  </p>
+
+  <div class="grid g2" style="margin-top:30px">
+
+    <div class="card soft-blue">
+      <div class="mini">URL Inspection API</div>
+      <h3 style="margin-top:9px">Google bu URL hakkında ne söylüyor?</h3>
+      <p class="small">
+        Google'ın bildirdiği indeks durumu ve canonical bilgileri dahil olmak üzere seçilen URL düzeyindeki indeksleme kontrolleri için kullanılır.
+      </p>
+    </div>
+
+    <div class="card soft-green">
+      <div class="mini">Search Analytics API</div>
+      <h3 style="margin-top:9px">Bu URL arama görünürlüğü alıyor mu?</h3>
+      <p class="small">
+        Google Arama performansı verilerinde gerçekten görünen tıklamaları, gösterimleri, sorguları ve sayfaları analiz etmek için kullanılır.
+      </p>
+    </div>
+
+    <div class="card soft-amber">
+      <div class="mini">Site Haritası Verileri</div>
+      <h3 style="margin-top:9px">Hangi URL'ler bilinçli olarak gönderiliyor?</h3>
+      <p class="small">
+        Sitenin indekslenmesi amaçlanan URL kümesini Google'ın keşfettiği URL'lerle
+        karşılaştırmak için kullanılır.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="mini">Sunucu / CDN Logları</div>
+      <h3 style="margin-top:9px">Googlebot gerçekte neyi tarıyor?</h3>
+      <p class="small">
+        Tarama etkinliğini, istek sıklığını, yanıt kodlarını ve Google'ın ilgi gösterdiği bölümleri ölçmek için kullanılır.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="flow" style="margin-top:34px;justify-content:center">
+    <span class="node">URL Envanteri</span>
+    <span class="arrow">+</span>
+    <span class="node">GSC APIs</span>
+    <span class="arrow">+</span>
+    <span class="node">Site haritaları</span>
+    <span class="arrow">+</span>
+    <span class="node">Server Logs</span>
+    <span class="arrow">=</span>
+    <span class="node">İndeksleme Teşhisi</span>
+  </div>
+
+  <div class="callout" style="margin-top:34px">
+    <strong>Search Analytics API sınırlaması</strong>
+    Search Analytics, arama performansı analizi için değerlidir ancak tam bir indeks envanteri olarak değerlendirilmemelidir.
+    Bu nedenle tam teşhis, API verilerini gerçek URL envanteri, GSC indeksleme raporları,
+    site haritası verileri ve Googlebot loglarıyla birleştirir.
+  </div>
+
+  <div class="quote" style="margin-top:38px;font-size:29px">
+    Amaç; keşif, tarama, indeksleme ve arama görünürlüğünü tek bir tabloda birleştirmektir.
+  </div>
+
+  <div class="footer">
+    <span>Birden fazla veri kaynağı çapraz kontrol edilecek</span>
+    <span>isbul.net</span>
+  </div>
+</section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">06 · Kategori analizi</div><div class="slide-no">10 / 16</div>
+    </div>
+    <h2>Her ana URL türü ayrı ayrı ölçülecek</h2>
+    <p class="lead">Site, tek bir genel indeksleme yüzdesiyle değerlendirilmemelidir. Faydalı sonuç, sayfa türlerinin karşılaştırılmasından çıkar.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Sayfa Türü</th><th class="num">Toplam</th><th class="num">Googlebot Taramaları</th><th class="num">İndekslenmiş</th><th class="num">İndekslenmemiş</th><th class="num">İndeksleme Oranı</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>İş İlanları</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+          <tr><td>İş İlanları</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+          <tr><td>Şirketler</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+          <tr><td>Pozisyonlar</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+          <tr><td>Departmanlar</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+          <tr><td>Filtreler / Parametreler</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid g3" style="margin-top:24px">
+      <div class="card soft-blue">
+        <h3>Yüksek tarama + düşük indeksleme</h3>
+        <p class="small">Düşük değerli içeriğe, çoğaltılmış içeriğe, zayıf özgünlüğe veya yetersiz canonical sinyallerine işaret edebilir.</p>
+      </div>
+      <div class="card soft-amber">
+        <h3>Düşük tarama + değerli sayfalar</h3>
+        <p class="small">Zayıf keşfe, iç bağlantı eksiklerine, site haritası boşluklarına veya tarama önceliklendirme sorunlarına işaret edebilir.</p>
+      </div>
+      <div class="card soft-green">
+        <h3>Yüksek tarama + yüksek indeksleme</h3>
+        <p class="small">Google'ın anladığı ve faydalı bulduğu sayfa türlerini gösterir ve sitenin geri kalanı için referans sağlar.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Son değerler URL envanteri, GSC verileri ve sunucu loglarından alınacak</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">07 · Teknik inceleme</div><div class="slide-no">11 / 16</div>
+    </div>
+    <h2>Denetim yalnızca sorunları listelemeyecek, gerçek URL'leri takip edecek</h2>
+    <p class="lead">Her önemli bulgu; URL, HTTP yanıtı, canonical, robots, site haritası, iç bağlantılar ve Googlebot davranışı üzerinden kontrol edilecek.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="phase-tag">Örnek</div>
+        <h3>Yinelenen / canonical URL</h3>
+        <p>GSC'nin aşağıdaki gibi bir URL bildirdiğini varsayalım:</p>
+        <div class="code">/is-ilanlari/example-position</div>
+        <p style="margin-top:12px">Analiz şu unsurları kontrol edecek:</p>
+        <div class="checklist">
+          <div class="check"><span class="dot">1</span><span>HTTP yanıtı: 200, 301, 302, 404, 5xx</span></div>
+          <div class="check"><span class="dot">2</span><span>Canonical hedefi</span></div>
+          <div class="check"><span class="dot">3</span><span>Bu URL'ye yönlendiren iç bağlantılar</span></div>
+          <div class="check"><span class="dot">4</span><span>Site haritasına dahil edilme</span></div>
+          <div class="check"><span class="dot">5</span><span>Googlebot istek sıklığı</span></div>
+          <div class="check"><span class="dot">6</span><span>Yönlendirme hedefinin uygunluğu</span></div>
+        </div>
+      </div>
+
+      <div class="card soft-blue">
+        <div class="phase-tag">Karar</div>
+        <h3>URL için ardından net bir işlem belirlenir</h3>
+        <p>Kanıtlara göre farklı URL grupları için farklı işlemler belirlenebilir.</p>
+        <div class="flow" style="margin-top:16px">
+          <span class="node">Tut</span>
+          <span class="node">Canonical belirle</span>
+          <span class="node">Yönlendir</span>
+          <span class="node">Noindex</span>
+          <span class="node">Engelle</span>
+          <span class="node">Kaldır</span>
+        </div>
+        <div class="callout" style="margin-top:20px">
+          <strong>Bu neden önemli?</strong>
+          Bir yönlendirme, noindex veya robots.txt kuralı otomatik olarak yanlış değildir. Doğru karar, sayfanın amacına ve Google'ın ona nasıl ulaştığına bağlıdır.
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g3" style="margin-top:20px">
+      <div class="card"><h3>URL mimarisi</h3><p class="small">Yinelenen yollar, filtreler, parametreler, eski URL'ler ve URL kombinasyonları.</p></div>
+      <div class="card"><h3>İndeksleme sinyalleri</h3><p class="small">Canonical, noindex, robots.txt, site haritası ve HTTP durumunun uyumu.</p></div>
+      <div class="card"><h3>İç bağlantılar</h3><p class="small">Önemli sayfalar, yetim sayfalar ve düşük değerli URL varyasyonlarına yönlendiren bağlantılar.</p></div>
+    </div>
+    <div class="footer"><span>Teklif amacıyla örnek inceleme modeli gösterilmiştir</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">08 · Rakip karşılaştırması</div><div class="slide-no">12 / 16</div>
+    </div>
+    <h2>isbul.net'i büyük Türk iş platformlarıyla karşılaştırın</h2>
+    <p class="lead">Kariyer.net ve Eleman.net, büyük iş sitelerinin çok sayıda URL varyasyonunu yönetirken değerli sayfaları Google'a nasıl sunduğunu görmek için yapısal referans olarak kullanılacaktır.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="mini">Kariyer.net</div>
+        <h3 style="margin-top:9px">Sayfa türü ve taksonomi referansı</h3>
+        <p class="small">İş ilanlarını, konum ve sektör yapılarını, kariyer içeriğini, iç bağlantıları ve indekslenebilir sayfa gruplarını inceleyin.</p>
+      </div>
+      <div class="card">
+        <div class="mini">Eleman.net</div>
+        <h3 style="margin-top:9px">Büyük ölçekli URL yönetimi referansı</h3>
+        <p class="small">Şehir, pozisyon, departman, sektör ve iş türü yapılarını ve bunların arama motorlarına nasıl sunulduğunu inceleyin.</p>
+      </div>
+    </div>
+
+    <div class="card soft-blue" style="margin-top:24px">
+      <div class="mini">Karşılaştırma çerçevesi</div>
+      <div class="grid g4" style="margin-top:12px">
+        <div><h3 style="font-size:17px">URL mimarisi</h3><p class="small">Sayfa gruplarının nasıl düzenlendiği.</p></div>
+        <div><h3 style="font-size:17px">Site haritaları</h3><p class="small">Nelerin bilinçli olarak gönderildiği.</p></div>
+        <div><h3 style="font-size:17px">İç bağlantılar</h3><p class="small">Önemli sayfaların nasıl keşfedildiği.</p></div>
+        <div><h3 style="font-size:17px">Filtreler</h3><p class="small">URL kombinasyonlarının nasıl kontrol edildiği.</p></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Amaç</strong>
+      Hangi sayfa türlerinin SEO açılış sayfası olarak değerlendirildiğini, hangi kombinasyonların indeks dışında tutulduğunu ve hangi yapısal farkların daha güçlü indekslemeyi açıklayabileceğini belirlemek.
+    </div>
+    <div class="footer"><span>Rakip karşılaştırması daha derin çalışma aşamasının bir parçasıdır</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">09 · Şimdiye kadar tamamlanan çalışma</div><div class="slide-no">13 / 16</div>
+    </div>
+    <h2>Bu teklif gerçek ön araştırmaya dayanmaktadır</h2>
+    <p class="lead">Aşağıdaki çalışmalar, teklifin genel bir SEO kontrol listesi yerine sitenin gerçek durumuna dayanabilmesi için tam çalışma başlamadan önce tamamlandı.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="phase-tag">Tamamlandı</div>
+        <div class="checklist">
+          <div class="check"><span class="dot">✓</span><span>GSC indeksleme görünümü incelendi.</span></div>
+          <div class="check"><span class="dot">✓</span><span>69,6K indekslenmiş ve 299K indekslenmemiş URL kaydedildi.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Ana GSC hariç bırakma kategorileri incelendi.</span></div>
+          <div class="check"><span class="dot">✓</span><span>GSC örneklerinden tekrarlanan URL kalıpları çıkarıldı.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Etkilenen ana URL grupları belirlendi.</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="phase-tag">Tamamlandı</div>
+        <div class="checklist">
+          <div class="check"><span class="dot">✓</span><span>Filtre ve parametre URL kalıpları incelendi.</span></div>
+          <div class="check"><span class="dot">✓</span><span>XML site haritası yapısı incelendi.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Yaklaşık 40.279 site haritası URL'si sayıldı.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Site haritası ölçeği, Google'ın bildiği yaklaşık 368,6K URL ile karşılaştırıldı.</span></div>
+          <div class="check"><span class="dot">✓</span><span>URL, tarama ve indeksleme analizi için çerçeve oluşturuldu.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-row" style="margin-top:30px">
+      <div class="stat"><div class="metric">GSC</div><div class="metric-label">İndeksleme incelemesi</div></div>
+      <div class="stat"><div class="metric">40.3K</div><div class="metric-label">Sayılan site haritası URL'leri</div></div>
+      <div class="stat primary"><div class="metric">~368.6K</div><div class="metric-label">Belirlenen Google'ın bildiği URL ölçeği</div></div>
+    </div>
+
+    <div class="callout">
+      <strong>İşe alımdan sonra ne olacak?</strong>
+      Sonraki aşama bu ön çalışmayı tam bir veri setine dönüştürecek: eksiksiz URL envanteri, log analizi, kategori düzeyinde indeksleme ölçümü ve URL bazında teknik örnekleme.
+    </div>
+    <div class="footer"><span>Çalışma başlamadan önce ön çalışma yapıldı</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">10 · Tam çalışma kapsamı</div><div class="slide-no">14 / 16</div>
+    </div>
+    <h2>Tam çalışma kapsamında neler yapılacak?</h2>
+    <p class="lead">Çalışma, geniş kapsamlı GSC raporlamasından kanıta dayalı teşhise ve uygulanabilir bir planlamaya ilerleyecek.</p>
+
+    <div class="grid g2">
+      <div class="card phase-card">
+        <div class="phase-tag">Aşama 1</div>
+        <h3>Eksiksiz URL envanteri</h3>
+        <p>Sitenin URL'leri ve sayfa şablonları için kategorilere ayrılmış bir görünüm oluşturun. Her grubu site haritası durumu, indeksleme durumu ve teknik sinyallerle eşleştirin.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Aşama 2</div>
+        <h3>Site haritası analizi</h3>
+        <p>Site haritası URL'lerini gerçek URL envanteriyle karşılaştırın ve eksik, yinelenen, yönlendirilmiş veya indekslenemeyen kayıtları bulun.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Aşama 3</div>
+        <h3>GSC indeksleme analizi</h3>
+        <p>Ana hariç bırakma sınıflarını inceleyin ve her önemli sayfa grubundan temsili URL'leri kontrol edin.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Aşama 4</div>
+        <h3>Googlebot log analizi</h3>
+        <p>Googlebot'un tarama etkinliğini nerelerde harcadığını, önemli bölümlere ne sıklıkla ulaştığını ve hangi düşük değerli URL'lerin istek tükettiğini ölçün.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Aşama 5</div>
+        <h3>Kategori düzeyinde karşılaştırma</h3>
+        <p>İş, şirket, pozisyon, departman ve filtre URL türleri için tarama oranını, indeksleme oranını ve hariç bırakma kalıplarını hesaplayın.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Aşama 6</div>
+        <h3>Teknik teşhis</h3>
+        <p>Canonical, robots, noindex, yönlendirmeler, 404, 5xx, iç bağlantılar, çoğaltma ve sayfa kalitesi kalıplarını takip edin.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Aşama 7</div>
+        <h3>Rakip karşılaştırması</h3>
+        <p>Büyük Türk iş platformlarının URL ve sayfa yapılarını karşılaştırın ve faydalı farkları belirleyin.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Aşama 8</div>
+        <h3>Eylem planı</h3>
+        <p>Bulguları belirli teknik değişikliklere, örneklere, önceliklere ve net bir uygulama sırasına dönüştürün.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Tam kapsam, gerekli veri ve erişimler sağlandıktan sonra başlayacak</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">11 · Analiz süreci</div><div class="slide-no">15 / 16</div>
+    </div>
+    <h2>Analiz veriden eyleme nasıl ilerleyecek?</h2>
+    <p class="lead">Her aşama bir sonrakini besler; böylece öneriler tek tek GSC uyarıları yerine kanıtlara dayanır.</p>
+
+    <div class="process">
+      <div class="step"><div class="n">1</div><b>URL Envanteri</b></div>
+      <div class="step"><div class="n">2</div><b>Site Haritası</b></div>
+      <div class="step"><div class="n">3</div><b>GSC</b></div>
+      <div class="step"><div class="n">4</div><b>Googlebot Logları</b></div>
+      <div class="step"><div class="n">5</div><b>Kategori Analizi</b></div>
+      <div class="step"><div class="n">6</div><b>Teknik Kontroller</b></div>
+      <div class="step"><div class="n">7</div><b>Rakipler</b></div>
+      <div class="step"><div class="n">8</div><b>Eylem Planı</b></div>
+    </div>
+
+    <div class="grid g3" style="margin-top:34px">
+      <div class="card soft-blue">
+        <div class="mini">Girdi</div>
+        <h3 style="margin-top:8px">Gerçek veriler</h3>
+        <p class="small">GSC, site haritası, tam URL dışa aktarımı ve sunucu/CDN logları.</p>
+      </div>
+      <div class="card soft-amber">
+        <div class="mini">Analiz</div>
+        <h3 style="margin-top:8px">Çapraz kontrol</h3>
+        <p class="small">Mevcut olanları, Google'ın keşfettiklerini, Google'ın taradıklarını ve Google'ın indekslediklerini karşılaştırın.</p>
+      </div>
+      <div class="card soft-green">
+        <div class="mini">Çıktı</div>
+        <h3 style="margin-top:8px">Uygulanabilir bulgular</h3>
+        <p class="small">Belirli URL grupları, nedenler, örnekler ve teknik değişiklikler.</p>
+      </div>
+    </div>
+
+    <div class="quote" style="margin-top:52px">Amaç, indekslenmemiş 299K URL'nin tamamını indekslemek değildir. Amaç, doğru indekslenebilir URL kümesini belirlemektir.</div>
+    <div class="footer"><span>Kanıta dayalı teknik SEO yaklaşımı</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide green">
+    <div class="topline">
+      <div class="eyebrow">12 · Gerekli erişimler</div><div class="slide-no">16 / 16</div>
+    </div>
+    <h2>Tam analize başlamak için gerekenler</h2>
+    <p class="lead">Daha derin bulguların çoğu sitenin gerçek URL ve tarama verilerine erişime bağlıdır.</p>
+
+    <div class="grid g2" style="margin-top:30px">
+      <div class="card">
+        <h3>Üçüncü Taraf SEO Araçları</h3>
+        <p class="small">Denetim ve analiz için Screaming Frog, indeksleme ve URL geçmişi doğrulaması için SEMrush/Ahrefs, log dosyası analizi için Log File Analyzer (Screaming Frog).</p>
+      </div>
+      <div class="card">
+        <h3>Sunucu / CDN logları</h3>
+        <p class="small">URL, zaman damgası, user-agent ve HTTP durumu içeren yaklaşık 30 günlük veriler.</p>
+      </div>
+      <div class="card">
+        <h3>Tam URL dışa aktarımı</h3>
+        <p class="small">Mevcutsa, sitenin bilinen URL envanterinin veritabanı, CMS veya başka bir kaynaktan dışa aktarımı.</p>
+      </div>
+      <div class="card">
+        <h3>Google Ürünleri</h3>
+        <p class="small">Sayfa düzeyinde arama verilerini toplamak için Search Console API ve URL'leri kategoriye göre incelemek için URL Inspection API.</p>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,255,255,.10);border-left-color:#c1f3e8;margin-top:34px">
+      <strong style="color:white">İsteğe bağlı destekleyici veriler</strong>
+      <span style="color:rgba(255,255,255,.82)">Cloudflare/CDN verileri, CMS ayrıntıları, son geçişler ve mevcut SEO yapılandırması olağandışı tarama veya URL davranışlarını açıklamaya yardımcı olabilir.</span>
+    </div>
+
+    <div style="margin-top:70px">
+      <div class="mini" style="color:#c3efe6">Nihai hedef</div>
+      <div class="quote">Google'ın neyi taradığını, neyi indekslediğini, neyi görmezden geldiğini ve nelerin değiştirilmesi gerektiğini açıkça açıklamak.</div>
+    </div>
+    <div class="footer"><span>isbul.net çalışması için özel olarak hazırlandı</span><span>Teşekkürler</span></div>
+  </section>
+
+</main>
+
+</body></html>
