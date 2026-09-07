@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0115)file:///C:/Users/USER/Downloads/isbul.net%20_%20SEO%20Indexation%20&%20Googlebot%20Analysis%20Proposal_updated.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>isbul.net | SEO Indexation &amp; Googlebot Analysis Proposal</title>
+<style>
+  :root{
+    --ink:#132238;
+    --muted:#66758a;
+    --paper:#ffffff;
+    --bg:#eef2f6;
+    --line:#dce3eb;
+    --navy:#102a43;
+    --blue:#2f6fed;
+    --cyan:#23a6d5;
+    --green:#16a085;
+    --red:#d9485f;
+    --amber:#d99000;
+    --soft-blue:#edf4ff;
+    --soft-green:#eaf8f4;
+    --soft-red:#fff0f2;
+    --soft-amber:#fff7e6;
+    --shadow:0 18px 50px rgba(16,42,67,.10);
+    --radius:28px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background:linear-gradient(180deg,#e9eef4 0%,#f6f8fb 100%);
+    color:var(--ink);
+    line-height:1.45;
+  }
+
+  .deck{
+    width:min(100%, 1120px);
+    margin:0 auto;
+    padding:40px 22px 80px;
+  }
+
+  .slide{
+    position:relative;
+    width:100%;
+    min-height:1120px;
+    margin:0 auto 28px;
+    padding:70px 72px;
+    background:var(--paper);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    page-break-after:always;
+  }
+
+  .slide::before{
+    content:"";
+    position:absolute;
+    width:360px;height:360px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(47,111,237,.10) 0%, rgba(47,111,237,0) 70%);
+    top:-150px;right:-120px;
+    pointer-events:none;
+  }
+
+  .slide.dark{
+    background:linear-gradient(145deg,#0e2238 0%,#173a5c 60%,#1f4d72 100%);
+    color:white;
+  }
+  .slide.dark::before{
+    background:radial-gradient(circle, rgba(61,183,255,.22) 0%, rgba(61,183,255,0) 70%);
+  }
+
+  .slide.green{
+    background:linear-gradient(145deg,#0d6b59 0%,#108c70 60%,#15a17f 100%);
+    color:white;
+  }
+
+  .topline{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:36px;
+  }
+
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:12px;
+    font-weight:800;
+    color:var(--blue);
+  }
+  .dark .eyebrow,.green .eyebrow{color:#a9dcff}
+
+  .slide-no{
+    font-size:13px;
+    font-weight:700;
+    color:var(--muted);
+  }
+  .dark .slide-no,.green .slide-no{color:rgba(255,255,255,.68)}
+
+  h1,h2,h3,p{margin-top:0}
+  h1{font-size:58px;line-height:1.03;letter-spacing:-.04em;margin-bottom:20px}
+  h2{font-size:42px;line-height:1.08;letter-spacing:-.03em;margin-bottom:16px}
+  h3{font-size:21px;line-height:1.2;margin-bottom:10px}
+  .lead{font-size:19px;color:var(--muted);max-width:850px}
+  .dark .lead,.green .lead{color:rgba(255,255,255,.78)}
+
+  .hero-meta{
+    display:flex;gap:12px;flex-wrap:wrap;margin-top:28px
+  }
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 13px;border:1px solid var(--line);
+    border-radius:999px;font-size:13px;font-weight:700;
+    background:#fff;
+  }
+  .dark .pill,.green .pill{
+    color:white;background:rgba(255,255,255,.08);
+    border-color:rgba(255,255,255,.18);
+  }
+
+  .grid{display:grid;gap:18px}
+  .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+  .card{
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:22px;
+    background:#fff;
+  }
+  .card.soft-blue{background:var(--soft-blue);border-color:#cfe0ff}
+  .card.soft-green{background:var(--soft-green);border-color:#c8ebdf}
+  .card.soft-red{background:var(--soft-red);border-color:#f4cad2}
+  .card.soft-amber{background:var(--soft-amber);border-color:#f0dbad}
+
+  .dark .card,.green .card{
+    background:rgba(255,255,255,.08);
+    border-color:rgba(255,255,255,.14);
+    color:white;
+  }
+
+  .metric{
+    font-size:42px;font-weight:850;letter-spacing:-.04em;
+    margin-bottom:5px;
+  }
+  .metric-label{font-size:13px;color:var(--muted);font-weight:700}
+  .dark .metric-label,.green .metric-label{color:rgba(255,255,255,.72)}
+
+  .stat-row{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+    margin:34px 0 24px;
+  }
+  .stat{
+    padding:26px;border-radius:22px;
+    background:#f7f9fc;border:1px solid var(--line);
+  }
+  .stat.primary{background:var(--soft-blue);border-color:#cfe0ff}
+  .stat.alert{background:var(--soft-red);border-color:#f4cad2}
+
+  .table-wrap{
+    overflow:hidden;border:1px solid var(--line);border-radius:20px;
+    background:#fff;
+  }
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{padding:14px 15px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{background:#f7f9fc;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#5e6c7f}
+  tr:last-child td{border-bottom:0}
+  .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:800}
+
+  .bar-row{margin:16px 0}
+  .bar-head{display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-bottom:7px}
+  .bar{height:10px;background:#e8edf3;border-radius:999px;overflow:hidden}
+  .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+
+  .process{
+    display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin-top:30px
+  }
+  .step{
+    position:relative;padding:17px 10px;border:1px solid var(--line);
+    border-radius:16px;background:#fff;text-align:center;
+  }
+  .step .n{
+    width:28px;height:28px;border-radius:50%;
+    display:grid;place-items:center;margin:0 auto 9px;
+    background:var(--navy);color:#fff;font-size:12px;font-weight:800
+  }
+  .step b{font-size:12px;display:block;line-height:1.25}
+
+  .flow{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:24px
+  }
+  .flow .node{
+    padding:14px 16px;border-radius:16px;background:var(--soft-blue);
+    border:1px solid #cfe0ff;font-weight:800;font-size:14px
+  }
+  .flow .arrow{font-size:24px;color:#8ca0b5}
+
+  .code{
+    font-family:"SFMono-Regular",Consolas,monospace;
+    font-size:13px;line-height:1.55;
+    background:#0f1d2e;color:#d9e9ff;
+    border-radius:18px;padding:20px;overflow:auto;
+    border:1px solid rgba(255,255,255,.08)
+  }
+
+  .callout{
+    margin-top:20px;padding:18px 20px;border-left:4px solid var(--blue);
+    background:var(--soft-blue);border-radius:0 16px 16px 0;
+  }
+  .callout strong{display:block;margin-bottom:5px}
+
+  .checklist{display:grid;gap:10px;margin-top:12px}
+  .check{
+    display:flex;gap:11px;align-items:flex-start;
+    font-size:15px
+  }
+  .check .dot{
+    flex:0 0 auto;width:22px;height:22px;border-radius:50%;
+    background:var(--soft-green);color:var(--green);
+    display:grid;place-items:center;font-size:12px;font-weight:900;
+    border:1px solid #c8ebdf;margin-top:1px
+  }
+
+  .small{font-size:13px;color:var(--muted)}
+  .dark .small,.green .small{color:rgba(255,255,255,.68)}
+
+  .footer{
+    position:absolute;left:72px;right:72px;bottom:34px;
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:12px;color:#8493a6
+  }
+  .dark .footer,.green .footer{color:rgba(255,255,255,.52)}
+
+  .quote{
+    font-size:34px;font-weight:800;line-height:1.18;letter-spacing:-.025em;
+    max-width:920px;
+  }
+
+  .mini{
+    font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+    color:#76869a
+  }
+
+  .sitemap-tree{
+    font-family:"SFMono-Regular",Consolas,monospace;
+    font-size:14px;line-height:1.8;
+    padding:18px 20px;background:#f7f9fc;border:1px solid var(--line);
+    border-radius:18px;white-space:pre-wrap;
+  }
+
+  .phase-card h3{margin-bottom:8px}
+  .phase-card p{font-size:14px;color:var(--muted)}
+  .phase-tag{
+    display:inline-block;font-size:11px;font-weight:900;
+    text-transform:uppercase;letter-spacing:.08em;
+    padding:6px 8px;border-radius:999px;background:#eef4ff;color:#315fae;margin-bottom:12px
+  }
+
+  .closing{
+    text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center
+  }
+
+  .accent-line{
+    width:86px;height:6px;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--cyan));
+    margin-bottom:24px
+  }
+
+  /* Responsive overrides: content and desktop styling remain unchanged above. */
+  @media (max-width:1100px){
+    .deck{width:min(100%,1020px);padding-left:18px;padding-right:18px}
+    .slide{padding-left:54px;padding-right:54px}
+    .footer{left:54px;right:54px}
+  }
+
+  @media (max-width:850px){
+    .deck{width:100%;padding:18px 12px 42px}
+    .slide{padding:42px 30px 92px;min-height:0;margin-bottom:18px;border-radius:22px}
+    .topline{gap:16px;margin-bottom:28px}
+    h1{font-size:44px;line-height:1.05}
+    h2{font-size:34px;line-height:1.1}
+    h3{font-size:20px}
+    .lead{font-size:18px}
+    .g4,.g3,.g2{grid-template-columns:1fr}
+    .stat-row{grid-template-columns:1fr}
+    .process{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .process .step{padding:15px 9px}
+    .footer{position:relative;left:auto;right:auto;bottom:auto;margin-top:28px;gap:12px;align-items:flex-start;flex-wrap:wrap}
+    .hero-meta{gap:8px}
+    .pill{font-size:12px;padding:8px 11px}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    table{min-width:680px}
+    .flow{gap:8px}
+    .flow .node{font-size:13px;padding:12px 14px}
+    .sitemap-tree{overflow-x:auto;white-space:pre;max-width:100%}
+    .code{max-width:100%;overflow-x:auto}
+  }
+
+  @media (max-width:600px){
+    .deck{padding:10px 8px 28px}
+    .slide{padding:30px 18px 82px;border-radius:18px}
+    .slide::before{width:240px;height:240px;top:-110px;right:-90px}
+    .topline{margin-bottom:22px}
+    .eyebrow{font-size:10px;letter-spacing:.11em;max-width:75%}
+    .slide-no{font-size:11px;white-space:nowrap}
+    h1{font-size:35px;letter-spacing:-.035em}
+    h2{font-size:29px;letter-spacing:-.025em}
+    h3{font-size:19px}
+    .lead{font-size:16px}
+    .metric{font-size:34px}
+    .stat{padding:20px}
+    .card{padding:18px;border-radius:16px}
+    .callout{padding:15px 16px}
+    .quote{font-size:25px}
+    .flow{align-items:stretch}
+    .flow .node{font-size:12px;padding:10px 12px}
+    .flow .arrow{font-size:20px;align-self:center}
+    .process{grid-template-columns:1fr 1fr}
+    .step .n{width:26px;height:26px}
+    .step b{font-size:11px}
+    .hero-meta{margin-top:22px}
+    .footer{font-size:11px;line-height:1.35}
+  }
+
+  @media (max-width:420px){
+    .slide{padding:26px 15px 78px}
+    h1{font-size:31px}
+    h2{font-size:26px}
+    .lead{font-size:15px}
+    .metric{font-size:31px}
+    .stat-row{gap:12px}
+    .process{grid-template-columns:1fr}
+    .flow{flex-direction:column;align-items:stretch}
+    .flow .arrow{text-align:center;line-height:1}
+    .flow .node{text-align:center}
+    .quote{font-size:22px}
+  }
+
+  @media print{
+    body{background:#fff}
+    .deck{width:100%;padding:0}
+    .slide{min-height:100vh;margin:0;border-radius:0;box-shadow:none}
+  }
+</style>
+</head>
+<body>
+<main class="deck">
+
+  <section class="slide dark">
+    <div class="topline">
+      <div class="eyebrow">SEO Analysis Proposal</div>
+      <div class="slide-no">01 / 16</div>
+    </div>
+    <div style="margin-top:120px;max-width:900px">
+      <div class="accent-line"></div>
+      <h1>SEO Indexation &amp;<br>Googlebot Crawl Analysis</h1>
+      <p class="lead">A focused investigation plan for isbul.net, built around the site's current Google Search Console data, sitemap structure and URL behavior.</p>
+      <div class="hero-meta">
+        <span class="pill">Prepared for isbul.net</span>
+        <span class="pill">SEO Specialist Proposal</span>
+        <span class="pill">Technical SEO + Indexation</span>
+      </div>
+    </div>
+    <div class="footer"><span>Proposal based on preliminary research</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">01 · The situation</div><div class="slide-no">02 / 16</div>
+    </div>
+    <h2>Why this needs a deeper look</h2>
+    <p class="lead">Google currently knows about a very large number of URLs, but only a small portion are indexed. The important task is to understand what those URLs actually are before making changes.</p>
+
+    <div class="stat-row">
+      <div class="stat primary">
+        <div class="metric">69.6K</div>
+        <div class="metric-label">Indexed URLs</div>
+      </div>
+      <div class="stat alert">
+        <div class="metric">299K</div>
+        <div class="metric-label">Not indexed URLs</div>
+      </div>
+      <div class="stat">
+        <div class="metric">~368.6K</div>
+        <div class="metric-label">URLs known to Google</div>
+      </div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card soft-blue">
+        <div class="mini">Current indexation rate</div>
+        <div class="metric" style="color:var(--blue)">~18.9%</div>
+        <p class="small">Only about one in five URLs known to Google is currently indexed.</p>
+      </div>
+      <div class="card">
+        <div class="mini">The real question</div>
+        <h3 style="margin-top:9px">Not every non-indexed URL is a problem.</h3>
+        <p class="small">The audit will separate valuable pages from duplicate, filtered, expired, blocked or otherwise non-indexable URLs.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Working question</strong>
+      Which URL types should be indexed, which should stay out of the index, and why is Google treating each group differently?
+    </div>
+    <div class="footer"><span>Preliminary GSC review completed before proposal</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">02 · GSC snapshot</div><div class="slide-no">03 / 16</div>
+    </div>
+    <h2>Google is reporting several different exclusion signals</h2>
+    <p class="lead">The non-indexed total is not one single technical problem. GSC is showing several distinct categories that need to be connected to the site's actual URL structure.</p>
+
+    <div class="grid g2">
+      <div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Crawled - currently not indexed</span><span>90,217</span></div>
+          <div class="bar"><div class="fill" style="width:100%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Page with redirect</span><span>79,786</span></div>
+          <div class="bar"><div class="fill" style="width:88.5%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Excluded by noindex</span><span>50,165</span></div>
+          <div class="bar"><div class="fill" style="width:55.6%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Not found (404)</span><span>41,743</span></div>
+          <div class="bar"><div class="fill" style="width:46.3%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Blocked by robots.txt</span><span>26,435</span></div>
+          <div class="bar"><div class="fill" style="width:29.3%"></div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Discovered - currently not indexed</span><span>7,017</span></div>
+          <div class="bar"><div class="fill" style="width:7.8%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Duplicate, Google chose different canonical</span><span>1,475</span></div>
+          <div class="bar"><div class="fill" style="width:1.6%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Duplicate without user-selected canonical</span><span>1,229</span></div>
+          <div class="bar"><div class="fill" style="width:1.4%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Server error (5xx)</span><span>426</span></div>
+          <div class="bar"><div class="fill" style="width:.5%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-head"><span>Alternate page with proper canonical</span><span>396</span></div>
+          <div class="bar"><div class="fill" style="width:.44%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:34px">
+      <strong>What this suggests</strong>
+      There are signs of URL duplication, filtering, redirects, crawl management, missing pages and server errors. The full job will determine which of these are expected and which are hurting valuable pages.
+    </div>
+    <div class="footer"><span>GSC overview supplied in the preliminary review</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">03 · URL patterns</div><div class="slide-no">04 / 16</div>
+    </div>
+    <h2>Several URL families are repeatedly involved</h2>
+    <p class="lead">The URL samples reviewed so far point to a few major sections that deserve focused investigation.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>URL Pattern</th><th>Meaning</th><th>Observed GSC Issues</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>/is-ilani/</strong></td><td>Job Posting</td><td>404, robots.txt, duplicate / canonical</td></tr>
+          <tr><td><strong>/is-ilanlari/</strong></td><td>Job Listings</td><td>Redirect, noindex, robots.txt, duplicate</td></tr>
+          <tr><td><strong>/firma/</strong></td><td>Companies</td><td>Crawled / discovered but not indexed</td></tr>
+          <tr><td><strong>/pozisyonlar/</strong></td><td>Job Positions</td><td>Crawled / discovered / noindex</td></tr>
+          <tr><td><strong>/bolum/</strong></td><td>Departments</td><td>Crawled but not indexed</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid g2" style="margin-top:24px">
+      <div class="card soft-amber">
+        <div class="mini">Filter examples</div>
+        <div class="code" style="margin-top:10px">
+?experience-levels=deneyimsiz<br>
+?work-preferences=uzaktan<br>
+?work-preferences=uzaktan,hibrit
+        </div>
+        <p style="margin-top:12px" class="small">These combinations may create many URL variations. The audit will identify which combinations have search value and which should stay out of the index.</p>
+      </div>
+      <div class="card soft-blue">
+        <div class="mini">Investigation model</div>
+        <h3 style="margin-top:9px">URL → Crawl → Index</h3>
+        <p class="small">For each important family, the analysis will connect the actual URL, its technical signals, Googlebot activity, sitemap status and GSC outcome.</p>
+        <div class="flow">
+          <span class="node">URL</span><span class="arrow">→</span>
+          <span class="node">Crawled?</span><span class="arrow">→</span>
+          <span class="node">Indexed?</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>URL patterns identified during preliminary GSC review</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">04 · Sitemap</div><div class="slide-no">05 / 16</div>
+    </div>
+    <h2>The sitemap and Google's URL discovery are very different in scale</h2>
+    <p class="lead">The current XML sitemap contains about 40K URLs, while GSC reports about 368.6K URLs known to Google.</p>
+
+    <div class="stat-row">
+      <div class="stat primary"><div class="metric">40,279</div><div class="metric-label">URLs in current XML sitemap</div></div>
+      <div class="stat"><div class="metric">~368.6K</div><div class="metric-label">URLs known to Google</div></div>
+      <div class="stat alert"><div class="metric">~328K</div><div class="metric-label">Difference to investigate</div></div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="mini">Current sitemap structure</div>
+        <div class="sitemap-tree" style="margin-top:10px">sitemap.xml
+├── main.xml ........................ 16,652
+├── adverts_listing.xml ............... 628
+├── adverts_details.xml
+│   └── adverts_details_1.xml ......... 350
+├── companies_index.xml
+│   ├── companies_1.xml ............. 19,898
+│   └── companies_2.xml ............... 995
+└── blog.xml ........................ 1,756
+
+TOTAL .............................. 40,279</div>
+      </div>
+      <div class="card soft-red">
+        <div class="mini">Key question</div>
+        <h3 style="margin-top:9px">Where do the other URLs come from?</h3>
+        <div class="checklist">
+          <div class="check"><span class="dot">✓</span><span>Database / CMS-generated URLs</span></div>
+          <div class="check"><span class="dot">✓</span><span>Filter and parameter combinations</span></div>
+          <div class="check"><span class="dot">✓</span><span>Legacy or expired URLs</span></div>
+          <div class="check"><span class="dot">✓</span><span>Internal links outside the sitemap</span></div>
+          <div class="check"><span class="dot">✓</span><span>URLs discovered from external links</span></div>
+        </div>
+        <p style="margin-top:16px" class="small">The full URL inventory will establish which of these are real, intentional and worth indexing.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Initial sitemap count completed during preliminary research</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide dark">
+    <div class="topline">
+      <div class="eyebrow">05 · Googlebot</div><div class="slide-no">06 / 16</div>
+    </div>
+    <h2>Server logs will show what Google actually crawls</h2>
+    <p class="lead">GSC tells us what Google reports about indexation. Server or CDN logs can show which URLs Googlebot is actually requesting and how often.</p>
+
+    <div class="grid g2" style="margin-top:34px">
+      <div class="card">
+        <div class="mini">Data requested</div>
+        <div class="checklist">
+          <div class="check"><span class="dot">✓</span><span>Date and time</span></div>
+          <div class="check"><span class="dot">✓</span><span>Requested URL</span></div>
+          <div class="check"><span class="dot">✓</span><span>User-agent</span></div>
+          <div class="check"><span class="dot">✓</span><span>HTTP status</span></div>
+          <div class="check"><span class="dot">✓</span><span>Response time</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="mini">Questions answered</div>
+        <div class="checklist">
+          <div class="check"><span class="dot">✓</span><span>Which sections Googlebot crawls most?</span></div>
+          <div class="check"><span class="dot">✓</span><span>Which sections it rarely reaches?</span></div>
+          <div class="check"><span class="dot">✓</span><span>How much crawl activity goes to filters or redirects?</span></div>
+          <div class="check"><span class="dot">✓</span><span>How often does Googlebot hit 404 / 5xx URLs?</span></div>
+          <div class="check"><span class="dot">✓</span><span>Are important pages being crawled enough?</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,255,255,.08);border-left-color:#8ed7ff;margin-top:30px">
+      <strong style="color:white">Example of the end result</strong>
+      <span style="color:rgba(255,255,255,.8)">If filter URLs receive hundreds of thousands of Googlebot requests while important company or position pages receive very few, the crawl data gives us evidence to fix the URL and internal-link structure.</span>
+    </div>
+    <div class="footer"><span>Target log window: approximately 30 days</span><span>isbul.net</span></div>
+  </section>
+
+<section class="slide">
+  <div class="topline">
+    <div class="eyebrow">06 · API setup</div>
+    <div class="slide-no">07 / 16</div>
+  </div>
+
+  <h2>Google Search Console API Setup</h2>
+
+  <p class="lead">
+    The Google Search Console API will be used to collect and analyze search and indexation data at scale,
+    reducing manual checks and making the analysis repeatable.
+  </p>
+
+  <div class="flow" style="margin-top:34px">
+    <span class="node">Google Search Console</span>
+    <span class="arrow">→</span>
+    <span class="node">Google Cloud Project</span>
+    <span class="arrow">→</span>
+    <span class="node">OAuth Authorization</span>
+    <span class="arrow">→</span>
+    <span class="node">Search Console API</span>
+  </div>
+
+  <div class="grid g2" style="margin-top:30px">
+
+    <div class="card soft-blue">
+      <div class="mini">URL Inspection API</div>
+      <h3 style="margin-top:9px">Indexation Data</h3>
+      <p class="small">
+        Used to inspect selected URLs and collect Google's reported index status,
+        canonical information and other URL-level indexation signals.
+      </p>
+    </div>
+
+    <div class="card soft-green">
+      <div class="mini">Search Analytics API</div>
+      <h3 style="margin-top:9px">Search Performance</h3>
+      <p class="small">
+        Used to analyze clicks, impressions, queries, pages and search visibility
+        for different URL groups.
+      </p>
+    </div>
+
+    <div class="card soft-amber">
+      <div class="mini">Sitemaps</div>
+      <h3 style="margin-top:9px">Sitemap Data</h3>
+      <p class="small">
+        Used to review submitted sitemap information and compare sitemap coverage
+        with the site's wider URL inventory.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="mini">Sites API</div>
+      <h3 style="margin-top:9px">Property Information</h3>
+      <p class="small">
+        Used to work with the verified Search Console property and its available
+        Search Console data.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="callout">
+    <strong>How this helps the job</strong>
+    API access will allow selected URL groups to be analyzed systematically instead of relying only on
+    manual GSC screenshots and individual checks.
+  </div>
+
+  <div class="footer">
+    <span>Google Search Console API will support the deeper analysis</span>
+    <span>isbul.net</span>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="topline">
+    <div class="eyebrow">07 · API limitations</div>
+    <div class="slide-no">08 / 16</div>
+  </div>
+
+  <h2>URL Inspection API Has a Fixed Daily Limit</h2>
+
+  <p class="lead">
+    The URL Inspection API is useful for URL-level verification, but it is not designed
+    to inspect an entire 368K+ URL website one URL at a time.
+  </p>
+
+  <div class="stat-row">
+
+    <div class="stat primary">
+      <div class="metric">2,000</div>
+      <div class="metric-label">
+        URL inspections per day per Search Console property
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="metric">600</div>
+      <div class="metric-label">
+        URL inspections per minute per Search Console property
+      </div>
+    </div>
+
+    <div class="stat alert">
+      <div class="metric">368.6K+</div>
+      <div class="metric-label">
+        URLs known to Google on isbul.net
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid g2" style="margin-top:30px">
+
+    <div class="card soft-red">
+      <div class="mini">What I will not do</div>
+      <h3 style="margin-top:9px">Inspect every URL blindly</h3>
+      <p class="small">
+        The daily API limit makes a full URL-by-URL inspection inefficient and unnecessary.
+        Randomly spending the quota would not produce a useful diagnosis.
+      </p>
+    </div>
+
+    <div class="card soft-blue">
+      <div class="mini">What I will do</div>
+      <h3 style="margin-top:9px">Inspect representative URL groups</h3>
+      <p class="small">
+        I will use the API on carefully selected URLs from each major page type and
+        each important GSC issue so the results reveal patterns.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="card" style="margin-top:24px">
+
+    <div class="mini">Example sampling approach</div>
+
+    <div class="table-wrap" style="margin-top:12px">
+      <table>
+        <thead>
+          <tr>
+            <th>URL Group</th>
+            <th>Inspection Focus</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><strong>/is-ilani/</strong></td>
+            <td>Representative job URLs, duplicate cases, 404 and robots cases</td>
+          </tr>
+
+          <tr>
+            <td><strong>/is-ilanlari/</strong></td>
+            <td>Location, category, filter and redirect variations</td>
+          </tr>
+
+          <tr>
+            <td><strong>/firma/</strong></td>
+            <td>Company pages with different indexation outcomes</td>
+          </tr>
+
+          <tr>
+            <td><strong>/pozisyonlar/</strong></td>
+            <td>Position pages showing crawled / discovered / noindex states</td>
+          </tr>
+
+          <tr>
+            <td><strong>/bolum/</strong></td>
+            <td>Department pages with different crawl and indexation behavior</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="callout">
+    <strong>The purpose of sampling</strong>
+    The API will be used to identify repeatable patterns across URL families,
+    while the complete site analysis will also use GSC reports, sitemap data,
+    URL inventory and server logs.
+  </div>
+
+  <div class="footer">
+    <span>API quota will be used selectively rather than randomly</span>
+    <span>isbul.net</span>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="topline">
+    <div class="eyebrow">08 · Data sources</div>
+    <div class="slide-no">09 / 16</div>
+  </div>
+
+  <h2>No Single API Can Explain the Whole Problem</h2>
+
+  <p class="lead">
+    Each data source answers a different question. The value comes from combining them
+    and comparing the results.
+  </p>
+
+  <div class="grid g2" style="margin-top:30px">
+
+    <div class="card soft-blue">
+      <div class="mini">URL Inspection API</div>
+      <h3 style="margin-top:9px">What does Google say about this URL?</h3>
+      <p class="small">
+        Used for selected URL-level indexation checks, including Google's reported
+        index status and canonical information.
+      </p>
+    </div>
+
+    <div class="card soft-green">
+      <div class="mini">Search Analytics API</div>
+      <h3 style="margin-top:9px">Does this URL receive search visibility?</h3>
+      <p class="small">
+        Used to analyze clicks, impressions, queries and pages that actually appear
+        in Google Search performance data.
+      </p>
+    </div>
+
+    <div class="card soft-amber">
+      <div class="mini">Sitemap Data</div>
+      <h3 style="margin-top:9px">Which URLs are intentionally submitted?</h3>
+      <p class="small">
+        Used to compare the site's intended indexable URL set with the URLs Google
+        has discovered.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="mini">Server / CDN Logs</div>
+      <h3 style="margin-top:9px">What is Googlebot actually crawling?</h3>
+      <p class="small">
+        Used to measure crawl activity, request frequency, response codes and
+        the sections receiving Google's attention.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="flow" style="margin-top:34px;justify-content:center">
+    <span class="node">URL Inventory</span>
+    <span class="arrow">+</span>
+    <span class="node">GSC APIs</span>
+    <span class="arrow">+</span>
+    <span class="node">Sitemaps</span>
+    <span class="arrow">+</span>
+    <span class="node">Server Logs</span>
+    <span class="arrow">=</span>
+    <span class="node">Indexation Diagnosis</span>
+  </div>
+
+  <div class="callout" style="margin-top:34px">
+    <strong>Search Analytics API limitation</strong>
+    Search Analytics is valuable for search-performance analysis, but it should not be treated as a
+    complete index inventory. The full diagnosis therefore combines API data with the actual URL inventory,
+    GSC indexation reports, sitemap data and Googlebot logs.
+  </div>
+
+  <div class="quote" style="margin-top:38px;font-size:29px">
+    The goal is to connect discovery, crawling, indexing and search visibility into one picture.
+  </div>
+
+  <div class="footer">
+    <span>Multiple data sources will be cross-checked</span>
+    <span>isbul.net</span>
+  </div>
+</section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">06 · Category analysis</div><div class="slide-no">10 / 16</div>
+    </div>
+    <h2>Every major URL type will be measured separately</h2>
+    <p class="lead">The site should not be judged by one overall indexation percentage. The useful answer comes from comparing page types.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Page Type</th><th class="num">Total</th><th class="num">Googlebot Crawls</th><th class="num">Indexed</th><th class="num">Not Indexed</th><th class="num">Index Rate</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Job Posts</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+          <tr><td>Job Listings</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+          <tr><td>Companies</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+          <tr><td>Positions</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+          <tr><td>Departments</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+          <tr><td>Filters / Parameters</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid g3" style="margin-top:24px">
+      <div class="card soft-blue">
+        <h3>High crawl + low index</h3>
+        <p class="small">Could indicate low-value content, duplication, weak uniqueness or poor canonical signals.</p>
+      </div>
+      <div class="card soft-amber">
+        <h3>Low crawl + valuable pages</h3>
+        <p class="small">Could point to weak discovery, internal-link gaps, sitemap gaps or crawl prioritization issues.</p>
+      </div>
+      <div class="card soft-green">
+        <h3>High crawl + high index</h3>
+        <p class="small">Shows the page types Google understands and considers useful, giving us a reference for the rest of the site.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Final values will come from URL inventory, GSC data and server logs</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">07 · Technical investigation</div><div class="slide-no">11 / 16</div>
+    </div>
+    <h2>The audit will trace real URLs, not just list issues</h2>
+    <p class="lead">Each major finding will be checked across the URL, HTTP response, canonical, robots, sitemap, internal links and Googlebot behavior.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="phase-tag">Example</div>
+        <h3>Duplicate / canonical URL</h3>
+        <p>Suppose GSC reports a URL such as:</p>
+        <div class="code">/is-ilanlari/example-position</div>
+        <p style="margin-top:12px">The analysis will check:</p>
+        <div class="checklist">
+          <div class="check"><span class="dot">1</span><span>HTTP response: 200, 301, 302, 404, 5xx</span></div>
+          <div class="check"><span class="dot">2</span><span>Canonical target</span></div>
+          <div class="check"><span class="dot">3</span><span>Internal links pointing to it</span></div>
+          <div class="check"><span class="dot">4</span><span>Sitemap inclusion</span></div>
+          <div class="check"><span class="dot">5</span><span>Googlebot request frequency</span></div>
+          <div class="check"><span class="dot">6</span><span>Redirect destination relevance</span></div>
+        </div>
+      </div>
+
+      <div class="card soft-blue">
+        <div class="phase-tag">Decision</div>
+        <h3>The URL then gets a clear treatment</h3>
+        <p>Based on the evidence, the recommendation can be different for different URL groups.</p>
+        <div class="flow" style="margin-top:16px">
+          <span class="node">Keep</span>
+          <span class="node">Canonicalize</span>
+          <span class="node">Redirect</span>
+          <span class="node">Noindex</span>
+          <span class="node">Block</span>
+          <span class="node">Remove</span>
+        </div>
+        <div class="callout" style="margin-top:20px">
+          <strong>Why this matters</strong>
+          A redirect, noindex or robots.txt rule is not automatically wrong. The right decision depends on the page's purpose and how Google is reaching it.
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g3" style="margin-top:20px">
+      <div class="card"><h3>URL architecture</h3><p class="small">Duplicate paths, filters, parameters, legacy URLs and URL combinations.</p></div>
+      <div class="card"><h3>Indexation signals</h3><p class="small">Canonical, noindex, robots.txt, sitemap and HTTP status alignment.</p></div>
+      <div class="card"><h3>Internal links</h3><p class="small">Important pages, orphan pages and links leading to low-value URL variants.</p></div>
+    </div>
+    <div class="footer"><span>Example investigation model shown for proposal purposes</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">08 · Competitor comparison</div><div class="slide-no">12 / 16</div>
+    </div>
+    <h2>Compare isbul.net with large Turkish job platforms</h2>
+    <p class="lead">Kariyer.net and Eleman.net will be used as structural references to see how large job websites expose useful pages to Google while managing large numbers of URL variations.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="mini">Kariyer.net</div>
+        <h3 style="margin-top:9px">Page-type &amp; taxonomy reference</h3>
+        <p class="small">Review job listings, location and sector structures, career content, internal links and indexable page families.</p>
+      </div>
+      <div class="card">
+        <div class="mini">Eleman.net</div>
+        <h3 style="margin-top:9px">Large-scale URL handling reference</h3>
+        <p class="small">Review city, position, department, sector and job-type structures and how these are presented to search engines.</p>
+      </div>
+    </div>
+
+    <div class="card soft-blue" style="margin-top:24px">
+      <div class="mini">Comparison framework</div>
+      <div class="grid g4" style="margin-top:12px">
+        <div><h3 style="font-size:17px">URL architecture</h3><p class="small">How page families are organized.</p></div>
+        <div><h3 style="font-size:17px">Sitemaps</h3><p class="small">What gets deliberately submitted.</p></div>
+        <div><h3 style="font-size:17px">Internal links</h3><p class="small">How important pages are discovered.</p></div>
+        <div><h3 style="font-size:17px">Filters</h3><p class="small">How URL combinations are controlled.</p></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Goal</strong>
+      Learn which page types are treated as SEO landing pages, which combinations are kept out of the index, and what structural differences may explain stronger indexation.
+    </div>
+    <div class="footer"><span>Competitor comparison is part of the deeper job phase</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">09 · Work already completed</div><div class="slide-no">13 / 16</div>
+    </div>
+    <h2>This proposal is based on real preliminary research</h2>
+    <p class="lead">The work below was completed before the full engagement so the proposal could be based on the actual site situation rather than a generic SEO checklist.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="phase-tag">Completed</div>
+        <div class="checklist">
+          <div class="check"><span class="dot">✓</span><span>Reviewed the GSC indexation overview.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Recorded 69.6K indexed vs 299K not indexed.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Reviewed the main GSC exclusion categories.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Mapped recurring URL patterns from GSC samples.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Identified the main affected URL families.</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="phase-tag">Completed</div>
+        <div class="checklist">
+          <div class="check"><span class="dot">✓</span><span>Reviewed filter and parameter URL patterns.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Reviewed XML sitemap structure.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Counted approximately 40,279 sitemap URLs.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Compared sitemap scale with Google's ~368.6K known URLs.</span></div>
+          <div class="check"><span class="dot">✓</span><span>Built the framework for URL, crawl and indexation analysis.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-row" style="margin-top:30px">
+      <div class="stat"><div class="metric">GSC</div><div class="metric-label">Indexation review</div></div>
+      <div class="stat"><div class="metric">40.3K</div><div class="metric-label">Sitemap URLs counted</div></div>
+      <div class="stat primary"><div class="metric">~368.6K</div><div class="metric-label">Google-known URL scale identified</div></div>
+    </div>
+
+    <div class="callout">
+      <strong>What happens after hiring</strong>
+      The next phase turns this preliminary work into a full data set: complete URL inventory, log analysis, category-level indexation measurement and URL-by-URL technical sampling.
+    </div>
+    <div class="footer"><span>Preliminary effort already invested before engagement</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">10 · Full job scope</div><div class="slide-no">14 / 16</div>
+    </div>
+    <h2>What the full engagement will actually cover</h2>
+    <p class="lead">The job moves from broad GSC reporting to evidence-based diagnosis and a practical implementation plan.</p>
+
+    <div class="grid g2">
+      <div class="card phase-card">
+        <div class="phase-tag">Phase 1</div>
+        <h3>Complete URL inventory</h3>
+        <p>Build a categorized view of the site's URLs and page templates. Map each group to sitemap status, indexation status and technical signals.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Phase 2</div>
+        <h3>Sitemap analysis</h3>
+        <p>Compare sitemap URLs against the real URL inventory and find missing, duplicate, redirected or non-indexable entries.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Phase 3</div>
+        <h3>GSC indexation analysis</h3>
+        <p>Study the main exclusion classes and inspect representative URLs from every important page family.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Phase 4</div>
+        <h3>Googlebot log analysis</h3>
+        <p>Measure where Googlebot spends crawl activity, how often it reaches important sections and which low-value URLs consume requests.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Phase 5</div>
+        <h3>Category-level comparison</h3>
+        <p>Calculate crawl rate, index rate and exclusion patterns for job, company, position, department and filter URL types.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Phase 6</div>
+        <h3>Technical diagnosis</h3>
+        <p>Trace canonical, robots, noindex, redirects, 404, 5xx, internal links, duplication and page-quality patterns.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Phase 7</div>
+        <h3>Competitor comparison</h3>
+        <p>Compare the URL and page structures of major Turkish job platforms and identify useful differences.</p>
+      </div>
+      <div class="card phase-card">
+        <div class="phase-tag">Phase 8</div>
+        <h3>Action plan</h3>
+        <p>Turn findings into specific technical changes, examples, priorities and a clear sequence for implementation.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Full scope begins after required data and access are available</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline">
+      <div class="eyebrow">11 · Analysis process</div><div class="slide-no">15 / 16</div>
+    </div>
+    <h2>How the analysis will move from data to action</h2>
+    <p class="lead">Each stage feeds the next, so recommendations are based on evidence rather than isolated GSC warnings.</p>
+
+    <div class="process">
+      <div class="step"><div class="n">1</div><b>URL Inventory</b></div>
+      <div class="step"><div class="n">2</div><b>Sitemap</b></div>
+      <div class="step"><div class="n">3</div><b>GSC</b></div>
+      <div class="step"><div class="n">4</div><b>Googlebot Logs</b></div>
+      <div class="step"><div class="n">5</div><b>Category Analysis</b></div>
+      <div class="step"><div class="n">6</div><b>Technical Checks</b></div>
+      <div class="step"><div class="n">7</div><b>Competitors</b></div>
+      <div class="step"><div class="n">8</div><b>Action Plan</b></div>
+    </div>
+
+    <div class="grid g3" style="margin-top:34px">
+      <div class="card soft-blue">
+        <div class="mini">Input</div>
+        <h3 style="margin-top:8px">Real data</h3>
+        <p class="small">GSC, sitemap, full URL export and server/CDN logs.</p>
+      </div>
+      <div class="card soft-amber">
+        <div class="mini">Analysis</div>
+        <h3 style="margin-top:8px">Cross-check</h3>
+        <p class="small">Compare what exists, what Google discovers, what Google crawls and what Google indexes.</p>
+      </div>
+      <div class="card soft-green">
+        <div class="mini">Output</div>
+        <h3 style="margin-top:8px">Actionable findings</h3>
+        <p class="small">Specific URL groups, causes, examples and technical changes.</p>
+      </div>
+    </div>
+
+    <div class="quote" style="margin-top:52px">The goal is not to index all 299K non-indexed URLs. The goal is to identify the right indexable URL set.</div>
+    <div class="footer"><span>Evidence-led technical SEO approach</span><span>isbul.net</span></div>
+  </section>
+
+  <section class="slide green">
+    <div class="topline">
+      <div class="eyebrow">12 · Required access</div><div class="slide-no">16 / 16</div>
+    </div>
+    <h2>What I need to start the full analysis</h2>
+    <p class="lead">Most of the deeper findings depend on access to the site's real URL and crawl data.</p>
+
+    <div class="grid g2" style="margin-top:30px">
+      <div class="card">
+        <h3>Third Party SEO Tools</h3>
+        <p class="small">Screaming Frog for Audit and Analysis, SEMrush/Ahrefs for indexing and URl history verification, Log File Analyzer (Screaming Frog) for Log file Analysis.</p>
+      </div>
+      <div class="card">
+        <h3>Server / CDN logs</h3>
+        <p class="small">Approximately 30 days containing URL, timestamp, user-agent and HTTP status.</p>
+      </div>
+      <div class="card">
+        <h3>Full URL export</h3>
+        <p class="small">Database, CMS or other export of the site's known URL inventory, where available.</p>
+      </div>
+      <div class="card">
+        <h3>Google Products</h3>
+        <p class="small">Search Console API for collect page-level search data &amp; URL Inspection API for inspecting URLs by category.</p>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,255,255,.10);border-left-color:#c1f3e8;margin-top:34px">
+      <strong style="color:white">Optional supporting data</strong>
+      <span style="color:rgba(255,255,255,.82)">Cloudflare/CDN data, CMS details, recent migrations and current SEO configuration can help explain unusual crawl or URL behavior.</span>
+    </div>
+
+    <div style="margin-top:70px">
+      <div class="mini" style="color:#c3efe6">End goal</div>
+      <div class="quote">A clear explanation of what Google is crawling, what it is indexing, what it is ignoring, and what should change.</div>
+    </div>
+    <div class="footer"><span>Prepared specifically for the isbul.net opportunity</span><span>Thank you</span></div>
+  </section>
+
+</main>
+
+</body></html>
