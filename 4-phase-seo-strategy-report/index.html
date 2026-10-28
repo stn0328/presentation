@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4-Phase SEO Strategy Report | ISN Medical</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#050505',
+            slateSurface: '#0F1117',
+            slateCard: '#161922',
+            ivory: '#F8F7F3',
+            gold: '#FFC400',
+            royal: '#2563EB',
+            royalLight: '#3B82F6',
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* Custom Scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(156, 163, 175, 0.25);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FFC400;
+    }
+    /* Subtle Architectural Dot Matrix Background */
+    .bg-dot-matrix-dark {
+      background-color: #050505;
+      background-image: radial-gradient(rgba(255, 196, 0, 0.10) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .bg-dot-matrix-light {
+      background-color: #F8F7F3;
+      background-image: radial-gradient(rgba(37, 99, 235, 0.12) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    /* Smooth slide entry */
+    .stage-fade {
+      animation: stageEnter 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes stageEnter {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Laser Focus Mode dims non-hovered cards for client walkthrough */
+    body.laser-mode .walkthrough-card {
+      opacity: 0.35;
+      transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    }
+    body.laser-mode .walkthrough-card:hover,
+    body.laser-mode .walkthrough-card.laser-pinned {
+      opacity: 1;
+      transform: scale(1.01);
+      border-color: #FFC400 !important;
+      box-shadow: 0 0 0 2px rgba(255, 196, 0, 0.25), 0 20px 35px -10px rgba(0, 0, 0, 0.5);
+    }
+    mark.spotlight-hit {
+      background: #FFC400;
+      color: #050505;
+      font-weight: 700;
+      padding: 0 3px;
+      border-radius: 3px;
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-dot-matrix-dark text-ivory font-sans min-h-screen flex flex-col selection:bg-gold selection:text-obsidian transition-colors duration-300">
+
+  <!-- TOP EXECUTIVE COMMAND BAR -->
+  <header class="no-print sticky top-0 z-40 h-16 bg-obsidian/90 dark:bg-obsidian/90 bg-white/95 backdrop-blur-md border-b border-neutral-200 dark:border-white/10 px-3 sm:px-5 flex items-center justify-between gap-3">
+    
+    <!-- Left: Sidebar Toggle + Client Identity -->
+    <div class="flex items-center gap-2.5 min-w-0">
+      <button 
+        onclick="toggleSidebar()" 
+        class="p-2 rounded-xl bg-neutral-100 dark:bg-slateCard border border-neutral-300 dark:border-white/10 text-neutral-800 dark:text-ivory hover:border-gold dark:hover:border-gold transition"
+        title="Toggle Roadmap Sidebar"
+        aria-label="Toggle Roadmap Sidebar"
+      >
+        <i data-lucide="panel-left" class="w-4 h-4"></i>
+      </button>
+
+      <div class="flex items-center gap-2.5 truncate">
+        <div class="w-8 h-8 rounded-xl bg-gold text-obsidian font-display font-extrabold text-xs flex items-center justify-center shrink-0 shadow-xs">
+          ISN
+        </div>
+        <div class="truncate">
+          <div class="flex items-center gap-2">
+            <span class="font-display font-extrabold text-sm sm:text-base text-neutral-900 dark:text-white truncate">ISN Medical</span>
+            <span class="hidden md:inline-block px-2 py-0.5 text-[10px] font-mono font-bold uppercase rounded bg-royal/15 text-royal dark:bg-royal/25 dark:text-blue-300 border border-royal/30">
+              4 Phases
+            </span>
+          </div>
+          <p class="text-[11px] font-mono text-neutral-500 dark:text-neutral-400 truncate hidden sm:block">
+            4-Phase SEO Strategy Report
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center: Real-Time Deliverable Spotlight Search -->
+    <div class="flex-1 max-w-md mx-2">
+      <div class="relative flex items-center">
+        <i data-lucide="search" class="w-4 h-4 text-neutral-400 absolute left-3 pointer-events-none"></i>
+        <input 
+          id="spotlightInput"
+          type="text"
+          oninput="handleSpotlightSearch(this.value)"
+          placeholder="Spotlight search deliverables across 4 phases..."
+          class="w-full pl-9 pr-8 py-1.5 rounded-xl text-xs sm:text-sm bg-neutral-100 dark:bg-slateCard text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 border border-neutral-300 dark:border-white/10 focus:outline-none focus:border-gold dark:focus:border-gold transition"
+        />
+        <button 
+          id="clearSpotlightBtn" 
+          onclick="clearSpotlightSearch()" 
+          class="hidden absolute right-2.5 text-neutral-400 hover:text-neutral-800 dark:hover:text-white"
+          title="Clear Search"
+        >
+          <i data-lucide="x" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right: Presentation Mode Switcher, Laser Focus & Theme Toggle -->
+    <div class="flex items-center gap-1.5 sm:gap-2">
+      
+      <!-- Laser Walkthrough Focus Toggle -->
+      <button 
+        id="laserToggleBtn"
+        onclick="toggleLaserMode()"
+        class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-semibold border border-neutral-300 dark:border-white/10 bg-neutral-100 dark:bg-slateCard text-neutral-700 dark:text-neutral-300 hover:border-gold transition"
+        title="Laser Focus Mode: Dim unselected cards during live presentation"
+      >
+        <i data-lucide="crosshair" class="w-3.5 h-3.5 text-gold"></i>
+        <span>Spotlight Focus</span>
+      </button>
+
+      <!-- Deck vs Vertical Brief Mode Switcher -->
+      <div class="flex items-center bg-neutral-100 dark:bg-slateCard p-1 rounded-xl border border-neutral-300 dark:border-white/10">
+        <button 
+          id="btnDeckMode"
+          onclick="switchPresentationMode('deck')"
+          class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold transition bg-gold text-obsidian shadow-2xs"
+          title="16:9 Split-Screen Slide Deck Mode"
+        >
+          <i data-lucide="layout-panel-left" class="w-3.5 h-3.5"></i>
+          <span class="hidden md:inline">Slide Deck</span>
+        </button>
+        <button 
+          id="btnBriefMode"
+          onclick="switchPresentationMode('brief')"
+          class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold transition text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
+          title="Boardroom Vertical Brief Mode"
+        >
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+          <span class="hidden md:inline">Boardroom Brief</span>
+        </button>
+      </div>
+
+      <!-- Theme Switcher (Dark Obsidian vs Clean Medical Light) -->
+      <button 
+        onclick="toggleTheme()"
+        class="p-2 rounded-xl bg-neutral-100 dark:bg-slateCard border border-neutral-300 dark:border-white/10 text-neutral-800 dark:text-gold hover:border-gold transition"
+        title="Toggle Dark / Clean Medical Light Theme"
+        aria-label="Toggle Theme"
+      >
+        <i id="themeIcon" data-lucide="sun" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN WORKSPACE: LEFT COLLAPSIBLE ROADMAP SIDEBAR + RIGHT STAGE -->
+  <div class="flex-1 flex relative overflow-hidden">
+
+    <!-- MOBILE SIDEBAR BACKDROP -->
+    <div 
+      id="mobileSidebarOverlay" 
+      onclick="toggleSidebar(false)" 
+      class="fixed inset-0 bg-black/70 backdrop-blur-xs z-40 hidden lg:hidden"
+    ></div>
+
+    <!-- LEFT COLLAPSIBLE ROADMAP SIDEBAR -->
+    <aside 
+      id="roadmapSidebar" 
+      class="no-print fixed lg:static top-16 bottom-0 left-0 z-40 w-72 bg-white dark:bg-slateSurface border-r border-neutral-200 dark:border-white/10 flex flex-col justify-between transition-all duration-300 -translate-x-full lg:translate-x-0 shrink-0"
+    >
+      <!-- Top Roadmap Header & Slide List -->
+      <div class="p-4 overflow-y-auto space-y-5 flex-1">
+        <div class="flex items-center justify-between border-b border-neutral-200 dark:border-white/10 pb-3">
+          <div>
+            <span class="font-mono text-[10px] uppercase tracking-widest text-royal dark:text-gold font-bold block">
+              Presentation Roadmap
+            </span>
+            <h2 class="font-display font-bold text-sm text-neutral-900 dark:text-white">
+              4-Phase SEO Strategy Report
+            </h2>
+          </div>
+          <button onclick="toggleSidebar(false)" class="lg:hidden p-1.5 rounded-lg text-neutral-400 hover:text-white">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Slide Navigation Tree -->
+        <nav id="sidebarSlideTree" class="space-y-1.5">
+          <!-- Populated dynamically via JS -->
+        </nav>
+
+        <!-- Live Walkthrough Checklist Tracker -->
+        <div class="rounded-2xl bg-neutral-100 dark:bg-slateCard border border-neutral-200 dark:border-white/10 p-3.5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-[11px] font-semibold text-neutral-700 dark:text-neutral-300">
+              Walkthrough Checkpoints
+            </span>
+            <button 
+              onclick="resetWalkthroughChecks()" 
+              class="text-[11px] font-mono text-royal dark:text-gold hover:underline"
+              title="Reset all checked items"
+            >
+              Reset
+            </button>
+          </div>
+          <div class="w-full h-2 rounded-full bg-neutral-300 dark:bg-black/50 overflow-hidden">
+            <div id="walkthroughProgressBar" class="h-full bg-gold transition-all duration-300" style="width: 0%"></div>
+          </div>
+          <div class="flex items-center justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
+            <span id="walkthroughCountLabel">0 Reviewed</span>
+            <span>Interactive Client Review</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Verbatim Metadata Card -->
+      <div class="p-4 border-t border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-obsidian/60 space-y-2 text-xs">
+        <div class="flex items-center justify-between">
+          <span class="font-mono text-neutral-500 dark:text-neutral-400">Client:</span>
+          <span class="font-semibold text-neutral-900 dark:text-white">ISN Medical</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-mono text-neutral-500 dark:text-neutral-400">Strategy Report</span>
+          <a href="https://isnmedical.com/" target="_blank" rel="noopener noreferrer" class="font-mono text-royal dark:text-gold hover:underline truncate max-w-[160px]">
+            https://docs.google.com/document/d/171nKSZHL-4-keaDI_pGOLPEN5UabccQ_qo6lndANVCE/edit?usp=sharing
+          </a>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-mono text-neutral-500 dark:text-neutral-400">Strategy Duration:</span>
+          <span class="font-mono font-bold text-obsidian bg-gold px-2 py-0.5 rounded">4 Phases</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT PRESENTATION STAGE -->
+    <div class="flex-1 flex flex-col min-w-0 pb-20 lg:pb-16">
+      
+      <!-- Active Search Banner -->
+      <div id="spotlightBanner" class="hidden bg-gold text-obsidian px-4 sm:px-8 py-2.5 text-xs sm:text-sm font-semibold flex items-center justify-between shadow-md">
+        <div class="flex items-center gap-2">
+          <i data-lucide="sparkles" class="w-4 h-4 shrink-0"></i>
+          <span id="spotlightBannerText">Spotlight Filter Active</span>
+        </div>
+        <button onclick="clearSpotlightSearch()" class="px-2.5 py-1 rounded-lg bg-obsidian text-white font-mono text-xs hover:bg-neutral-800 transition">
+          Clear Filter
+        </button>
+      </div>
+
+      <!-- Main Dynamic Content Container -->
+      <main id="presentationStage" class="flex-1 px-4 sm:px-6 lg:px-10 py-6 sm:py-8 max-w-[1520px] w-full mx-auto">
+        <!-- Populated dynamically via JS -->
+      </main>
+    </div>
+  </div>
+
+  <!-- BOTTOM STICKY SLIDE DECK DOCK (Mobile + Desktop Slide Controls) -->
+  <footer id="bottomDeckDock" class="no-print fixed bottom-0 left-0 right-0 z-30 h-14 bg-white/95 dark:bg-obsidian/95 backdrop-blur-md border-t border-neutral-200 dark:border-white/10 px-3 sm:px-6 flex items-center justify-between gap-2">
+    
+    <!-- Current Slide Pill & Quick Jump Dots -->
+    <div class="flex items-center gap-3 min-w-0">
+      <span id="dockSlideBadge" class="font-mono text-xs font-bold px-2.5 py-1 rounded-lg bg-gold text-obsidian shrink-0">
+        01 / 06
+      </span>
+      <div id="dockQuickDots" class="hidden sm:flex items-center gap-1.5">
+        <!-- Populated by JS -->
+      </div>
+      <span id="dockSlideTitle" class="text-xs font-semibold text-neutral-700 dark:text-neutral-300 truncate">
+        4-Phase SEO Strategy Report
+      </span>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="flex items-center gap-2 shrink-0">
+      <span class="hidden lg:inline-block text-[11px] font-mono text-neutral-400 mr-2">
+        Arrow Keys <kbd class="px-1.5 py-0.5 rounded bg-neutral-200 dark:bg-slateCard text-neutral-800 dark:text-neutral-300 border border-neutral-300 dark:border-white/10">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-neutral-200 dark:bg-slateCard text-neutral-800 dark:text-neutral-300 border border-neutral-300 dark:border-white/10">→</kbd>
+      </span>
+      <button 
+        id="dockPrevBtn"
+        onclick="stepSlide(-1)"
+        class="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-neutral-100 dark:bg-slateCard border border-neutral-300 dark:border-white/15 text-xs font-semibold text-neutral-800 dark:text-white hover:border-gold disabled:opacity-35 disabled:pointer-events-none transition"
+      >
+        <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+        <span>Prev</span>
+      </button>
+      <button 
+        id="dockNextBtn"
+        onclick="stepSlide(1)"
+        class="flex items-center gap-1 px-3.5 py-1.5 rounded-xl bg-gold text-obsidian text-xs font-bold hover:bg-yellow-400 disabled:opacity-35 disabled:pointer-events-none transition shadow-xs"
+      >
+        <span>Next Slide</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- EXACT VERBATIM SOURCE DATA & PRESENTATION LOGIC -->
+  <script>
+    // STRICT VERBATIM SOURCE DATA - ZERO EXTRAPOLATION OR ALTERATION
+    const VERBATIM_REPORT = {
+      title: "4-Phase SEO Strategy Report",
+      client: "ISN Medical",
+      website: "https://isnmedical.com/",
+      strategyDuration: "4 Phases",
+      phases: [
+        {
+          id: "phase-1",
+          slideIndex: 1,
+          code: "Phase 1",
+          title: "Phase 1: Technical SEO",
+          objective: "Improve website crawling, indexation, performance, and technical health.",
+          icon: "cpu",
+          workstreams: [
+            {
+              number: "1",
+              title: "Technical SEO Audit",
+              icon: "scan-search",
+              bullets: [
+                "Conduct a comprehensive technical SEO audit to identify crawling, indexation, and website structure issues.",
+                "Review URL consistency, duplicate pages, broken links, redirect chains, and orphan pages.",
+                "Check mobile usability, HTTPS security, and other technical factors affecting search visibility.",
+                "Prioritize issues based on their impact on crawling, indexing, performance, and user experience."
+              ]
+            },
+            {
+              number: "2",
+              title: "SEO Tools & Rank Tracking Setup",
+              icon: "line-chart",
+              bullets: [
+                "Set up the project in Mangools or SE Ranking.",
+                "Configure the website and target location.",
+                "Add target keywords and record baseline rankings.",
+                "Configure competitor tracking where applicable."
+              ]
+            },
+            {
+              number: "3",
+              title: "WordPress SEO Plugin Optimization",
+              icon: "settings-2",
+              bullets: [
+                "Review Rank Math configuration and SEO settings.",
+                "Optimize global metadata settings.",
+                "Configure indexing rules for pages and posts.",
+                "Validate SEO settings across important website pages."
+              ]
+            },
+            {
+              number: "4",
+              title: "XML Sitemap & Robots.txt Optimization",
+              icon: "file-code-2",
+              bullets: [
+                "Review and optimize the XML sitemap and robots.txt directives.",
+                "Ensure important, indexable pages are included in the sitemap and accessible to search engines.",
+                "Exclude inappropriate or non-indexable URLs from the sitemap where necessary.",
+                "Submit the sitemap to Google Search Console and verify its processing status."
+              ]
+            },
+            {
+              number: "5",
+              title: "Website Performance & Core Web Vitals",
+              icon: "gauge",
+              bullets: [
+                "Analyze website speed and Core Web Vitals.",
+                "Identify performance issues related to images, scripts, CSS, and page loading.",
+                "Recommend and implement improvements where possible.",
+                "Validate performance after optimization."
+              ]
+            },
+            {
+              number: "6",
+              title: "Structured Data & Schema Markup",
+              icon: "braces",
+              bullets: [
+                "Audit existing structured data and identify missing or incorrect schema types.",
+                "Implement relevant schema markup based on the website's content and business.",
+                "Validate structured data and resolve implementation errors.",
+                "Verify that schema markup accurately represents the information on each page."
+              ]
+            },
+            {
+              number: "7",
+              title: "Technical Fixes & Quality Assurance",
+              icon: "shield-check",
+              bullets: [
+                "Implement prioritized technical fixes identified during the audit.",
+                "Validate crawling, indexation, redirects, canonical tags, and internal links after implementation.",
+                "Recheck mobile usability, HTTPS functionality, and technical errors.",
+                "Document completed fixes and outstanding issues."
+              ]
+            }
+          ]
+        },
+        {
+          id: "phase-2",
+          slideIndex: 2,
+          code: "Phase 2",
+          title: "Phase 2: On-Page SEO & Content Production",
+          objective: "Research, optimize, write, and publish content for important website pages.",
+          importantNote: "Privacy Policy and other legal pages must reflect the business's actual practices. The client or a qualified legal adviser should review their content.",
+          icon: "file-edit",
+          workstreams: [
+            {
+              number: "1",
+              title: "Product Pages: Research, Content Writing & Publishing",
+              icon: "package-check",
+              bullets: [
+                "Research product-specific keywords, search intent, product features, and competitor listings for all 113 product pages.",
+                "Write unique product pages content, optimize headings, and relevant internal links.",
+                "Publish optimized product content using the appropriate website theme or template.",
+                "Review product information, content quality, page formatting, and indexability."
+              ]
+            },
+            {
+              number: "2",
+              title: "Category Pages: Research, Content Writing & Publishing",
+              icon: "folder-kanban",
+              bullets: [
+                "Research category keywords, search intent, and competing category pages for all 36 pages.",
+                "Write relevant category content, optimize headings, and internal links.",
+                "Publish optimized content using the appropriate website theme or template.",
+                "Check published pages for content quality, layout, and indexability."
+              ]
+            },
+            {
+              number: "3",
+              title: "Primary Blog Pages: Research, Content Writing & Publishing",
+              icon: "book-open",
+              bullets: [
+                "Research informational keywords, audience questions, and competitor topics.",
+                "Prepare content outlines and write informative blog posts with relevant internal links.",
+                "Optimize headings, metadata, and images before publishing.",
+                "Publish using the appropriate website template and review the final pages."
+              ]
+            },
+            {
+              number: "4",
+              title: "Other Website Pages: Research, Content Writing & Publishing",
+              icon: "layout-template",
+              bullets: [
+                "Review pages such as About Us, Contact, and Privacy Policy to identify content requirements.",
+                "Write or update content, optimize relevant headings, and internal links.",
+                "Publish updates using the appropriate website theme or template.",
+                "Check content accuracy, formatting, mobile display, and functionality."
+              ]
+            }
+          ]
+        },
+        {
+          id: "phase-3",
+          slideIndex: 3,
+          code: "Phase 3",
+          title: "Phase 3: Off-Page SEO",
+          objective: "Build website authority, brand recognition, and external trust signals through relevant and credible external sources.",
+          icon: "globe-2",
+          workstreams: [
+            {
+              number: "1",
+              title: "Backlink Audit & Competitor Analysis",
+              icon: "link-2",
+              bullets: [
+                "Audit existing backlinks and assess their quality and relevance.",
+                "Review suspicious backlink patterns and potentially harmful links.",
+                "Analyze competitor backlink profiles and referring domains.",
+                "Identify backlink gaps and prioritize realistic link-building opportunities."
+              ]
+            },
+            {
+              number: "2",
+              title: "Link Building & Digital PR",
+              icon: "megaphone",
+              bullets: [
+                "Identify relevant link-building opportunities within the industry.",
+                "Conduct outreach to relevant websites, publishers, and industry resources.",
+                "Develop digital PR and media placement opportunities.",
+                "Pursue relevant editorial links and genuine industry relationships.",
+                "Monitor acquired backlinks and referring domain growth."
+              ]
+            },
+            {
+              number: "3",
+              title: "Web 2.0 Link Building",
+              icon: "layers",
+              bullets: [
+                "Identify suitable third-party publishing platforms for branded content.",
+                "Create and optimize branded profiles with consistent business information.",
+                "Publish useful, original content related to the business and its areas of expertise.",
+                "Add contextual website links naturally where relevant and permitted by platform guidelines."
+              ]
+            },
+            {
+              number: "4",
+              title: "Local Citations & Business Listings",
+              icon: "map-pin",
+              bullets: [
+                "Identify relevant local, medical, and industry directories.",
+                "Create or optimize appropriate business listings.",
+                "Maintain consistent business name, address, phone number, and website information where applicable.",
+                "Review existing citations and identify missing listing opportunities."
+              ]
+            },
+            {
+              number: "5",
+              title: "Social Profile Optimization",
+              icon: "share-2",
+              bullets: [
+                "Identify relevant social media platforms for the business.",
+                "Create or optimize business profiles with consistent branding and information.",
+                "Add website links and relevant business details.",
+                "Ensure profiles accurately represent the company and its services."
+              ]
+            },
+            {
+              number: "6",
+              title: "Google Business Profile & Reviews",
+              icon: "star",
+              bullets: [
+                "Review and optimize the Google Business Profile, where applicable.",
+                "Verify business information, categories, services, and descriptions.",
+                "Publish regular Google Business Profile posts featuring company updates, products, services, and relevant announcements.",
+                "Add suitable business photos and supporting information.",
+                "Develop a process for requesting and responding to genuine customer reviews.",
+                "Monitor profile accuracy, engagement, and local search performance."
+              ]
+            }
+          ]
+        },
+        {
+          id: "phase-4",
+          slideIndex: 4,
+          code: "Phase 4",
+          title: "Phase 4: AEO & GEO",
+          objective: "Increase ISN Medical's visibility, authority, and brand recognition across AI search engines and generative AI platforms.",
+          icon: "sparkles",
+          workstreams: [
+            {
+              number: "1",
+              title: "AI Visibility Foundation",
+              icon: "bot",
+              bullets: [
+                "AI search engine submission and indexing checks across relevant search ecosystems",
+                "AI visibility tracking setup and baseline monitoring",
+                "Educational and informational content development",
+                "Best-product listicle and product comparison content creation",
+                "Long-tail informational query targeting",
+                "People Also Ask (PAA) question targeting"
+              ]
+            },
+            {
+              number: "2",
+              title: "Authority & Trust Building",
+              icon: "award",
+              bullets: [
+                "Industry directory and relevant business listing optimization",
+                "Product review and customer feedback development",
+                "Reddit participation and relevant industry discussions",
+                "Quora question-and-answer strategy",
+                "Social profile optimization and brand information consistency",
+                "Digital PR and third-party content placement opportunities",
+                "Voice and conversational search optimization"
+              ]
+            },
+            {
+              number: "3",
+              title: "Entity Authority & AI Citations",
+              icon: "network",
+              bullets: [
+                "Entity optimization and knowledge graph signal development",
+                "Natural language processing (NLP) and semantic content optimization",
+                "Brand mentions across authoritative industry publications",
+                "Homepage authority enhancement",
+                "Product comparison content creation",
+                "AI citation tracking and competitor visibility analysis"
+              ]
+            }
+          ]
+        }
+      ],
+      overallGoal: "Build ISN Medical's presence across traditional search engines, AI search platforms, industry publications, review platforms, social networks, and relevant community websites to increase organic visibility, brand authority, qualified traffic, and recognition across search and AI-generated answers.",
+      ongoingReportingIntro: "Reporting will continue throughout all four phases to track implementation, performance, and next priorities.",
+      ongoingReportingBullets: [
+        "Monitor organic traffic, rankings, impressions, clicks, and conversions.",
+        "Track technical SEO progress and completed fixes.",
+        "Monitor product and category page optimization and content publishing.",
+        "Track backlinks, referring domains, citations, and brand mentions.",
+        "Review local SEO performance where applicable.",
+        "Monitor AEO/GEO visibility and AI citations where measurable.",
+        "Document completed tasks, pending items, and upcoming priorities."
+      ]
+    };
+
+    const SLIDE_MANIFEST = [
+      { index: 0, badge: "01", label: "Executive Cover", fullTitle: "4-Phase SEO Strategy Report", icon: "presentation" },
+      { index: 1, badge: "02", label: "Phase 1: Technical SEO", fullTitle: "Phase 1: Technical SEO", icon: "cpu" },
+      { index: 2, badge: "03", label: "Phase 2: On-Page SEO", fullTitle: "Phase 2: On-Page SEO & Content Production", icon: "file-edit" },
+      { index: 3, badge: "04", label: "Phase 3: Off-Page SEO", fullTitle: "Phase 3: Off-Page SEO", icon: "globe-2" },
+      { index: 4, badge: "05", label: "Phase 4: AEO & GEO", fullTitle: "Phase 4: AEO & GEO", icon: "sparkles" },
+      { index: 5, badge: "06", label: "Overall Goal & Reporting", fullTitle: "Overall Goal & Ongoing SEO Reporting", icon: "target" }
+    ];
+
+    // State Management
+    let currentSlide = 0;
+    let presentationMode = 'deck'; // 'deck' | 'brief'
+    let spotlightQuery = '';
+    let selectedWorkstreamPerPhase = {
+      'phase-1': 'ALL',
+      'phase-2': 'ALL',
+      'phase-3': 'ALL',
+      'phase-4': 'ALL'
+    };
+    let checkedBullets = new Set();
+    let isDarkTheme = true;
+    let isLaserActive = false;
+    let isSidebarOpenDesktop = true;
+    let isSidebarOpenMobile = false;
+
+    // Calculate total deliverable bullets for walkthrough progress bar
+    const TOTAL_DELIVERABLES = VERBATIM_REPORT.phases.reduce(
+      (acc, p) => acc + p.workstreams.reduce((wAcc, w) => wAcc + w.bullets.length, 0),
+      0
+    ) + VERBATIM_REPORT.ongoingReportingBullets.length;
+
+    function escapeRegExp(str) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function applySpotlight(text) {
+      if (!spotlightQuery.trim()) return text;
+      const safe = escapeRegExp(spotlightQuery.trim());
+      const regex = new RegExp(`(${safe})`, 'gi');
+      return text.replace(regex, '<mark class="spotlight-hit">$1</mark>');
+    }
+
+    function toggleBulletCheck(key) {
+      if (checkedBullets.has(key)) {
+        checkedBullets.delete(key);
+      } else {
+        checkedBullets.add(key);
+      }
+      updateWalkthroughProgressUI();
+      renderPresentation();
+    }
+
+    function resetWalkthroughChecks() {
+      checkedBullets.clear();
+      updateWalkthroughProgressUI();
+      renderPresentation();
+    }
+
+    function updateWalkthroughProgressUI() {
+      const count = checkedBullets.size;
+      const pct = TOTAL_DELIVERABLES > 0 ? Math.round((count / TOTAL_DELIVERABLES) * 100) : 0;
+      const bar = document.getElementById('walkthroughProgressBar');
+      const label = document.getElementById('walkthroughCountLabel');
+      if (bar) bar.style.width = `${pct}%`;
+      if (label) label.textContent = `${count} / ${TOTAL_DELIVERABLES} Reviewed`;
+    }
+
+    // Render Left Sidebar Tree & Bottom Dock Indicators
+    function renderNavigationUI() {
+      const tree = document.getElementById('sidebarSlideTree');
+      tree.innerHTML = SLIDE_MANIFEST.map(item => {
+        const active = presentationMode === 'deck' && currentSlide === item.index;
+        return `
+          <button
+            onclick="jumpToSlide(${item.index})"
+            class="w-full text-left px-3 py-2.5 rounded-xl transition flex items-center justify-between gap-2 group ${
+              active
+                ? 'bg-gold text-obsidian font-bold shadow-xs'
+                : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-white/5'
+            }"
+          >
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span class="font-mono text-xs px-1.5 py-0.5 rounded ${
+                active ? 'bg-obsidian text-gold' : 'bg-neutral-200 dark:bg-slateCard text-neutral-600 dark:text-gold'
+              }">${item.badge}</span>
+              <span class="text-xs sm:text-sm truncate">${item.label}</span>
+            </div>
+            <i data-lucide="${item.icon}" class="w-4 h-4 shrink-0 ${active ? 'text-obsidian' : 'text-neutral-400 group-hover:text-gold'}"></i>
+          </button>
+        `;
+      }).join('');
+
+      // Quick Dots in Bottom Dock
+      const dots = document.getElementById('dockQuickDots');
+      dots.innerHTML = SLIDE_MANIFEST.map(item => {
+        const active = currentSlide === item.index;
+        return `
+          <button
+            onclick="jumpToSlide(${item.index})"
+            class="h-2 rounded-full transition-all ${
+              active ? 'w-7 bg-gold' : 'w-2 bg-neutral-300 dark:bg-white/20 hover:bg-gold/60'
+            }"
+            title="${item.fullTitle}"
+            aria-label="${item.fullTitle}"
+          ></button>
+        `;
+      }).join('');
+
+      const activeMeta = SLIDE_MANIFEST[currentSlide];
+      document.getElementById('dockSlideBadge').textContent = `${activeMeta.badge} / 06`;
+      document.getElementById('dockSlideTitle').textContent = activeMeta.fullTitle;
+      document.getElementById('dockPrevBtn').disabled = currentSlide === 0;
+      document.getElementById('dockNextBtn').disabled = currentSlide === SLIDE_MANIFEST.length - 1;
+    }
+
+    // SLIDE 01: EXECUTIVE COVER & INTERACTIVE 4-PHASE ARCHITECTURE MATRIX
+    function buildCoverSlide() {
+      return `
+        <section class="stage-fade space-y-8">
+          <!-- Hero Split Banner -->
+          <div class="rounded-3xl bg-white dark:bg-slateSurface border border-neutral-200 dark:border-white/10 p-6 sm:p-10 lg:p-12 shadow-xl relative overflow-hidden">
+            <!-- Top Decorative Accent Bar -->
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-gold via-royal to-gold"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <!-- Left Column: Title & Client Identity -->
+              <div class="lg:col-span-8 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 border border-gold/40 text-amber-700 dark:text-gold font-mono text-xs font-bold">
+                  <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                  <span>Strategy Duration: ${applySpotlight(VERBATIM_REPORT.strategyDuration)}</span>
+                </div>
+
+                <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl tracking-tight text-neutral-900 dark:text-white leading-[1.06]">
+                  ${applySpotlight(VERBATIM_REPORT.title)}
+                </h1>
+
+                <div class="pt-2 flex flex-wrap items-center gap-4 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300">
+                  <div class="flex items-center gap-2 bg-neutral-100 dark:bg-slateCard px-3.5 py-2 rounded-xl border border-neutral-200 dark:border-white/10">
+                    <span class="font-mono text-neutral-400">Client:</span>
+                    <strong class="text-neutral-900 dark:text-white">${applySpotlight(VERBATIM_REPORT.client)}</strong>
+                  </div>
+                  <a 
+                    href="${VERBATIM_REPORT.website}" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-2 bg-neutral-100 dark:bg-slateCard px-3.5 py-2 rounded-xl border border-neutral-200 dark:border-white/10 hover:border-gold text-royal dark:text-gold font-mono transition"
+                  >
+                    <span>Website: ${VERBATIM_REPORT.website}</span>
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Column: Overall Goal Preview Box -->
+              <div class="lg:col-span-4 rounded-2xl bg-neutral-900 dark:bg-obsidian border border-neutral-800 dark:border-gold/30 p-5 sm:p-6 text-white space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="font-mono text-[11px] uppercase tracking-widest text-gold font-bold">Overall Goal</span>
+                  <i data-lucide="compass" class="w-4 h-4 text-gold"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-neutral-200 leading-relaxed">
+                  ${applySpotlight(VERBATIM_REPORT.overallGoal)}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4-Phase Interactive Architecture Grid -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h2 class="font-mono text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-bold">
+                Interactive 4-Phase Execution Architecture (Select a Phase to Open Split-Screen Walkthrough)
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+              ${VERBATIM_REPORT.phases.map((phase) => `
+                <div 
+                  onclick="jumpToSlide(${phase.slideIndex})"
+                  class="walkthrough-card cursor-pointer group rounded-2xl bg-white dark:bg-slateSurface border border-neutral-200 dark:border-white/10 hover:border-gold dark:hover:border-gold p-5 transition-all flex flex-col justify-between shadow-sm hover:shadow-xl"
+                >
+                  <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                      <span class="font-mono text-xs font-bold px-2.5 py-1 rounded-lg bg-gold text-obsidian">
+                        ${phase.code}
+                      </span>
+                      <div class="w-8 h-8 rounded-lg bg-neutral-100 dark:bg-slateCard flex items-center justify-center text-neutral-600 dark:text-gold group-hover:bg-gold group-hover:text-obsidian transition">
+                        <i data-lucide="${phase.icon}" class="w-4 h-4"></i>
+                      </div>
+                    </div>
+
+                    <h3 class="font-display font-bold text-lg text-neutral-900 dark:text-white group-hover:text-royal dark:group-hover:text-gold transition">
+                      ${applySpotlight(phase.title)}
+                    </h3>
+
+                    <p class="text-xs text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                      <strong class="font-mono text-[11px] uppercase text-neutral-500 dark:text-gold block mb-0.5">Objective:</strong>
+                      ${applySpotlight(phase.objective)}
+                    </p>
+                  </div>
+
+                  <div class="mt-5 pt-3 border-t border-neutral-200 dark:border-white/10 space-y-1.5">
+                    ${phase.workstreams.map(ws => `
+                      <div class="text-[11px] font-mono text-neutral-500 dark:text-neutral-400 truncate flex items-center gap-1.5">
+                        <span class="text-gold font-bold">${ws.number}.</span>
+                        <span class="truncate">${applySpotlight(ws.title)}</span>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    // SPLIT-SCREEN PHASE SLIDE BUILDER (Slides 02, 03, 04, 05)
+    function buildSplitScreenPhaseSlide(phase) {
+      const activeWS = selectedWorkstreamPerPhase[phase.id] || 'ALL';
+
+      const visibleWorkstreams = phase.workstreams.filter(ws => {
+        const matchesSelector = activeWS === 'ALL' || ws.number === activeWS;
+        if (!matchesSelector) return false;
+        if (!spotlightQuery.trim()) return true;
+        const q = spotlightQuery.toLowerCase();
+        return (
+          ws.title.toLowerCase().includes(q) ||
+          ws.bullets.some(b => b.toLowerCase().includes(q)) ||
+          phase.title.toLowerCase().includes(q) ||
+          phase.objective.toLowerCase().includes(q)
+        );
+      });
+
+      return `
+        <section id="${phase.id}" class="stage-fade grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          
+          <!-- LEFT COLUMN (4 Cols on Desktop): Sticky Phase Hero, Objective & Workstream Selector -->
+          <div class="lg:col-span-4 lg:sticky lg:top-20 space-y-4">
+            <div class="rounded-3xl bg-white dark:bg-slateSurface border border-neutral-200 dark:border-white/10 p-6 shadow-lg space-y-5">
+              
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs font-bold px-3 py-1 rounded-lg bg-gold text-obsidian">
+                  ${phase.code}
+                </span>
+                <span class="font-mono text-xs text-neutral-400">
+                  Strategy Duration: ${VERBATIM_REPORT.strategyDuration}
+                </span>
+              </div>
+
+              <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-neutral-900 dark:text-white leading-tight">
+                ${applySpotlight(phase.title)}
+              </h2>
+
+              <!-- Verbatim Objective Box -->
+              <div class="rounded-2xl bg-neutral-100 dark:bg-slateCard border-l-4 border-gold p-4 space-y-1">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-royal dark:text-gold font-bold block">
+                  Objective
+                </span>
+                <p class="text-xs sm:text-sm font-medium text-neutral-800 dark:text-neutral-200 leading-relaxed">
+                  ${applySpotlight(phase.objective)}
+                </p>
+              </div>
+
+              <!-- Interactive Workstream Selector Tabs -->
+              <div class="no-print space-y-2 pt-2 border-t border-neutral-200 dark:border-white/10">
+                <div class="flex items-center justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
+                  <span>WORKSTREAM SELECTOR</span>
+                  ${activeWS !== 'ALL' ? `
+                    <button onclick="selectWorkstream('${phase.id}', 'ALL')" class="text-royal dark:text-gold hover:underline">
+                      Show All (${phase.workstreams.length})
+                    </button>
+                  ` : ''}
+                </div>
+
+                <div class="space-y-1.5">
+                  <button
+                    onclick="selectWorkstream('${phase.id}', 'ALL')"
+                    class="w-full text-left px-3 py-2 rounded-xl text-xs font-mono font-semibold transition flex items-center justify-between ${
+                      activeWS === 'ALL'
+                        ? 'bg-gold text-obsidian font-bold'
+                        : 'bg-neutral-100 dark:bg-slateCard text-neutral-700 dark:text-neutral-300 hover:border-gold border border-transparent'
+                    }"
+                  >
+                    <span>Show All Workstreams</span>
+                    <span class="px-1.5 py-0.5 rounded text-[10px] ${activeWS === 'ALL' ? 'bg-obsidian text-gold' : 'bg-neutral-200 dark:bg-obsidian text-neutral-500'}">
+                      ${phase.workstreams.length}
+                    </span>
+                  </button>
+
+                  ${phase.workstreams.map(ws => {
+                    const isSelected = activeWS === ws.number;
+                    return `
+                      <button
+                        onclick="selectWorkstream('${phase.id}', '${ws.number}')"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition flex items-center gap-2.5 ${
+                          isSelected
+                            ? 'bg-royal text-white font-semibold shadow-xs'
+                            : 'bg-neutral-50 dark:bg-slateCard/60 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-slateCard'
+                        }"
+                      >
+                        <span class="font-mono text-[11px] font-bold ${isSelected ? 'text-gold' : 'text-royal dark:text-gold'}">
+                          ${ws.number}.
+                        </span>
+                        <span class="truncate">${ws.title}</span>
+                      </button>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            </div>
+
+            <!-- Verbatim Legal Callout Box (Strictly for Phase 2) -->
+            ${phase.importantNote ? `
+              <div class="rounded-2xl bg-amber-500/10 border-2 border-amber-500/60 p-4 sm:p-5 text-xs sm:text-sm space-y-1.5">
+                <div class="flex items-center gap-2 font-mono font-bold text-amber-600 dark:text-gold uppercase text-xs">
+                  <i data-lucide="alert-circle" class="w-4 h-4 shrink-0"></i>
+                  <span>Important</span>
+                </div>
+                <p class="text-neutral-900 dark:text-ivory leading-relaxed">
+                  <strong>Important:</strong> ${applySpotlight(phase.importantNote)}
+                </p>
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- RIGHT COLUMN (8 Cols on Desktop): Detailed Checklist Cards -->
+          <div class="lg:col-span-8 space-y-4">
+            ${visibleWorkstreams.length === 0 ? `
+              <div class="rounded-3xl bg-white dark:bg-slateSurface border border-neutral-200 dark:border-white/10 p-10 text-center">
+                <p class="font-mono text-sm text-neutral-500">No matching deliverables found in ${phase.title}.</p>
+              </div>
+            ` : `
+              <div class="grid grid-cols-1 ${visibleWorkstreams.length > 1 ? 'xl:grid-cols-2' : 'grid-cols-1'} gap-4">
+                ${visibleWorkstreams.map(ws => `
+                  <article 
+                    onclick="this.classList.toggle('laser-pinned')"
+                    class="walkthrough-card rounded-2xl bg-white dark:bg-slateSurface border border-neutral-200 dark:border-white/10 hover:border-gold/70 p-5 sm:p-6 shadow-sm transition-all flex flex-col justify-between"
+                  >
+                    <div>
+                      <!-- Workstream Header -->
+                      <div class="flex items-start justify-between gap-3 pb-3.5 mb-4 border-b border-neutral-200 dark:border-white/10">
+                        <div class="flex items-start gap-3">
+                          <span class="w-8 h-8 rounded-xl bg-gold text-obsidian font-mono font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                            ${ws.number}
+                          </span>
+                          <h3 class="font-display font-bold text-base sm:text-lg text-neutral-900 dark:text-white leading-snug">
+                            ${ ws.number }. ${ applySpotlight(ws.title) }
+                          </h3>
+                        </div>
+                        <i data-lucide="${ws.icon}" class="w-5 h-5 text-royal dark:text-gold shrink-0"></i>
+                      </div>
+
+                      <!-- Interactive Verbatim Deliverables List -->
+                      <ul class="space-y-2.5">
+                        ${ws.bullets.map((bullet, bIdx) => {
+                          const checkKey = `${phase.id}-${ws.number}-${bIdx}`;
+                          const isChecked = checkedBullets.has(checkKey);
+                          return `
+                            <li 
+                              onclick="event.stopPropagation(); toggleBulletCheck('${checkKey}')"
+                              class="group/item cursor-pointer flex items-start gap-3 p-2 rounded-xl transition ${
+                                isChecked 
+                                  ? 'bg-emerald-500/10 border border-emerald-500/30' 
+                                  : 'hover:bg-neutral-100 dark:hover:bg-white/[0.04] border border-transparent'
+                              }"
+                            >
+                              <button 
+                                type="button"
+                                class="mt-0.5 w-4 h-4 rounded flex items-center justify-center shrink-0 border transition ${
+                                  isChecked
+                                    ? 'bg-gold border-gold text-obsidian'
+                                    : 'border-neutral-400 dark:border-neutral-600 group-hover/item:border-gold'
+                                }"
+                                aria-label="Mark deliverable reviewed"
+                              >
+                                ${isChecked ? '<i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>' : ''}
+                              </button>
+                              <span class="text-xs sm:text-sm leading-relaxed ${
+                                isChecked 
+                                  ? 'line-through text-neutral-400 dark:text-neutral-500' 
+                                  : 'text-neutral-700 dark:text-neutral-200'
+                              }">
+                                ${applySpotlight(bullet)}
+                              </span>
+                            </li>
+                          `;
+                        }).join('')}
+                      </ul>
+                    </div>
+                  </article>
+                `).join('')}
+              </div>
+            `}
+          </div>
+
+        </section>
+      `;
+    }
+
+    // SLIDE 06: OVERALL GOAL & ONGOING SEO REPORTING
+    function buildGoalAndReportingSlide() {
+      return `
+        <section class="stage-fade grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          
+          <!-- Left Column: Overall Goal Card -->
+          <div class="lg:col-span-5 rounded-3xl bg-neutral-900 dark:bg-slateSurface border-2 border-gold p-6 sm:p-8 text-white shadow-xl space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-gold text-obsidian font-mono text-xs font-bold">
+              <i data-lucide="target" class="w-4 h-4"></i>
+              <span>Overall Goal</span>
+            </div>
+
+            <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white">
+              Overall Goal
+            </h2>
+
+            <p class="text-base sm:text-lg text-neutral-100 leading-relaxed font-medium">
+              ${applySpotlight(VERBATIM_REPORT.overallGoal)}
+            </p>
+
+            <div class="pt-4 border-t border-white/15 grid grid-cols-2 gap-3 text-xs font-mono">
+              <div class="bg-white/5 p-3 rounded-xl">
+                <span class="text-neutral-400 block">Client</span>
+                <strong class="text-white">${VERBATIM_REPORT.client}</strong>
+              </div>
+              <div class="bg-white/5 p-3 rounded-xl">
+                <span class="text-neutral-400 block">Strategy Duration</span>
+                <strong class="text-gold">${VERBATIM_REPORT.strategyDuration}</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Ongoing SEO Reporting Checklist -->
+          <div class="lg:col-span-7 rounded-3xl bg-white dark:bg-slateSurface border border-neutral-200 dark:border-white/10 p-6 sm:p-8 shadow-lg space-y-6">
+            <div class="space-y-2 border-b border-neutral-200 dark:border-white/10 pb-4">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs font-bold uppercase tracking-wider text-royal dark:text-gold">
+                  Continuous Performance Tracking
+                </span>
+                <i data-lucide="bar-chart-3" class="w-5 h-5 text-gold"></i>
+              </div>
+              <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-neutral-900 dark:text-white">
+                Ongoing SEO Reporting
+              </h2>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300">
+                ${applySpotlight(VERBATIM_REPORT.ongoingReportingIntro)}
+              </p>
+            </div>
+
+            <ul class="space-y-2.5">
+              ${VERBATIM_REPORT.ongoingReportingBullets.map((item, idx) => {
+                const checkKey = `reporting-${idx}`;
+                const isChecked = checkedBullets.has(checkKey);
+                return `
+                  <li 
+                    onclick="toggleBulletCheck('${checkKey}')"
+                    class="walkthrough-card cursor-pointer flex items-start gap-3.5 p-3.5 rounded-2xl border transition ${
+                      isChecked
+                        ? 'bg-emerald-500/10 border-emerald-500/30'
+                        : 'bg-neutral-50 dark:bg-slateCard border-neutral-200 dark:border-white/10 hover:border-gold'
+                    }"
+                  >
+                    <button 
+                      type="button"
+                      class="mt-0.5 w-5 h-5 rounded-md flex items-center justify-center shrink-0 border transition ${
+                        isChecked
+                          ? 'bg-gold border-gold text-obsidian'
+                          : 'border-neutral-400 dark:border-neutral-500'
+                      }"
+                    >
+                      ${isChecked ? '<i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>' : `<span class="font-mono text-[10px] font-bold">${idx + 1}</span>`}
+                    </button>
+                    <span class="text-xs sm:text-sm font-medium leading-relaxed ${
+                      isChecked
+                        ? 'line-through text-neutral-400 dark:text-neutral-500'
+                        : 'text-neutral-800 dark:text-neutral-100'
+                    }">
+                      ${applySpotlight(item)}
+                    </span>
+                  </li>
+                `;
+              }).join('')}
+            </ul>
+          </div>
+
+        </section>
+      `;
+    }
+
+    // MAIN RENDER CONTROLLER
+    function renderPresentation() {
+      const stage = document.getElementById('presentationStage');
+      const dock = document.getElementById('bottomDeckDock');
+
+      // When spotlight search is active or user is in Boardroom Brief mode, show all sections vertically
+      if (spotlightQuery.trim() !== '' || presentationMode === 'brief') {
+        dock.classList.add('hidden');
+        stage.innerHTML = `
+          <div class="space-y-12">
+            ${buildCoverSlide()}
+            ${VERBATIM_REPORT.phases.map(p => buildSplitScreenPhaseSlide(p)).join('')}
+            ${buildGoalAndReportingSlide()}
+          </div>
+        `;
+      } else {
+        dock.classList.remove('hidden');
+        if (currentSlide === 0) {
+          stage.innerHTML = buildCoverSlide();
+        } else if (currentSlide >= 1 && currentSlide <= 4) {
+          stage.innerHTML = buildSplitScreenPhaseSlide(VERBATIM_REPORT.phases[currentSlide - 1]);
+        } else {
+          stage.innerHTML = buildGoalAndReportingSlide();
+        }
+      }
+
+      renderNavigationUI();
+      lucide.createIcons();
+    }
+
+    // Navigation & Control Handlers
+    function jumpToSlide(idx) {
+      if (idx < 0 || idx >= SLIDE_MANIFEST.length) return;
+      currentSlide = idx;
+      if (presentationMode !== 'deck') {
+        switchPresentationMode('deck');
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        renderPresentation();
+      }
+      if (window.innerWidth < 1024) {
+        toggleSidebar(false);
+      }
+    }
+
+    function stepSlide(delta) {
+      const target = currentSlide + delta;
+      if (target >= 0 && target < SLIDE_MANIFEST.length) {
+        jumpToSlide(target);
+      }
+    }
+
+    function selectWorkstream(phaseId, wsNumber) {
+      selectedWorkstreamPerPhase[phaseId] = wsNumber;
+      renderPresentation();
+    }
+
+    function switchPresentationMode(mode) {
+      presentationMode = mode;
+      const deckBtn = document.getElementById('btnDeckMode');
+      const briefBtn = document.getElementById('btnBriefMode');
+
+      if (mode === 'deck') {
+        deckBtn.className = 'flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold transition bg-gold text-obsidian shadow-2xs';
+        briefBtn.className = 'flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold transition text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white';
+      } else {
+        briefBtn.className = 'flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold transition bg-gold text-obsidian shadow-2xs';
+        deckBtn.className = 'flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold transition text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white';
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      renderPresentation();
+    }
+
+    function handleSpotlightSearch(val) {
+      spotlightQuery = val;
+      const clearBtn = document.getElementById('clearSpotlightBtn');
+      const banner = document.getElementById('spotlightBanner');
+      const bannerText = document.getElementById('spotlightBannerText');
+
+      if (spotlightQuery.trim().length > 0) {
+        clearBtn.classList.remove('hidden');
+        banner.classList.remove('hidden');
+        bannerText.textContent = `Spotlight Search: Highlighting "${spotlightQuery.trim()}" across all 4 phases`;
+      } else {
+        clearBtn.classList.add('hidden');
+        banner.classList.add('hidden');
+      }
+      renderPresentation();
+    }
+
+    function clearSpotlightSearch() {
+      document.getElementById('spotlightInput').value = '';
+      handleSpotlightSearch('');
+    }
+
+    function toggleLaserMode() {
+      isLaserActive = !isLaserActive;
+      document.body.classList.toggle('laser-mode', isLaserActive);
+      const btn = document.getElementById('laserToggleBtn');
+      if (isLaserActive) {
+        btn.className = 'hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-bold border border-gold bg-gold text-obsidian transition';
+      } else {
+        btn.className = 'hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-semibold border border-neutral-300 dark:border-white/10 bg-neutral-100 dark:bg-slateCard text-neutral-700 dark:text-neutral-300 hover:border-gold transition';
+      }
+    }
+
+    function toggleTheme() {
+      isDarkTheme = !isDarkTheme;
+      const htmlEl = document.documentElement;
+      const bodyEl = document.body;
+      const iconEl = document.getElementById('themeIcon');
+
+      if (isDarkTheme) {
+        htmlEl.classList.add('dark');
+        bodyEl.classList.remove('bg-dot-matrix-light', 'text-neutral-900');
+        bodyEl.classList.add('bg-dot-matrix-dark', 'text-ivory');
+        iconEl.setAttribute('data-lucide', 'sun');
+      } else {
+        htmlEl.classList.remove('dark');
+        bodyEl.classList.remove('bg-dot-matrix-dark', 'text-ivory');
+        bodyEl.classList.add('bg-dot-matrix-light', 'text-neutral-900');
+        iconEl.setAttribute('data-lucide', 'moon');
+      }
+      lucide.createIcons();
+    }
+
+    function toggleSidebar(force) {
+      const sidebar = document.getElementById('roadmapSidebar');
+      const overlay = document.getElementById('mobileSidebarOverlay');
+
+      if (window.innerWidth >= 1024) {
+        isSidebarOpenDesktop = typeof force === 'boolean' ? force : !isSidebarOpenDesktop;
+        if (isSidebarOpenDesktop) {
+          sidebar.classList.remove('lg:w-0', 'lg:opacity-0', 'lg:overflow-hidden', 'lg:border-r-0');
+          sidebar.classList.add('lg:w-72');
+        } else {
+          sidebar.classList.remove('lg:w-72');
+          sidebar.classList.add('lg:w-0', 'lg:opacity-0', 'lg:overflow-hidden', 'lg:border-r-0');
+        }
+      } else {
+        isSidebarOpenMobile = typeof force === 'boolean' ? force : !isSidebarOpenMobile;
+        if (isSidebarOpenMobile) {
+          sidebar.classList.remove('-translate-x-full');
+          overlay.classList.remove('hidden');
+        } else {
+          sidebar.classList.add('-translate-x-full');
+          overlay.classList.add('hidden');
+        }
+      }
+    }
+
+    // Keyboard Navigation Support
+    window.addEventListener('keydown', (e) => {
+      if (document.activeElement && document.activeElement.tagName === 'INPUT') return;
+      if (presentationMode !== 'deck' || spotlightQuery.trim() !== '') return;
+      if (e.key === 'ArrowRight') stepSlide(1);
+      if (e.key === 'ArrowLeft') stepSlide(-1);
+    });
+
+    // Mobile Touch Swipe Support
+    let touchStartX = 0;
+    let touchStartY = 0;
+    window.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    window.addEventListener('touchend', (e) => {
+      if (presentationMode !== 'deck' || spotlightQuery.trim() !== '') return;
+      const dx = touchStartX - e.changedTouches[0].screenX;
+      const dy = Math.abs(touchStartY - e.changedTouches[0].screenY);
+      if (Math.abs(dx) > 75 && dy < 50) {
+        if (dx > 0) stepSlide(1);
+        else stepSlide(-1);
+      }
+    }, { passive: true });
+
+    window.onload = function () {
+      updateWalkthroughProgressUI();
+      renderPresentation();
+    };
+  </script>
+</body>
+</html>
