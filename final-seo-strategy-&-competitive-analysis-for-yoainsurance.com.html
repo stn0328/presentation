@@ -1160,34 +1160,40 @@
             <p class="small-text" style="margin-top:20px;">Insight: Established brands have localized direct searches. We need to build brand recognition through SEO momentum.</p>
         </div>
 
-        <!-- Slide 9: Website Scale & Merchant Depth -->
+    <!-- Slide 9: Website Scale & Content Depth -->
         <div class="slide">
             <h2>Website Scale &amp; Content Depth</h2>
-            <p class="slide-description">Competitors have built out index pages. Leadway and First Standard are creating specific service and category pages to target long-tail searches.</p>
+            <p class="slide-description">Competitors are building out specific service and category pages to target long-tail searches. Here is how the site structure compares.</p>
             <div class="legend">
-                <div class="legend-item"><span class="legend-color" style="background-color: var(--color-pages);"></span>Total Index Pages</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: var(--primary-color);"></span>Total Service Pages</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #ffc966;"></span>Total Category Pages</div>
             </div>
             <div class="grouped-chart-container" id="scale-chart">
                 <div class="chart-area">
                     <!-- 1. YOA Insurance -->
-                    <div class="competitor-group highlight" data-pages="14">
-                        <div class="bar-item bar-pages"><div class="bar-inner" style="height: 0%;"><span class="tooltip">14</span></div></div>
+                    <div class="competitor-group highlight" data-service="13" data-category="1">
+                        <div class="bar-item bar-service"><div class="bar-inner" style="height: 0%; background: var(--primary-color);"><span class="tooltip">13</span></div></div>
+                        <div class="bar-item bar-category"><div class="bar-inner" style="height: 0%; background: #ffc966;"><span class="tooltip">1</span></div></div>
                     </div>
                     <!-- 2. Leadway -->
-                    <div class="competitor-group" data-pages="84">
-                        <div class="bar-item bar-pages"><div class="bar-inner" style="height: 0%;"><span class="tooltip">84</span></div></div>
+                    <div class="competitor-group" data-service="70" data-category="14">
+                        <div class="bar-item bar-service"><div class="bar-inner" style="height: 0%; background: var(--primary-color);"><span class="tooltip">70</span></div></div>
+                        <div class="bar-item bar-category"><div class="bar-inner" style="height: 0%; background: #ffc966;"><span class="tooltip">14</span></div></div>
                     </div>
                     <!-- 3. AIICO -->
-                    <div class="competitor-group" data-pages="40">
-                        <div class="bar-item bar-pages"><div class="bar-inner" style="height: 0%;"><span class="tooltip">40</span></div></div>
+                    <div class="competitor-group" data-service="36" data-category="4">
+                        <div class="bar-item bar-service"><div class="bar-inner" style="height: 0%; background: var(--primary-color);"><span class="tooltip">36</span></div></div>
+                        <div class="bar-item bar-category"><div class="bar-inner" style="height: 0%; background: #ffc966;"><span class="tooltip">4</span></div></div>
                     </div>
                     <!-- 4. SIB Nig -->
-                    <div class="competitor-group" data-pages="12">
-                        <div class="bar-item bar-pages"><div class="bar-inner" style="height: 0%;"><span class="tooltip">12</span></div></div>
+                    <div class="competitor-group" data-service="8" data-category="4">
+                        <div class="bar-item bar-service"><div class="bar-inner" style="height: 0%; background: var(--primary-color);"><span class="tooltip">8</span></div></div>
+                        <div class="bar-item bar-category"><div class="bar-inner" style="height: 0%; background: #ffc966;"><span class="tooltip">4</span></div></div>
                     </div>
                     <!-- 5. First Standard -->
-                    <div class="competitor-group" data-pages="42">
-                        <div class="bar-item bar-pages"><div class="bar-inner" style="height: 0%;"><span class="tooltip">42</span></div></div>
+                    <div class="competitor-group" data-service="36" data-category="6">
+                        <div class="bar-item bar-service"><div class="bar-inner" style="height: 0%; background: var(--primary-color);"><span class="tooltip">36</span></div></div>
+                        <div class="bar-item bar-category"><div class="bar-inner" style="height: 0%; background: #ffc966;"><span class="tooltip">6</span></div></div>
                     </div>
                 </div>
                 <div class="name-row">
@@ -1655,7 +1661,7 @@
                     setTimeout(() => {
                         animateSimpleChart(slide);
                         animateGroupedChart(slide, '.grouped-chart-container:not(#scale-chart):not(#authority-chart):not(#ai-chart):not(#social-chart)', ['as', 'kw', 'traffic']);
-                        animateGroupedChart(slide, '#scale-chart', ['pages']);
+                    animateGroupedChart(slide, '#scale-chart', ['service', 'category']);
                         animateGroupedChart(slide, '#authority-chart', ['as', 'backlinks', 'domains']);
                         animateGroupedChart(slide, '#ai-chart', ['aiv', 'men', 'cpt', 'aio', 'aim', 'gem']);
                         animateGroupedChart(slide, '#social-chart', ['fb', 'ig', 'li', 'tt']);
