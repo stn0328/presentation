@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Accu-Chek Online Sales: Paid Media Strategy | ISN Medical</title>
+<meta name="description" content="Paid media strategy for ISN Medical, prepared by Pedicel Marketing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1F4F;
+    --blue:#1546A8;
+    --blue-soft:#DCE6F7;
+    --red:#E1251B;
+    --red-soft:#FDE4E2;
+    --ink:#13203D;
+    --muted:#55617A;
+    --mist:#F1F4FA;
+    --line:#D6DDEA;
+    --white:#FFFFFF;
+    --font:"Maison Neue","Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    --pad-x:clamp(1.25rem,5vw,4.5rem);
+    --pad-y:clamp(3.5rem,8vh,5.5rem);
+    --maxw:1120px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-snap-type:y proximity;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--font);color:var(--ink);background:var(--white);font-size:clamp(1rem,0.95rem + 0.25vw,1.125rem);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue);text-underline-offset:3px}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+  h1,h2,h3{margin:0;line-height:1.12;letter-spacing:-0.015em}
+  p{margin:0 0 1rem}
+  ul,ol{margin:0;padding-left:1.2rem}
+  li{margin:0 0 .45rem}
+  li::marker{color:var(--red)}
+
+  /* ---------- Slides ---------- */
+  .slide{
+    min-height:100vh;min-height:100svh;
+    scroll-snap-align:start;
+    display:flex;align-items:center;
+    padding:var(--pad-y) var(--pad-x);
+    padding-right:calc(var(--pad-x) + 2.5rem);
+    position:relative;
+  }
+  .slide:nth-of-type(even){background:var(--mist)}
+  .inner{width:100%;max-width:var(--maxw);margin:0 auto}
+  .head{display:flex;align-items:baseline;gap:clamp(.8rem,2vw,1.4rem);margin-bottom:clamp(1.5rem,4vh,2.5rem);padding-bottom:1rem;border-bottom:2px solid var(--ink)}
+  .num{font-weight:800;font-size:clamp(2.4rem,1.6rem + 3vw,4.2rem);color:var(--red);line-height:.9;font-variant-numeric:tabular-nums;min-width:1.2ch}
+  .head h2{font-size:clamp(1.6rem,1.2rem + 1.8vw,2.6rem);font-weight:700}
+  .head .sub{display:block;font-size:clamp(1rem,.9rem + .4vw,1.2rem);font-weight:500;color:var(--muted);margin-top:.35rem;letter-spacing:0}
+  h3{font-size:clamp(1.1rem,1rem + .45vw,1.35rem);font-weight:700;margin:0 0 .8rem;color:var(--navy)}
+  .note{font-size:.9rem;color:var(--muted);font-style:italic;margin-top:.75rem}
+  .lead{font-size:clamp(1.05rem,1rem + .35vw,1.25rem);max-width:68ch}
+
+  /* ---------- Cover ---------- */
+  .cover{background:var(--navy)!important;color:var(--white);overflow:hidden}
+  .cover .inner{display:grid;gap:clamp(2rem,6vh,3.5rem)}
+  .cover-brand{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-weight:600;font-size:.95rem;color:#C9D5F0}
+  .cover-brand strong{color:var(--white);font-weight:700}
+  .cover-title{position:relative;padding-left:clamp(1.1rem,2.5vw,1.8rem)}
+  .cover-title::before{content:"";position:absolute;left:0;top:.1em;bottom:.1em;width:clamp(6px,.8vw,10px);background:var(--red);border-radius:2px;transform-origin:top;animation:grow 900ms cubic-bezier(.2,.7,.2,1) both}
+  @keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  .cover h1{font-size:clamp(2.3rem,1.3rem + 5vw,5.2rem);font-weight:800;line-height:1.02;letter-spacing:-0.03em;max-width:14ch}
+  .cover h1 span{display:block;color:#9FB6EA;font-weight:600}
+  .meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.18);border-radius:10px;overflow:hidden}
+  .meta div{background:var(--navy);padding:1rem 1.1rem}
+  .meta dt{font-size:.85rem;color:#9FB6EA;margin-bottom:.25rem}
+  .meta dd{margin:0;font-weight:600}
+  .cover .src{font-size:.9rem;color:#C9D5F0}
+  .cover .src a{color:var(--white)}
+  .scroll-hint{font-size:.9rem;color:#9FB6EA}
+
+  /* ---------- Purpose ---------- */
+  .two{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+  .covers li{margin-bottom:.35rem}
+  .facts{display:grid;gap:.75rem}
+  .fact{background:var(--white);border-left:5px solid var(--blue);padding:1rem 1.2rem;border-radius:0 8px 8px 0}
+  .slide:nth-of-type(odd) .fact{background:var(--mist)}
+  .fact b{display:block;color:var(--blue);margin-bottom:.2rem}
+  .callout{margin-top:1.5rem;padding:1rem 1.2rem;background:var(--red-soft);border-radius:8px;color:var(--ink)}
+
+  /* ---------- One-page strategy ---------- */
+  .dlgrid{display:grid;grid-template-columns:minmax(150px,220px) 1fr;border-top:1px solid var(--line)}
+  .dlgrid dt,.dlgrid dd{margin:0;padding:1rem 0;border-bottom:1px solid var(--line)}
+  .dlgrid dt{font-weight:700;color:var(--navy);padding-right:1.5rem}
+  .dlgrid dt:first-of-type{color:var(--red)}
+  .dlgrid dd:first-of-type{font-size:1.1em;font-weight:600}
+
+  /* ---------- Tables ---------- */
+  .rt{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:.95em}
+  .rt th,.rt td{text-align:left;vertical-align:top;padding:.85rem 1rem;border-bottom:1px solid var(--line)}
+  .rt th{background:var(--navy);color:var(--white);font-weight:600;font-size:.9rem}
+  .rt tbody tr:last-child td{border-bottom:0}
+  .rt td:first-child{font-weight:700;color:var(--navy)}
+  .rt .tag{display:inline-block;font-size:.8rem;font-weight:600;color:var(--red);background:var(--red-soft);padding:.1rem .5rem;border-radius:999px;margin-left:.3rem;white-space:nowrap}
+  .rt .kw{color:var(--ink)}
+
+  /* ---------- Keyword bars ---------- */
+  .bars{list-style:none;padding:0;margin:0;display:grid;gap:.55rem}
+  .bars li{display:grid;grid-template-columns:minmax(0,15rem) 1fr 3.6rem;gap:.9rem;align-items:center;margin:0}
+  .bars .k{font-size:.95rem}
+  .bars .track{height:14px;background:var(--blue-soft);border-radius:999px;overflow:hidden}
+  .bars .fill{height:100%;width:var(--w);background:var(--blue);border-radius:999px}
+  .bars li:first-child .fill{background:var(--red)}
+  .bars .v{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+  .stack{display:grid;gap:1.25rem}
+  .demand ul{margin-bottom:1.5rem}
+
+  /* ---------- Lists ---------- */
+  .steps{list-style:none;padding:0;margin:0;counter-reset:s;display:grid;gap:.9rem}
+  .steps>li{counter-increment:s;position:relative;padding:1.1rem 1.2rem 1.1rem 3.6rem;background:var(--white);border:1px solid var(--line);border-radius:10px;margin:0}
+  .slide:nth-of-type(even) .steps>li{background:var(--white)}
+  .steps>li::before{content:counter(s);position:absolute;left:1.1rem;top:1rem;width:1.75rem;height:1.75rem;border-radius:50%;background:var(--red);color:var(--white);font-weight:700;display:grid;place-items:center;font-size:.9rem}
+  .steps ul{margin-top:.5rem}
+  .steps ul li{margin-bottom:.25rem}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2.5vw,1.75rem)}
+  .panel{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:clamp(1.1rem,2vw,1.6rem)}
+  .panel ul,.panel ol{margin:0}
+  .offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.5vw,1.75rem)}
+  .offer{background:var(--white);border-top:5px solid var(--blue);border-radius:0 0 10px 10px;padding:1.4rem 1.3rem;box-shadow:0 1px 0 var(--line)}
+  .offer:first-child{border-top-color:var(--red)}
+  .offer h3{margin-bottom:.5rem}
+
+  /* ---------- Split bars ---------- */
+  .split{display:flex;height:44px;border-radius:8px;overflow:hidden;font-weight:700;font-size:.9rem;color:var(--white)}
+  .split span{display:flex;align-items:center;justify-content:center;white-space:nowrap;padding:0 .4rem}
+  .split .g{background:var(--blue)}
+  .split .m{background:var(--red)}
+  .split .m2{background:#F06A62}
+  .split .m3{background:#F7A7A1;color:var(--ink)}
+  .splits{display:grid;gap:.9rem;margin:1.4rem 0}
+  .splits .row{display:grid;grid-template-columns:11rem 1fr;gap:1rem;align-items:center}
+  .splits .lbl{font-weight:600;font-size:.95rem}
+  .legend{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+  .legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+
+  /* ---------- End slide ---------- */
+  .end{background:var(--navy)!important;color:var(--white)}
+  .end h2{font-size:clamp(1.8rem,1.2rem + 2.5vw,3rem);font-weight:800;margin-bottom:1.2rem}
+  .doclink{display:inline-flex;flex-direction:column;gap:.2rem;padding:1.2rem 1.4rem;border:2px solid rgba(255,255,255,.35);border-radius:10px;color:var(--white);text-decoration:none;max-width:100%}
+  .doclink strong{font-size:1.15rem}
+  .doclink span{color:#C9D5F0;font-size:.9rem;word-break:break-all}
+  .doclink:hover{border-color:var(--white)}
+  .end .by{margin-top:2rem;color:#C9D5F0}
+
+  /* ---------- Navigation ---------- */
+  .rail{position:fixed;right:clamp(.6rem,1.5vw,1.4rem);top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;gap:.45rem;margin:0;padding:0;list-style:none}
+  .rail li{margin:0}
+  .rail button{all:unset;cursor:pointer;display:block;width:10px;height:10px;border-radius:50%;background:rgba(19,32,61,.22);transition:transform .2s,background .2s;position:relative}
+  .rail button[aria-current="true"]{background:var(--red);transform:scale(1.35)}
+  .rail button:hover{background:var(--blue)}
+  .rail button .tip{position:absolute;right:18px;top:50%;transform:translateY(-50%);white-space:nowrap;background:var(--ink);color:var(--white);font-size:.78rem;padding:.25rem .55rem;border-radius:5px;opacity:0;pointer-events:none;transition:opacity .15s}
+  .rail button:hover .tip,.rail button:focus-visible .tip{opacity:1}
+  body.on-dark .rail button{background:rgba(255,255,255,.35)}
+  body.on-dark .rail button[aria-current="true"]{background:var(--red)}
+  .progress{position:fixed;top:0;left:0;height:4px;width:0;background:var(--red);z-index:30}
+  .counter{position:fixed;left:clamp(.8rem,2vw,1.4rem);bottom:clamp(.8rem,2vh,1.2rem);z-index:20;font-size:.8rem;font-weight:600;color:var(--muted);background:rgba(255,255,255,.85);padding:.25rem .6rem;border-radius:999px;font-variant-numeric:tabular-nums}
+  body.on-dark .counter{color:var(--white);background:rgba(11,31,79,.7)}
+
+  /* ---------- Desktop fit for short screens ---------- */
+  @media (min-width:1024px) and (max-height:820px){
+    body{font-size:.98rem}
+    .rt th,.rt td{padding:.6rem .85rem}
+    .head{margin-bottom:1.2rem}
+  }
+
+  /* ---------- Tablet ---------- */
+  @media (max-width:1000px){
+    .two,.grid2{grid-template-columns:1fr}
+    .offers{grid-template-columns:1fr}
+    .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width:760px){
+    html{scroll-snap-type:none}
+    .slide{padding-right:var(--pad-x);align-items:flex-start;min-height:auto}
+    .cover,.end{min-height:100svh;align-items:center}
+    .rail{display:none}
+    .meta{grid-template-columns:1fr}
+    .dlgrid{grid-template-columns:1fr}
+    .dlgrid dt{padding:1rem 0 .2rem;border-bottom:0}
+    .dlgrid dd{padding-top:0}
+    .bars li{grid-template-columns:1fr 3.4rem;grid-template-areas:"k v" "t t";gap:.3rem .8rem}
+    .bars .k{grid-area:k}.bars .v{grid-area:v}.bars .track{grid-area:t}
+    .splits .row{grid-template-columns:1fr}
+    .split{font-size:.8rem}
+    .rt,.rt tbody,.rt tr,.rt td{display:block;width:100%}
+    .rt{border:0;background:transparent;border-radius:0}
+    .rt thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    .rt tr{background:var(--white);border:1px solid var(--line);border-radius:10px;margin-bottom:.8rem;overflow:hidden}
+    .rt td{border-bottom:1px solid var(--line);padding:.7rem 1rem}
+    .rt td:last-child{border-bottom:0}
+    .rt td::before{content:attr(data-label);display:block;font-size:.78rem;font-weight:600;color:var(--muted);margin-bottom:.15rem}
+    .rt td:first-child{background:var(--navy);color:var(--white)}
+    .rt td:first-child::before{color:#9FB6EA}
+    .rt td:first-child .tag{background:rgba(255,255,255,.15);color:var(--white)}
+    .steps>li{padding-left:3.2rem}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .cover-title::before{animation:none}
+    *{transition:none!important}
+  }
+  @media print{
+    .rail,.progress,.counter,.scroll-hint{display:none}
+    .slide{min-height:auto;page-break-after:always;padding-right:var(--pad-x)}
+  }
+</style>
+</head>
+<body class="on-dark">
+
+<div class="progress" aria-hidden="true"></div>
+<ol class="rail" aria-label="Slides"></ol>
+<div class="counter" aria-live="polite"></div>
+
+<main>
+
+<!-- Cover -->
+<section class="slide cover" id="cover" data-title="Cover" data-dark>
+  <div class="inner">
+    <div class="cover-brand"><span>Prepared by <strong>Pedicel Marketing</strong>, Performance Marketing</span><span>Prepared for <strong>ISN Medical</strong></span></div>
+    <div class="cover-title">
+      <h1>Accu-Chek Online Sales: <span>Paid Media Strategy</span></h1>
+    </div>
+    <dl class="meta">
+      <div><dt>Prepared for</dt><dd>ISN Medical</dd></div>
+      <div><dt>Prepared by</dt><dd>Pedicel Marketing, Performance Marketing</dd></div>
+      <div><dt>Date</dt><dd>4 November 2026</dd></div>
+      <div><dt>Status</dt><dd>For client review and approval</dd></div>
+    </dl>
+    <p class="src">Source: <a href="https://docs.google.com/document/d/1j_J2W7XWyiG-bZ5mQ57Nd1N1sESZ_JjMWAV7qCblSW0/edit?usp=sharing" target="_blank" rel="noopener">Paid Media Strategy - ISN Medical</a></p>
+    <p class="scroll-hint">Scroll, or use the arrow keys, to move through the slides.</p>
+  </div>
+</section>
+
+<!-- Purpose -->
+<section class="slide" id="purpose" data-title="Purpose of this document">
+  <div class="inner">
+    <div class="head"><h2>Purpose of this document</h2></div>
+    <div class="two">
+      <div>
+        <p class="lead">This document sets out how we propose to use Google Ads and Meta Ads to grow online sales of Accu-Chek through ISN’s shop. It covers:</p>
+        <ul class="covers">
+          <li>who we will target</li>
+          <li>the job each channel does</li>
+          <li>how we will structure campaigns</li>
+          <li>what needs to be in place before we scale spend</li>
+          <li>how budget will be phased</li>
+          <li>how we will measure success</li>
+        </ul>
+        <p class="callout">Ad copy, creative concepts and asset specifications will follow in a separate ad brief once this strategy is approved.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>Objective</b>online sales of Accu-Chek through ISN’s shop</div>
+        <div class="fact"><b>Audience</b>patients and caregivers (B2C only; pharmacies and clinics are routed to a separate wholesale channel)</div>
+        <div class="fact"><b>Channels</b>Google Search (already running) and Meta (new)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1 -->
+<section class="slide" id="s1" data-title="1. The strategy on one page">
+  <div class="inner">
+    <div class="head"><span class="num">1</span><h2>The strategy on one page</h2></div>
+    <dl class="dlgrid">
+      <dt>Positioning</dt>
+      <dd>“Genuine Accu-Chek, straight from the distributor.” Every competitor sells Accu-Chek as a commodity. Only ISN can say its stock comes direct from Roche’s distributor.</dd>
+      <dt>Google’s job</dt>
+      <dd>Capture people already searching. Accu-Chek brand searches total about 3,000 a month in Nigeria, and generic “glucometer” searches about 4,900. Volume is limited, so Google wins on efficiency, not scale.</dd>
+      <dt>Meta’s job</dt>
+      <dd>Create demand, retarget site visitors and drive repeat strip orders. This is where growth will come from. Competitors on Meta are small resellers and herbal-cure sellers, so a credible brand can stand out quickly.</dd>
+      <dt>Main offer</dt>
+      <dd>A starter kit (meter, strips and lancets) for new users, and a strip refill bundle for existing users.</dd>
+      <dt>Profit driver</dt>
+      <dd>Strips. A box of 50 lasts about 7 weeks at one test a day, and under 2 weeks at four a day. The meter brings the customer in; repeat strip orders make the money.</dd>
+      <dt>Main metric</dt>
+      <dd>Return on ad spend (ROAS) from tracked Paystack purchases. Supporting metrics: cost per purchase, conversion rate, average order value and repeat rate.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- 2a -->
+<section class="slide" id="s2a" data-title="2. Where we’re starting from: demand">
+  <div class="inner">
+    <div class="head"><span class="num">2</span><h2>Where we’re starting from<span class="sub">Demand</span></h2></div>
+    <div class="two demand">
+      <div>
+        <ul>
+          <li>GA4 data for March to August 2026 shows about 1 in 4 Accu-Chek page visitors already click Buy Now, around 217 clicks.</li>
+          <li>76% of that traffic comes from Google search.</li>
+          <li>Lagos, FCT and Rivers are the leading locations.</li>
+          <li>Nigerian monthly search volumes for the core terms:</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Searches / month</h3>
+        <ul class="bars" aria-label="Nigerian monthly search volumes">
+          <li><span class="k">glucometer</span><span class="track"><span class="fill" style="--w:100%"></span></span><span class="v">3,600</span></li>
+          <li><span class="k">accu chek</span><span class="track"><span class="fill" style="--w:24.4%"></span></span><span class="v">880</span></li>
+          <li><span class="k">accu chek glucometer</span><span class="track"><span class="fill" style="--w:16.4%"></span></span><span class="v">590</span></li>
+          <li><span class="k">accu chek machine</span><span class="track"><span class="fill" style="--w:13.3%"></span></span><span class="v">480</span></li>
+          <li><span class="k">strip accu chek</span><span class="track"><span class="fill" style="--w:13.3%"></span></span><span class="v">480</span></li>
+          <li><span class="k">glucometer price in nigeria</span><span class="track"><span class="fill" style="--w:10.8%"></span></span><span class="v">390</span></li>
+          <li><span class="k">glucometer machine</span><span class="track"><span class="fill" style="--w:10.8%"></span></span><span class="v">390</span></li>
+          <li><span class="k">accu chek glucometer price in nigeria</span><span class="track"><span class="fill" style="--w:4.7%"></span></span><span class="v">170</span></li>
+          <li><span class="k">accu chek strips price in nigeria</span><span class="track"><span class="fill" style="--w:3.9%"></span></span><span class="v">140</span></li>
+          <li><span class="k">accu chek instant</span><span class="track"><span class="fill" style="--w:3.9%"></span></span><span class="v">140</span></li>
+        </ul>
+        <p class="note">Source: Ubersuggest, Nigeria. Volumes are estimates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2b -->
+<section class="slide" id="s2b" data-title="2. Competitors and their prices">
+  <div class="inner">
+    <div class="head"><span class="num">2</span><h2>Where we’re starting from<span class="sub">Competitors and their prices</span></h2></div>
+    <table class="rt">
+      <thead><tr><th scope="col">Product</th><th scope="col">Competitor prices</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Product">Instant strips (50)</td><td data-label="Competitor prices">HealthPlus ₦21,000; GoMed ₦15,900</td></tr>
+        <tr><td data-label="Product">Instant meter</td><td data-label="Competitor prices">Asset Pharmacy ₦23,400; GoMed ₦25,850</td></tr>
+        <tr><td data-label="Product">Active strips (50)</td><td data-label="Competitor prices">GoMed ₦15,000; Jumia from ₦20,000</td></tr>
+        <tr><td data-label="Product">Active meter + 50 strips</td><td data-label="Competitor prices">Jumia ₦40,000</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Prices checked on retailer websites, 4 November 2026.</p>
+    <p class="callout">On Meta, about 10 resellers are currently running ads that mention Accu-Chek. Herbal “lower your sugar” sellers are also heavily targeting the same audience. Full detail is in the competitor report we shared separately.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" id="s3" data-title="3. Before we scale spend">
+  <div class="inner">
+    <div class="head"><span class="num">3</span><h2>What needs to be in place before we scale spend</h2></div>
+    <p class="lead">These are blockers. Ads sent to a page without prices, or without purchase tracking, will waste budget.</p>
+    <ol class="steps">
+      <li><strong>Purchase tracking.</strong>
+        <ul>
+          <li>After a Paystack payment, the buyer must return to a thank-you page on isnmedical.com, and that page must record a purchase with the order value.</li>
+          <li>We will send that purchase event to GA4, Google Ads (with enhanced conversions) and Meta (Pixel plus Conversions API).</li>
+          <li>Without this, neither platform can learn who buys.</li>
+        </ul>
+      </li>
+      <li><strong>The /accu-chek/ landing page</strong>, live with: Naira prices; delivery fee and delivery time; NAFDAC numbers; the warranty; WhatsApp support.</li>
+      <li><strong>Product catalogue on Meta.</strong> The six Accu-Chek products with prices and images. This powers carousel and retargeting ads.</li>
+      <li><strong>Google Shopping check.</strong> We will confirm in Google Merchant Center whether Shopping ads are available for Nigeria. If they are, we will add a product feed. Shopping ads show the price and photo before the click, which suits these buyers.</li>
+      <li><strong>Price decision.</strong> We recommend setting ISN’s retail price at or near the recommended retail price, so ISN doesn’t undercut its 36 pharmacy partners. Competitors sell Instant strips at ₦15,900–₦21,000, so ISN needs to know exactly where it sits.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" id="s4" data-title="4. Who we’re selling to">
+  <div class="inner">
+    <div class="head"><span class="num">4</span><h2>Who we’re selling to</h2></div>
+    <table class="rt">
+      <thead><tr><th scope="col">Segment</th><th scope="col">Who they are</th><th scope="col">What they need to hear</th><th scope="col">Channel</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Segment">A. Refill buyers <span class="tag">top priority</span></td><td data-label="Who they are">Already own an Accu-Chek meter and need strips</td><td data-label="What they need to hear">Genuine strips, delivered, the right ones for their meter</td><td data-label="Channel">Google (strip searches), Meta retention</td></tr>
+        <tr><td data-label="Segment">B. First-time buyers</td><td data-label="Who they are">Newly advised to monitor at home</td><td data-label="What they need to hear">Which meter, how it works, what it costs</td><td data-label="Channel">Google (glucometer searches), Meta prospecting</td></tr>
+        <tr><td data-label="Segment">C. Caregivers</td><td data-label="Who they are">Adults aged 25–50 buying for a parent</td><td data-label="What they need to hear">Keeping a parent’s testing on track, delivered to their door</td><td data-label="Channel">Meta prospecting</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 5a -->
+<section class="slide" id="s5a" data-title="5. Google Ads: campaign structure">
+  <div class="inner">
+    <div class="head"><span class="num">5</span><h2>Google Ads plan<span class="sub">Campaign structure</span></h2></div>
+    <p class="lead">Google Search ads for Accu-Chek are already running. We will restructure the account so each campaign has one clear job and its own budget.</p>
+    <table class="rt">
+      <thead><tr><th scope="col">Campaign</th><th scope="col">Example keywords</th><th scope="col">Why</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Campaign">1. Accu-Chek brand: strips <span class="tag">top budget priority</span></td><td data-label="Example keywords" class="kw">“accu chek strips”, “strip accu chek”, “accu chek active strips”, “accu chek instant strips”, “accu chek strips price in nigeria”</td><td data-label="Why">Repeat buyers, with the highest lifetime value</td></tr>
+        <tr><td data-label="Campaign">2. Accu-Chek brand: meters</td><td data-label="Example keywords" class="kw">“accu chek glucometer”, “accu chek machine”, “accu chek instant”, “accu chek active”, “accu chek glucometer price in nigeria”</td><td data-label="Why">Starter-kit buyers</td></tr>
+        <tr><td data-label="Campaign">3. Accu-Chek brand: core and lancets</td><td data-label="Example keywords" class="kw">“accu chek”, “accu chek softclix”, “accu chek lancets”</td><td data-label="Why">Catches the broad brand term</td></tr>
+        <tr><td data-label="Campaign">4. Generic glucometer <span class="tag">new</span></td><td data-label="Example keywords" class="kw">“glucometer”, “glucometer price in nigeria”, “glucometer machine”, “glucometer and strips”, “sugar level machine”</td><td data-label="Why">The biggest search pool (3,600 a month for “glucometer” alone). Wins buyers before they pick a brand.</td></tr>
+        <tr><td data-label="Campaign">5. Competitor brands <span class="tag">test, small budget</span></td><td data-label="Example keywords" class="kw">“fine test glucometer” (320 a month), other meter brands</td><td data-label="Why">Bidding on a competitor’s name is allowed, but their trademark is never used in ad text</td></tr>
+        <tr><td data-label="Campaign">6. ISN brand protection</td><td data-label="Example keywords" class="kw">“isn medical”, “isn accu chek”</td><td data-label="Why">Low cost. Stops resellers from buying ISN’s name.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 5b -->
+<section class="slide" id="s5b" data-title="5. Google Ads: settings and checks">
+  <div class="inner">
+    <div class="head"><span class="num">5</span><h2>Google Ads plan<span class="sub">Keywords, bidding, locations and weekly checks</span></h2></div>
+    <div class="grid2">
+      <div class="panel">
+        <h3>Keyword settings</h3>
+        <ul>
+          <li><strong>Exact and phrase match</strong> for the brand campaigns.</li>
+          <li>Generic searches get more room, with the search terms report reviewed weekly.</li>
+          <li><strong>Negative keywords</strong> (searches we block): pregnancy, ovulation, urine, malaria, HIV, diagram, pictures, image, job, vacancy, PDF, India, UK, USA, Amazon.</li>
+          <li>“Wholesale” is a negative here. Those searches go to a wholesale campaign if ISN wants one.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Bidding</h3>
+        <ol>
+          <li>For the first 2–4 weeks, use <strong>Maximise conversions</strong>, optimising for purchases. If there are fewer than about 15 purchases a month, we optimise for “begin checkout” until volume builds.</li>
+          <li>Move to <strong>Target ROAS</strong> (a target return on spend) once a campaign has 30 or more purchases in 30 days.</li>
+        </ol>
+      </div>
+      <div class="panel">
+        <h3>Locations and timing</h3>
+        <ul>
+          <li>Target all of Nigeria.</li>
+          <li>Raise bids in Lagos, FCT and Rivers if those areas convert better.</li>
+          <li>Review the hour-of-day report after 4 weeks before cutting any hours.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Weekly checks</h3>
+        <ul>
+          <li>Review the search terms report and add negatives.</li>
+          <li>Check Auction Insights to see which competitors (HealthPlus, Asset Pharmacy, GoMed, Jumia) bid on ISN’s terms.</li>
+          <li>Confirm landing page URLs work, given the July URL change.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" id="s6" data-title="6. Meta Ads plan">
+  <div class="inner">
+    <div class="head"><span class="num">6</span><h2>Meta Ads plan<span class="sub">New channel</span></h2></div>
+    <div class="stack">
+      <div class="panel">
+        <h3>Account setup</h3>
+        <p>We will set up ISN’s Meta ad account and tracking before launch:</p>
+        <ul>
+          <li>verify the isnmedical.com domain</li>
+          <li>install the Pixel and Conversions API</li>
+          <li>configure the purchase event with order value</li>
+          <li>connect the product catalogue</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Campaign structure</h3>
+        <div class="split" role="img" aria-label="Budget share: M1 Prospecting about 60%, M2 Retargeting about 25%, M3 Refill and retention about 15%">
+          <span class="m" style="width:60%">M1 ~60%</span><span class="m2" style="width:25%">M2 ~25%</span><span class="m3" style="width:15%">M3 ~15%</span>
+        </div>
+        <div style="height:1rem"></div>
+        <table class="rt">
+          <thead><tr><th scope="col">Campaign</th><th scope="col">Setup</th><th scope="col">Who sees it</th><th scope="col">Budget share</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Campaign">M1. Prospecting</td><td data-label="Setup">Sales objective (Advantage+ sales campaign). Optimise for purchases. With fewer than about 50 purchases a week, we start with add-to-cart or checkout and switch later.</td><td data-label="Who sees it">Broad Nigeria, age 30–65+, weighted towards Lagos, FCT and Rivers. Meta finds the buyers; it no longer allows targeting by health condition.</td><td data-label="Budget share">~60%</td></tr>
+            <tr><td data-label="Campaign">M2. Retargeting</td><td data-label="Setup">Sales objective with catalogue (dynamic product ads)</td><td data-label="Who sees it">Accu-Chek page visitors in the last 30 days, checkout abandoners, video viewers, and Instagram and Facebook engagers</td><td data-label="Budget share">~25%</td></tr>
+            <tr><td data-label="Campaign">M3. Refill and retention</td><td data-label="Setup">Sales objective</td><td data-label="Who sees it">Past buyers from the customer list (consented contacts only), shown strip refill ads 25–45 days after purchase</td><td data-label="Budget share">~15%</td></tr>
+            <tr><td data-label="Campaign">Test: WhatsApp ads</td><td data-label="Setup">Ads that open a WhatsApp chat</td><td data-label="Who sees it">Same audience as M1</td><td data-label="Budget share">Split from M1</td></tr>
+          </tbody>
+        </table>
+        <p class="callout">The WhatsApp test matters because many Nigerian buyers prefer to chat before paying, as GoMed’s model shows. We will compare cost per sale against website checkout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" id="s7" data-title="7. Offers">
+  <div class="inner">
+    <div class="head"><span class="num">7</span><h2>Offers</h2></div>
+    <div class="offers">
+      <div class="offer"><h3>Starter kit</h3><p>Meter, 50 strips and lancets at a bundle price. Lifts order value and suits first-time buyers.</p></div>
+      <div class="offer"><h3>Refill bundle</h3><p>2 × 50 strips with a small saving. This answers Asset Pharmacy’s subscribe-and-save.</p></div>
+      <div class="offer"><h3>Delivery</h3><p>Free delivery in Lagos above a set order value, or a flat nationwide fee shown upfront.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" id="s8" data-title="8. Budget split and timeline">
+  <div class="inner">
+    <div class="head"><span class="num">8</span><h2>Budget split and timeline</h2></div>
+    <p class="lead">ISN’s monthly budget is still to be confirmed. Our recommended split:</p>
+    <div class="splits" role="img" aria-label="Launch and learn: Google 55%, Meta 45%. Scale: Google 40%, Meta 60%.">
+      <div class="row"><span class="lbl">Weeks 3–6: launch and learn</span><div class="split"><span class="g" style="width:55%">Google 55%</span><span class="m" style="width:45%">Meta 45%</span></div></div>
+      <div class="row"><span class="lbl">Weeks 7–12: scale</span><div class="split"><span class="g" style="width:40%">Google 40%</span><span class="m" style="width:60%">Meta 60%</span></div></div>
+    </div>
+    <table class="rt">
+      <thead><tr><th scope="col">Phase</th><th scope="col">Google</th><th scope="col">Meta</th><th scope="col">Focus</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Phase">Weeks 0–2: set-up</td><td data-label="Google">Current campaigns keep running</td><td data-label="Meta">Not live</td><td data-label="Focus">Fix tracking, landing page, catalogue and prices</td></tr>
+        <tr><td data-label="Phase">Weeks 3–6: launch and learn</td><td data-label="Google">55%</td><td data-label="Meta">45%</td><td data-label="Focus">Restructured Google campaigns. Meta M1 and M2 live.</td></tr>
+        <tr><td data-label="Phase">Weeks 7–12: scale</td><td data-label="Google">40%</td><td data-label="Meta">60%</td><td data-label="Focus">Raise budget on the best Meta ad sets by about 20% at a time. Add M3 refill once there are buyers to target. Google is capped by search volume, so extra budget mostly goes to Meta.</td></tr>
+      </tbody>
+    </table>
+    <p class="callout"><strong>Target cost per sale:</strong> ISN can accept a higher cost on the first sale, because strip customers reorder. We need ISN to confirm its margins before we set final targets.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" id="s9" data-title="9. Measurement and reporting">
+  <div class="inner">
+    <div class="head"><span class="num">9</span><h2>Measurement and reporting</h2></div>
+    <div class="grid2">
+      <div class="panel"><h3>Tagging</h3><p>Every ad link carries UTM tags (channel, campaign and ad), so GA4 reports match each platform’s own numbers.</p></div>
+      <div class="panel"><h3>Weekly checks</h3><p>Spend, purchases, cost per purchase, ROAS, conversion rate, how often each audience sees an ad, and how quickly each creative is wearing out.</p></div>
+      <div class="panel"><h3>Monthly report</h3><p>Paid media results added to your existing monthly report from Pedicel, including new versus returning buyers and the strip repeat rate.</p></div>
+      <div class="panel"><h3>Testing</h3><p>One change per test, run for at least 2 weeks or until 50 or more conversions per version. Test order:</p>
+        <ol><li>creative concept</li><li>offer (starter kit vs single meter)</li><li>WhatsApp vs website</li><li>landing page variations</li></ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" id="s10" data-title="10. Rules and risks">
+  <div class="inner">
+    <div class="head"><span class="num">10</span><h2>Rules and risks</h2></div>
+    <table class="rt">
+      <thead><tr><th scope="col">Risk</th><th scope="col">How we manage it</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Risk">Meta health ad rules</td><td data-label="How we manage it">Ads never say or imply the viewer has a condition (“Do you have diabetes?”, “Your sugar is high”). They talk about the product and the action. No claims of cures or outcomes.</td></tr>
+        <tr><td data-label="Risk">Health claims generally</td><td data-label="How we manage it">A glucometer monitors blood sugar; it doesn’t treat anything. The “doesn’t replace your doctor” note stays on the landing page.</td></tr>
+        <tr><td data-label="Risk">Stock and expiry</td><td data-label="How we manage it">Only products in stock, with long expiry dates, are advertised. Ads pause automatically if stock runs out.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" id="s11" data-title="11. What we need from ISN">
+  <div class="inner">
+    <div class="head"><span class="num">11</span><h2>What we need from ISN</h2></div>
+    <ol class="steps">
+      <li>Monthly ad budget, and gross margin per product</li>
+      <li>Retail prices, delivery fees, delivery times and the chosen offer</li>
+      <li>NAFDAC numbers, warranty terms and permission to say “authorised Roche distributor”</li>
+      <li>Access to Paystack and the website to set up purchase tracking, and a Meta ad account Pedicel can manage</li>
+      <li>A customer list with marketing consent, for refill ads and lookalike audiences</li>
+      <li>Product photos and real customer stories, with consent.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- Source -->
+<section class="slide end" id="source" data-title="Source document" data-dark>
+  <div class="inner">
+    <h2>Source document</h2>
+    <a class="doclink" href="https://docs.google.com/document/d/1j_J2W7XWyiG-bZ5mQ57Nd1N1sESZ_JjMWAV7qCblSW0/edit?usp=sharing" target="_blank" rel="noopener">
+      <strong>Paid Media Strategy - ISN Medical</strong>
+      <span>https://docs.google.com/document/d/1j_J2W7XWyiG-bZ5mQ57Nd1N1sESZ_JjMWAV7qCblSW0/edit?usp=sharing</span>
+    </a>
+    <p class="by">Prepared for ISN Medical by Pedicel Marketing, Performance Marketing · 4 November 2026</p>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var rail = document.querySelector('.rail');
+  var counter = document.querySelector('.counter');
+  var bar = document.querySelector('.progress');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current = 0;
+
+  slides.forEach(function(s, i){
+    var li = document.createElement('li');
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', 'Go to ' + s.dataset.title);
+    b.innerHTML = '<span class="tip">' + s.dataset.title + '</span>';
+    b.addEventListener('click', function(){ go(i); });
+    li.appendChild(b); rail.appendChild(li);
+  });
+  var dots = rail.querySelectorAll('button');
+
+  function go(i){
+    i = Math.max(0, Math.min(slides.length - 1, i));
+    slides[i].scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'start'});
+  }
+  function setActive(i){
+    current = i;
+    dots.forEach(function(d, j){ d.setAttribute('aria-current', j === i ? 'true' : 'false'); });
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    document.body.classList.toggle('on-dark', slides[i].hasAttribute('data-dark'));
+  }
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) setActive(slides.indexOf(e.target));
+    });
+  }, {rootMargin: '-45% 0px -45% 0px'});
+  slides.forEach(function(s){ io.observe(s); });
+
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive: true});
+  onScroll();
+
+  document.addEventListener('keydown', function(e){
+    if (e.target.closest && e.target.closest('a,button,input,textarea')) {
+      if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    }
+    if (['ArrowDown','PageDown'].indexOf(e.key) > -1 || (e.key === ' ' && !e.shiftKey)) { e.preventDefault(); go(current + 1); }
+    else if (['ArrowUp','PageUp'].indexOf(e.key) > -1 || (e.key === ' ' && e.shiftKey)) { e.preventDefault(); go(current - 1); }
+    else if (e.key === 'Home') { e.preventDefault(); go(0); }
+    else if (e.key === 'End') { e.preventDefault(); go(slides.length - 1); }
+  });
+
+  setActive(0);
+})();
+</script>
+</body>
+</html>
