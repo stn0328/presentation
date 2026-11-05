@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4-Phase SEO Strategy Report · Yoa Insurance Brokers</title>
+<meta name="description" content="4-Phase SEO Strategy Report for Yoa Insurance Brokers (yoainsurance.com): Technical SEO, On-Page SEO & Content Production, Off-Page SEO, and AEO & GEO.">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --navy:#0A1C36; --navy-2:#12305A; --ink:#13233F; --text:#2A3A55; --muted:#5A6A82;
+  --line:#E2E8F1; --bg:#E9EEF5; --paper:#FFFFFF; --tint:#F7F9FC;
+  --gold:#C9A227; --gold-l:#E9C964;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  --sans:"Segoe UI",-apple-system,BlinkMacSystemFont,Inter,"Helvetica Neue",Arial,sans-serif;
+  --accent:#A07D12; --accent-soft:#F7F0DA; --accent-l:#E9C964;
+  --fs-eyebrow:clamp(11px,.9cqw,15px);
+  --fs-title:clamp(24px,2.75cqw,48px);
+  --fs-h3:clamp(15.5px,1.42cqw,24px);
+  --fs-body:clamp(13.5px,1.16cqw,20px);
+  --fs-small:clamp(11px,.85cqw,14px);
+  --pad-y:clamp(20px,3.2cqw,56px);
+  --pad-x:clamp(20px,3.8cqw,68px);
+  --gap:clamp(12px,1.6cqw,28px);
+  --big:clamp(64px,10cqw,180px);
+}
+.p1{--accent:#0E7F81;--accent-soft:#E2F3F2;--accent-l:#62D2CF}
+.p2{--accent:#2F52CC;--accent-soft:#E6ECFC;--accent-l:#93A9FF}
+.p3{--accent:#A86A12;--accent-soft:#FBF0DD;--accent-l:#F1C36F}
+.p4{--accent:#6D34D9;--accent-soft:#EFE8FD;--accent-l:#BCA2FF}
+.rep{--accent:#A07D12;--accent-soft:#F7F0DA;--accent-l:#E9C964}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{font-family:var(--sans);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(1200px 600px at 10% -10%,#DCE5F1 0%,transparent 60%),radial-gradient(900px 500px at 110% 110%,#E3E1F3 0%,transparent 60%),var(--bg);background-attachment:fixed}
+a{color:inherit}
+.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* ---------- Slide frame ---------- */
+.slide{min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:32px 76px 32px 32px;scroll-snap-align:start;position:relative}
+.card{container-type:inline-size;position:relative;overflow:hidden;display:flex;flex-direction:column;
+  width:min(100%,calc((100vh - 64px) * 16 / 9),1560px);aspect-ratio:16/9;background:var(--paper);border-radius:20px;
+  box-shadow:0 1px 2px rgba(10,28,54,.06),0 24px 60px -20px rgba(10,28,54,.28)}
+@supports (height:100dvh){.card{width:min(100%,calc((100dvh - 64px) * 16 / 9),1560px)}}
+.inner{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;gap:var(--gap);padding:var(--pad-y) var(--pad-x) calc(var(--pad-y) * .7)}
+
+/* reveal animation */
+.inner > *{transition:opacity .6s ease,transform .6s ease}
+.inner > *:nth-child(2){transition-delay:.08s}
+.inner > *:nth-child(3){transition-delay:.16s}
+.inner > *:nth-child(4){transition-delay:.24s}
+html.js .slide:not(.seen) .inner > *{opacity:0;transform:translateY(16px)}
+@media (prefers-reduced-motion:reduce){.inner > *{transition:none}html.js .slide:not(.seen) .inner > *{opacity:1;transform:none}}
+
+/* ---------- Typography ---------- */
+.hd{display:flex;flex-direction:column;gap:.4em}
+.eyebrow{display:inline-flex;align-items:center;gap:.7em;font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:1.8em;height:2px;background:currentColor;border-radius:2px}
+.title{font-family:var(--serif);font-size:var(--fs-title);font-weight:600;line-height:1.12;color:var(--navy);letter-spacing:-.01em}
+.lead{font-size:calc(var(--fs-body) * 1.08);color:var(--muted);max-width:70ch}
+.mini-label{font-size:var(--fs-small);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.7em}
+.foot{margin-top:auto;padding-top:.9em;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1em;font-size:var(--fs-small);color:var(--muted);letter-spacing:.02em}
+.foot .pg{font-variant-numeric:tabular-nums;font-weight:600}
+
+/* ---------- Panels & bullets ---------- */
+.cols-2{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);flex:1;align-items:stretch}
+.panel{position:relative;overflow:hidden;background:var(--tint);border:1px solid var(--line);border-radius:14px;padding:calc(var(--gap) * 1.15)}
+.panel::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--accent)}
+.ph{display:flex;align-items:center;gap:.85em;margin-bottom:1em}
+.ph h3{font-size:var(--fs-h3);font-weight:700;line-height:1.25;color:var(--navy)}
+.ico{width:calc(var(--fs-h3) * 2.1);height:calc(var(--fs-h3) * 2.1);border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex:none}
+.ico .ic{width:55%;height:55%}
+.ticks{list-style:none}
+.ticks li{position:relative;padding-left:1.55em;font-size:var(--fs-body);line-height:1.5;color:var(--text)}
+.ticks li + li{margin-top:.62em}
+.ticks li::before{content:"";position:absolute;left:.18em;top:.62em;width:.48em;height:.48em;background:var(--accent);border-radius:2px;transform:rotate(45deg)}
+.badge{margin-left:auto;display:flex;align-items:baseline;gap:.35em;background:var(--accent);color:#fff;border-radius:10px;padding:.3em .8em;flex:none}
+.badge b{font-family:var(--serif);font-size:calc(var(--fs-h3) * 1.35);line-height:1}
+.badge span{font-size:var(--fs-small);font-weight:600;opacity:.9}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:.45em}
+.chips li{font-size:calc(var(--fs-small) * 1.05);font-weight:600;padding:.35em .85em;border-radius:999px;background:var(--accent-soft);color:var(--accent);line-height:1.3}
+.chips-row{margin:-.2em 0 1em}
+
+/* ---------- Dark slides (cover, dividers, source) ---------- */
+.slide--dark .card{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#E9EEF7}
+.slide--dark .card::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 70% at 96% 4%,var(--accent-l),transparent 70%);opacity:.18;pointer-events:none}
+.slide--dark .card::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px;
+  -webkit-mask-image:linear-gradient(120deg,transparent 30%,#000 100%);mask-image:linear-gradient(120deg,transparent 30%,#000 100%)}
+.slide--dark .title{color:#fff}
+.slide--dark .eyebrow{color:var(--accent-l)}
+.slide--dark .foot{border-top-color:rgba(255,255,255,.14);color:rgba(233,238,247,.62)}
+.slide--dark .mini-label{color:rgba(233,238,247,.6)}
+
+/* cover */
+.cover-grid{flex:1;display:grid;grid-template-columns:1.25fr 1fr;gap:calc(var(--gap) * 2);align-items:center}
+.cover-title{font-family:var(--serif);font-size:clamp(34px,5cqw,88px);line-height:1.04;color:#fff;font-weight:600;letter-spacing:-.015em;margin:.35em 0 .55em}
+.cover-title em{font-style:normal;color:var(--gold-l)}
+.meta{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:1em 2.6em;border-top:1px solid rgba(255,255,255,.16);padding-top:1.2em}
+.meta dt{font-size:var(--fs-small);text-transform:uppercase;letter-spacing:.12em;color:var(--gold-l);font-weight:700;margin-bottom:.25em}
+.meta dd{font-size:calc(var(--fs-body) * 1.15);color:#fff;font-weight:600}
+.meta a{text-decoration:none;border-bottom:1px solid rgba(233,201,100,.6)}
+.meta a:hover{color:var(--gold-l)}
+.stack{display:flex;flex-direction:column;gap:clamp(8px,.9cqw,16px)}
+.stack-row{width:var(--w);display:flex;align-items:center;gap:1em;padding:clamp(10px,1.1cqw,20px) clamp(12px,1.4cqw,24px);border-radius:12px;background:linear-gradient(90deg,var(--accent),rgba(255,255,255,.06));color:#fff;box-shadow:0 10px 24px -12px rgba(0,0,0,.5)}
+.stack-row b{font-family:var(--serif);font-size:calc(var(--fs-h3) * 1.2);opacity:.9;line-height:1}
+.stack-row span{font-size:var(--fs-body);font-weight:600}
+
+/* phase dividers */
+.div-grid{flex:1;display:grid;grid-template-columns:1.05fr 1fr;gap:calc(var(--gap) * 2.2);align-items:center}
+.phase-num{font-family:var(--serif);font-size:var(--big);line-height:.9;font-weight:600;color:var(--accent-l);letter-spacing:-.03em;margin:.12em 0 .08em}
+.objective{margin-top:calc(var(--gap) * 1.1);padding:.95em 1.15em;border-left:3px solid var(--accent-l);background:rgba(255,255,255,.055);border-radius:0 12px 12px 0}
+.objective span{display:block;font-size:var(--fs-small);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-l);margin-bottom:.35em}
+.objective p{font-size:calc(var(--fs-body) * 1.14);color:#fff;line-height:1.5}
+.ws{list-style:none;display:flex;flex-direction:column;gap:.55em;counter-reset:ws}
+.ws li{counter-increment:ws;display:flex;align-items:center;gap:.85em;padding:.62em .95em;border-radius:10px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);font-size:var(--fs-body);color:#E9EEF7}
+.ws li .ic{width:1.35em;height:1.35em;color:var(--accent-l)}
+.ws li::after{content:counter(ws,decimal-leading-zero);margin-left:auto;font-size:var(--fs-small);color:rgba(233,238,247,.45);font-weight:700}
+
+/* overview roadmap */
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--gap) * .9);flex:1}
+.rm{background:var(--tint);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:14px;padding:calc(var(--gap) * .95);display:flex;flex-direction:column;gap:.7em}
+.rm-hd{display:flex;align-items:center;gap:.7em}
+.rm-n{font-family:var(--serif);font-size:calc(var(--fs-title) * .95);color:var(--accent);line-height:1;font-weight:700}
+.rm-hd p{font-size:var(--fs-small);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:700}
+.rm-hd h3{font-size:var(--fs-h3);color:var(--navy);line-height:1.2}
+.count{align-self:flex-start;font-size:var(--fs-small);font-weight:700;color:var(--accent);background:var(--accent-soft);padding:.25em .75em;border-radius:999px}
+.rm ol{list-style:none;display:flex;flex-direction:column;gap:.5em;counter-reset:w}
+.rm li{counter-increment:w;display:flex;gap:.6em;font-size:calc(var(--fs-body) * .93);line-height:1.35;color:var(--text)}
+.rm li::before{content:counter(w,decimal-leading-zero);font-weight:700;color:var(--accent);font-size:.85em;padding-top:.12em;flex:none}
+.band{display:flex;align-items:center;gap:1em;padding:.9em 1.25em;border-radius:12px;background:var(--navy);color:#DCE3EF;font-size:var(--fs-body)}
+.band .ic{color:var(--gold-l);width:1.6em;height:1.6em}
+.band b{color:#fff}
+
+/* steps */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);flex:1}
+.steps li{position:relative;background:var(--tint);border:1px solid var(--line);border-radius:14px;padding:calc(var(--gap) * 1.15);display:flex;flex-direction:column;gap:.7em}
+.steps li:not(:last-child)::after{content:"›";position:absolute;right:calc(var(--gap) / -2);top:50%;transform:translate(50%,-50%);width:1.7em;height:1.7em;border-radius:50%;background:#fff;border:1px solid var(--line);color:var(--accent);display:grid;place-items:center;font-size:var(--fs-body);font-weight:700;line-height:1;z-index:2}
+.sn{width:2.5em;height:2.5em;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700;font-size:var(--fs-body)}
+.steps h4{font-family:var(--serif);font-size:calc(var(--fs-h3) * 1.15);color:var(--navy);font-weight:600}
+.steps p{font-size:var(--fs-body);color:var(--text)}
+.callout{display:flex;align-items:center;gap:1em;padding:.9em 1.2em;border-radius:12px;background:var(--accent-soft);color:var(--navy);font-size:var(--fs-body)}
+.callout .ic{color:var(--accent);width:1.5em;height:1.5em}
+.callout b{color:var(--accent)}
+
+/* ongoing content */
+.cc-grid{display:grid;grid-template-columns:.8fr 1.7fr;gap:var(--gap);flex:1}
+.statcard{border-radius:14px;padding:calc(var(--gap) * 1.2);color:#fff;background:linear-gradient(160deg,var(--accent) 0%,#182A7A 100%);display:flex;flex-direction:column;gap:.6em;position:relative;overflow:hidden}
+.statcard::after{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;right:-25%;bottom:-25%;background:rgba(255,255,255,.08)}
+.stat{font-family:var(--serif);font-size:clamp(54px,6.6cqw,120px);line-height:.95;font-weight:600}
+.stat-cap{font-size:calc(var(--fs-body) * 1.1);font-weight:600;opacity:.95}
+.statcard .mini-label{color:rgba(255,255,255,.7);margin:auto 0 .5em}
+.statcard .chips li{background:rgba(255,255,255,.14);color:#fff}
+.nlist{list-style:none;display:flex;flex-direction:column;gap:calc(var(--gap) * .7);counter-reset:n}
+.nlist li{counter-increment:n;display:flex;gap:1em;align-items:flex-start;padding:.95em 1.1em;background:var(--tint);border:1px solid var(--line);border-radius:12px;font-size:var(--fs-body);color:var(--text)}
+.nlist li::before{content:counter(n);flex:none;width:2em;height:2em;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:700}
+
+/* tiles */
+.tiles{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:var(--gap);flex:1}
+.tiles > :last-child:nth-child(3n+1){grid-column:1 / -1}
+.tile{position:relative;overflow:hidden;background:var(--tint);border:1px solid var(--line);border-radius:14px;padding:calc(var(--gap) * 1.05);display:flex;flex-direction:column;gap:.9em}
+.tile::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+.tile .n{position:absolute;right:.7em;top:.35em;font-family:var(--serif);font-size:calc(var(--fs-title) * 1.05);font-weight:700;color:var(--accent);opacity:.13;line-height:1}
+.tile p{font-size:calc(var(--fs-body) * 1.05);font-weight:500;line-height:1.45;color:var(--ink);max-width:46ch}
+
+/* goal */
+.goal-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:calc(var(--gap) * 1.8);flex:1;align-items:center}
+.goal-quote{font-family:var(--serif);font-size:calc(var(--fs-h3) * 1.22);line-height:1.55;color:var(--navy);border-left:4px solid var(--gold);padding-left:1em;margin-top:1.1em}
+.goal-map{display:flex;flex-direction:column;gap:.8em}
+.gm-box{background:var(--tint);border:1px solid var(--line);border-radius:14px;padding:1.1em 1.25em}
+.gm-arrow{align-self:center;width:2.4em;height:2.4em;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;font-size:var(--fs-body)}
+
+/* source */
+.src-grid{flex:1;display:grid;grid-template-columns:1.3fr 1fr;gap:calc(var(--gap) * 2);align-items:center}
+.src-title{font-family:var(--serif);font-size:clamp(28px,3.6cqw,64px);line-height:1.1;color:#fff;font-weight:600;margin:.4em 0 .5em}
+.src-doc{font-size:calc(var(--fs-body) * 1.08);color:#DCE3EF;margin-bottom:1.4em}
+.src-doc b{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:.6em;background:var(--gold);color:var(--navy);font-weight:700;padding:.85em 1.45em;border-radius:999px;text-decoration:none;font-size:var(--fs-body);transition:transform .2s ease,box-shadow .2s ease;box-shadow:0 10px 24px -10px rgba(201,162,39,.7)}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(201,162,39,.85)}
+.btn .ic{width:1.1em;height:1.1em;stroke-width:2.2}
+.url{display:block;margin-top:1em;font-size:var(--fs-small);color:rgba(233,238,247,.55);word-break:break-all;max-width:60ch}
+.src-site{margin-top:1.2em;font-size:var(--fs-body);color:#DCE3EF}
+.src-site a{color:var(--gold-l)}
+.keys{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:calc(var(--gap) * 1.2)}
+.keys ul{list-style:none;display:flex;flex-direction:column;gap:.75em}
+.keys li{display:flex;justify-content:space-between;align-items:center;gap:1em;font-size:var(--fs-body);color:#DCE3EF}
+kbd{font-family:var(--sans);font-size:.85em;font-weight:700;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-bottom-width:2px;border-radius:6px;padding:.15em .55em;margin-left:.25em}
+.thanks{font-family:var(--serif);font-size:calc(var(--fs-title) * .9);color:var(--gold-l);margin-top:.9em}
+
+/* ---------- Navigation UI ---------- */
+.progress{position:fixed;left:0;top:0;right:0;height:3px;z-index:60;background:rgba(10,28,54,.08)}
+.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#E9C964);transform-origin:left;transform:scaleX(0);transition:transform .35s ease}
+.dots{position:fixed;right:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:50}
+.dot{position:relative;width:9px;height:9px;border-radius:999px;border:0;background:rgba(10,28,54,.22);cursor:pointer;transition:height .25s ease,background .25s ease;padding:0}
+.dot:hover{background:rgba(10,28,54,.5)}
+.dot.active{height:24px;background:var(--gold)}
+.dot::after{content:attr(data-label);position:absolute;right:20px;top:50%;transform:translateY(-50%);white-space:nowrap;background:var(--navy);color:#fff;font:600 12px/1 var(--sans);padding:6px 10px;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.dot:hover::after,.dot:focus-visible::after{opacity:1}
+.hud{position:fixed;right:22px;bottom:20px;z-index:55;display:flex;align-items:center;gap:4px;padding:5px;border-radius:999px;background:rgba(10,28,54,.92);color:#fff;box-shadow:0 10px 30px -10px rgba(10,28,54,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hud button{width:36px;height:36px;border-radius:50%;border:0;background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .2s ease}
+.hud button:hover:not(:disabled){background:rgba(255,255,255,.14)}
+.hud button:disabled{opacity:.3;cursor:default}
+.hud .ic{width:18px;height:18px;stroke-width:2.2}
+.hud .counter{font:600 13px/1 var(--sans);font-variant-numeric:tabular-nums;padding:0 6px;letter-spacing:.04em}
+.hud .counter span{opacity:.55}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* ---------- Responsive ---------- */
+@media (min-width:861px) and (min-height:560px){html{scroll-snap-type:y mandatory}}
+@media (max-width:1100px){
+  .slide{padding:24px}
+  .dots{display:none}
+  .roadmap{grid-template-columns:repeat(2,1fr)}
+  .tiles{grid-template-columns:repeat(2,1fr)}
+  .tiles > :last-child:nth-child(3n+1){grid-column:auto}
+  .tiles > :last-child:nth-child(odd){grid-column:1 / -1}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .steps li:nth-child(2)::after{display:none}
+}
+@media (max-height:640px){.dots{display:none}}
+@media (max-width:860px){
+  :root{--fs-eyebrow:11.5px;--fs-title:26px;--fs-h3:17px;--fs-body:15px;--fs-small:12px;--pad-y:24px;--pad-x:20px;--gap:14px;--big:64px}
+  body{padding-bottom:76px}
+  .slide{min-height:0;padding:10px 12px}
+  .slide:first-of-type{padding-top:18px}
+  .card{width:100%;aspect-ratio:auto;border-radius:16px}
+  .cols-2,.div-grid,.cover-grid,.goal-grid,.cc-grid,.src-grid{grid-template-columns:1fr}
+  .roadmap,.tiles,.steps{grid-template-columns:1fr}
+  .tiles > *{grid-column:auto !important}
+  .tiles{grid-auto-rows:auto}
+  .steps li::after{display:none !important}
+  .meta{grid-template-columns:1fr;gap:.9em}
+  .cover-title{font-size:36px}
+  .stack-row{width:100% !important}
+  .stat{font-size:64px}
+  .src-title{font-size:30px}
+  .ph{align-items:flex-start;flex-wrap:wrap}
+  .badge{margin-left:0}
+  .hud{right:50%;transform:translateX(50%);bottom:14px}
+}
+@media print{
+  @page{size:landscape;margin:0}
+  html{scroll-snap-type:none;background:#fff}
+  body{background:#fff}
+  .progress,.dots,.hud{display:none}
+  .slide{min-height:auto;padding:0;page-break-after:always;break-after:page}
+  .card{width:100%;box-shadow:none;border-radius:0}
+  html.js .slide .inner > *{opacity:1 !important;transform:none !important}
+}
+</style>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-audit" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-track" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></symbol>
+  <symbol id="i-plugin" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6"/><path d="M6 8h12v4a6 6 0 0 1-12 0z"/><path d="M12 18v4"/></symbol>
+  <symbol id="i-sitemap" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></symbol>
+  <symbol id="i-speed" viewBox="0 0 24 24"><path d="M3.5 18a9 9 0 1 1 17 0"/><path d="m12 14 4-5"/><circle cx="12" cy="14" r="1.5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13 7 4 4"/></symbol>
+  <symbol id="i-pages" viewBox="0 0 24 24"><rect x="5" y="3" width="12" height="16" rx="1.5"/><path d="M8 7h6M8 11h6M8 15h3"/><path d="M19 7v14H9"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+  <symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 10v4h4l6 4V6l-6 4z"/><path d="M17 9a4 4 0 0 1 0 6M19.5 6.5a8 8 0 0 1 0 11"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3l-5.5 2.9 1-6.2L3 9.6l6.2-.9z"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3c.6 4.2 2.8 6.4 7 7-4.2.6-6.4 2.8-7 7-.6-4.2-2.8-6.4-7-7 4.2-.6 6.4-2.8 7-7z"/><path d="M19 15c.3 1.6 1 2.4 2.5 2.6-1.5.3-2.2 1-2.5 2.5-.3-1.5-1-2.2-2.5-2.5 1.5-.2 2.2-1 2.5-2.6z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></symbol>
+  <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M11 7.3 6.2 15.8M13 7.3l4.8 8.5M7.5 18h9"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 16v-4M12 16V8M16 16v-6"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+  <symbol id="i-compare" viewBox="0 0 24 24"><path d="M7 3v18M17 3v18"/><path d="m3 7 4-4 4 4M13 17l4 4 4-4"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v14H6a2 2 0 0 0-2 2.5 2 2 0 0 0 2 1.5h14"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v4h16v-4"/></symbol>
+  <symbol id="i-news" viewBox="0 0 24 24"><path d="M4 4h13v16H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v10a2 2 0 0 1-2 2"/><path d="M7 8h7M7 12h7M7 16h4"/></symbol>
+  <symbol id="i-growth" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+  <symbol id="i-tasks" viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10"/><path d="m3.5 6 1 1 2-2M3.5 12l1 1 2-2M3.5 18l1 1 2-2"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 4.5a4.5 4.5 0 0 0-5.6 5.8L3.5 15.7a2.1 2.1 0 0 0 3 3l5.4-5.4a4.5 4.5 0 0 0 5.8-5.6l-2.6 2.6-2.4-.6-.6-2.4z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-full" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+</svg>
+
+<div class="progress" aria-hidden="true"><span id="bar"></span></div>
+<nav class="dots" id="dots" aria-label="Slide navigation"></nav>
+<div class="hud" role="toolbar" aria-label="Presentation controls">
+  <button type="button" id="prev" aria-label="Previous slide"><svg class="ic"><use href="#i-up"/></svg></button>
+  <div class="counter" aria-live="polite"><b id="cur">01</b> <span>/ <span id="tot">22</span></span></div>
+  <button type="button" id="next" aria-label="Next slide"><svg class="ic"><use href="#i-down"/></svg></button>
+  <button type="button" id="fs" aria-label="Toggle full screen"><svg class="ic"><use href="#i-full"/></svg></button>
+</div>
+
+<main id="deck">
+
+<!-- 1 · COVER -->
+<section class="slide slide--dark rep" id="cover" data-title="Cover" aria-label="Cover">
+  <div class="card"><div class="inner">
+    <div class="cover-grid">
+      <div>
+        <p class="eyebrow">SEO Strategy Report</p>
+        <h1 class="cover-title"><em>4-Phase</em> SEO Strategy Report</h1>
+        <dl class="meta">
+          <div><dt>Client</dt><dd>Yoa Insurance Brokers</dd></div>
+          <div><dt>Website</dt><dd><a href="http://yoainsurance.com" target="_blank" rel="noopener">yoainsurance.com</a></dd></div>
+          <div><dt>Strategy Duration</dt><dd>4 Phases</dd></div>
+        </dl>
+      </div>
+      <div>
+        <p class="mini-label">Strategy roadmap</p>
+        <div class="stack">
+          <div class="stack-row p1" style="--w:64%"><b>01</b><span>Technical SEO</span></div>
+          <div class="stack-row p2" style="--w:76%"><b>02</b><span>On-Page SEO &amp; Content Production</span></div>
+          <div class="stack-row p3" style="--w:88%"><b>03</b><span>Off-Page SEO</span></div>
+          <div class="stack-row p4" style="--w:100%"><b>04</b><span>AEO &amp; GEO</span></div>
+        </div>
+      </div>
+    </div>
+    <footer class="foot"><span>Press ↓ or Space to begin · F for full screen</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 2 · OVERVIEW -->
+<section class="slide rep" id="overview" data-title="Strategy Overview" aria-label="Strategy Overview">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Strategy at a Glance</p>
+      <h2 class="title">Strategy Overview: 4 Phases</h2>
+    </header>
+    <div class="roadmap">
+      <div class="rm p1">
+        <div class="rm-hd"><span class="rm-n">01</span><div><p>Phase 1</p><h3>Technical SEO</h3></div></div>
+        <span class="count">7 workstreams</span>
+        <ol>
+          <li>Technical SEO Audit</li>
+          <li>SEO Tools &amp; Rank Tracking Setup</li>
+          <li>WordPress SEO Plugin Optimization</li>
+          <li>XML Sitemap &amp; Robots.txt Optimization</li>
+          <li>Website Performance &amp; Core Web Vitals</li>
+          <li>Structured Data &amp; Schema Markup</li>
+          <li>Technical Fixes &amp; Quality Assurance</li>
+        </ol>
+      </div>
+      <div class="rm p2">
+        <div class="rm-hd"><span class="rm-n">02</span><div><p>Phase 2</p><h3>On-Page SEO &amp; Content Production</h3></div></div>
+        <span class="count">5 workstreams</span>
+        <ol>
+          <li>Service Pages</li>
+          <li>Homepage</li>
+          <li>Primary Blog Pages</li>
+          <li>Other Website Pages</li>
+          <li>Ongoing Content Creation</li>
+        </ol>
+      </div>
+      <div class="rm p3">
+        <div class="rm-hd"><span class="rm-n">03</span><div><p>Phase 3</p><h3>Off-Page SEO</h3></div></div>
+        <span class="count">6 workstreams</span>
+        <ol>
+          <li>Backlink Audit &amp; Competitor Analysis</li>
+          <li>Link Building &amp; Digital PR</li>
+          <li>Web 2.0 Link Building</li>
+          <li>Local Citations &amp; Business Listings</li>
+          <li>Social Profile Optimization</li>
+          <li>Google Business Profile &amp; Reviews</li>
+        </ol>
+      </div>
+      <div class="rm p4">
+        <div class="rm-hd"><span class="rm-n">04</span><div><p>Phase 4</p><h3>AEO &amp; GEO</h3></div></div>
+        <span class="count">3 workstreams</span>
+        <ol>
+          <li>AI Visibility Foundation</li>
+          <li>Authority &amp; Trust Building</li>
+          <li>Entity Authority &amp; AI Citations</li>
+        </ol>
+      </div>
+    </div>
+    <div class="band"><svg class="ic"><use href="#i-report"/></svg><div><b>Ongoing SEO Reporting</b> — Reporting will continue throughout all four phases to track implementation, performance, and next priorities.</div></div>
+    <footer class="foot"><span>Yoa Insurance Brokers · 4-Phase SEO Strategy Report</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 3 · PHASE 1 DIVIDER -->
+<section class="slide slide--dark p1" id="phase-1" data-title="Phase 1 · Technical SEO" aria-label="Phase 1: Technical SEO">
+  <div class="card"><div class="inner">
+    <div class="div-grid">
+      <div>
+        <p class="eyebrow">Phase 1 of 4</p>
+        <div class="phase-num">01</div>
+        <h2 class="title">Technical SEO</h2>
+        <div class="objective"><span>Objective</span><p>Improve website crawling, indexation, performance, and technical health.</p></div>
+      </div>
+      <div>
+        <p class="mini-label">Workstreams in this phase</p>
+        <ol class="ws">
+          <li><svg class="ic"><use href="#i-audit"/></svg>Technical SEO Audit</li>
+          <li><svg class="ic"><use href="#i-track"/></svg>SEO Tools &amp; Rank Tracking Setup</li>
+          <li><svg class="ic"><use href="#i-plugin"/></svg>WordPress SEO Plugin Optimization</li>
+          <li><svg class="ic"><use href="#i-sitemap"/></svg>XML Sitemap &amp; Robots.txt Optimization</li>
+          <li><svg class="ic"><use href="#i-speed"/></svg>Website Performance &amp; Core Web Vitals</li>
+          <li><svg class="ic"><use href="#i-code"/></svg>Structured Data &amp; Schema Markup</li>
+          <li><svg class="ic"><use href="#i-shield"/></svg>Technical Fixes &amp; Quality Assurance</li>
+        </ol>
+      </div>
+    </div>
+    <footer class="foot"><span>Phase 1 · Technical SEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 4 · P1 Audit + Tracking -->
+<section class="slide p1" id="p1-audit" data-title="Audit & Rank Tracking" aria-label="Technical SEO Audit and Rank Tracking Setup">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 1 · Technical SEO</p>
+      <h2 class="title">Technical SEO Audit &amp; Rank Tracking Setup</h2>
+    </header>
+    <div class="cols-2">
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-audit"/></svg></span><h3>Technical SEO Audit</h3></div>
+        <ul class="ticks">
+          <li>Run a thorough technical SEO audit to uncover issues affecting crawling, indexation, and site structure.</li>
+          <li>Look for inconsistent URLs, duplicate pages, broken links, redirect chains, and orphan pages.</li>
+          <li>Review mobile usability, HTTPS security, and other technical factors that impact search visibility.</li>
+          <li>Order the issues found by how much they affect crawling, indexing, performance, and user experience.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-track"/></svg></span><h3>SEO Tools &amp; Rank Tracking Setup</h3></div>
+        <ul class="ticks">
+          <li>Add the project to a rank tracking tool.</li>
+          <li>Configure the website along with its target location.</li>
+          <li>Input the target keywords and capture their initial rankings.</li>
+          <li>Enable competitor tracking where it applies.</li>
+        </ul>
+      </article>
+    </div>
+    <footer class="foot"><span>Phase 1 · Technical SEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 5 · P1 Plugin + Sitemap -->
+<section class="slide p1" id="p1-plugin-sitemap" data-title="Plugin, Sitemap & Robots.txt" aria-label="WordPress SEO Plugin and XML Sitemap Optimization">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 1 · Technical SEO</p>
+      <h2 class="title">WordPress SEO Plugin, XML Sitemap &amp; Robots.txt</h2>
+    </header>
+    <div class="cols-2">
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-plugin"/></svg></span><h3>WordPress SEO Plugin Optimization</h3></div>
+        <ul class="ticks">
+          <li>Audit the Rank Math setup and SEO settings.</li>
+          <li>Improve the global metadata settings.</li>
+          <li>Set up indexing rules for pages and posts.</li>
+          <li>Confirm SEO settings are correct across key website pages.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-sitemap"/></svg></span><h3>XML Sitemap &amp; Robots.txt Optimization</h3></div>
+        <ul class="ticks">
+          <li>Check and refine the XML sitemap and robots.txt directives.</li>
+          <li>Confirm that key indexable pages appear in the sitemap and are accessible to search engines.</li>
+          <li>Leave out unsuitable or non-indexable URLs from the sitemap where required.</li>
+          <li>Submit the sitemap to Google Search Console and check that it has been processed.</li>
+        </ul>
+      </article>
+    </div>
+    <footer class="foot"><span>Phase 1 · Technical SEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 6 · P1 Performance + Schema -->
+<section class="slide p1" id="p1-performance-schema" data-title="Performance & Schema" aria-label="Website Performance and Structured Data">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 1 · Technical SEO</p>
+      <h2 class="title">Performance, Core Web Vitals &amp; Schema Markup</h2>
+    </header>
+    <div class="cols-2">
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-speed"/></svg></span><h3>Website Performance &amp; Core Web Vitals</h3></div>
+        <ul class="ticks">
+          <li>Review website speed and Core Web Vitals scores.</li>
+          <li>Pinpoint performance problems linked to images, scripts, CSS, and page loading.</li>
+          <li>Propose and carry out improvements where feasible.</li>
+          <li>Re-test performance once optimization is complete.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-code"/></svg></span><h3>Structured Data &amp; Schema Markup</h3></div>
+        <ul class="ticks">
+          <li>Audit existing structured data and identify missing or incorrect schema types.</li>
+          <li>Implement relevant schema markup based on the website's content and business.</li>
+          <li>Validate structured data and resolve implementation errors.</li>
+          <li>Verify that schema markup accurately represents the information on each page.</li>
+        </ul>
+      </article>
+    </div>
+    <footer class="foot"><span>Phase 1 · Technical SEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 7 · P1 Fixes & QA -->
+<section class="slide p1" id="p1-fixes" data-title="Technical Fixes & QA" aria-label="Technical Fixes and Quality Assurance">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 1 · Technical SEO</p>
+      <h2 class="title">Technical Fixes &amp; Quality Assurance</h2>
+    </header>
+    <ol class="steps">
+      <li><span class="sn">1</span><h4>Apply</h4><p>Apply the priority technical fixes found during the audit.</p></li>
+      <li><span class="sn">2</span><h4>Confirm</h4><p>Confirm crawling, indexation, redirects, canonical tags, and internal links work correctly after the changes.</p></li>
+      <li><span class="sn">3</span><h4>Re-test</h4><p>Re-test mobile usability, HTTPS functionality, and technical errors.</p></li>
+      <li><span class="sn">4</span><h4>Record</h4><p>Record completed fixes and any remaining issues.</p></li>
+    </ol>
+    <div class="callout"><svg class="ic"><use href="#i-target"/></svg><div><b>Phase 1 Objective:</b> Improve website crawling, indexation, performance, and technical health.</div></div>
+    <footer class="foot"><span>Phase 1 · Technical SEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 8 · PHASE 2 DIVIDER -->
+<section class="slide slide--dark p2" id="phase-2" data-title="Phase 2 · On-Page SEO & Content" aria-label="Phase 2: On-Page SEO and Content Production">
+  <div class="card"><div class="inner">
+    <div class="div-grid">
+      <div>
+        <p class="eyebrow">Phase 2 of 4</p>
+        <div class="phase-num">02</div>
+        <h2 class="title">On-Page SEO &amp; Content Production</h2>
+        <div class="objective"><span>Objective</span><p>Research, optimize, write, and publish content for important website pages.</p></div>
+      </div>
+      <div>
+        <p class="mini-label">Workstreams in this phase</p>
+        <ol class="ws">
+          <li><svg class="ic"><use href="#i-brief"/></svg>Service Pages: Research, Content Writing &amp; Publishing</li>
+          <li><svg class="ic"><use href="#i-home"/></svg>Homepage: Research, Content Writing &amp; Optimization</li>
+          <li><svg class="ic"><use href="#i-pen"/></svg>Primary Blog Pages: Research, Content Writing &amp; Publishing</li>
+          <li><svg class="ic"><use href="#i-pages"/></svg>Other Website Pages: Research, Content Writing &amp; Publishing</li>
+          <li><svg class="ic"><use href="#i-cal"/></svg>Ongoing Content Creation: Research, Content Writing &amp; Publishing</li>
+        </ol>
+      </div>
+    </div>
+    <footer class="foot"><span>Phase 2 · On-Page SEO &amp; Content Production</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 9 · P2 Service + Homepage -->
+<section class="slide p2" id="p2-service-home" data-title="Service Pages & Homepage" aria-label="Service Pages and Homepage">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 2 · On-Page SEO &amp; Content Production</p>
+      <h2 class="title">Service Pages &amp; Homepage</h2>
+    </header>
+    <div class="cols-2">
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-brief"/></svg></span><h3>Service Pages: Research, Content Writing &amp; Publishing</h3><span class="badge"><b>13</b><span>service pages</span></span></div>
+        <ul class="ticks">
+          <li>Research service-specific keywords, search intent, coverage details, and competing broker pages for all 13 service pages.</li>
+          <li>Write unique service page content covering what each policy covers, who it is for, the claims process, and FAQs, with optimized headings and relevant internal links.</li>
+          <li>Publish optimized content using the appropriate Elementor template.</li>
+          <li>Review service information, content quality, page formatting, and indexability.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-home"/></svg></span><h3>Homepage: Research, Content Writing &amp; Optimization</h3></div>
+        <ul class="ticks">
+          <li>Research primary keywords, search intent, and competing Nigerian insurance broker homepages.</li>
+          <li>Rewrite the homepage title tag, meta description, and main heading to clearly target insurance brokerage in Nigeria.</li>
+          <li>Optimize homepage content, headings, and internal links to all service pages.</li>
+          <li>Review the published homepage for content quality, layout, and indexability.</li>
+        </ul>
+      </article>
+    </div>
+    <footer class="foot"><span>Phase 2 · On-Page SEO &amp; Content Production</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 10 · P2 Blog + Other Pages -->
+<section class="slide p2" id="p2-blog-other" data-title="Blog & Other Pages" aria-label="Primary Blog Pages and Other Website Pages">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 2 · On-Page SEO &amp; Content Production</p>
+      <h2 class="title">Primary Blog Pages &amp; Other Website Pages</h2>
+    </header>
+    <div class="cols-2">
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-pen"/></svg></span><h3>Primary Blog Pages: Research, Content Writing &amp; Publishing</h3></div>
+        <ul class="ticks">
+          <li>Research informational keywords, audience questions, and competitor topics.</li>
+          <li>Prepare content outlines and write informative blog posts with relevant internal links.</li>
+          <li>Optimize headings, metadata, and images before publishing.</li>
+          <li>Publish using the appropriate website template and review the final pages.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-pages"/></svg></span><h3>Other Website Pages: Research, Content Writing &amp; Publishing</h3></div>
+        <ul class="chips chips-row" aria-label="Key pages">
+          <li>Our Story</li><li>Leadership</li><li>Global Reach and Standards</li><li>Careers</li><li>Contact Us</li><li>Privacy Policy</li><li>and more</li>
+        </ul>
+        <ul class="ticks">
+          <li>Review key pages such as Our Story, Leadership, Global Reach and Standards, Careers, Contact Us, and Privacy Policy, and more, to identify content requirements.</li>
+          <li>Write or update content, optimize relevant headings, and add internal links to key service pages.</li>
+          <li>Publish updates using the appropriate Elementor template.</li>
+          <li>Check content accuracy, formatting, mobile display, and functionality.</li>
+        </ul>
+      </article>
+    </div>
+    <footer class="foot"><span>Phase 2 · On-Page SEO &amp; Content Production</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 11 · P2 Ongoing Content -->
+<section class="slide p2" id="p2-ongoing" data-title="Ongoing Content Creation" aria-label="Ongoing Content Creation">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 2 · On-Page SEO &amp; Content Production</p>
+      <h2 class="title">Ongoing Content Creation: Research, Content Writing &amp; Publishing</h2>
+    </header>
+    <div class="cc-grid">
+      <div class="statcard">
+        <div class="stat">4–6</div>
+        <div class="stat-cap">blog topics every month</div>
+        <p class="mini-label">Relevant service pages such as</p>
+        <ul class="chips"><li>Energy</li><li>Marine</li><li>Property</li><li>SME</li><li>Motor Insurance</li></ul>
+      </div>
+      <ol class="nlist">
+        <li>Research 4–6 blog topics every month based on Nigerian insurance keywords, business and individual audience questions, industry risks, and regulatory updates.</li>
+        <li>Write original, informative Insights posts with internal links to relevant service pages such as Energy, Marine, Property, SME, and Motor Insurance.</li>
+        <li>Optimize headings, metadata, images, and alt text before publishing.</li>
+        <li>Publish posts using the appropriate WordPress blog template and review their performance in monthly reports.</li>
+      </ol>
+    </div>
+    <footer class="foot"><span>Phase 2 · On-Page SEO &amp; Content Production</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 12 · PHASE 3 DIVIDER -->
+<section class="slide slide--dark p3" id="phase-3" data-title="Phase 3 · Off-Page SEO" aria-label="Phase 3: Off-Page SEO">
+  <div class="card"><div class="inner">
+    <div class="div-grid">
+      <div>
+        <p class="eyebrow">Phase 3 of 4</p>
+        <div class="phase-num">03</div>
+        <h2 class="title">Off-Page SEO</h2>
+        <div class="objective"><span>Objective</span><p>Build website authority, brand recognition, and external trust signals through relevant and credible external sources.</p></div>
+      </div>
+      <div>
+        <p class="mini-label">Workstreams in this phase</p>
+        <ol class="ws">
+          <li><svg class="ic"><use href="#i-link"/></svg>Backlink Audit &amp; Competitor Analysis</li>
+          <li><svg class="ic"><use href="#i-mega"/></svg>Link Building &amp; Digital PR</li>
+          <li><svg class="ic"><use href="#i-globe"/></svg>Web 2.0 Link Building</li>
+          <li><svg class="ic"><use href="#i-pin"/></svg>Local Citations &amp; Business Listings</li>
+          <li><svg class="ic"><use href="#i-users"/></svg>Social Profile Optimization</li>
+          <li><svg class="ic"><use href="#i-star"/></svg>Google Business Profile &amp; Reviews</li>
+        </ol>
+      </div>
+    </div>
+    <footer class="foot"><span>Phase 3 · Off-Page SEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 13 · P3 Backlinks + Link Building -->
+<section class="slide p3" id="p3-backlinks" data-title="Backlinks & Digital PR" aria-label="Backlink Audit and Link Building">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 3 · Off-Page SEO</p>
+      <h2 class="title">Backlink Audit, Link Building &amp; Digital PR</h2>
+    </header>
+    <div class="cols-2">
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-link"/></svg></span><h3>Backlink Audit &amp; Competitor Analysis</h3></div>
+        <ul class="ticks">
+          <li>Check current backlinks and judge their quality and relevance.</li>
+          <li>Investigate suspicious backlink patterns and potentially damaging links.</li>
+          <li>Assess competitor backlink profiles and referring domains.</li>
+          <li>Spot backlink gaps and rank the most realistic link-building opportunities.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-mega"/></svg></span><h3>Link Building &amp; Digital PR</h3></div>
+        <ul class="ticks">
+          <li>Discover relevant link-building opportunities across the industry.</li>
+          <li>Contact relevant websites, publishers, and industry resources through outreach.</li>
+          <li>Earn relevant editorial links and develop genuine industry relationships.</li>
+          <li>Keep track of acquired backlinks and referring domain growth.</li>
+        </ul>
+      </article>
+    </div>
+    <footer class="foot"><span>Phase 3 · Off-Page SEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 14 · P3 Web 2.0 + Citations -->
+<section class="slide p3" id="p3-web2-citations" data-title="Web 2.0 & Local Citations" aria-label="Web 2.0 Link Building and Local Citations">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 3 · Off-Page SEO</p>
+      <h2 class="title">Web 2.0 Link Building &amp; Local Citations</h2>
+    </header>
+    <div class="cols-2">
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-globe"/></svg></span><h3>Web 2.0 Link Building</h3></div>
+        <ul class="ticks">
+          <li>Select suitable third-party publishing platforms for branded content.</li>
+          <li>Build and refine branded profiles with consistent business information.</li>
+          <li>Share valuable, original content covering the business and its areas of expertise.</li>
+          <li>Place contextual website links naturally where relevant and permitted by each platform's guidelines.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-pin"/></svg></span><h3>Local Citations &amp; Business Listings</h3></div>
+        <ul class="ticks">
+          <li>Identify relevant Nigerian business directories, insurance industry associations, and broker listing platforms.</li>
+          <li>Create or optimize business listings, including pages such as insurance broker directories and partner networks.</li>
+          <li>Maintain a consistent business name, Lagos office address, phone number, and website link across all listings.</li>
+          <li>Review existing citations and identify missing listing opportunities in the Nigerian market.</li>
+        </ul>
+      </article>
+    </div>
+    <footer class="foot"><span>Phase 3 · Off-Page SEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 15 · P3 Social + GBP -->
+<section class="slide p3" id="p3-social-gbp" data-title="Social & Google Business Profile" aria-label="Social Profile Optimization and Google Business Profile">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 3 · Off-Page SEO</p>
+      <h2 class="title">Social Profiles, Google Business Profile &amp; Reviews</h2>
+    </header>
+    <div class="cols-2">
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-users"/></svg></span><h3>Social Profile Optimization</h3></div>
+        <ul class="ticks">
+          <li>Identify relevant social media platforms for the business, prioritizing professional networks alongside the existing profiles.</li>
+          <li>Create or optimize business profiles with consistent branding, bio, logo, and messaging that reflect the company's expertise and professional identity.</li>
+          <li>Add website links to key service pages and the Insights section, along with relevant business details.</li>
+          <li>Ensure profiles accurately represent the company and its insurance services.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="ph"><span class="ico"><svg class="ic"><use href="#i-star"/></svg></span><h3>Google Business Profile &amp; Reviews</h3></div>
+        <ul class="ticks">
+          <li>Review and optimize the Google Business Profile, where applicable.</li>
+          <li>Verify business information, categories, services, and descriptions.</li>
+          <li>Publish regular Google Business Profile posts featuring company updates, products, services, and relevant announcements.</li>
+          <li>Add suitable business photos and supporting information.</li>
+          <li>Develop a process for requesting and responding to genuine customer reviews.</li>
+          <li>Monitor profile accuracy, engagement, and local search performance.</li>
+        </ul>
+      </article>
+    </div>
+    <footer class="foot"><span>Phase 3 · Off-Page SEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 16 · PHASE 4 DIVIDER -->
+<section class="slide slide--dark p4" id="phase-4" data-title="Phase 4 · AEO & GEO" aria-label="Phase 4: AEO and GEO">
+  <div class="card"><div class="inner">
+    <div class="div-grid">
+      <div>
+        <p class="eyebrow">Phase 4 of 4</p>
+        <div class="phase-num">04</div>
+        <h2 class="title">AEO &amp; GEO</h2>
+        <div class="objective"><span>Objective</span><p>Increase YOA Insurance Brokers' visibility, authority, and brand recognition as a trusted insurance broker in Nigeria across AI search engines and generative AI platforms.</p></div>
+      </div>
+      <div>
+        <p class="mini-label">Workstreams in this phase</p>
+        <ol class="ws">
+          <li><svg class="ic"><use href="#i-spark"/></svg>AI Visibility Foundation</li>
+          <li><svg class="ic"><use href="#i-award"/></svg>Authority &amp; Trust Building</li>
+          <li><svg class="ic"><use href="#i-network"/></svg>Entity Authority &amp; AI Citations</li>
+        </ol>
+      </div>
+    </div>
+    <footer class="foot"><span>Phase 4 · AEO &amp; GEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 17 · P4 AI Visibility Foundation -->
+<section class="slide p4" id="p4-foundation" data-title="AI Visibility Foundation" aria-label="AI Visibility Foundation">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 4 · AEO &amp; GEO</p>
+      <h2 class="title">AI Visibility Foundation</h2>
+    </header>
+    <ul class="tiles">
+      <li class="tile"><span class="n">01</span><span class="ico"><svg class="ic"><use href="#i-upload"/></svg></span><p>AI search engine submission and indexing checks across relevant search ecosystems</p></li>
+      <li class="tile"><span class="n">02</span><span class="ico"><svg class="ic"><use href="#i-eye"/></svg></span><p>AI visibility tracking setup and baseline monitoring for brand and Nigerian insurance queries</p></li>
+      <li class="tile"><span class="n">03</span><span class="ico"><svg class="ic"><use href="#i-book"/></svg></span><p>Educational and informational content development</p></li>
+      <li class="tile"><span class="n">04</span><span class="ico"><svg class="ic"><use href="#i-list"/></svg></span><p><strong>"Best insurance brokers in Nigeria"</strong> listicles and insurance comparison content creation</p></li>
+      <li class="tile"><span class="n">05</span><span class="ico"><svg class="ic"><use href="#i-target"/></svg></span><p>Long-tail informational query targeting</p></li>
+      <li class="tile"><span class="n">06</span><span class="ico"><svg class="ic"><use href="#i-help"/></svg></span><p>People Also Ask (PAA) question targeting for padel apparel and lifestyle topics</p></li>
+    </ul>
+    <footer class="foot"><span>Phase 4 · AEO &amp; GEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 18 · P4 Authority & Trust -->
+<section class="slide p4" id="p4-authority" data-title="Authority & Trust Building" aria-label="Authority and Trust Building">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 4 · AEO &amp; GEO</p>
+      <h2 class="title">Authority &amp; Trust Building</h2>
+    </header>
+    <ul class="tiles">
+      <li class="tile"><span class="n">01</span><span class="ico"><svg class="ic"><use href="#i-pin"/></svg></span><p>Improving listings on industry directories and relevant business platforms</p></li>
+      <li class="tile"><span class="n">02</span><span class="ico"><svg class="ic"><use href="#i-star"/></svg></span><p>Growing product reviews and collecting customer feedback</p></li>
+      <li class="tile"><span class="n">03</span><span class="ico"><svg class="ic"><use href="#i-chat"/></svg></span><p>Engaging in Reddit and relevant industry conversations</p></li>
+      <li class="tile"><span class="n">04</span><span class="ico"><svg class="ic"><use href="#i-help"/></svg></span><p>Building a Quora question-and-answer approach</p></li>
+      <li class="tile"><span class="n">05</span><span class="ico"><svg class="ic"><use href="#i-users"/></svg></span><p>Enhancing social profiles and maintaining consistent brand information</p></li>
+      <li class="tile"><span class="n">06</span><span class="ico"><svg class="ic"><use href="#i-mega"/></svg></span><p>Pursuing digital PR and third-party content placement opportunities</p></li>
+      <li class="tile"><span class="n">07</span><span class="ico"><svg class="ic"><use href="#i-mic"/></svg></span><p>Adapting content for voice and conversational search</p></li>
+    </ul>
+    <footer class="foot"><span>Phase 4 · AEO &amp; GEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 19 · P4 Entity Authority -->
+<section class="slide p4" id="p4-entity" data-title="Entity Authority & AI Citations" aria-label="Entity Authority and AI Citations">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Phase 4 · AEO &amp; GEO</p>
+      <h2 class="title">Entity Authority &amp; AI Citations</h2>
+    </header>
+    <ul class="tiles">
+      <li class="tile"><span class="n">01</span><span class="ico"><svg class="ic"><use href="#i-network"/></svg></span><p>Reinforcing entity signals to establish the brand in Google's Knowledge Graph</p></li>
+      <li class="tile"><span class="n">02</span><span class="ico"><svg class="ic"><use href="#i-chat"/></svg></span><p>Applying natural language processing (NLP) principles for semantic content optimization</p></li>
+      <li class="tile"><span class="n">03</span><span class="ico"><svg class="ic"><use href="#i-news"/></svg></span><p>Securing brand mentions in authoritative insurance and business publications</p></li>
+      <li class="tile"><span class="n">04</span><span class="ico"><svg class="ic"><use href="#i-home"/></svg></span><p>Enhancing the homepage's authority and trust signals</p></li>
+      <li class="tile"><span class="n">05</span><span class="ico"><svg class="ic"><use href="#i-compare"/></svg></span><p>Producing content that compares insurance products and policies</p></li>
+      <li class="tile"><span class="n">06</span><span class="ico"><svg class="ic"><use href="#i-eye"/></svg></span><p>Following AI citations and reviewing competitor visibility</p></li>
+    </ul>
+    <footer class="foot"><span>Phase 4 · AEO &amp; GEO</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 20 · Ongoing Reporting -->
+<section class="slide rep" id="reporting" data-title="Ongoing SEO Reporting" aria-label="Ongoing SEO Reporting">
+  <div class="card"><div class="inner">
+    <header class="hd">
+      <p class="eyebrow">Across All Four Phases</p>
+      <h2 class="title">Ongoing SEO Reporting</h2>
+      <p class="lead">Reporting will continue throughout all four phases to track implementation, performance, and next priorities.</p>
+    </header>
+    <ul class="tiles">
+      <li class="tile"><span class="n">01</span><span class="ico"><svg class="ic"><use href="#i-growth"/></svg></span><p>Measure organic traffic, rankings, impressions, clicks, and conversions.</p></li>
+      <li class="tile"><span class="n">02</span><span class="ico"><svg class="ic"><use href="#i-wrench"/></svg></span><p>Follow technical SEO progress and fixes that have been completed.</p></li>
+      <li class="tile"><span class="n">03</span><span class="ico"><svg class="ic"><use href="#i-layers"/></svg></span><p>Track product and category page optimization along with content publishing.</p></li>
+      <li class="tile"><span class="n">04</span><span class="ico"><svg class="ic"><use href="#i-link"/></svg></span><p>Keep an eye on backlinks, referring domains, citations, and brand mentions.</p></li>
+      <li class="tile"><span class="n">05</span><span class="ico"><svg class="ic"><use href="#i-pin"/></svg></span><p>Assess local SEO performance where it applies.</p></li>
+      <li class="tile"><span class="n">06</span><span class="ico"><svg class="ic"><use href="#i-spark"/></svg></span><p>Watch AEO/GEO visibility and AI citations where they can be measured.</p></li>
+      <li class="tile"><span class="n">07</span><span class="ico"><svg class="ic"><use href="#i-tasks"/></svg></span><p>Log completed tasks, pending items, and upcoming priorities.</p></li>
+    </ul>
+    <footer class="foot"><span>Yoa Insurance Brokers · 4-Phase SEO Strategy Report</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 21 · Overall Goal -->
+<section class="slide rep" id="goal" data-title="Overall Goal" aria-label="Overall Goal">
+  <div class="card"><div class="inner">
+    <div class="goal-grid">
+      <div>
+        <p class="eyebrow">Bringing It Together</p>
+        <h2 class="title" style="margin-top:.35em">Overall Goal</h2>
+        <blockquote class="goal-quote">Build YOA Insurance Brokers' presence across traditional search engines, AI search platforms, insurance and business publications, review platforms, social networks, and professional communities to increase organic visibility, brand authority, qualified leads, client enquiries, and recognition across search and AI-generated answers.</blockquote>
+      </div>
+      <div class="goal-map">
+        <div class="gm-box">
+          <p class="mini-label">Presence across</p>
+          <ul class="chips">
+            <li>Traditional search engines</li><li>AI search platforms</li><li>Insurance and business publications</li><li>Review platforms</li><li>Social networks</li><li>Professional communities</li>
+          </ul>
+        </div>
+        <div class="gm-arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></div>
+        <div class="gm-box">
+          <p class="mini-label">To increase</p>
+          <ul class="chips">
+            <li>Organic visibility</li><li>Brand authority</li><li>Qualified leads</li><li>Client enquiries</li><li>Recognition across search and AI-generated answers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="foot"><span>Yoa Insurance Brokers · 4-Phase SEO Strategy Report</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+<!-- 22 · Source -->
+<section class="slide slide--dark rep" id="source" data-title="Source" aria-label="Source Document">
+  <div class="card"><div class="inner">
+    <div class="src-grid">
+      <div>
+        <p class="eyebrow">Source</p>
+        <h2 class="src-title">Source Document</h2>
+        <p class="src-doc">This presentation is based on <b>4 Phase SEO Strategy Report – Yoa Insurance Brokers</b>.</p>
+        <a class="btn" href="https://docs.google.com/document/d/1KSZWb0ruFdJqbYF9PNPf2XwbJQs1guDntpC-zu0sdzI/edit?tab=t.ntbszhq46ake#heading=h.izwl9hxk7uan" target="_blank" rel="noopener">Open the original document <svg class="ic"><use href="#i-ext"/></svg></a>
+        <p class="src-site">Client website: <a href="http://yoainsurance.com" target="_blank" rel="noopener">yoainsurance.com</a></p>
+        <p class="thanks">Thank you.</p>
+      </div>
+      <div class="keys">
+        <p class="mini-label">Navigating this presentation</p>
+        <ul>
+          <li><span>Next slide</span><span><kbd>↓</kbd><kbd>→</kbd><kbd>Space</kbd></span></li>
+          <li><span>Previous slide</span><span><kbd>↑</kbd><kbd>←</kbd><kbd>Shift</kbd>+<kbd>Space</kbd></span></li>
+          <li><span>Page up / down</span><span><kbd>PgUp</kbd><kbd>PgDn</kbd></span></li>
+          <li><span>First / last slide</span><span><kbd>Home</kbd><kbd>End</kbd></span></li>
+          <li><span>Full screen</span><span><kbd>F</kbd></span></li>
+        </ul>
+      </div>
+    </div>
+    <footer class="foot"><span>Yoa Insurance Brokers · 4-Phase SEO Strategy Report</span><span class="pg"></span></footer>
+  </div></div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var total = slides.length;
+  var dotsNav = document.getElementById('dots');
+  var bar = document.getElementById('bar');
+  var cur = document.getElementById('cur');
+  var tot = document.getElementById('tot');
+  var prevBtn = document.getElementById('prev');
+  var nextBtn = document.getElementById('next');
+  var fsBtn = document.getElementById('fs');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var behavior = reduce ? 'auto' : 'smooth';
+  var current = -1;
+
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  tot.textContent = pad(total);
+
+  // Page numbers + navigation dots
+  slides.forEach(function(s, i){
+    var pg = s.querySelector('.pg');
+    if (pg) pg.textContent = pad(i + 1) + ' / ' + pad(total);
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'dot';
+    b.setAttribute('aria-label', 'Slide ' + (i + 1) + ': ' + s.getAttribute('data-title'));
+    b.setAttribute('data-label', s.getAttribute('data-title'));
+    b.addEventListener('click', function(){ go(i); });
+    dotsNav.appendChild(b);
+  });
+  var dots = dotsNav.children;
+
+  function setActive(i){
+    if (i === current) return;
+    current = i;
+    for (var j = 0; j < total; j++){
+      dots[j].classList.toggle('active', j === i);
+      if (j === i) dots[j].setAttribute('aria-current', 'true'); else dots[j].removeAttribute('aria-current');
+    }
+    cur.textContent = pad(i + 1);
+    bar.style.transform = 'scaleX(' + ((i + 1) / total) + ')';
+    prevBtn.disabled = i === 0;
+    nextBtn.disabled = i === total - 1;
+  }
+
+  function go(i){
+    i = Math.max(0, Math.min(total - 1, i));
+    slides[i].scrollIntoView({ behavior: behavior, block: 'start' });
+    setActive(i);
+    if (history.replaceState) history.replaceState(null, '', '#' + slides[i].id);
+  }
+
+  // If a slide is taller than the screen (e.g. on mobile), scroll through it first
+  function step(dir){
+    if (current < 0) current = 0;
+    var r = slides[current].getBoundingClientRect(), vh = window.innerHeight;
+    if (dir > 0 && r.bottom > vh + 4 && current < total - 1){
+      window.scrollBy({ top: Math.min(vh * 0.85, r.bottom - vh), behavior: behavior }); return;
+    }
+    if (dir < 0 && r.top < -4){
+      window.scrollBy({ top: Math.max(-vh * 0.85, r.top), behavior: behavior }); return;
+    }
+    go(current + dir);
+  }
+
+  // Detect which slide is on screen while scrolling
+  var ticking = false;
+  function detect(){
+    ticking = false;
+    var mid = window.innerHeight * 0.45, idx = 0;
+    for (var i = 0; i < total; i++){
+      if (slides[i].getBoundingClientRect().top <= mid) idx = i; else break;
+    }
+    if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 2) idx = total - 1;
+    setActive(idx);
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking){ ticking = true; requestAnimationFrame(detect); }
+  }, { passive: true });
+  window.addEventListener('resize', detect);
+
+  // Keyboard controls
+  document.addEventListener('keydown', function(e){
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    var t = e.target, k = e.key;
+    if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+    if ((k === ' ' || k === 'Enter') && t && (t.tagName === 'BUTTON' || t.tagName === 'A')) return;
+    if (k === 'ArrowDown' || k === 'PageDown' || k === 'ArrowRight' || (k === ' ' && !e.shiftKey)){ e.preventDefault(); step(1); }
+    else if (k === 'ArrowUp' || k === 'PageUp' || k === 'ArrowLeft' || (k === ' ' && e.shiftKey)){ e.preventDefault(); step(-1); }
+    else if (k === 'Home'){ e.preventDefault(); go(0); }
+    else if (k === 'End'){ e.preventDefault(); go(total - 1); }
+    else if (k === 'f' || k === 'F'){ toggleFs(); }
+  });
+
+  prevBtn.addEventListener('click', function(){ step(-1); });
+  nextBtn.addEventListener('click', function(){ step(1); });
+
+  function toggleFs(){
+    var d = document, el = d.documentElement;
+    if (!d.fullscreenElement && !d.webkitFullscreenElement){
+      (el.requestFullscreen || el.webkitRequestFullscreen || function(){}).call(el);
+    } else {
+      (d.exitFullscreen || d.webkitExitFullscreen || function(){}).call(d);
+    }
+  }
+  fsBtn.addEventListener('click', toggleFs);
+  if (!document.documentElement.requestFullscreen && !document.documentElement.webkitRequestFullscreen) fsBtn.style.display = 'none';
+
+  // Reveal animation when a slide enters the screen
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ en.target.classList.add('seen'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.15 });
+    slides.forEach(function(s){ io.observe(s); });
+  } else {
+    slides.forEach(function(s){ s.classList.add('seen'); });
+  }
+  window.addEventListener('beforeprint', function(){ slides.forEach(function(s){ s.classList.add('seen'); }); });
+
+  // Open at the slide named in the URL hash, if any
+  var h = location.hash.slice(1);
+  if (h){
+    for (var i = 0; i < total; i++){ if (slides[i].id === h){ slides[i].scrollIntoView(); break; } }
+  }
+  detect();
+})();
+</script>
+</body>
+</html>
