@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4-Phase SEO Strategy Report | A State Of Mind</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0F0C20;
+  --ink:#1A1535;
+  --paper:#F6F4FB;
+  --muted:#5D5980;
+  --ball:#E4FF3A;
+  --p1:#2F5BFF;  /* electric court blue */
+  --p2:#FF4F8B;  /* sunset pink */
+  --p3:#0E8A6A;  /* turf green */
+  --p4:#6A4BF0;  /* dusk violet */
+  --r:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ball);outline-offset:3px;border-radius:6px}
+
+/* phase color hooks */
+.c1{--c:var(--p1);--on:#fff}
+.c2{--c:var(--p2);--on:var(--ink)}
+.c3{--c:var(--p3);--on:#fff}
+.c4{--c:var(--p4);--on:#fff}
+
+/* ---------- Deck shell ---------- */
+#deck{position:relative;height:100vh;height:100dvh;overflow-y:auto;scroll-snap-type:y mandatory;scroll-behavior:smooth}
+.slide{min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:28px 84px 28px 40px;scroll-snap-align:start}
+.frame{
+  width:min(100%, calc((100dvh - 56px) * 16 / 9));aspect-ratio:16/9;
+  container-type:inline-size;background:var(--paper);border-radius:var(--r);
+  position:relative;display:flex;
+}
+.inner{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;padding:3.8cqw 4.6cqw 2.4cqw;font-size:clamp(15px,1.3cqw,22px);line-height:1.5}
+.deco{position:absolute;inset:0;overflow:hidden;border-radius:var(--r);pointer-events:none;z-index:0}
+
+h1,h2,h3{line-height:1.02;letter-spacing:-.025em}
+h2{font-size:clamp(28px,3.4cqw,60px);font-weight:800}
+h3{font-size:clamp(17px,1.5cqw,25px);font-weight:700;letter-spacing:-.01em;line-height:1.2}
+
+.foot{margin-top:auto;padding-top:1.1em;display:flex;justify-content:space-between;font-size:clamp(12px,.85cqw,15px);opacity:.7}
+
+/* ---------- Content slide header ---------- */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:2em;margin-bottom:2.2cqw}
+.pill{display:inline-flex;align-items:center;gap:.5em;background:var(--c);color:var(--on);font-weight:700;font-size:clamp(13px,.95cqw,16px);padding:.3em .95em;border-radius:2em;margin-bottom:.7em}
+.rally{display:flex;gap:.45em;align-items:center}
+.rally i{width:.85em;height:.85em;border-radius:50%;display:block;border:2px solid currentColor;opacity:.35}
+.rally i.on{background:var(--c);border-color:var(--c);opacity:1;transform:scale(1.35)}
+.rally-wrap{display:flex;align-items:center;gap:.8em;color:var(--muted);font-size:clamp(13px,.95cqw,16px);font-weight:600;white-space:nowrap}
+
+/* ---------- Workstream panels ---------- */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:1.8cqw;align-items:stretch}
+.ws{
+  position:relative;background:#fff;background:color-mix(in srgb,var(--c) 8%,#fff);
+  border-radius:22px;padding:1.5em 1.6em 1.6em;
+}
+.ws-head{display:flex;align-items:center;gap:.75em;margin-bottom:1em}
+.ico{width:1.5em;height:1.5em;flex:none;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.badge{width:2.3em;height:2.3em;border-radius:50%;background:var(--c);color:var(--on);display:grid;place-items:center;flex:none}
+.badge .ico{width:1.2em;height:1.2em}
+ul.pts{list-style:none;display:grid;gap:.7em}
+ul.pts li{position:relative;padding-left:1.35em;color:#2B2650}
+ul.pts li::before{content:"";position:absolute;left:0;top:.55em;width:.55em;height:.55em;border-radius:50%;background:var(--c)}
+.sticker{
+  position:absolute;top:-.9em;right:1.2em;background:var(--ball);color:var(--ink);
+  font-weight:800;font-size:.85em;padding:.35em .9em;border-radius:2em;transform:rotate(-5deg);
+  box-shadow:0 6px 14px -8px rgba(26,21,53,.5)
+}
+
+/* ---------- Title slide ---------- */
+.title-frame{background:var(--ink);color:#fff}
+.title-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:2cqw;align-items:center;flex:1}
+.brand{display:inline-flex;align-items:center;gap:.6em;font-weight:700;font-size:clamp(14px,1.05cqw,18px);color:#CFCBEA}
+.brand b{width:.9em;height:.9em;border-radius:50%;background:var(--ball);display:inline-block}
+.title-grid h1{font-size:clamp(40px,6.4cqw,116px);font-weight:800;margin:.35em 0 .45em;letter-spacing:-.04em;line-height:.92}
+.title-grid h1 span{display:block;color:var(--ball)}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:.4em 1.3em;font-size:clamp(15px,1.2cqw,21px)}
+.meta dt{color:#A8A3CC}
+.meta dd{font-weight:600}
+.meta a{color:var(--ball);text-underline-offset:3px}
+.hint{font-size:clamp(12px,.85cqw,15px);color:#A8A3CC;margin-top:2em}
+.hint kbd{font-family:inherit;border:1px solid #4A4478;border-radius:5px;padding:0 .4em}
+.rally-svg{width:100%;height:auto;overflow:visible}
+.rally-svg text{font-family:inherit;font-weight:800}
+.bounce{animation:bounce 1.6s cubic-bezier(.3,0,.7,1) 2 both;transform-origin:center;transform-box:fill-box}
+@keyframes bounce{0%{transform:translateY(-120px)}45%{transform:translateY(0) scale(1.08,.9)}70%{transform:translateY(-40px)}100%{transform:translateY(0)}}
+
+/* ---------- Scoreboard ---------- */
+.board{width:100%;border-collapse:separate;border-spacing:0 .45em;font-size:.92em}
+.board th{text-align:left;font-weight:600;color:var(--muted);font-size:.85em;padding:0 1em}
+.board td{background:#fff;padding:.85em 1em;vertical-align:middle}
+.board td:first-child{border-radius:16px 0 0 16px;width:4.2em}
+.board td:last-child{border-radius:0 16px 16px 0;text-align:center;font-weight:800;font-size:1.25em;width:6em}
+.board .num{width:2.1em;height:2.1em;border-radius:50%;background:var(--c);color:var(--on);display:grid;place-items:center;font-weight:800;font-size:1.1em}
+.board .name{font-weight:700;width:30%}
+.board .obj{color:#3A3560}
+.board tr.live td{background:var(--ink);color:#fff}
+.board tr.live .obj{color:#D3CFEF}
+.livedot{display:inline-flex;align-items:center;gap:.4em;font-size:.6em;font-weight:700;color:var(--ball)}
+.livedot::before{content:"";width:.7em;height:.7em;border-radius:50%;background:var(--ball);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
+
+/* ---------- Phase divider ---------- */
+.divider{background:var(--c);color:var(--on)}
+.giant{
+  position:absolute;right:-2cqw;bottom:-9cqw;font-size:44cqw;font-weight:800;line-height:1;letter-spacing:-.06em;
+  color:transparent;-webkit-text-stroke:2px currentColor;opacity:.4
+}
+.giant-ball{position:absolute;right:30cqw;top:7cqw;width:5.5cqw;height:5.5cqw;border-radius:50%;background:var(--ball);box-shadow:inset -.6cqw -.6cqw 0 rgba(0,0,0,.12)}
+.c2 .giant-ball{background:#fff}
+.div-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:4cqw;align-items:center;flex:1}
+.div-kicker{font-weight:700;font-size:clamp(14px,1.1cqw,19px);opacity:.85}
+.div-title{font-size:clamp(34px,5cqw,88px);font-weight:800;margin:.25em 0 .45em;letter-spacing:-.035em;line-height:.95}
+.objective{font-size:clamp(16px,1.45cqw,24px);line-height:1.45;max-width:30em}
+.objective strong{font-weight:800}
+.side-h{font-size:clamp(14px,1.05cqw,18px);font-weight:700;margin-bottom:.8em;opacity:.85}
+.ws-index{list-style:none;display:grid;gap:.5em}
+.ws-index li{
+  display:grid;grid-template-columns:1.5em 1fr auto;gap:.75em;align-items:center;
+  background:rgba(255,255,255,.16);border-radius:16px;padding:.7em 1em;font-weight:600;
+  backdrop-filter:blur(2px)
+}
+.c2 .ws-index li{background:rgba(26,21,53,.09)}
+.ws-index em{font-style:normal;font-size:.82em;opacity:.85;white-space:nowrap}
+.bar-row{grid-column:2 / 4;display:flex;align-items:center;gap:.7em}
+.bar-track{flex:1;height:.55em;border-radius:1em;background:rgba(26,21,53,.14)}
+.bar{height:100%;border-radius:1em;background:var(--ink);width:calc(var(--v) / 20 * 100%)}
+.bar-row b{font-size:.82em;min-width:4.8em;text-align:right}
+
+/* ---------- Ongoing content ---------- */
+.split{display:grid;grid-template-columns:1.4fr 1fr;gap:1.8cqw;align-items:stretch}
+.stat-card{background:var(--c);color:var(--on);border-radius:22px;padding:1.6em;display:flex;flex-direction:column;justify-content:space-between;gap:1em}
+.stat{font-size:clamp(54px,7cqw,124px);font-weight:800;line-height:.9;letter-spacing:-.05em}
+.stat-l{font-weight:700;font-size:1.05em}
+.chips{display:flex;flex-wrap:wrap;gap:.45em}
+.chip{border:1.5px solid currentColor;border-radius:2em;padding:.25em .85em;font-weight:600;font-size:.9em}
+.stat-card .chip{background:rgba(26,21,53,.08)}
+.chip-h{font-size:.85em;font-weight:700;opacity:.8;margin-bottom:.5em}
+
+/* ---------- Phase 4 tiles ---------- */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:1em;align-content:start}
+.tiles.four{grid-template-columns:repeat(4,1fr)}
+.tile{background:#fff;border-radius:22px;padding:1.3em 1.3em 1.4em;display:flex;flex-direction:column;gap:1em;border:1.5px solid color-mix(in srgb,var(--c) 22%,#fff)}
+.tile:nth-child(3n+1){background:var(--c);color:var(--on);border-color:transparent}
+.tile:nth-child(3n+1) .badge{background:#fff;color:var(--c)}
+.tile p{font-weight:600;line-height:1.35}
+
+/* ---------- Reporting ---------- */
+.report{background:var(--ink);color:#fff}
+.report .pill{--c:var(--ball);--on:var(--ink)}
+.sub{color:#D3CFEF;max-width:46em;margin:-1cqw 0 2cqw;font-size:1.05em}
+.rep-grid{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6em 1.4cqw}
+.rep-grid li{display:flex;align-items:flex-start;gap:.9em;background:rgba(255,255,255,.06);border-radius:16px;padding:.85em 1.1em}
+.rep-grid li:last-child{grid-column:1 / -1}
+.rep-grid .ico{color:var(--ball);margin-top:.05em}
+
+/* ---------- Final ---------- */
+.final{background:var(--ball);color:var(--ink)}
+.final .pill{--c:var(--ink);--on:var(--ball)}
+.final h2{font-size:clamp(34px,4.6cqw,82px);margin-bottom:.35em}
+.goal{font-size:clamp(18px,1.7cqw,29px);line-height:1.42;max-width:44em;font-weight:500;margin-bottom:1.4em}
+.goal-cols{display:grid;grid-template-columns:1.3fr 1fr;gap:2.4cqw;margin-bottom:1.8cqw}
+.goal-cols .chip{background:rgba(26,21,53,.06)}
+.source{border-top:2px solid var(--ink);padding-top:1.1em;display:flex;flex-wrap:wrap;gap:.8em 3em}
+.source p{font-size:.85em;font-weight:600;opacity:.7}
+.source a{font-weight:800;text-underline-offset:4px;word-break:break-word}
+.final-ball{position:absolute;right:-7cqw;top:-7cqw;width:26cqw;height:26cqw;border-radius:50%;border:2px solid rgba(26,21,53,.2)}
+.final-ball::after{content:"";position:absolute;inset:3cqw;border-radius:50%;border:2px dashed rgba(26,21,53,.2)}
+
+/* ---------- Navigation ---------- */
+.dots{position:fixed;right:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:9px;z-index:10}
+.dots button{width:11px;height:11px;border-radius:50%;border:2px solid var(--dc,#8F8AB8);background:transparent;cursor:pointer;padding:0;transition:transform .2s,background .2s}
+.dots button[aria-current="true"]{background:var(--dc,var(--ball));transform:scale(1.4)}
+.ctrl{position:fixed;right:18px;bottom:18px;display:flex;align-items:center;gap:4px;z-index:10;background:#fff;color:var(--ink);border-radius:30px;padding:4px;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
+.ctrl button{width:36px;height:36px;border-radius:50%;border:0;background:transparent;color:inherit;cursor:pointer;display:grid;place-items:center}
+.ctrl button:hover{background:#EDEAF8}
+.ctrl button:disabled{opacity:.3;cursor:default;background:transparent}
+.ctrl .ico{width:20px;height:20px}
+.count{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;min-width:52px;text-align:center}
+.progress{position:fixed;left:0;top:0;height:4px;background:var(--ball);width:0;z-index:11;transition:width .3s}
+
+/* ---------- Tablet / mobile / short screens ---------- */
+@media (max-width:1000px),(max-height:600px){
+  #deck{scroll-snap-type:y proximity}
+  .slide{min-height:auto;padding:12px 12px 4px}
+  .slide:last-child{padding-bottom:84px}
+  .frame{width:100%;aspect-ratio:auto;--r:22px}
+  .inner{padding:28px 22px 18px;font-size:16px}
+  h2{font-size:clamp(26px,6vw,38px)}
+  h3{font-size:18px}
+  .head{flex-direction:column;align-items:flex-start;gap:.6em;margin-bottom:22px}
+  .cols,.div-grid,.split,.goal-cols,.rep-grid,.title-grid{grid-template-columns:1fr;gap:18px}
+  .tiles,.tiles.four{grid-template-columns:1fr 1fr}
+  .title-grid h1{font-size:clamp(38px,10vw,64px)}
+  .div-title{font-size:clamp(34px,8vw,52px)}
+  .objective,.goal{font-size:18px}
+  .giant{font-size:70vw;bottom:-14vw}
+  .giant-ball{width:44px;height:44px;right:24px;top:24px}
+  .ws{padding:1.3em 1.2em}
+  .board,.board tbody,.board tr,.board td{display:block;width:100%!important}
+  .board thead{display:none}
+  .board tr{background:#fff;border-radius:16px;padding:.9em 1em;margin-bottom:.6em;display:grid;grid-template-columns:auto 1fr;gap:.2em .8em}
+  .board tr.live{background:var(--ink)}
+  .board td{background:transparent!important;padding:0;border-radius:0!important;text-align:left!important}
+  .board td:first-child{grid-row:span 3}
+  .board td:last-child{font-size:.85em;font-weight:600;opacity:.75}
+  .dots{display:none}
+  .ctrl{left:50%;right:auto;transform:translateX(-50%);bottom:14px}
+}
+@media (max-width:480px){.tiles,.tiles.four{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){
+  #deck{scroll-behavior:auto}
+  .bounce,.livedot::before{animation:none}
+  *{transition:none!important}
+}
+@media print{
+  #deck{height:auto;overflow:visible}
+  .slide{page-break-after:always;padding:0;min-height:auto}
+  .dots,.ctrl,.progress{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-audit" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></symbol>
+  <symbol id="i-rank" viewBox="0 0 24 24"><path d="M5 20V12M11 20V5M17 20v-9M2 20h20"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v5M15 2v5M6 7h12v4a6 6 0 0 1-12 0zM12 17v5"/></symbol>
+  <symbol id="i-sitemap" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M6 16v-4h12v4"/></symbol>
+  <symbol id="i-speed" viewBox="0 0 24 24"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l4-1L19 8l-3-3L5 16z"/><path d="M14 7l3 3"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h9l4 4v16H6z"/><path d="M15 2v4h4M9 12h7M9 16h7"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+  <symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 10v4h4l9 5V5L7 10z"/><path d="M19 9a4 4 0 0 1 0 6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a7 7 0 0 1 4 6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-node" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M6 6.5l3.8 3.8M18 6.5l-3.8 3.8M6 17.5l3.8-3.8M18 17.5l-3.8-3.8"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 16v-4M12 16V8M16 16v-6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-q" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 9v12h14V9"/></symbol>
+  <symbol id="i-compare" viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="16" rx="1"/><rect x="14" y="4" width="7" height="16" rx="1"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2 2 2 0 0 0 2 2h14"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h13"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+</svg>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<main id="deck" aria-label="Presentation: 4-Phase SEO Strategy Report">
+
+<!-- 1. TITLE -->
+<section class="slide" data-title="Title" data-dot="#E4FF3A">
+  <div class="frame title-frame"><div class="inner">
+    <div class="title-grid">
+      <div>
+        <span class="brand"><b></b>A State Of Mind</span>
+        <h1>4-Phase SEO <span>Strategy Report</span></h1>
+        <dl class="meta">
+          <dt>Client</dt><dd>A State Of Mind</dd>
+          <dt>Website</dt><dd><a href="https://www.astateofmind.com/" target="_blank" rel="noopener">astateofmind.com</a></dd>
+          <dt>Strategy Duration</dt><dd>4 Phases</dd>
+        </dl>
+        <p class="hint">Scroll, or press <kbd>↑</kbd> <kbd>↓</kbd> to move between slides</p>
+      </div>
+      <svg class="rally-svg" viewBox="0 0 600 400" role="img" aria-label="A ball's rally path passing through the four phases in order">
+        <path d="M10 360 Q 110 20 210 330 Q 300 80 390 300 Q 470 130 550 270" fill="none" stroke="#4A4478" stroke-width="2.5" stroke-dasharray="3 10" stroke-linecap="round"/>
+        <g><circle cx="110" cy="182" r="40" fill="var(--p1)"/><text x="110" y="196" text-anchor="middle" font-size="40" fill="#fff">1</text>
+           <text x="110" y="118" text-anchor="middle" font-size="17" fill="#CFCBEA" font-weight="600">Technical</text></g>
+        <g><circle cx="300" cy="197" r="40" fill="var(--p2)"/><text x="300" y="211" text-anchor="middle" font-size="40" fill="#1A1535">2</text>
+           <text x="300" y="133" text-anchor="middle" font-size="17" fill="#CFCBEA" font-weight="600">On-Page</text></g>
+        <g><circle cx="470" cy="207" r="40" fill="var(--p3)"/><text x="470" y="221" text-anchor="middle" font-size="40" fill="#fff">3</text>
+           <text x="470" y="143" text-anchor="middle" font-size="17" fill="#CFCBEA" font-weight="600">Off-Page</text></g>
+        <g><circle cx="556" cy="300" r="34" fill="var(--p4)"/><text x="556" y="313" text-anchor="middle" font-size="34" fill="#fff">4</text>
+           <text x="556" y="366" text-anchor="middle" font-size="17" fill="#CFCBEA" font-weight="600">AEO &amp; GEO</text></g>
+        <circle class="bounce" cx="30" cy="330" r="16" fill="var(--ball)"/>
+      </svg>
+    </div>
+    <div class="foot" style="color:#CFCBEA"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 2. OVERVIEW SCOREBOARD -->
+<section class="slide" data-title="Strategy overview" data-dot="#E4FF3A">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill c4" style="--c:var(--ink);--on:#fff">Strategy overview</span><h2>The match plan</h2></div>
+      <div class="rally-wrap">4 phases + reporting throughout</div>
+    </div>
+    <table class="board">
+      <thead><tr><th></th><th>Phase</th><th>Objective</th><th style="text-align:center">Workstreams</th></tr></thead>
+      <tbody>
+        <tr class="c1"><td><span class="num">1</span></td><td class="name">Technical SEO</td><td class="obj">Improve website crawling, indexation, performance, and technical health.</td><td>6</td></tr>
+        <tr class="c2"><td><span class="num">2</span></td><td class="name">On-Page SEO &amp; Content Production</td><td class="obj">Research, optimize, write, and publish content for important website pages.</td><td>5</td></tr>
+        <tr class="c3"><td><span class="num">3</span></td><td class="name">Off-Page SEO</td><td class="obj">Build website authority, brand recognition, and external trust signals through relevant and credible external sources.</td><td>6</td></tr>
+        <tr class="c4"><td><span class="num">4</span></td><td class="name">AEO &amp; GEO</td><td class="obj">Increase A State of Mind's visibility, authority, and brand recognition as a padel apparel brand across AI search engines and generative AI platforms.</td><td>3</td></tr>
+        <tr class="live"><td><span class="livedot">Live</span></td><td class="name">Ongoing SEO Reporting</td><td class="obj">Reporting will continue throughout all four phases to track implementation, performance, and next priorities.</td><td>All</td></tr>
+      </tbody>
+    </table>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 3. PHASE 1 DIVIDER -->
+<section class="slide c1" data-title="Phase 1: Technical SEO" data-dot="#2F5BFF">
+  <div class="frame divider">
+    <div class="deco"><div class="giant" aria-hidden="true">1</div><div class="giant-ball"></div></div>
+    <div class="inner">
+      <div class="div-grid">
+        <div>
+          <p class="div-kicker">Phase 1 of 4</p>
+          <h2 class="div-title">Technical SEO</h2>
+          <p class="objective"><strong>Objective:</strong> Improve website crawling, indexation, performance, and technical health.</p>
+        </div>
+        <div>
+          <h3 class="side-h">Workstreams in this phase</h3>
+          <ul class="ws-index">
+            <li><svg class="ico"><use href="#i-audit"/></svg><span>Technical SEO Audit</span></li>
+            <li><svg class="ico"><use href="#i-rank"/></svg><span>SEO Tools &amp; Rank Tracking Setup</span></li>
+            <li><svg class="ico"><use href="#i-plug"/></svg><span>Shopify SEO Plugin Optimization</span></li>
+            <li><svg class="ico"><use href="#i-sitemap"/></svg><span>XML Sitemap &amp; Robots.txt Optimization</span></li>
+            <li><svg class="ico"><use href="#i-speed"/></svg><span>Website Performance &amp; Core Web Vitals</span></li>
+            <li><svg class="ico"><use href="#i-check"/></svg><span>Technical Fixes &amp; Quality Assurance</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide c1" data-title="Technical SEO Audit; SEO Tools & Rank Tracking Setup" data-dot="#2F5BFF">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 1 of 4</span><h2>Technical SEO</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span></div>
+    </div>
+    <div class="cols">
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-audit"/></svg></span><h3>Technical SEO Audit</h3></div>
+        <ul class="pts">
+          <li>Conduct a comprehensive technical SEO audit to identify crawling, indexation, and website structure issues.</li>
+          <li>Review URL consistency, duplicate pages, broken links, redirect chains, and orphan pages.</li>
+          <li>Check mobile usability, HTTPS security, and other technical factors affecting search visibility.</li>
+          <li>Prioritize issues based on their impact on crawling, indexing, performance, and user experience.</li>
+        </ul>
+      </article>
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-rank"/></svg></span><h3>SEO Tools &amp; Rank Tracking Setup</h3></div>
+        <ul class="pts">
+          <li>Set up the project in a Rank Tracking tool.</li>
+          <li>Configure the website and target location.</li>
+          <li>Add target keywords and record baseline rankings.</li>
+          <li>Configure competitor tracking where applicable.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 5 -->
+<section class="slide c1" data-title="Shopify SEO Plugin Optimization; XML Sitemap & Robots.txt" data-dot="#2F5BFF">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 1 of 4</span><h2>Technical SEO</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span></div>
+    </div>
+    <div class="cols">
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-plug"/></svg></span><h3>Shopify SEO Plugin Optimization</h3></div>
+        <ul class="pts">
+          <li>Install Yoast SEO for Shopify and configure global settings, including title and meta description templates.</li>
+          <li>Optimize metadata for the homepage, products, collections, pages, and blog posts.</li>
+          <li>Configure indexing rules for pages, collections, and blog posts.</li>
+          <li>Validate Yoast settings and structured data across important store pages, avoiding overlap with the theme's schema.</li>
+        </ul>
+      </article>
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-sitemap"/></svg></span><h3>XML Sitemap &amp; Robots.txt Optimization</h3></div>
+        <ul class="pts">
+          <li>Review and optimize the XML sitemap and robots.txt directives.</li>
+          <li>Ensure important, indexable pages are included in the sitemap and accessible to search engines.</li>
+          <li>Exclude inappropriate or non-indexable URLs from the sitemap where necessary.</li>
+          <li>Submit the sitemap to Google Search Console and verify its processing status.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 6 -->
+<section class="slide c1" data-title="Website Performance & Core Web Vitals; Technical Fixes & QA" data-dot="#2F5BFF">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 1 of 4</span><h2>Technical SEO</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span></div>
+    </div>
+    <div class="cols">
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-speed"/></svg></span><h3>Website Performance &amp; Core Web Vitals</h3></div>
+        <ul class="pts">
+          <li>Analyze website speed and Core Web Vitals.</li>
+          <li>Identify performance issues related to images, scripts, CSS, and page loading.</li>
+          <li>Recommend and implement improvements where possible.</li>
+          <li>Validate performance after optimization.</li>
+        </ul>
+      </article>
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-check"/></svg></span><h3>Technical Fixes &amp; Quality Assurance</h3></div>
+        <ul class="pts">
+          <li>Implement prioritized technical fixes identified during the audit.</li>
+          <li>Validate crawling, indexation, redirects, canonical tags, and internal links after implementation.</li>
+          <li>Recheck mobile usability, HTTPS functionality, and technical errors.</li>
+          <li>Document completed fixes and outstanding issues.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 7. PHASE 2 DIVIDER -->
+<section class="slide c2" data-title="Phase 2: On-Page SEO & Content Production" data-dot="#FF4F8B">
+  <div class="frame divider">
+    <div class="deco"><div class="giant" aria-hidden="true">2</div><div class="giant-ball"></div></div>
+    <div class="inner">
+      <div class="div-grid">
+        <div>
+          <p class="div-kicker">Phase 2 of 4</p>
+          <h2 class="div-title">On-Page SEO &amp; Content Production</h2>
+          <p class="objective"><strong>Objective:</strong> Research, optimize, write, and publish content for important website pages.</p>
+        </div>
+        <div>
+          <h3 class="side-h">Workstreams in this phase</h3>
+          <ul class="ws-index">
+            <li><svg class="ico"><use href="#i-tag"/></svg><span>Product Pages</span><em>All 20 pages</em>
+              <div class="bar-row" aria-hidden="true"><div class="bar-track"><div class="bar" style="--v:20"></div></div><b>20 pages</b></div></li>
+            <li><svg class="ico"><use href="#i-grid"/></svg><span>Category Pages</span><em>All 4 pages</em>
+              <div class="bar-row" aria-hidden="true"><div class="bar-track"><div class="bar" style="--v:4"></div></div><b>4 pages</b></div></li>
+            <li><svg class="ico"><use href="#i-pen"/></svg><span>Primary Blog Pages</span><em></em></li>
+            <li><svg class="ico"><use href="#i-doc"/></svg><span>Other Website Pages</span><em></em></li>
+            <li><svg class="ico"><use href="#i-cal"/></svg><span>Ongoing Content Creation</span><em>4–6 topics / month</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide c2" data-title="Product Pages; Category Pages" data-dot="#FF4F8B">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 2 of 4</span><h2>On-Page SEO &amp; Content Production</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i></i><i class="on"></i><i></i><i></i></span></div>
+    </div>
+    <div class="cols">
+      <article class="ws">
+        <span class="sticker">20 product pages</span>
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-tag"/></svg></span><h3>Product Pages: Research, Content Writing &amp; Publishing</h3></div>
+        <ul class="pts">
+          <li>Research product-specific keywords, search intent, product features, and competitor listings for all 20 product pages.</li>
+          <li>Write unique product pages content, optimize headings, and relevant internal links.</li>
+          <li>Publish optimized product content using the appropriate website theme or template.</li>
+          <li>Review product information, content quality, page formatting, and indexability.</li>
+        </ul>
+      </article>
+      <article class="ws">
+        <span class="sticker" style="transform:rotate(4deg)">4 category pages</span>
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-grid"/></svg></span><h3>Category Pages: Research, Content Writing &amp; Publishing</h3></div>
+        <ul class="pts">
+          <li>Research category keywords, search intent, and competing category pages for all 4 pages.</li>
+          <li>Write relevant category content, optimize headings, and internal links.</li>
+          <li>Publish optimized content using the appropriate website theme or template.</li>
+          <li>Check published pages for content quality, layout, and indexability.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 9 -->
+<section class="slide c2" data-title="Primary Blog Pages; Other Website Pages" data-dot="#FF4F8B">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 2 of 4</span><h2>On-Page SEO &amp; Content Production</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i></i><i class="on"></i><i></i><i></i></span></div>
+    </div>
+    <div class="cols">
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-pen"/></svg></span><h3>Primary Blog Pages: Research, Content Writing &amp; Publishing</h3></div>
+        <ul class="pts">
+          <li>Research informational keywords, audience questions, and competitor topics.</li>
+          <li>Prepare content outlines and write informative blog posts with relevant internal links.</li>
+          <li>Optimize headings, metadata, and images before publishing.</li>
+          <li>Publish using the appropriate website template and review the final pages.</li>
+        </ul>
+      </article>
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-doc"/></svg></span><h3>Other Website Pages: Research, Content Writing &amp; Publishing</h3></div>
+        <ul class="pts">
+          <li>Review pages such as About Us, Contact, Shipping, and Returns &amp; Exchanges to identify content requirements.</li>
+          <li>Create a new Privacy Policy page by researching the store's data practices, writing optimized content, and publishing it through Shopify's Policies settings.</li>
+          <li>Write or update content for existing pages, optimize headings and internal links, and publish using the appropriate Shopify template.</li>
+          <li>Check content accuracy, formatting, mobile display, and functionality.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 10 -->
+<section class="slide c2" data-title="Ongoing Content Creation" data-dot="#FF4F8B">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 2 of 4</span><h2>On-Page SEO &amp; Content Production</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i></i><i class="on"></i><i></i><i></i></span></div>
+    </div>
+    <div class="split">
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-cal"/></svg></span><h3>Ongoing Content Creation: Research, Content Writing &amp; Publishing</h3></div>
+        <ul class="pts">
+          <li>Research 4–6 blog topics every month based on padel, sport, travel, and lifestyle keywords, audience questions, and seasonal trends.</li>
+          <li>Write original, informative blog posts with internal links to relevant collections and products.</li>
+          <li>Optimize headings, metadata, images, and alt text before publishing.</li>
+          <li>Publish posts using the appropriate Shopify blog template and review their performance in monthly reports.</li>
+        </ul>
+      </article>
+      <aside class="stat-card" aria-label="Content cadence">
+        <div><div class="stat">4–6</div><p class="stat-l">blog topics every month</p></div>
+        <div>
+          <p class="chip-h">Keyword areas</p>
+          <div class="chips"><span class="chip">Padel</span><span class="chip">Sport</span><span class="chip">Travel</span><span class="chip">Lifestyle</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 11. PHASE 3 DIVIDER -->
+<section class="slide c3" data-title="Phase 3: Off-Page SEO" data-dot="#0E8A6A">
+  <div class="frame divider">
+    <div class="deco"><div class="giant" aria-hidden="true">3</div><div class="giant-ball"></div></div>
+    <div class="inner">
+      <div class="div-grid">
+        <div>
+          <p class="div-kicker">Phase 3 of 4</p>
+          <h2 class="div-title">Off-Page SEO</h2>
+          <p class="objective"><strong>Objective:</strong> Build website authority, brand recognition, and external trust signals through relevant and credible external sources.</p>
+        </div>
+        <div>
+          <h3 class="side-h">Workstreams in this phase</h3>
+          <ul class="ws-index">
+            <li><svg class="ico"><use href="#i-audit"/></svg><span>Backlink Audit &amp; Competitor Analysis</span></li>
+            <li><svg class="ico"><use href="#i-link"/></svg><span>Link Building &amp; Digital PR</span></li>
+            <li><svg class="ico"><use href="#i-globe"/></svg><span>Web 2.0 Link Building</span></li>
+            <li><svg class="ico"><use href="#i-list"/></svg><span>Brand Listings &amp; Directories</span></li>
+            <li><svg class="ico"><use href="#i-users"/></svg><span>Social Profile Optimization</span></li>
+            <li><svg class="ico"><use href="#i-pin"/></svg><span>Google Business Profile &amp; Reviews</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide c3" data-title="Backlink Audit & Competitor Analysis; Link Building & Digital PR" data-dot="#0E8A6A">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 3 of 4</span><h2>Off-Page SEO</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i></i><i></i><i class="on"></i><i></i></span></div>
+    </div>
+    <div class="cols">
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-audit"/></svg></span><h3>Backlink Audit &amp; Competitor Analysis</h3></div>
+        <ul class="pts">
+          <li>Audit existing backlinks and assess their quality and relevance.</li>
+          <li>Review suspicious backlink patterns and potentially harmful links.</li>
+          <li>Analyze competitor backlink profiles and referring domains.</li>
+          <li>Identify backlink gaps and prioritize realistic link-building opportunities.</li>
+        </ul>
+      </article>
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-link"/></svg></span><h3>Link Building &amp; Digital PR</h3></div>
+        <ul class="pts">
+          <li>Identify relevant link-building opportunities within the industry.</li>
+          <li>Conduct outreach to relevant websites, publishers, and industry resources.</li>
+          <li>Pursue relevant editorial links and genuine industry relationships.</li>
+          <li>Monitor acquired backlinks and referring domain growth.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 13 -->
+<section class="slide c3" data-title="Web 2.0 Link Building; Brand Listings & Directories" data-dot="#0E8A6A">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 3 of 4</span><h2>Off-Page SEO</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i></i><i></i><i class="on"></i><i></i></span></div>
+    </div>
+    <div class="cols">
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-globe"/></svg></span><h3>Web 2.0 Link Building</h3></div>
+        <ul class="pts">
+          <li>Identify suitable third-party publishing platforms for branded content.</li>
+          <li>Create and optimize branded profiles with consistent business information.</li>
+          <li>Publish useful, original content related to the business and its areas of expertise.</li>
+          <li>Add contextual website links naturally where relevant and permitted by platform guidelines.</li>
+        </ul>
+      </article>
+      <article class="ws">
+        <span class="sticker">UAE markets</span>
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-list"/></svg></span><h3>Brand Listings &amp; Directories</h3></div>
+        <ul class="pts">
+          <li>Identify relevant fashion, sportswear, padel, and lifestyle directories and brand listing platforms.</li>
+          <li>Create or optimize brand listings, including pages such as padel club pro shops and retailers.</li>
+          <li>Maintain a consistent brand name, description, logo, and website link across all listings.</li>
+          <li>Review existing listings and identify missing opportunities in the UAE markets.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 14 -->
+<section class="slide c3" data-title="Social Profile Optimization; Google Business Profile & Reviews" data-dot="#0E8A6A">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 3 of 4</span><h2>Off-Page SEO</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i></i><i></i><i class="on"></i><i></i></span></div>
+    </div>
+    <div class="cols">
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-users"/></svg></span><h3>Social Profile Optimization</h3></div>
+        <ul class="pts">
+          <li>Identify relevant social media platforms for the business.</li>
+          <li>Create or optimize brand profiles with consistent branding, bio, logo, and messaging that reflect the brand's sport and lifestyle identity.</li>
+          <li>Add website links to key collections and the blog, along with relevant brand details.</li>
+          <li>Ensure profiles accurately represent the brand and its padel apparel products.</li>
+        </ul>
+      </article>
+      <article class="ws">
+        <div class="ws-head"><span class="badge"><svg class="ico"><use href="#i-pin"/></svg></span><h3>Google Business Profile &amp; Reviews</h3></div>
+        <ul class="pts">
+          <li>Create and verify the Google Business Profile with accurate business information, categories, and description.</li>
+          <li>Optimize the profile with products, brand photos, and regular posts featuring new collections and brand updates.</li>
+          <li>Develop a process for requesting and responding to genuine customer reviews.</li>
+          <li>Monitor profile accuracy, engagement, and search performance.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 15. PHASE 4 DIVIDER -->
+<section class="slide c4" data-title="Phase 4: AEO & GEO" data-dot="#6A4BF0">
+  <div class="frame divider">
+    <div class="deco"><div class="giant" aria-hidden="true">4</div><div class="giant-ball"></div></div>
+    <div class="inner">
+      <div class="div-grid">
+        <div>
+          <p class="div-kicker">Phase 4 of 4</p>
+          <h2 class="div-title">AEO &amp; GEO</h2>
+          <p class="objective"><strong>Objective:</strong> Increase A State of Mind's visibility, authority, and brand recognition as a padel apparel brand across AI search engines and generative AI platforms.</p>
+        </div>
+        <div>
+          <h3 class="side-h">Workstreams in this phase</h3>
+          <ul class="ws-index">
+            <li><svg class="ico"><use href="#i-spark"/></svg><span>AI Visibility Foundation</span><em>6 activities</em></li>
+            <li><svg class="ico"><use href="#i-shield"/></svg><span>Authority &amp; Trust Building</span><em>7 activities</em></li>
+            <li><svg class="ico"><use href="#i-node"/></svg><span>Entity Authority &amp; AI Citations</span><em>6 activities</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide c4" data-title="AI Visibility Foundation" data-dot="#6A4BF0">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 4 of 4: AEO &amp; GEO</span><h2>AI Visibility Foundation</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i></i><i></i><i></i><i class="on"></i></span></div>
+    </div>
+    <div class="tiles">
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-send"/></svg></span><p>AI search engine submission and indexing checks across relevant search ecosystems</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-eye"/></svg></span><p>AI visibility tracking setup and baseline monitoring for brand and padel apparel queries</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-book"/></svg></span><p>Educational and informational content development</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-list"/></svg></span><p>"<strong>Best padel clothing</strong>" listicles and product comparison content creation</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-target"/></svg></span><p>Long-tail informational query targeting</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-q"/></svg></span><p>People Also Ask (PAA) question targeting for padel apparel and lifestyle topics</p></div>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 17 -->
+<section class="slide c4" data-title="Authority & Trust Building" data-dot="#6A4BF0">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 4 of 4: AEO &amp; GEO</span><h2>Authority &amp; Trust Building</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i></i><i></i><i></i><i class="on"></i></span></div>
+    </div>
+    <div class="tiles four">
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-list"/></svg></span><p>Industry directory and relevant business listing optimization</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-star"/></svg></span><p>Product review and customer feedback development</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-chat"/></svg></span><p>Reddit participation and relevant industry discussions</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-q"/></svg></span><p>Quora question-and-answer strategy</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-users"/></svg></span><p>Social profile optimization and brand information consistency</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-mega"/></svg></span><p>Digital PR and third-party content placement opportunities</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-mic"/></svg></span><p>Voice and conversational search optimization</p></div>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 18 -->
+<section class="slide c4" data-title="Entity Authority & AI Citations" data-dot="#6A4BF0">
+  <div class="frame"><div class="inner">
+    <div class="head">
+      <div><span class="pill">Phase 4 of 4: AEO &amp; GEO</span><h2>Entity Authority &amp; AI Citations</h2></div>
+      <div class="rally-wrap"><span class="rally" aria-hidden="true"><i></i><i></i><i></i><i class="on"></i></span></div>
+    </div>
+    <div class="tiles">
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-node"/></svg></span><p>Entity optimization and knowledge graph signal development</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-text"/></svg></span><p>Natural language processing (NLP) and semantic content optimization</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-doc"/></svg></span><p>Brand mentions across authoritative industry publications</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-home"/></svg></span><p>Homepage authority enhancement</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-compare"/></svg></span><p>Product comparison content creation</p></div>
+      <div class="tile"><span class="badge"><svg class="ico"><use href="#i-eye"/></svg></span><p>AI citation tracking and competitor visibility analysis</p></div>
+    </div>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 19. Reporting -->
+<section class="slide" data-title="Ongoing SEO Reporting" data-dot="#E4FF3A">
+  <div class="frame report"><div class="inner">
+    <div class="head">
+      <div><span class="pill"><span class="livedot" style="color:var(--ink);font-size:1em"></span>Across all four phases</span><h2>Ongoing SEO Reporting</h2></div>
+    </div>
+    <p class="sub">Reporting will continue throughout all four phases to track implementation, performance, and next priorities.</p>
+    <ul class="rep-grid">
+      <li><svg class="ico"><use href="#i-report"/></svg><span>Monitor organic traffic, rankings, impressions, clicks, and conversions.</span></li>
+      <li><svg class="ico"><use href="#i-check"/></svg><span>Track technical SEO progress and completed fixes.</span></li>
+      <li><svg class="ico"><use href="#i-tag"/></svg><span>Monitor product and category page optimization and content publishing.</span></li>
+      <li><svg class="ico"><use href="#i-link"/></svg><span>Track backlinks, referring domains, citations, and brand mentions.</span></li>
+      <li><svg class="ico"><use href="#i-pin"/></svg><span>Review local SEO performance where applicable.</span></li>
+      <li><svg class="ico"><use href="#i-spark"/></svg><span>Monitor AEO/GEO visibility and AI citations where measurable.</span></li>
+      <li><svg class="ico"><use href="#i-list"/></svg><span>Document completed tasks, pending items, and upcoming priorities.</span></li>
+    </ul>
+    <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+  </div></div>
+</section>
+
+<!-- 20. Overall Goal + Source -->
+<section class="slide" data-title="Overall Goal and source" data-dot="#E4FF3A">
+  <div class="frame final">
+    <div class="deco"><div class="final-ball"></div></div>
+    <div class="inner">
+      <div><span class="pill">Overall Goal</span></div>
+      <h2>Game, set, visibility</h2>
+      <p class="goal">Build A State of Mind's presence across traditional search engines, AI search platforms, padel, sport, and fashion publications, review platforms, social networks, and padel communities to increase organic visibility, brand authority, qualified traffic, online sales, and recognition across search and AI-generated answers.</p>
+      <div class="goal-cols">
+        <div><p class="chip-h">Presence across</p>
+          <div class="chips"><span class="chip">Traditional search engines</span><span class="chip">AI search platforms</span><span class="chip">Padel, sport, and fashion publications</span><span class="chip">Review platforms</span><span class="chip">Social networks</span><span class="chip">Padel communities</span></div>
+        </div>
+        <div><p class="chip-h">To increase</p>
+          <div class="chips"><span class="chip">Organic visibility</span><span class="chip">Brand authority</span><span class="chip">Qualified traffic</span><span class="chip">Online sales</span><span class="chip">Recognition across search and AI-generated answers</span></div>
+        </div>
+      </div>
+      <div class="source">
+        <div><p>Source document</p><a href="https://docs.google.com/document/d/163QzjZkKfsCoe3542pwxBnmRnFUAUESzO9Lml5_tOJ0/edit?usp=sharing" target="_blank" rel="noopener">4-Phase SEO Strategy Report: A State Of Mind (Google Doc)</a></div>
+        <div><p>Client website</p><a href="https://www.astateofmind.com/" target="_blank" rel="noopener">astateofmind.com</a></div>
+      </div>
+      <div class="foot"><span>A State Of Mind</span><span class="pg"></span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<nav class="dots" id="dots" aria-label="Slide navigation"></nav>
+<div class="ctrl" role="group" aria-label="Slide controls">
+  <button id="prev" aria-label="Previous slide"><svg class="ico"><use href="#i-up"/></svg></button>
+  <span class="count" id="count" aria-live="polite">1 / 20</span>
+  <button id="next" aria-label="Next slide"><svg class="ico"><use href="#i-down"/></svg></button>
+</div>
+
+<script>
+(function(){
+  const deck = document.getElementById('deck');
+  const slides = Array.from(deck.querySelectorAll('.slide'));
+  const total = slides.length;
+  const dotsNav = document.getElementById('dots');
+  const count = document.getElementById('count');
+  const progress = document.getElementById('progress');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let current = 0;
+
+  slides.forEach((s, i) => {
+    s.querySelectorAll('.pg').forEach(pg => pg.textContent = (i + 1) + ' / ' + total);
+    s.setAttribute('aria-label', 'Slide ' + (i + 1) + ' of ' + total + ': ' + (s.dataset.title || ''));
+  });
+
+  // One dot per slide, colored by its phase
+  const dots = slides.map((s, i) => {
+    const b = document.createElement('button');
+    b.style.setProperty('--dc', s.dataset.dot || '#E4FF3A');
+    b.setAttribute('aria-label', 'Go to slide ' + (i + 1) + ': ' + (s.dataset.title || ''));
+    b.title = s.dataset.title || ('Slide ' + (i + 1));
+    b.addEventListener('click', () => go(i));
+    dotsNav.appendChild(b);
+    return b;
+  });
+
+  function go(i){
+    i = Math.max(0, Math.min(total - 1, i));
+    slides[i].scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  }
+
+  function update(){
+    const mark = deck.scrollTop + deck.clientHeight * 0.4;
+    let idx = 0;
+    for (let i = 0; i < total; i++) { if (slides[i].offsetTop <= mark) idx = i; }
+    if (deck.scrollTop + deck.clientHeight >= deck.scrollHeight - 2) idx = total - 1;
+    current = idx;
+    count.textContent = (idx + 1) + ' / ' + total;
+    progress.style.width = ((idx + 1) / total * 100) + '%';
+    progress.style.background = slides[idx].dataset.dot || '#E4FF3A';
+    dots.forEach((d, i) => d.setAttribute('aria-current', i === idx ? 'true' : 'false'));
+    prev.disabled = idx === 0;
+    next.disabled = idx === total - 1;
+  }
+
+  let ticking = false;
+  deck.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(() => { update(); ticking = false; }); ticking = true; }
+  }, { passive: true });
+  window.addEventListener('resize', update);
+  prev.addEventListener('click', () => go(current - 1));
+  next.addEventListener('click', () => go(current + 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    const tag = (document.activeElement && document.activeElement.tagName) || '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+    switch (e.key) {
+      case 'ArrowDown': case 'ArrowRight': case 'PageDown': e.preventDefault(); go(current + 1); break;
+      case 'ArrowUp': case 'ArrowLeft': case 'PageUp': e.preventDefault(); go(current - 1); break;
+      case ' ':
+        if (tag === 'BUTTON' || tag === 'A') return;
+        e.preventDefault(); go(current + (e.shiftKey ? -1 : 1)); break;
+      case 'Home': e.preventDefault(); go(0); break;
+      case 'End': e.preventDefault(); go(total - 1); break;
+      case 'f': case 'F':
+        if (!document.fullscreenElement) { document.documentElement.requestFullscreen && document.documentElement.requestFullscreen(); }
+        else { document.exitFullscreen && document.exitFullscreen(); }
+        break;
+    }
+  });
+
+  update();
+})();
+</script>
+</body>
+</html>
