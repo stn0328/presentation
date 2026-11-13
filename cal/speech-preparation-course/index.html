@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speech Delivery Coaching for Clear, Confident Talks</title>
+<meta name="description" content="Get speech delivery coaching for clearer structure, better pacing and confident practice. Working with a speech coach in Scotland. Book a session today.">
+<style>
+:root {
+  color-scheme: light;
+  --ink: #111;
+  --muted: #666;
+  --line: #111;
+  --soft: #f4f4f4;
+  --page: #fff;
+  --max: 1160px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.58;
+}
+main {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 0 auto;
+}
+section { padding: 66px 0; border-bottom: 2px solid var(--line); }
+section:last-child { border-bottom: 0; }
+h1, h2, h3, p { margin-top: 0; }
+h1 {
+  max-width: 760px;
+  margin-bottom: 22px;
+  font-size: clamp(38px, 5.4vw, 66px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+h2 {
+  max-width: 850px;
+  margin-bottom: 22px;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+h3 { font-size: 20px; line-height: 1.25; }
+p { margin-bottom: 18px; }
+p:last-child { margin-bottom: 0; }
+.eyebrow {
+  margin-bottom: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.hero {
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(300px, .88fr);
+  align-items: center;
+  gap: 58px;
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+.hero-copy { max-width: 700px; }
+.hero-copy > p { max-width: 620px; font-size: 19px; line-height: 1.55; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.cta {
+  display: inline-flex;
+  min-height: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 19px;
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  color: var(--ink);
+  background: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+.cta.primary { color: #fff; background: #111; }
+.image-placeholder {
+  min-height: 330px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  border: 2px dashed #777;
+  background: #fafafa;
+  color: #555;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.image-placeholder.tall { min-height: 390px; }
+.section-head { max-width: 820px; margin-bottom: 34px; }
+.section-head .eyebrow { margin-bottom: 12px; }
+.intro-grid, .about-grid, .closing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .72fr);
+  align-items: center;
+  gap: 64px;
+}
+.intro-copy { max-width: 760px; }
+.support-panel {
+  padding: 28px;
+  border: 2px solid var(--ink);
+}
+.support-panel p { font-size: 17px; }
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.problem-grid li {
+  min-height: 112px;
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+  border: 2px solid var(--ink);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.28;
+}
+.problem-grid li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  margin: 0 12px 5px 0;
+  background: #111;
+}
+.plan-list, .process-list, .faq-list { border-bottom: 1px solid var(--line); }
+.accordion-item { border-top: 1px solid var(--line); }
+.accordion-item > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.accordion-item > summary::-webkit-details-marker { display: none; }
+.accordion-item > summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1;
+}
+.accordion-item[open] > summary::after { content: "−"; }
+.accordion-item > summary:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 5px;
+}
+.accordion-panel { max-width: 850px; padding: 0 48px 22px 0; }
+.accordion-panel p { margin-bottom: 14px; }
+.accordion-panel p:last-child { margin-bottom: 0; }
+.benefit-panel {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 44px;
+  align-items: center;
+  padding: 32px;
+  border: 2px solid var(--ink);
+}
+.benefit-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.benefit-list li {
+  padding: 10px 0 10px 18px;
+  border-bottom: 1px solid #aaa;
+  position: relative;
+  font-weight: 700;
+}
+.benefit-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+.about-copy { max-width: 720px; }
+.process-intro { max-width: 800px; margin-bottom: 30px; }
+.final-cta {
+  margin-top: 34px;
+  padding: 30px;
+  border: 2px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.final-cta p { max-width: 760px; margin: 0; font-size: 18px; }
+.faq-list .accordion-item > summary { font-size: 18px; }
+.closing-copy { max-width: 750px; }
+.closing-copy > p { font-size: 18px; }
+.closing-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.cta:focus-visible { outline: 3px solid #777; outline-offset: 3px; }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr) minmax(240px, .8fr); gap: 32px; }
+  .problem-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .intro-grid, .about-grid, .closing-grid { gap: 34px; }
+  .benefit-panel { grid-template-columns: 1fr; }
+}
+@media (max-width: 650px) {
+  main { width: calc(100% - 30px); }
+  section { padding: 43px 0; }
+  .hero, .intro-grid, .about-grid, .closing-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero { min-height: auto; padding-top: 88px; padding-bottom: 44px; }
+  .hero-copy > p { font-size: 17px; }
+  .image-placeholder { min-height: 245px; }
+  .image-placeholder.tall { min-height: 270px; }
+  .problem-grid { grid-template-columns: 1fr 1fr; gap: 9px; }
+  .problem-grid li { min-height: 94px; padding: 13px; font-size: 15px; }
+  .benefit-panel { padding: 20px; gap: 20px; }
+  .benefit-list { grid-template-columns: 1fr; gap: 3px; }
+  .accordion-item > summary { font-size: 18px; padding: 17px 0; }
+  .accordion-panel { padding-right: 8px; }
+  .final-cta { align-items: flex-start; flex-direction: column; padding: 22px; }
+  .cta-row, .closing-actions { flex-direction: column; align-items: stretch; }
+  .cta { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+</style>
+
+</head>
+<body class="">
+
+
+<main id="page-content">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Prepare Your Speech</p>
+      <h1>Speech Delivery Coaching For Confident Communication</h1>
+      <p>Improve your speaking confidence, prepare clear presentations and express your ideas with greater ease in my <strong>speech coaching</strong> sessions.</p>
+      <div class="cta-row">
+        <span class="cta primary">Book Your Coaching Session</span>
+        <span class="cta">Discuss Your Speech Preparation</span>
+      </div>
+    </div>
+    <div class="image-placeholder" role="img" aria-label="Image placeholder">IMAGE PLACEHOLDER</div>
+  </section>
+
+  <section>
+    <div class="intro-grid">
+      <div class="intro-copy">
+        <p class="eyebrow">Personal Speech Preparation</p>
+        <h2>One to One Speech Preparation Coaching Built Around Your Needs</h2>
+        <p>Preparing a speech can feel difficult when you don't know where to start. You may have plenty of ideas but struggle to organise them. My <strong>public speaking coaching</strong> helps you turn those ideas into a clear and well-prepared speech.</p>
+        <p>My background in theatre direction shapes how I approach speech preparation. We'll work on your content, structure, opening, ending and delivery. My speech coaching focuses on helping you communicate your message clearly and speak in a way that feels natural.</p>
+      </div>
+      <div class="image-placeholder" role="img" aria-label="Image placeholder">IMAGE PLACEHOLDER</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <p class="eyebrow">Common Speech Preparation Problems</p>
+      <h2>Finding It Difficult To Prepare Your Speech? Public Speaking Coaching Can Help</h2>
+      <p>A good speech needs more than written words. My <strong>speech delivery coaching</strong> helps you prepare your content and rehearse how to present it.</p>
+    </div>
+    <ul class="problem-grid">
+      <li>Unclear speech structure</li>
+      <li>Weak speech openings</li>
+      <li>Poor message organisation</li>
+      <li>Unprepared speech delivery</li>
+    </ul>
+    <div class="cta-row">
+      <span class="cta primary">Get Speech Preparation Help</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <p class="eyebrow">My Speech Preparation Service</p>
+      <h2>Need A Speech Coach For Personal Speech Preparation?</h2>
+      <p>My speech preparation sessions help you organise your ideas, structure your speech and improve your delivery.</p>
+      <p>You might be preparing a business speech, an important announcement or a speech for a special event. We'll discuss your subject, audience and purpose before working on the content. I'll bring my experience as a <strong>presentation coach</strong> to help you prepare for your speaking occasion.</p>
+      <p>With support from a <strong>speaking coach</strong>, you can give your speech a clear structure and prepare each section carefully. We'll rehearse your delivery, work on your voice and review areas for improvement. My <strong>presentation skills coaching</strong> also covers speeches that form part of a larger presentation.</p>
+    </div>
+
+    <div class="section-head">
+      <p class="eyebrow">What We'll Prepare</p>
+      <h2>Speech Preparation And Delivery With A Speaking Coach</h2>
+    </div>
+    <div class="plan-list">
+      <details class="accordion-item" data-hover-disclosure="" open="">
+        <summary><span class="accordion-title">1. Understanding Your Speech Purpose</span></summary>
+        <div class="accordion-panel">
+          <p>We'll begin by discussing why you're giving the speech and what you want people to understand. We'll consider your subject, audience and main message. My <strong>speech coaching</strong> helps you decide what needs to be included and what can be left out.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="">
+        <summary><span class="accordion-title">2. Writing And Structuring Your Speech</span></summary>
+        <div class="accordion-panel">
+          <p>Once your main ideas are clear, we'll organise them into a logical structure. We'll work on your introduction, main points and conclusion. My <strong>public speaking coaching</strong> sessions will help you connect each part and create a speech that's easy to follow.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="">
+        <summary><span class="accordion-title">3. Creating A Strong Opening And Ending</span></summary>
+        <div class="accordion-panel">
+          <p>Your opening gives people their first impression of your speech. Your ending helps them remember your message. We'll work on both parts and make sure they suit your subject. My <strong>speech coach</strong> guidance helps you prepare an opening and ending that feel natural.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="" open="">
+        <summary><span class="accordion-title">4. Developing Your Speech Delivery</span></summary>
+        <div class="accordion-panel">
+          <p>Writing a good speech is only part of the preparation. We'll work on pace, pauses, volume and vocal variety. My <strong>speech delivery coaching</strong> includes practical <strong>speech delivery techniques</strong> that help you develop <strong>good delivery in a speech</strong>.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="">
+        <summary><span class="accordion-title">5. Rehearsing Your Speech</span></summary>
+        <div class="accordion-panel">
+          <p>We'll rehearse your speech and review how it sounds when spoken aloud. I'll help you identify difficult sections, improve transitions and make changes where needed. My <strong>presentation skills coaching</strong> focuses on practical feedback to help you prepare for the occasion.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="">
+        <summary><span class="accordion-title">6. Preparing For Your Audience</span></summary>
+        <div class="accordion-panel">
+          <p>Every speech needs to suit its audience. I'll help you decide what to say, how much detail to include and which language feels right. My <strong>presentation consultant</strong> experience helps me guide you through these decisions.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <p class="eyebrow">Better Speech Preparation</p>
+      <h2>How Personal Speech Coaching Helps You Prepare With Confidence</h2>
+      <p>My <strong>speech coaching</strong> gives you time to prepare your message and improve your delivery.</p>
+    </div>
+    <div class="benefit-panel">
+      <ul class="benefit-list">
+        <li>Clearer speech structure</li>
+        <li>Stronger speech opening</li>
+        <li>Better message organisation</li>
+        <li>Confident speech delivery</li>
+        <li>Improved voice control</li>
+        <li>Natural audience connection</li>
+      </ul>
+      <div class="image-placeholder" role="img" aria-label="Image placeholder">IMAGE PLACEHOLDER</div>
+    </div>
+    <div class="cta-row">
+      <span class="cta primary">Start Preparing Your Speech</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">Personal Experience And Guidance</p>
+        <h2>Work With A Speech Preparation Coach</h2>
+        <p>My background in theatre direction shapes the way I prepare people for speaking. I understand the importance of structure, timing, rehearsal and variety. I won't give you a standard speech and expect you to deliver it. We'll work with your ideas and find a speaking style that feels natural. My online coaching is available to people looking for a <strong>speech coach</strong> in the UK. Every session focuses on individual speaking needs. This approach also connects with my Corporate Communication Training Course when speech preparation forms part of wider workplace communication.</p>
+        <div class="cta-row">
+          <span class="cta">Meet Your Coach</span>
+          <span class="cta primary">Book A Session</span>
+        </div>
+      </div>
+      <div class="image-placeholder tall" role="img" aria-label="Image placeholder">IMAGE PLACEHOLDER</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <p class="eyebrow">Your Speech Preparation Process</p>
+      <h2>Four Steps To Prepare Your Speech From Start To Finish</h2>
+    </div>
+    <div class="process-list">
+      <details class="accordion-item" data-hover-disclosure="">
+        <summary><span class="accordion-title">Step 1. Understanding Your Speech Requirements</span></summary>
+        <div class="accordion-panel">
+          <p>We'll discuss your subject, audience, purpose and speaking date. You can bring your initial ideas, notes or an existing draft. I'll help you understand what your speech needs to communicate. This gives our <strong>public speaking coaching</strong> sessions a clear starting point.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="">
+        <summary><span class="accordion-title">Step 2. Planning And Structuring Your Speech</span></summary>
+        <div class="accordion-panel">
+          <p>We'll organise your ideas and decide how your speech should flow. I'll help you develop your introduction, main points and conclusion. If you're preparing a business presentation, we can also consider how your speech fits into your wider <strong>presentation training</strong> requirements.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="">
+        <summary><span class="accordion-title">Step 3. Rehearsing Your Speech Delivery</span></summary>
+        <div class="accordion-panel">
+          <p>Once your speech is ready, we'll rehearse it aloud. I'll listen to your delivery and give feedback on pace, pauses, voice and clarity. My <strong>speech delivery coaching</strong> helps you work through difficult sections and become more comfortable with your material.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="" open="">
+        <summary><span class="accordion-title">Step 4. Reviewing And Improving Your Speech</span></summary>
+        <div class="accordion-panel">
+          <p>We'll review your performance and make any final changes. You'll have time to repeat your speech and work on areas that need attention. My <strong>speech coaching</strong> helps you feel better prepared before speaking to your actual audience.</p>
+        </div>
+      </details>
+    </div>
+    <div class="final-cta">
+      <div>
+        <h2>Get Personal Support From A Presentation Coach For Your Important Speech</h2>
+        <p>You don't have to work everything out alone. Let's organise your ideas, prepare your speech and rehearse your delivery so you feel ready.</p>
+      </div>
+      <span class="cta primary">Discuss Your Speech</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Speech Preparation Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="accordion-item" data-hover-disclosure="" open="">
+        <summary><span class="accordion-title">1. Can you help me write and structure my speech?</span></summary>
+        <div class="accordion-panel">
+          <p>Yes. My <strong>speech coaching</strong> includes help with planning your message, organising ideas and creating a clear structure. I'll also help you prepare your delivery.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="">
+        <summary><span class="accordion-title">2. Do you provide one-to-one speech preparation coaching?</span></summary>
+        <div class="accordion-panel">
+          <p>Yes. I offer <strong>one-to-one public speaking coaching</strong> with personal feedback and practical exercises. You can work directly with a <strong>Public Speaking Coach</strong> on your individual speaking needs.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="">
+        <summary><span class="accordion-title">3. Do you offer online speech preparation coaching classes?</span></summary>
+        <div class="accordion-panel">
+          <p>Yes. I provide <strong>online speech delivery coaching</strong>, with sessions focused on your speaking goals. You can work with a <strong>public speaking coach</strong> in Glasgow from wherever you are.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="">
+        <summary><span class="accordion-title">4. Do I need to have my speech written before booking a session?</span></summary>
+        <div class="accordion-panel">
+          <p>No. You can bring your initial ideas, notes or a completed draft. My <strong>presentation skills coach</strong> approach helps you develop your content and prepare it for delivery.</p>
+        </div>
+      </details>
+      <details class="accordion-item" data-hover-disclosure="">
+        <summary><span class="accordion-title">5. How early should I start preparing for my speech?</span></summary>
+        <div class="accordion-panel">
+          <p>Ideally, start a few weeks before the event. This gives us time for <strong>one on one public speaking coaching</strong>, rehearsal and feedback. I can also help when <strong>speech preparation</strong> is part of a <strong>Corporate Communication Training Course</strong>.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <div class="closing-copy">
+      <h2>Prepare A Speech You Feel Ready To Deliver</h2>
+      <p>Let's work on your message, structure and delivery. I'll help you prepare your speech and express your ideas clearly.</p>
+      <div class="closing-actions">
+        <span class="cta primary">Book Your Session</span>
+        <span class="cta">Contact Me</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+<script>
+(() => {
+  const supportsMouseHover = window.matchMedia &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (!supportsMouseHover) return;
+
+  let lastPointerType = 'mouse';
+  document.addEventListener('pointerdown', (event) => {
+    lastPointerType = event.pointerType;
+  }, true);
+
+  document.querySelectorAll('details[data-hover-disclosure]').forEach((details) => {
+    const summary = details.querySelector(':scope > summary');
+    if (!summary) return;
+
+    let isMouseHovering = false;
+    let wasOpenBeforeHover = false;
+
+    details.addEventListener('pointerenter', (event) => {
+      if (event.pointerType !== 'mouse') return;
+      if (document.body.classList.contains('edit-mode')) return;
+
+      isMouseHovering = true;
+      wasOpenBeforeHover = details.open;
+      details.open = true;
+    });
+
+    details.addEventListener('pointerleave', (event) => {
+      if (event.pointerType !== 'mouse') return;
+
+      isMouseHovering = false;
+      if (!wasOpenBeforeHover) details.open = false;
+      wasOpenBeforeHover = false;
+    });
+
+    summary.addEventListener('click', (event) => {
+      const isMouseClick = event.detail > 0 && lastPointerType === 'mouse';
+      const isEditing = document.body.classList.contains('edit-mode') ||
+        summary.isContentEditable || Boolean(summary.querySelector('[contenteditable="true"]'));
+
+      if (isMouseClick && isMouseHovering && !isEditing) {
+        event.preventDefault();
+        details.open = true;
+      }
+    });
+  });
+})();
+</script>
+
+
+</body></html>
