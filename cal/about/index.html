@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Cal Moore | Public Speaking Coach Scotland</title>
+  <meta name="description" content="Meet Cal Moore, a public speaking coach in Scotland. Discover his theatre background and practical approach to helping people communicate with confidence.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #000;
+      --paper: #fff;
+      --muted: #666;
+      --line: #000;
+      --soft-line: #d5d5d5;
+      --gutter: 24px;
+      --content: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.58;
+    }
+    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #777; outline-offset: 4px; }
+    .wrap { width: min(var(--content), calc(100% - 2 * var(--gutter))); margin-inline: auto; }
+    main { display: block; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr);
+      align-items: center;
+      gap: clamp(36px, 6vw, 84px);
+      padding-block: clamp(54px, 8vw, 104px) clamp(64px, 8vw, 96px);
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      margin-bottom: 18px;
+      font-size: clamp(42px, 6.2vw, 66px);
+      line-height: 1.02;
+      letter-spacing: -.045em;
+      font-weight: 700;
+    }
+    .hero-tagline {
+      max-width: 670px;
+      margin-bottom: 26px;
+      font-size: clamp(27px, 3.7vw, 42px);
+      line-height: 1.12;
+      letter-spacing: -.03em;
+      font-weight: 700;
+    }
+    .hero-copy p { max-width: 650px; margin-bottom: 16px; }
+    .hero-copy p:last-child { margin-bottom: 0; }
+    .media-placeholder {
+      position: relative;
+      display: grid;
+      min-width: 0;
+      min-height: 430px;
+      aspect-ratio: 4 / 5;
+      place-items: center;
+      border: 2px dashed #777;
+      background: #f7f7f7;
+      color: #555;
+      text-align: center;
+      padding: 24px;
+    }
+    .media-placeholder span {
+      font-size: 12px;
+      letter-spacing: .12em;
+      font-weight: 700;
+    }
+    .page-section {
+      border-top: 2px solid var(--line);
+      padding-block: clamp(48px, 7vw, 76px) clamp(54px, 7vw, 82px);
+    }
+    .section-kicker {
+      margin-bottom: 32px;
+      font-size: 13px;
+      line-height: 1.2;
+      letter-spacing: .13em;
+      font-weight: 700;
+    }
+    .section-heading {
+      max-width: 790px;
+      margin-bottom: 28px;
+      font-size: clamp(30px, 4.2vw, 44px);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(290px, .88fr);
+      gap: clamp(34px, 6vw, 78px);
+      align-items: start;
+    }
+    .story-copy p { margin-bottom: 18px; }
+    .story-copy p:last-child { margin-bottom: 0; }
+    .subheading {
+      margin: 42px 0 12px;
+      font-size: clamp(21px, 2.3vw, 27px);
+      line-height: 1.2;
+      letter-spacing: -.02em;
+    }
+    .service-panel {
+      border: 2px solid var(--line);
+      padding: 24px;
+    }
+    .service-panel .intro { margin-bottom: 20px; }
+    .service-links { margin-bottom: 0; }
+    .service-links a { font-weight: 700; text-decoration-thickness: 1px; }
+    .credentials {
+      margin-top: 38px;
+      padding-top: 24px;
+      border-top: 1px solid var(--soft-line);
+      color: #252525;
+    }
+    .method-intro { max-width: 760px; margin-bottom: 34px; }
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border: 2px solid var(--line);
+    }
+    .method-card {
+      min-width: 0;
+      padding: 26px 24px 28px;
+    }
+    .method-card + .method-card { border-left: 2px solid var(--line); }
+    .method-card h3 {
+      margin-bottom: 24px;
+      font-size: 26px;
+      line-height: 1.1;
+    }
+    .method-card .principle {
+      min-height: 58px;
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+    .method-card p:last-child { margin-bottom: 0; }
+    .method-outro {
+      max-width: 760px;
+      margin: 28px 0 0;
+    }
+    .contact-section { padding-bottom: clamp(64px, 8vw, 100px); }
+    .contact-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 34px;
+      padding: clamp(26px, 4vw, 44px);
+      border: 2px solid var(--line);
+    }
+    .contact-panel .section-heading { margin-bottom: 18px; }
+    .contact-copy p { max-width: 700px; margin-bottom: 14px; }
+    .contact-copy p:last-child { margin-bottom: 0; }
+    .cta-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 58px;
+      padding: 16px 22px;
+      border: 2px solid var(--line);
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 13px;
+      line-height: 1.25;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+    .edit-toolbar {
+      position: fixed;
+      z-index: 50;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid #000;
+      background: #fff;
+      box-shadow: 0 3px 18px rgba(0,0,0,.12);
+    }
+    .edit-toolbar button {
+      min-height: 38px;
+      padding: 8px 12px;
+      border: 1px solid #000;
+      border-radius: 0;
+      background: #fff;
+      color: #000;
+      font: 700 12px Arial, Helvetica, sans-serif;
+      cursor: pointer;
+    }
+    .edit-toolbar button.primary { background: #000; color: #fff; }
+    @media (max-width: 760px) {
+      :root { --gutter: 15px; }
+      .hero, .story-grid, .contact-panel { grid-template-columns: minmax(0, 1fr); }
+      .hero { gap: 30px; padding-block: 48px 54px; }
+      .media-placeholder { min-height: 0; max-height: 440px; aspect-ratio: 5 / 4; }
+      .story-grid { gap: 28px; }
+      .service-panel { padding: 20px; }
+      .method-grid { grid-template-columns: minmax(0, 1fr); }
+      .method-card + .method-card { border-left: 0; border-top: 2px solid var(--line); }
+      .method-card { padding: 22px 20px; }
+      .method-card h3 { margin-bottom: 14px; }
+      .method-card .principle { min-height: 0; }
+      .contact-panel { align-items: start; }
+      .cta-button { width: 100%; white-space: normal; }
+      .edit-toolbar { right: 10px; bottom: 10px; }
+    }
+    @media (max-width: 380px) {
+      .edit-toolbar { left: 10px; right: 10px; }
+      .edit-toolbar button { flex: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+  
+</head>
+<body>
+  <main id="page-content">
+    <header class="hero wrap" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <h1 id="page-title">About Cal Moore</h1>
+        <h2 class="hero-tagline">Good speakers aren't born. They're made.</h2>
+        <p>I'm Cal Moore, a public speaking coach based in Glasgow. I help professionals and teams communicate clearly, speak with confidence and get their message across.</p>
+        <p>My approach comes from the theatre. It's practical, active and built around one simple idea: <strong>the best way to become a better speaker is to practise.</strong></p>
+      </div>
+      <div class="media-placeholder" role="img" aria-label="Image placeholder">
+        <span>IMAGE PLACEHOLDER</span>
+      </div>
+    </header>
+
+    <section class="page-section" aria-labelledby="story-title">
+      <div class="wrap">
+        <p class="section-kicker">01 / MY STORY &amp; APPROACH</p>
+        <h2 class="section-heading" id="story-title">From theatre direction to public speaking coaching.</h2>
+        <div class="story-grid">
+          <div class="story-copy">
+            <p>I spent my early career directing theatre productions and coaching actors. During that time, I saw how practice, feedback and rehearsal could help people become more confident in the way they communicate.</p>
+            <p>I also noticed that professionals faced many of the same challenges. They rushed through their words, struggled to speak up or found it difficult to keep an audience interested.</p>
+            <p>In October 2024, I founded The Communication Catalyst to bring a director's approach to workplace communication.</p>
+            <p>My sessions use practical exercises, questions and honest feedback. We'll work with your own presentations and speaking challenges, rather than giving you a script to follow.</p>
+            <p>The aim isn't to make you sound like someone else. It's to help you become a stronger version of the speaker you already are.</p>
+          </div>
+          <aside class="service-panel" aria-label="Speaking goals and services">
+            <h3 class="subheading">Different speaking goals. The same practical approach.</h3>
+            <p class="intro">I help people prepare for important presentations, build confidence and improve the way they communicate at work.</p>
+            <p class="service-links">Find out more about <a href="/one-to-one-coaching/">One-to-One Coaching</a>, <a href="/speech-preparation/">Speech Preparation</a> or <a href="/corporate-training-workshops/">Corporate Training &amp; Workshops</a>.</p>
+          </aside>
+        </div>
+        <p class="credentials">I've also worked with organisations including The Scotch Whisky Association and delivered workshops for the Tartan Talks community. I'm the partner speaker coach for the Scottish Marketing Summit 2026 and an Associate Member of the Professional Speaking Association.</p>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="method-title">
+      <div class="wrap">
+        <p class="section-kicker">02 / THE CPV METHOD</p>
+        <h2 class="section-heading" id="method-title">Three principles. A more effective way to speak.</h2>
+        <p class="method-intro">At the centre of my coaching is the CPV Method: Commitment, Pacing and Variety. These three principles help you make more of your words and connect with the people listening.</p>
+        <div class="method-grid">
+          <article class="method-card">
+            <h3>Commitment</h3>
+            <p class="principle">Say what you mean, and mean what you say.</p>
+            <p>Speak with purpose and conviction. Make your message clear so people understand what you're saying and why it matters.</p>
+          </article>
+          <article class="method-card">
+            <h3>Pacing</h3>
+            <p class="principle">Give your words room to breathe.</p>
+            <p>Learn when to slow down, when to pause and how to give important points time to land.</p>
+          </article>
+          <article class="method-card">
+            <h3>Variety</h3>
+            <p class="principle">Keep people listening.</p>
+            <p>Use changes in tone, pace and vocal expression to make your delivery more natural and engaging.</p>
+          </article>
+        </div>
+        <p class="method-outro">Together, these principles help you communicate clearly without losing your own style.</p>
+      </div>
+    </section>
+
+    <section class="page-section contact-section" aria-labelledby="contact-title">
+      <div class="wrap">
+        <p class="section-kicker">03 / LET'S TALK</p>
+        <div class="contact-panel">
+          <div class="contact-copy">
+            <h2 class="section-heading" id="contact-title">You have something worth saying. Let's make sure people hear it.</h2>
+            <p>You don't need to become someone else to be a good speaker. You need practice, useful feedback and an approach that works for you.</p>
+            <p>I'm based in Maryhill, Glasgow, and offer coaching in person and online.</p>
+          </div>
+          <div class="cta-button">BOOK YOUR FREE 30-MINUTE CALL</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+
+  
+
+
+</body></html>
