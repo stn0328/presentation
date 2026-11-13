@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Cal Moore | Public Speaking Coach Glasgow</title>
+  <meta name="description" content="Get in touch with Cal Moore, a public speaking coach in Glasgow. Book a free 30-minute discovery call or enquire about team training.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111;
+      --muted: #666;
+      --line: #d5d5d5;
+      --soft: #f4f4f4;
+      --page: #fff;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.58;
+    }
+    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #777; outline-offset: 4px; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, .92fr);
+      gap: clamp(36px, 6vw, 84px);
+      align-items: center;
+      padding: 76px 0 82px;
+    }
+    .hero h1 {
+      max-width: 720px;
+      margin: 0 0 20px;
+      font-size: clamp(42px, 5.5vw, 66px);
+      line-height: 1.04;
+      letter-spacing: -.045em;
+    }
+    .hero h2 {
+      max-width: 650px;
+      margin: 0 0 20px;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.18;
+      letter-spacing: -.025em;
+    }
+    .hero-copy p { max-width: 650px; margin: 0 0 14px; }
+    .hero-action { margin-top: 28px; }
+    .image-placeholder {
+      display: flex;
+      min-height: 390px;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      border: 2px dashed #777;
+      background: #fafafa;
+      color: #555;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+    .button-link, .button-look {
+      display: inline-flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border: 2px solid var(--ink);
+      background: var(--ink);
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .045em;
+      line-height: 1.35;
+    }
+    .button-link:hover { background: #fff; color: var(--ink); }
+    .button-look { background: #fff; color: var(--ink); }
+    .section { border-top: 2px solid var(--ink); padding: 64px 0 68px; }
+    .section-head { margin-bottom: 34px; }
+    .section-index {
+      margin: 0 0 15px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+    }
+    .section h2 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.12;
+      letter-spacing: -.035em;
+    }
+    .section h3 { margin: 0 0 18px; font-size: 21px; line-height: 1.25; }
+    .section p { max-width: 760px; margin: 0 0 15px; }
+    .booking-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .booking-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      border: 2px solid var(--ink);
+      padding: 26px;
+    }
+    .booking-card p { max-width: none; }
+    .booking-card .booking-action { margin-top: auto; padding-top: 22px; }
+    .booking-card .booking-action p { margin: 0 0 14px; font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+    .meeting-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr); gap: 30px; align-items: stretch; }
+    .meeting-list { margin: 16px 0 18px; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+    .meeting-list li { padding: 16px 0; border-bottom: 1px solid var(--ink); }
+    .meeting-list strong { display: block; margin-bottom: 3px; }
+    .studio-image { min-height: 320px; }
+    .form-panel {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      border: 2px dashed #777;
+      background: #fafafa;
+      padding: 26px;
+    }
+    .form-placeholder {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+    .resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+    .resource-link {
+      display: block;
+      min-width: 0;
+      padding: 21px 22px 21px 0;
+      border-bottom: 1px solid var(--ink);
+    }
+    .resource-link:nth-child(odd) { margin-right: 24px; }
+    .resource-link:nth-child(even) { padding-left: 22px; border-left: 1px solid var(--ink); }
+    .resource-link a { font-weight: 700; }
+    .resource-link p { margin: 7px 0 0; font-size: 15px; }
+    .closing {
+      border-top: 2px solid var(--ink);
+      padding: 58px 0 66px;
+    }
+    .closing-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, .65fr); gap: 40px; align-items: end; }
+    .closing h2 { margin: 0 0 18px; max-width: 760px; font-size: clamp(29px, 3.8vw, 42px); line-height: 1.14; letter-spacing: -.035em; }
+    .signature { border-left: 2px solid var(--ink); padding-left: 22px; }
+    .signature p { margin: 0 0 4px; }
+    .signature .name { font-weight: 700; }
+    .signature .tagline { margin-top: 16px; color: var(--muted); font-style: italic; }
+    #editor-toolbar {
+      position: fixed;
+      z-index: 20;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px;
+      border: 1px solid #111;
+      background: #fff;
+    }
+    #editor-toolbar button {
+      min-height: 38px;
+      padding: 8px 12px;
+      border: 1px solid #111;
+      background: #fff;
+      color: #111;
+      font: 700 12px Arial, Helvetica, sans-serif;
+      cursor: pointer;
+    }
+    #editor-toolbar button.primary { background: #111; color: #fff; }
+    @media (max-width: 760px) {
+      .wrap { width: min(var(--max), calc(100% - 30px)); }
+      .hero { grid-template-columns: 1fr; gap: 30px; padding: 48px 0 46px; }
+      .image-placeholder { min-height: 260px; }
+      .section { padding: 42px 0 46px; }
+      .booking-grid, .meeting-grid, .closing-grid { grid-template-columns: 1fr; }
+      .booking-card { padding: 21px; }
+      .studio-image { min-height: 230px; }
+      .resource-grid { grid-template-columns: 1fr; }
+      .resource-link, .resource-link:nth-child(odd), .resource-link:nth-child(even) { margin: 0; padding: 17px 0; border-left: 0; }
+      .closing { padding: 42px 0 50px; }
+      .signature { margin-top: 10px; }
+      #editor-toolbar { right: 10px; bottom: 10px; }
+    }
+    @media (max-width: 380px) {
+      #editor-toolbar { left: 10px; right: 10px; justify-content: stretch; }
+      #editor-toolbar button { flex: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+  
+</head>
+<body class="">
+  <main id="page-content">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <h1 id="page-title">Have something important to say?&nbsp;</h1>
+          <h2>Let's work on how you say it.</h2>
+          <p>I'm Cal Moore, a public speaking coach based in Glasgow. If you want to feel more confident when speaking, prepare for an important presentation or help your team communicate better, I'd love to hear from you.</p>
+          <p>Tell me a little about what you're working on, and we'll take it from there.</p>
+          <div class="hero-action">
+            <a class="button-link" href="https://calendly.com/calummoorecommunication/30min">BOOK YOUR FREE 30-MINUTE CALL</a>
+          </div>
+        </div>
+        <div class="image-placeholder" role="img" aria-label="Image placeholder">IMAGE PLACEHOLDER</div>
+      </section>
+
+      <section class="section" id="discovery-call" aria-labelledby="discovery-title">
+        <div class="section-head">
+          <p class="section-index">01 / BOOK A DISCOVERY CALL</p>
+          <h2 id="discovery-title">Start with a conversation.</h2>
+        </div>
+        <div class="booking-grid">
+          <div>
+            <p>Not sure where to start? Book a free 30-minute discovery call with me on Zoom.</p>
+            <p>It's a chance to talk about your speaking challenges, what you'd like to improve and how coaching might help.</p>
+            <p>No pressure. Just a conversation to see how we can work together.</p>
+          </div>
+          <div class="booking-card">
+            <div class="booking-action">
+              <p><div>BOOK YOUR FREE DISCOVERY CALL</div></p>
+              <a class="button-link" href="https://calendly.com/calummoorecommunication/30min">Book a 30-minute call</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="team-training" aria-labelledby="team-title">
+        <div class="section-head">
+          <p class="section-index">02 / TEAM TRAINING ENQUIRIES</p>
+          <h2 id="team-title">Looking to improve communication across your team?</h2>
+        </div>
+        <div class="booking-grid">
+          <div>
+            <p>I work with organisations that want their people to present with confidence, speak up in meetings and communicate more clearly.</p>
+            <p>You can start with a free 60-minute team taster session. I'll introduce my approach and give your team a chance to experience the practical exercises.</p>
+            <p>These sessions are available twice a month, with a decision-maker present.</p>
+          </div>
+          <div class="booking-card">
+            <div class="booking-action">
+              <p>BOOK A FREE TEAM TASTER</p>
+              <a class="button-link" href="https://calendly.com/calummoorecommunication/free-team-taster-session">Book your free team taster session</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="meeting-options" aria-labelledby="meeting-title">
+        <div class="section-head">
+          <p class="section-index">03 / WHERE WE CAN MEET</p>
+          <h2 id="meeting-title">Coaching that fits your schedule.</h2>
+        </div>
+        <div class="meeting-grid">
+          <div>
+            <p>I'm based in Maryhill, Glasgow, with a dedicated studio for in-person coaching.</p>
+            <p>Sessions are also available:</p>
+            <ul class="meeting-list">
+              <li><strong>In person:</strong> <span>At my Maryhill studio or another agreed location.</span></li>
+              <li><strong>Online:</strong> <span>Through Zoom or Microsoft Teams.</span></li>
+              <li><strong>A mix of both:</strong> <span>Combine in-person and online sessions to fit your schedule.</span></li>
+            </ul>
+            <p>I also deliver in-person team workshops for organisations across Scotland. Online team sessions can be arranged on request.</p>
+          </div>
+          <div class="image-placeholder studio-image" role="img" aria-label="Image placeholder">IMAGE PLACEHOLDER</div>
+        </div>
+      </section>
+
+      <section class="section" id="send-message" aria-labelledby="message-title">
+        <div class="section-head">
+          <p class="section-index">04 / SEND ME A MESSAGE</p>
+          <h2 id="message-title">Tell me what you'd like help with.</h2>
+        </div>
+        <p>Have a question about coaching, speech preparation or team training? Fill in the form below and tell me a little about what you need.</p>
+        <p>I'll be happy to discuss your plans and help you work out the next step.</p>
+        <div class="form-panel">
+          <div class="form-placeholder">[CONTACT FORM]</div>
+          <div><span class="button-look">SEND YOUR ENQUIRY</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="questions" aria-labelledby="questions-title">
+        <div class="section-head">
+          <p class="section-index">05 / STILL HAVE QUESTIONS?</p>
+          <h2 id="questions-title">Find out more about working with me.</h2>
+        </div>
+        <p>You can learn more about my coaching and approach on the website.</p>
+        <div class="resource-grid">
+          <div class="resource-link">
+            <a href="/one-to-one-coaching/">One-to-One Coaching</a>
+            <p>Practical coaching built around your speaking goals.</p>
+          </div>
+          <div class="resource-link">
+            <a href="/speech-preparation/">Speech Preparation</a>
+            <p>Get ready for an important talk, keynote or event.</p>
+          </div>
+          <div class="resource-link">
+            <a href="/corporate-training-workshops/">Corporate Training &amp; Workshops</a>
+            <p>Practical communication training for teams.</p>
+          </div>
+          <div class="resource-link">
+            <a href="/about-cal/">About Cal</a>
+            <p>Learn about my background and the CPV Method.</p>
+          </div>
+          <div class="resource-link">
+            <a href="/testimonials-case-studies/">Testimonials &amp; Case Studies</a>
+            <p>Hear from people and organisations I've worked with.</p>
+          </div>
+          <div class="resource-link">
+            <a href="/blog/">Blog</a>
+            <p>Read practical advice on public speaking and communication.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="closing-grid">
+          <div>
+            <h2 id="closing-title">You have something worth saying. Let's make sure people hear it.</h2>
+            <p>I look forward to hearing from you.</p>
+          </div>
+          <div class="signature">
+            <p class="name">Cal Moore</p>
+            <p>The Communication Catalyst</p>
+            <p>Maryhill, Glasgow, Scotland</p>
+            <p class="tagline">Coaching people to promote change.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  
+
+  
+
+
+</body></html>
