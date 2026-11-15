@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All in One Marketing Platform | Sirius Exchange</title>
+  <meta name="description" content="An all in one marketing platform for product creation, sales, email campaigns, lead management and marketing automation. Manage everything from one place.">
+  <style>
+    :root {
+      --ink: #111;
+      --line: #171717;
+      --muted: #666;
+      --soft: #f0f0f0;
+      --paper: #fff;
+      --content: 1020px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    .page-shell {
+      width: min(var(--content), calc(100% - 48px));
+      margin: 0 auto;
+    }
+    main { padding: 68px 0 72px; }
+    section { margin: 0 0 92px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 590px;
+      margin-bottom: 18px;
+      font-size: clamp(42px, 5vw, 58px);
+      line-height: .99;
+      letter-spacing: -2.2px;
+      font-weight: 750;
+    }
+    h2 {
+      max-width: 760px;
+      margin-bottom: 15px;
+      font-size: clamp(30px, 3.8vw, 42px);
+      line-height: 1.06;
+      letter-spacing: -1.35px;
+      font-weight: 750;
+    }
+    h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+    p { margin-bottom: 13px; }
+    .intro-copy { max-width: 780px; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(310px, .93fr);
+      gap: 54px;
+      align-items: center;
+      padding: 0 0 84px;
+      margin-bottom: 0;
+    }
+    .hero-copy { max-width: 510px; }
+    .hero-copy p { max-width: 500px; }
+    .hero-emphasis { font-weight: 700; margin: 18px 0 28px; }
+    .hero-actions, .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 17px;
+      border: 1.5px solid var(--line);
+      color: var(--ink);
+      background: transparent;
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 700;
+      text-align: center;
+    }
+    .button.dark { color: white; background: var(--ink); }
+    .signin {
+      display: inline-block;
+      margin-top: 13px;
+      font-size: 13px;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .placeholder {
+      min-height: 260px;
+      border: 1px dashed #8b8b8b;
+      background: repeating-linear-gradient(135deg, #f4f4f4 0, #f4f4f4 8px, #fff 8px, #fff 16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: #4c4c4c;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.15px;
+      line-height: 1.4;
+    }
+    .hero-media { min-height: 310px; }
+    .section-rule { border-top: 2px solid var(--line); padding-top: 29px; }
+    .feature-section h2 { max-width: 900px; }
+    .feature-layout {
+      display: grid;
+      grid-template-columns: .86fr 1.14fr;
+      gap: 34px;
+      align-items: start;
+      margin-top: 26px;
+    }
+    .feature-media { min-height: 330px; }
+    .accordion-list { border-bottom: 1px solid var(--line); }
+    .accordion-item { border-top: 1px solid var(--line); }
+    .accordion-item > summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+    .accordion-item > summary::-webkit-details-marker { display: none; }
+    .accordion-item > summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      font-size: 22px;
+      line-height: 1;
+      font-weight: 400;
+    }
+    .accordion-item[open] > summary::after { content: "−"; }
+    .accordion-item > summary:focus-visible {
+      outline: 2px solid #111;
+      outline-offset: 4px;
+    }
+    .accordion-panel { padding: 0 34px 17px 0; }
+    .accordion-panel > :last-child { margin-bottom: 0; }
+    .tools-section { padding-top: 0; }
+    .tools-section h2 { font-size: clamp(29px, 3.2vw, 36px); }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 27px;
+    }
+    .tool-card {
+      min-width: 0;
+      border: 1.5px solid var(--line);
+      padding: 19px 18px 17px;
+    }
+    .tool-card p { margin: 0; font-size: 14px; line-height: 1.45; }
+    .ai-section {
+      display: grid;
+      grid-template-columns: minmax(0, .98fr) minmax(340px, 1.02fr);
+      gap: 52px;
+      align-items: center;
+      margin-top: 96px;
+    }
+    .ai-section h2 { max-width: 560px; }
+    .ai-section ul { margin: 12px 0 14px; padding-left: 22px; }
+    .ai-section li { padding: 3px 0; }
+    .ai-media { min-height: 300px; }
+    .ai-cta { margin-top: 20px; }
+    .process-section { padding-top: 4px; }
+    .process-section h2 { max-width: 700px; }
+    .process-list { margin-top: 30px; border-bottom: 1px solid var(--line); }
+    .process-item > summary { padding: 18px 0; }
+    .step-title { display: flex; align-items: baseline; gap: 28px; min-width: 0; }
+    .step-number { width: 24px; flex: 0 0 24px; font-size: 13px; font-weight: 700; }
+    .step-name { font-size: 17px; }
+    .process-item .accordion-panel { padding-left: 52px; max-width: 800px; }
+    .process-note { margin: 26px 0 17px; font-weight: 700; }
+    .audience-section { padding-top: 7px; }
+    .audience-section h2 { max-width: 780px; }
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 27px;
+    }
+    .audience-card { border: 1.5px solid var(--line); padding: 13px 18px 0; }
+    .audience-card .accordion-item { border-top: 1px solid var(--line); border-bottom: 0; }
+    .audience-card .accordion-item > summary { min-height: 48px; padding: 12px 0; font-size: 14px; }
+    .audience-card .accordion-panel { font-size: 14px; padding: 0 0 14px; }
+    .eyebrow {
+      margin-bottom: 13px;
+      font-size: 11px;
+      line-height: 1.3;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .split-section {
+      display: grid;
+      grid-template-columns: minmax(0, .94fr) minmax(330px, 1.06fr);
+      gap: 50px;
+      align-items: center;
+    }
+    .split-copy { max-width: 520px; }
+    .split-media { min-height: 285px; }
+    .media-frame { padding: 17px; border: 1.5px solid var(--line); }
+    .media-frame .placeholder { min-height: 200px; }
+    .automation-section { margin-top: -8px; }
+    .automation-section .split-media { min-height: 300px; order: -1; }
+    .plans-section { margin-bottom: 62px; }
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 27px;
+    }
+    .plan-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 245px;
+      border: 1.5px solid var(--line);
+      padding: 19px 20px 18px;
+    }
+    .plan-card h3 { font-size: 20px; margin-bottom: 10px; }
+    .plan-card p { font-size: 14px; line-height: 1.5; }
+    .plan-card .button { width: 100%; margin-top: auto; min-height: 40px; }
+    .plan-note {
+      margin: 18px 0 16px;
+      border-left: 2px solid var(--line);
+      padding: 2px 0 2px 13px;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .plan-note p:last-child { margin-bottom: 0; }
+    .all-plans { margin-top: 0; }
+    .faq-section { margin-bottom: 78px; }
+    .faq-section h2 { margin-bottom: 28px; }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 34px;
+      align-items: start;
+    }
+    .faq-column { border-bottom: 1px solid var(--line); }
+    .faq-item > summary { padding: 15px 0; font-size: 15px; }
+    .faq-item .accordion-panel { font-size: 14px; line-height: 1.5; padding: 0 25px 17px 0; }
+    .faq-item ul { margin: 8px 0 13px; padding-left: 21px; }
+    .faq-item li { margin: 4px 0; }
+    .final-cta {
+      margin: 0 auto;
+      padding: 58px 7.5%;
+      background: #ededed;
+    }
+    .final-cta h2 { max-width: 720px; font-size: clamp(34px, 4.2vw, 48px); }
+    .final-cta p { max-width: 800px; }
+    .final-cta .closing-line { margin-top: 19px; font-weight: 700; }
+    .final-cta .signin { text-decoration: none; margin-top: 15px; }
+    .editor-toolbar {
+      position: fixed;
+      z-index: 1000;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid #111;
+      background: rgba(255,255,255,.97);
+    }
+    .editor-toolbar button {
+      min-height: 34px;
+      border: 1px solid #111;
+      border-radius: 0;
+      padding: 7px 11px;
+      background: white;
+      color: #111;
+      font: 700 12px Arial, Helvetica, sans-serif;
+      cursor: pointer;
+    }
+    .editor-toolbar button.primary { background: #111; color: #fff; }
+    .editor-toolbar button:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
+    .editor-hint { padding: 0 5px; color: #555; font: 11px Arial, Helvetica, sans-serif; }
+    @media (max-width: 760px) {
+      .page-shell { width: calc(100% - 30px); }
+      main { padding-top: 40px; }
+      section { margin-bottom: 60px; }
+      .hero, .feature-layout, .ai-section, .split-section { grid-template-columns: 1fr; gap: 25px; }
+      .hero { padding-bottom: 58px; }
+      h1 { font-size: clamp(39px, 11vw, 54px); letter-spacing: -1.7px; }
+      h2 { font-size: clamp(29px, 8vw, 38px); }
+      .hero-media { min-height: 230px; }
+      .feature-media { min-height: 230px; }
+      .tools-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .ai-section { margin-top: 68px; }
+      .ai-media { min-height: 220px; }
+      .audience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .split-media, .automation-section .split-media { min-height: 230px; }
+      .plans-grid { grid-template-columns: 1fr; }
+      .plan-card { min-height: 0; }
+      .plan-card .button { margin-top: 9px; }
+      .faq-grid { grid-template-columns: 1fr; gap: 0; }
+      .final-cta { padding: 38px 25px; }
+      .editor-toolbar { right: 10px; bottom: 10px; }
+      .editor-hint { display: none; }
+    }
+    @media (max-width: 480px) {
+      .tools-grid, .audience-grid { grid-template-columns: 1fr; }
+      .hero-actions, .cta-actions { align-items: stretch; flex-direction: column; }
+      .hero-actions .button, .cta-actions .button { width: 100%; }
+      .step-title { gap: 15px; }
+      .process-item .accordion-panel { padding-left: 39px; }
+      .editor-toolbar { left: 10px; right: 10px; justify-content: flex-end; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+  
+</head>
+<body class="">
+  <main class="page-shell" id="page-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">An All-in-One Marketing Platform to Build, Market and Sell</h1>
+        <p>Running a business shouldn't mean jumping between a dozen different tools just to get one product out the door. Sirius Exchange brings product creation, automation and marketing campaigns together in one AI-powered marketing platform.</p>
+        <p class="hero-emphasis">Less tool switching. More time to grow your business.</p>
+        <div class="hero-actions">
+          <span class="button dark">Create Your Account →</span>
+          <span class="button">See How It Works</span>
+        </div>
+        <span class="signin">Already Have an Account? Sign In</span>
+      </div>
+      <div class="placeholder hero-media" role="img" aria-label="Image placeholder">IMAGE PLACEHOLDER</div>
+    </section>
+
+    <section class="feature-section section-rule" aria-labelledby="features-title">
+      <h2 id="features-title">Everything Your Business Needs. All Working Together.</h2>
+      <p class="intro-copy">Building and selling a product often means switching between different tools for content, sales, reporting and marketing campaigns. That takes time and makes it harder to keep everything connected. Sirius Exchange brings these activities into one marketing platform. Plan your campaigns, create your sales materials, manage customer activity and track your progress without jumping between disconnected systems.</p>
+      <div class="feature-layout">
+        <div class="placeholder feature-media" role="img" aria-label="Product workspace image placeholder">PRODUCT WORKSPACE IMAGE PLACEHOLDER</div>
+        <div class="accordion-list" aria-label="Platform features">
+          <details class="accordion-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Product and Sales Page Creation</span></summary>
+            <div class="accordion-panel"><p>Start with your product or course and create a sales page that explains your offer. Give potential customers the information they need and provide a place to make a purchase.</p></div>
+          </details>
+          <details class="accordion-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Sales and Payment Management</span></summary>
+            <div class="accordion-panel"><p>Manage your sales pipeline, orders and payments from one workspace. Keep track of your sales activities and organize the steps involved in converting leads into customers.</p></div>
+          </details>
+          <details class="accordion-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Contact and Inbox Management</span></summary>
+            <div class="accordion-panel"><p>Keep your customer information and conversations organized. Manage contacts and use your inbox to keep track of customer communication.</p></div>
+          </details>
+          <details class="accordion-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Marketing Campaign Management</span></summary>
+            <div class="accordion-panel"><p>Plan and manage your marketing activities from one place. Create marketing assets, organize your content calendar and prepare email sequences for your audience.</p></div>
+          </details>
+          <details class="accordion-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Business Automation</span></summary>
+            <div class="accordion-panel"><p>Reduce repetitive work with automation tools. Organize sales and marketing activities, manage follow-ups and create workflows that help keep your business moving.</p></div>
+          </details>
+          <details class="accordion-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Analytics and Performance Tracking</span></summary>
+            <div class="accordion-panel"><p>Access business analytics to understand your activities and monitor performance. Keep track of important information about your campaigns, customers and sales.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section" aria-labelledby="tools-title">
+      <h2 id="tools-title">Tools That Support Your Everyday Business Operations</h2>
+      <p class="intro-copy">Sirius Exchange includes additional tools to help you manage different areas of your business without relying on separate applications for every task.</p>
+      <div class="tools-grid">
+        <article class="tool-card"><h3>Find Leads</h3><p>Discover potential business leads and support your lead generation activities.</p></article>
+        <article class="tool-card"><h3>Analytics</h3><p>Review business information and monitor your sales and marketing performance.</p></article>
+        <article class="tool-card"><h3>Bookings Calendar</h3><p>Organize your bookings and manage scheduled activities through your calendar.</p></article>
+        <article class="tool-card"><h3>Migration</h3><p>Access migration tools to support the movement of your business activities into Sirius Exchange.</p></article>
+        <article class="tool-card"><h3>Workspace and Team</h3><p>Manage your workspace, team members and related settings.</p></article>
+        <article class="tool-card"><h3>Connections</h3><p>Manage connections with supported third-party services from your platform settings.</p></article>
+        <article class="tool-card"><h3>Marketplace</h3><p>Access the Sirius Exchange marketplace for available resources and offerings.</p></article>
+        <article class="tool-card"><h3>Earn With Sirius Exchange</h3><p>Discover opportunities to earn through the Sirius Exchange platform.</p></article>
+      </div>
+
+      <div class="ai-section" aria-labelledby="ai-title">
+        <div>
+          <h2 id="ai-title">Let AI Help With the Work.</h2>
+          <p>Creating marketing content takes time. Sirius Exchange uses AI to help you prepare the words, visuals, audio and other creative materials needed to market your products.</p>
+          <p>Use AI assistance to:</p>
+          <ul>
+            <li>Draft product descriptions and sales copy.</li>
+            <li>Prepare sales page content.</li>
+            <li>Create marketing visuals.</li>
+            <li>Develop video and advertising materials.</li>
+            <li>Produce voiceovers and audio.</li>
+            <li>Prepare email content and campaigns.</li>
+          </ul>
+          <p>You decide what gets published or sent. Review your work, make changes and approve it before it goes live.</p>
+          <div class="ai-cta"><span class="button dark">Create with Sirius AI</span></div>
+        </div>
+        <div class="placeholder ai-media" role="img" aria-label="AI creative studio image placeholder">AI CREATIVE STUDIO IMAGE PLACEHOLDER</div>
+      </div>
+    </section>
+
+    <section class="process-section" aria-labelledby="process-title">
+      <h2 id="process-title">From Product Idea to Your First Sale. Five Steps. One Platform.</h2>
+      <p class="intro-copy">You don't need a complicated setup to get started. Sirius Exchange gives you a clear path from creating your product to marketing it and managing what happens next.</p>
+      <div class="process-list">
+        <details class="accordion-item process-item" data-hover-disclosure="">
+          <summary><span class="step-title"><span class="step-number">01.</span><span class="step-name">Create Your Product</span></span></summary>
+          <div class="accordion-panel"><p>Add your product or course, describe what it does, and tell Sirius who it's for. Get your offer ready for the next step.</p></div>
+        </details>
+        <details class="accordion-item process-item" data-hover-disclosure="">
+          <summary><span class="step-title"><span class="step-number">02.</span><span class="step-name">Build Your Sales Page</span></span></summary>
+          <div class="accordion-panel"><p>Create a sales page that explains your offer, highlights its benefits and gives visitors a clear path to purchase.</p></div>
+        </details>
+        <details class="accordion-item process-item" data-hover-disclosure="">
+          <summary><span class="step-title"><span class="step-number">03.</span><span class="step-name">Set Up Your Payments</span></span></summary>
+          <div class="accordion-panel"><p>Connect your payment account, prepare your checkout and get your payment setup ready before sending people to your offer.</p></div>
+        </details>
+        <details class="accordion-item process-item" data-hover-disclosure="">
+          <summary><span class="step-title"><span class="step-number">04.</span><span class="step-name">Create and Launch Your Marketing</span></span></summary>
+          <div class="accordion-panel"><p>Create designs, videos and ads. Prepare email campaigns and sequences. Organize your content calendar, review your marketing and publish through supported connections.</p></div>
+        </details>
+        <details class="accordion-item process-item" data-hover-disclosure="">
+          <summary><span class="step-title"><span class="step-number">05.</span><span class="step-name">Track Sales and Follow Up</span></span></summary>
+          <div class="accordion-panel"><p>Keep track of orders, payments, contacts, emails and sales activity. Follow up with customers, manage your pipeline and see how your business is performing.</p></div>
+        </details>
+      </div>
+      <p class="process-note">From the first idea to what happens after the sale, Sirius Exchange keeps the process connected.</p>
+      <span class="button dark">Start Building with Sirius →</span>
+    </section>
+
+    <section class="audience-section" aria-labelledby="audience-title">
+      <h2 id="audience-title">Built for People Who Want to Build and Sell Online</h2>
+      <p class="intro-copy">Sirius Exchange brings useful business and marketing tools together for people who create, promote and sell products or services.</p>
+      <p>It can support:</p>
+      <div class="audience-grid">
+        <article class="audience-card"><details class="accordion-item" data-hover-disclosure=""><summary><span class="accordion-title">Entrepreneurs and Founders</span></summary><div class="accordion-panel"><p>Build your offer, prepare your sales page and manage your marketing from one workspace.</p></div></details></article>
+        <article class="audience-card"><details class="accordion-item" data-hover-disclosure=""><summary><span class="accordion-title">Course Creators and Educators</span></summary><div class="accordion-panel"><p>Create courses, prepare sales pages and manage the campaigns used to promote your content.</p></div></details></article>
+        <article class="audience-card"><details class="accordion-item" data-hover-disclosure=""><summary><span class="accordion-title">Small and Growing Businesses</span></summary><div class="accordion-panel"><p>Organise customer information, run email campaigns, manage sales activity and track results.</p></div></details></article>
+        <article class="audience-card"><details class="accordion-item" data-hover-disclosure=""><summary><span class="accordion-title">Digital Marketers</span></summary><div class="accordion-panel"><p>Create campaign materials, manage email marketing and organise marketing activities in one place.</p></div></details></article>
+        <article class="audience-card"><details class="accordion-item" data-hover-disclosure=""><summary><span class="accordion-title">Product and Service Sellers</span></summary><div class="accordion-panel"><p>Present your offers, prepare payment options and manage customer follow-ups.</p></div></details></article>
+      </div>
+    </section>
+
+    <section class="split-section" aria-labelledby="connections-title">
+      <div class="split-copy">
+        <p class="eyebrow">Integrations and Connections</p>
+        <h2 id="connections-title">Connect the Services You Already Use</h2>
+        <p>Sirius Exchange includes a Connections area where you can manage supported third-party services and connect the tools needed for your work. Keep your important business activities connected while managing your marketing and sales from one workspace.</p>
+        <span class="button">View Available Connections</span>
+      </div>
+      <div class="media-frame"><div class="placeholder split-media" role="img" aria-label="Connected services image placeholder">CONNECTED SERVICES IMAGE PLACEHOLDER</div></div>
+    </section>
+
+    <section class="split-section automation-section" aria-labelledby="automation-title">
+      <div class="split-copy">
+        <h2 id="automation-title">Marketing Automation Software That Saves Time</h2>
+        <p>Managing every task manually can take time away from other business activities. Sirius Exchange helps organize your marketing workflows through campaigns, email sequences and automation features.</p>
+        <p>Whether you are managing a small campaign or several marketing activities, having your tools connected makes your daily work easier.</p>
+        <span class="button">View Automations</span>
+      </div>
+      <div class="placeholder split-media" role="img" aria-label="Automation workflow image placeholder">AUTOMATION WORKFLOW IMAGE PLACEHOLDER</div>
+    </section>
+
+    <section class="plans-section" aria-labelledby="plans-title">
+      <h2 id="plans-title">Find the Plan That Fits Your Business.</h2>
+      <p class="intro-copy">Whether you're testing your first offer or managing several products and campaigns, choose a plan that fits the way you work.</p>
+      <div class="plans-grid">
+        <article class="plan-card">
+          <h3>Basic</h3>
+          <p>For your first offer and your growing audience.</p>
+          <p>Get started with the tools you need to build your product and prepare your first marketing activities.</p>
+          <span class="button">Explore Basic →</span>
+        </article>
+        <article class="plan-card">
+          <h3>Growth</h3>
+          <p>For businesses running several offers and regular campaigns.</p>
+          <p>Manage more of your sales and marketing activities as your business grows.</p>
+          <span class="button dark">Explore Growth →</span>
+        </article>
+        <article class="plan-card">
+          <h3>Pro</h3>
+          <p>For established businesses, larger catalogues and teams.</p>
+          <p>Get a plan designed for businesses with broader operational needs.</p>
+          <span class="button">Explore Pro →</span>
+        </article>
+      </div>
+      <div class="plan-note">
+        <p>Core AI is included in each of the proposed launch plans.</p>
+        <p>Plan availability, pricing and allowances are confirmed before payment. Check your account for the terms that currently apply.</p>
+      </div>
+      <span class="button">View All Plans →</span>
+    </section>
+
+    <section class="faq-section" aria-labelledby="faq-title">
+      <h2 id="faq-title">Got Questions? We've Got Answers.</h2>
+      <div class="faq-grid">
+        <div class="faq-column">
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">What is an all-in-one marketing platform?</span></summary>
+            <div class="accordion-panel">
+              <p>An all-in-one marketing platform brings different marketing and business management tools together in one place. Instead of using separate campaign platforms, email tools and customer management systems, businesses can manage multiple activities through a single online marketing platform.</p>
+              <p>Sirius Exchange combines product creation, sales management, lead management, email campaigns, marketing automation and analytics. It works as an all in one marketing software solution for businesses that want to manage their sales and marketing activities from one workspace.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">What features should an all-in-one marketing platform include?</span></summary>
+            <div class="accordion-panel">
+              <p>A good all-in-one marketing platform should include the tools needed to manage everyday marketing and sales activities. These may include:</p>
+              <ul>
+                <li>Digital marketing software and campaign management.</li>
+                <li>Content marketing software for creating designs, videos and advertisements.</li>
+                <li>Lead management software for organizing customer information.</li>
+                <li>Sales engagement software for managing conversations and follow-ups.</li>
+                <li>Email campaign software for communicating with customers.</li>
+                <li>Marketing automation software for organizing repetitive tasks.</li>
+                <li>Advertising management software for preparing promotional campaigns.</li>
+                <li>Analytics for monitoring business performance.</li>
+              </ul>
+              <p>Sirius Exchange brings many of these activities together in one platform.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Can I manage sales and marketing in one platform?</span></summary>
+            <div class="accordion-panel">
+              <p>Yes. Sirius Exchange combines sales and marketing features in one workspace.</p>
+              <p>You can manage your sales pipeline, orders, payments, contacts and inbox alongside marketing campaigns, email sequences, creative content and automations.</p>
+              <p>This makes it easier to manage the complete customer journey without switching between different marketing platforms for businesses.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Does the platform support third-party integrations?</span></summary>
+            <div class="accordion-panel">
+              <p>Sirius Exchange includes a Connections section where you can manage supported third-party services.</p>
+              <p>Available integrations may depend on the services enabled for your account. Check the Connections section or confirm integration availability with the team before purchasing a plan.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Is there a free trial available before purchasing?</span></summary>
+            <div class="accordion-panel">
+              <p>Free trial availability depends on the current offers and subscription options. Creating an account does not automatically purchase or activate a paid plan.</p>
+              <p>Check the current plans or contact the Sirius Exchange team to confirm the available access options before subscribing.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Can I cancel my Sirius Exchange subscription at any time?</span></summary>
+            <div class="accordion-panel">
+              <p>Subscription cancellation depends on the terms of your selected plan. You can review your billing information through the platform's Billing section.</p>
+              <p>Please check the Billing &amp; Refunds policy and your current subscription terms for details about cancellation, renewals and refunds.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">What support is available after purchasing the platform?</span></summary>
+            <div class="accordion-panel">
+              <p>Sirius Exchange provides a Help section and an Academy for platform information and learning resources.</p>
+              <p>You can use these resources to understand the platform and its features. For details about direct assistance, support availability and response times, check the support options included with your plan.</p>
+            </div>
+          </details>
+        </div>
+        <div class="faq-column">
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">What is the difference between an online marketing platform and all-in-one business software?</span></summary>
+            <div class="accordion-panel">
+              <p>An online marketing platform mainly focuses on activities such as campaign creation, email marketing, lead generation and marketing automation.</p>
+              <p>All-in-one business software can cover a wider range of operations, including sales management, customer communication, payments, bookings and business reporting.</p>
+              <p>Sirius Exchange combines marketing and sales management features, helping businesses handle several connected activities from one workspace. It brings the functions of an internet marketing platform and selected business management tools together.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Is Sirius Exchange an online marketing platform for small businesses?</span></summary>
+            <div class="accordion-panel">
+              <p>Sirius Exchange can support small businesses that need to organize their products, sales and marketing activities.</p>
+              <p>Instead of subscribing to separate campaign platforms, email campaign tools and lead management software, businesses can manage these activities through one connected workspace.</p>
+              <p>It can also help growing teams organize their marketing workflow as their business needs change.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Can marketing agencies use Sirius Exchange?</span></summary>
+            <div class="accordion-panel">
+              <p>Sirius Exchange includes features that can support marketing agencies managing creative work, leads, campaigns, email sequences and sales activities.</p>
+              <p>Agencies searching for agency marketing software can use these tools to organize their marketing operations and customer-related activities.</p>
+              <p>The platform also provides workspace and team management features for managing team access.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Does Sirius Exchange support ecommerce automation software features?</span></summary>
+            <div class="accordion-panel">
+              <p>Sirius Exchange includes product management, sales pages, payment connections, orders, contacts and marketing automation features that can support parts of an ecommerce workflow.</p>
+              <p>Businesses can use these tools to organize product sales, customer communication and marketing follow-ups. Specific ecommerce integrations and advanced store management features should be confirmed before subscribing.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">How does marketing campaign management software help businesses?</span></summary>
+            <div class="accordion-panel">
+              <p>Marketing campaign management software helps businesses organize their marketing activities, prepare campaign materials and manage communication with their audience.</p>
+              <p>Sirius Exchange brings campaigns, creative creation, content calendars and email sequences together in one workspace.</p>
+              <p>This helps teams manage their marketing campaign platform activities without constantly moving between different tools.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">What are marketing automation softwares used for?</span></summary>
+            <div class="accordion-panel">
+              <p>Marketing automation softwares help businesses organize repetitive marketing tasks, including email follow-ups, campaign workflows and customer communication.</p>
+              <p>Sirius Exchange provides automation features alongside its sales pipeline, contacts, campaigns and email sequences.</p>
+              <p>These tools support marketing automation software workflows and sales automation software solutions from one connected platform.</p>
+            </div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure="">
+            <summary><span class="accordion-title">Can I use Sirius Exchange as an all-in-one marketing software solution?</span></summary>
+            <div class="accordion-panel">
+              <p>Sirius Exchange combines several business and marketing functions, including product creation, sales pages, payments, lead management, email campaigns, marketing content, automations and analytics.</p>
+              <p>Instead of relying on disconnected tools for every activity, you can manage these functions from one all-in-one marketing platform.</p>
+              <p>It is designed to bring your marketing workflow and sales activities together.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-title">
+      <h2 id="final-title">You've Got a Business to Run. Let's Make the Rest Easier.</h2>
+      <p>You have products to build, customers to reach and a business to grow. You don't need to keep jumping between different platforms to get those things done. Bring your work together with Sirius Exchange.</p>
+      <p>Create your product. Prepare your marketing. Manage your sales. Keep everything moving.</p>
+      <p class="closing-line">One platform. More control over your business.</p>
+      <div class="cta-actions">
+        <span class="button dark">Create Your Free Account →</span>
+        <span class="button">Explore Plans</span>
+      </div>
+      <span class="signin">Already a member? Sign in to your Sirius Exchange account.</span>
+    </section>
+  </main>
+
+  
+
+  <script>
+    (() => {
+      const editToggle = document.getElementById('edit-toggle');
+      const editableItems = [...document.querySelectorAll('[data-copy-editable]')];
+      let editing = false;
+
+      function setEditMode(enabled) {
+        editing = enabled;
+        document.body.classList.toggle('edit-mode', editing);
+        editToggle.setAttribute('aria-pressed', String(editing));
+        editToggle.textContent = editing ? 'Done editing' : 'Edit text';
+        editableItems.forEach((item) => {
+          if (editing) {
+            item.setAttribute('contenteditable', 'true');
+            item.setAttribute('spellcheck', 'true');
+          } else {
+            item.removeAttribute('contenteditable');
+            item.removeAttribute('spellcheck');
+          }
+        });
+      }
+
+      editToggle.addEventListener('click', () => setEditMode(!editing));
+
+      document.addEventListener('click', (event) => {
+        if (!editing) return;
+        const editable = event.target.closest('[data-copy-editable]');
+        if (editable && editable.closest('summary')) event.preventDefault();
+        if (editable && editable.closest('.button, .signin')) event.preventDefault();
+      }, true);
+
+      function downloadCleanHtml() {
+        const clone = document.documentElement.cloneNode(true);
+        clone.querySelectorAll('[data-editor-ui]').forEach(el => el.remove());
+        clone.querySelectorAll('script[data-editor-only], style[data-editor-only]')
+          .forEach(el => el.remove());
+        clone.querySelectorAll('[contenteditable], [spellcheck], [data-copy-editable], [data-editor-state]')
+          .forEach(el => {
+            el.removeAttribute('contenteditable');
+            el.removeAttribute('spellcheck');
+            el.removeAttribute('data-copy-editable');
+            el.removeAttribute('data-editor-state');
+          });
+        clone.querySelectorAll('.is-editing, .edit-mode').forEach(el => {
+          el.classList.remove('is-editing', 'edit-mode');
+        });
+        clone.body?.classList.remove('edit-mode');
+        const html = '<!doctype html>\n' + clone.outerHTML;
+        const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'sirius-exchange-homepage-wireframe.html';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      document.getElementById('download-html').addEventListener('click', downloadCleanHtml);
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const supportsMouseHover = window.matchMedia &&
+        window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      if (!supportsMouseHover) return;
+
+      let lastPointerType = 'mouse';
+      document.addEventListener('pointerdown', (event) => {
+        lastPointerType = event.pointerType;
+      }, true);
+
+      document.querySelectorAll('details[data-hover-disclosure]').forEach((details) => {
+        const summary = details.querySelector(':scope > summary');
+        if (!summary) return;
+
+        let isMouseHovering = false;
+        let wasOpenBeforeHover = false;
+
+        details.addEventListener('pointerenter', (event) => {
+          if (event.pointerType !== 'mouse') return;
+          if (document.body.classList.contains('edit-mode')) return;
+          isMouseHovering = true;
+          wasOpenBeforeHover = details.open;
+          details.open = true;
+        });
+
+        details.addEventListener('pointerleave', (event) => {
+          if (event.pointerType !== 'mouse') return;
+          isMouseHovering = false;
+          if (!wasOpenBeforeHover) details.open = false;
+          wasOpenBeforeHover = false;
+        });
+
+        summary.addEventListener('click', (event) => {
+          const isMouseClick = event.detail > 0 && lastPointerType === 'mouse';
+          const isEditing = document.body.classList.contains('edit-mode') ||
+            summary.isContentEditable || Boolean(summary.querySelector('[contenteditable="true"]'));
+          if (isMouseClick && isMouseHovering && !isEditing) {
+            event.preventDefault();
+            details.open = true;
+          }
+        });
+      });
+    })();
+  </script>
+
+
+</body></html>
