@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sirius AI Lab, Artificial Intelligence Lab for Founders</title>
+  <meta name="description" content="Get access to artificial intelligence lab resources and AI labs solutions with Sirius AI Lab. Compare memberships and choose yours.">
+  <style>
+    :root {
+      --ink: #111;
+      --muted: #666;
+      --line: #111;
+      --soft-line: #d8d8d8;
+      --paper: #fff;
+      --wash: #f5f5f5;
+      --content: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.58;
+    }
+    a { color: inherit; }
+    .wrap { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 18px;
+      font-size: 12px;
+      line-height: 1.3;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 760px;
+      margin-bottom: 22px;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -.045em;
+    }
+    h2 {
+      max-width: 820px;
+      margin-bottom: 22px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+    h3 { margin-bottom: 10px; font-size: 20px; line-height: 1.25; }
+    p { margin-bottom: 18px; }
+    .lead { max-width: 650px; font-size: 19px; line-height: 1.5; }
+    .section { padding: 76px 0; border-top: 2px solid var(--line); }
+    .section-head { max-width: 780px; margin-bottom: 34px; }
+    .section-head p { max-width: 670px; }
+    .hero {
+      padding: 84px 0 76px;
+      border-bottom: 2px solid var(--line);
+    }
+    .hero-grid, .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, .92fr);
+      gap: clamp(32px, 6vw, 76px);
+      align-items: center;
+    }
+    .hero-copy { min-width: 0; }
+    .hero-copy .lead { margin-bottom: 30px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 19px;
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      line-height: 1.2;
+      transition: background .15s ease, color .15s ease;
+    }
+    .button:hover, .button:focus-visible { background: #fff; color: var(--ink); }
+    .button.secondary { background: #fff; color: var(--ink); }
+    .button.secondary:hover, .button.secondary:focus-visible { background: var(--ink); color: #fff; }
+    .text-link { display: inline-block; margin-top: 20px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .media-placeholder {
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      border: 2px dashed #777;
+      background: var(--wash);
+      color: #555;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+    .media-placeholder.compact { min-height: 260px; }
+    .intro-copy { max-width: 820px; }
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 30px 0 28px;
+    }
+    .audience-item {
+      min-height: 98px;
+      display: flex;
+      align-items: center;
+      padding: 18px;
+      border: 2px solid var(--ink);
+      font-size: 17px;
+      font-weight: 700;
+    }
+    .tool-copy { max-width: 650px; }
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 42px;
+      border-bottom: 1px solid var(--line);
+    }
+    .accordion-item { min-width: 0; border-top: 1px solid var(--line); }
+    .accordion-item > summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 20px 0;
+      cursor: pointer;
+      list-style: none;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .accordion-item > summary::-webkit-details-marker { display: none; }
+    .accordion-item > summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      font-size: 25px;
+      line-height: 1;
+      font-weight: 400;
+    }
+    .accordion-item[open] > summary::after { content: "−"; }
+    .accordion-item > summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+    .accordion-panel { padding: 0 42px 20px 0; }
+    .accordion-panel > :last-child { margin-bottom: 0; }
+    .founder-section { background: var(--wash); }
+    .founder-section .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); gap: clamp(30px, 6vw, 70px); align-items: center; }
+    .founder-copy { min-width: 0; }
+    .steps-list {
+      max-width: 980px;
+      border-bottom: 1px solid var(--line);
+      counter-reset: membership-step;
+    }
+    .step-item {
+      display: block;
+      counter-increment: membership-step;
+    }
+    .step-item > summary {
+      width: 100%;
+      min-height: 78px;
+      justify-content: initial;
+      gap: 18px;
+      font-size: 20px;
+    }
+    .step-item > summary::before {
+      content: counter(membership-step, decimal-leading-zero);
+      flex: 0 0 36px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+    .step-item .accordion-title { flex: 1; }
+    .step-item .accordion-panel { padding: 0 46px 22px 54px; }
+    .membership-panel {
+      padding: clamp(30px, 6vw, 64px);
+      border: 2px solid var(--ink);
+      background: var(--wash);
+    }
+    .membership-panel .button-row { margin-top: 28px; }
+    .faq-list { max-width: 920px; border-bottom: 1px solid var(--line); }
+    .faq-item > summary { font-size: 18px; }
+    .final-cta { padding: 78px 0 86px; border-top: 2px solid var(--line); }
+    .final-cta-inner { max-width: 820px; }
+    .final-cta h2 { max-width: 760px; }
+    .muted-rule { height: 1px; margin: 28px 0; background: var(--soft-line); }
+    [data-copy-editable] { outline-offset: 3px; }
+    body.edit-mode [data-copy-editable] { outline: 1px dashed #777; cursor: text; }
+    body.edit-mode [data-copy-editable]:focus { outline: 2px solid #111; }
+    [data-editor-ui] {
+      position: fixed;
+      z-index: 1000;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      gap: 8px;
+      padding: 9px;
+      border: 1px solid #111;
+      background: #fff;
+      box-shadow: 0 4px 22px rgba(0,0,0,.12);
+    }
+    [data-editor-ui] button {
+      min-height: 38px;
+      padding: 8px 12px;
+      border: 1px solid #111;
+      border-radius: 0;
+      background: #111;
+      color: #fff;
+      font: 700 13px Arial, Helvetica, sans-serif;
+      cursor: pointer;
+    }
+    [data-editor-ui] button.secondary { background: #fff; color: #111; }
+    [data-editor-ui] button:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
+    @media (max-width: 850px) {
+      .hero-grid, .split, .founder-section .wrap { grid-template-columns: minmax(0, 1fr); }
+      .media-placeholder { min-height: 300px; }
+      .audience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .benefit-grid { gap: 0 24px; }
+    }
+    @media (max-width: 620px) {
+      .wrap { width: min(var(--content), calc(100% - 30px)); }
+      .hero { padding: 58px 0 48px; }
+      .section { padding: 48px 0; }
+      .section-head { margin-bottom: 26px; }
+      .hero-grid, .split, .founder-section .wrap { gap: 28px; }
+      .benefit-grid { grid-template-columns: minmax(0, 1fr); }
+      .audience-grid { grid-template-columns: minmax(0, 1fr); }
+      .audience-item { min-height: 68px; }
+      .media-placeholder { min-height: 230px; }
+      .accordion-panel { padding-right: 0; }
+      .step-item > summary { min-height: 72px; gap: 12px; }
+      .step-item > summary::before { flex-basis: 30px; }
+      .step-item .accordion-panel { padding-left: 42px; }
+      .button-row { flex-direction: column; align-items: stretch; }
+      .button { width: 100%; }
+      [data-editor-ui] { right: 10px; bottom: 10px; left: 10px; justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+  <style data-editor-only>
+    body.edit-mode [data-copy-editable] { outline: 1px dashed #777; }
+  </style>
+</head>
+<body>
+  <main id="page-content">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-copy-editable>Artificial Intelligence Lab</p>
+          <h1 data-copy-editable>The AI Business Membership Built for Ambitious Founders</h1>
+          <p class="lead" data-copy-editable>Get practical AI tools, business resources and access to a founder community through Sirius AI Lab membership.</p>
+          <div class="button-row">
+            <a class="button" href="#membership-options" data-copy-editable>Explore Memberships</a>
+            <a class="button secondary" href="#member-benefits" data-copy-editable>Discover Member Benefits</a>
+          </div>
+        </div>
+        <div class="media-placeholder" role="img" aria-label="Image placeholder">IMAGE PLACEHOLDER</div>
+      </div>
+    </section>
+
+    <section class="section" id="meet-sirius">
+      <div class="wrap intro-copy">
+        <p class="eyebrow" data-copy-editable>Meet Sirius AI Lab</p>
+        <h2 data-copy-editable>The AI Lab Built Around Your Business</h2>
+        <p data-copy-editable>Sirius AI Lab gives you access to AI tools designed to support your business. Use your AI concierge for member matching and client discovery, and access resources that help with your everyday business needs.</p>
+        <p data-copy-editable>Your membership includes business templates, founder-led learning and AI tools. Growth Syndicate and Inner Circle offer extra benefits. Choose the membership level that best suits your business.</p>
+      </div>
+    </section>
+
+    <section class="section" id="made-for-business-owners">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow" data-copy-editable>Made for Business Owners</p>
+          <h2 data-copy-editable>Is Sirius AI Lab for You?</h2>
+          <p data-copy-editable>Sirius AI Lab is for founders, entrepreneurs and business owners who want practical AI support, better business connections and access to useful resources.</p>
+        </div>
+        <div class="audience-grid">
+          <div class="audience-item" data-copy-editable>Start-up founders</div>
+          <div class="audience-item" data-copy-editable>Small business owners</div>
+          <div class="audience-item" data-copy-editable>Growing companies</div>
+          <div class="audience-item" data-copy-editable>Purpose-led entrepreneurs</div>
+        </div>
+        <a class="button" href="#membership-options" data-copy-editable>Choose Your Membership</a>
+      </div>
+    </section>
+
+    <section class="section" id="inside-sirius">
+      <div class="wrap split">
+        <div class="tool-copy">
+          <p class="eyebrow" data-copy-editable>Inside Sirius AI Lab</p>
+          <h2 data-copy-editable>AI Tools That Support Your Business</h2>
+          <p data-copy-editable>Sirius AI Lab helps businesses put artificial intelligence into practice.</p>
+          <p data-copy-editable>From AI-powered software to business-focused AI systems, our work centres on practical solutions that address real business needs. We make AI easier to understand and put to use, without requiring you to become a technical expert.</p>
+        </div>
+        <div class="media-placeholder compact" role="img" aria-label="Image placeholder">IMAGE PLACEHOLDER</div>
+      </div>
+    </section>
+
+    <section class="section" id="member-benefits">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow" data-copy-editable>Your Member Benefits</p>
+          <h2 data-copy-editable>Six Ways Sirius AI Lab Supports Your Business</h2>
+          <p data-copy-editable>Your membership gives you access to six areas of support. The benefits available depend on the membership level you choose.</p>
+        </div>
+        <div class="benefit-grid">
+          <details class="accordion-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>AI Concierge and Business Agents</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Use your AI concierge and business agents for member matching and client discovery. Share what your business offers and the type of connections you're looking for. These tools help identify relevant people and potential opportunities for your business.</p></div>
+          </details>
+          <details class="accordion-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Business Templates Library</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Access ready-to-use business templates for your company. Use them to organise tasks, prepare business documents and plan your work. You can choose the templates you need and adapt them to suit your business.</p></div>
+          </details>
+          <details class="accordion-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Founder Masterclasses</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Learn from experienced founders through pre-recorded masterclasses and digital content. Growth Syndicate members get access to Sirius Business School, with further learning resources to support their business knowledge and development.</p></div>
+          </details>
+          <details class="accordion-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Sirius Exchange</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Growth Syndicate members receive access to Sirius Exchange, including marketing, sales and social media linking tools. Inner Circle members get Sirius Exchange PRO, which includes an enterprise-grade marketing and listing suite.</p></div>
+          </details>
+          <details class="accordion-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Private Founder Community</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Become part of a private community of business owners. Connect with other members, share ideas and request introductions. Your membership may include access to in-person events, giving you more opportunities to meet fellow founders.</p></div>
+          </details>
+          <details class="accordion-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Inner Circle Access</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Inner Circle members receive an Angel Investor Panel seat, an annual retreat and a private founder dinner. You can take part in deal-selection discussions, with optional co-investment rights subject to regulatory compliance. Investment opportunities are not guaranteed.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section founder-section" id="the-sirius-difference">
+      <div class="wrap">
+        <div class="founder-copy">
+          <p class="eyebrow" data-copy-editable>The Sirius Difference</p>
+          <h2 data-copy-editable>More Value From Your AI Membership</h2>
+          <p data-copy-editable>Sirius AI Lab was founded by Lynn Black and Garry Hutton with a clear goal: make AI more useful for business owners. We understand that every business has different goals, so our three membership levels give you room to choose the access that suits you. You'll be part of a community built around business owners who want to put new ideas into practice and make meaningful progress.</p>
+          <div class="button-row">
+            <a class="button secondary" href="#the-sirius-difference" data-copy-editable>Meet Our Founders</a>
+            <a class="button" href="#membership-options" data-copy-editable>Compare Memberships</a>
+          </div>
+        </div>
+        <div class="media-placeholder compact" role="img" aria-label="Founders image placeholder">FOUNDERS IMAGE PLACEHOLDER</div>
+      </div>
+    </section>
+
+    <section class="section" id="membership-steps">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow" data-copy-editable>Join Sirius AI Lab</p>
+          <h2 data-copy-editable>Four Simple Steps to Access Your Membership</h2>
+          <p data-copy-editable>Choose your membership, complete your registration and start using the benefits included in your plan.</p>
+        </div>
+        <div class="steps-list">
+          <details class="accordion-item step-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Select Your Membership Level</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Choose from Foundation, Growth Syndicate or Inner Circle. Each plan offers a different level of access to Sirius AI Lab resources and benefits. Review the membership options and select the one that fits your business needs.</p></div>
+          </details>
+          <details class="accordion-item step-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Tell Us About Your Business</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Sign up and provide the details needed to set up your membership. Share information about your business and goals to get started with the artificial intelligence lab, use your AI concierge and access relevant member resources.</p></div>
+          </details>
+          <details class="accordion-item step-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Start Using Your Resources</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Access the tools and resources included in your plan. Use your AI concierge for member matching and client discovery, browse the business templates and watch your available founder masterclasses. Your membership gives you access to resources you can start using.</p></div>
+          </details>
+          <details class="accordion-item step-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Become Part of the Community</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Join the private founder community and start connecting with other members. Request introductions, share ideas and attend the events included in your membership. Growth Syndicate and Inner Circle members can access their additional community and event benefits.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="membership-options">
+      <div class="wrap">
+        <div class="membership-panel">
+          <h2 data-copy-editable>Find the Right AI Lab Membership for You</h2>
+          <p class="lead" data-copy-editable>Choose the level of support that fits your business. The AI laboratory membership gives you access to AI tools, founder learning and member benefits through Sirius AI Lab.</p>
+          <a class="button" href="#membership-options" data-copy-editable>Compare Membership Plans</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faqs">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-copy-editable>Faqs</h2>
+        </div>
+        <div class="faq-list">
+          <details class="accordion-item faq-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>What AI labs solutions can I access through Sirius AI Lab?</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Our AI labs solutions include business agents, an AI concierge and practical business resources. These tools help your AI powered company find relevant connections, identify potential clients and use AI in everyday business tasks.</p></div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Can I access Sirius AI Lab online?</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Yes. Sirius AI Lab online gives members access to their available tools and resources through their membership. You can use our AI laboratory resources, business templates and learning content without needing to visit a physical location.</p></div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Is Sirius AI Lab available in Dubai and across the UAE?</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Sirius AI Lab gives business owners in Dubai and across the UAE access to practical AI tools, business resources and founder connections. Our AI lab Dubai and AI lab UAE membership options make these resources available to local entrepreneurs looking to use AI in their businesses.</p></div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>What makes Sirius AI Lab an artificial intelligence laboratory for businesses?</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Sirius AI Lab gives businesses access to an AI concierge, business agents and practical resources. As an artificial intelligence laboratory, we focus on helping founders use AI for client discovery, member matching and everyday business tasks.</p></div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>Does Sirius AI Lab develop AI products and software?</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>Sirius AI Lab gives members access to practical AI tools, including business agents and an AI concierge. If you run an AI product company or want to use AI-powered products in your business, our membership provides tools and resources to support your work.</p></div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>What is the difference between AI build labs and AI systems labs?</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>AI build labs focus on creating and testing AI solutions, while AI systems labs focus on developing AI systems that work together to perform specific tasks. Both can involve AI-powered software, depending on the tools and solutions being developed.</p></div>
+          </details>
+          <details class="accordion-item faq-item" data-hover-disclosure>
+            <summary><span class="accordion-title" data-copy-editable>How do I get started with an AI lab membership?</span></summary>
+            <div class="accordion-panel"><p data-copy-editable>You can start by reviewing our Business membership options. Choose between Foundation, Growth Syndicate and Inner Circle based on the access and benefits you need. Each plan offers a different level of access to Sirius AI Lab resources.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="wrap final-cta-inner">
+        <h2 data-copy-editable>Get More From Your Business With Sirius AI</h2>
+        <p class="lead" data-copy-editable>Choose your membership and get access to AI tools, business resources and a private founder community. Find the plan that fits your business and become a Sirius AI Lab member.</p>
+        <div class="button-row">
+          <a class="button" href="#membership-options" data-copy-editable>Join Sirius Today</a>
+          <span class="button secondary" data-copy-editable>Talk to Our Team</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-editor-ui aria-label="Page editing controls">
+    <button type="button" id="edit-toggle" class="secondary" aria-pressed="false">Edit text</button>
+    <button type="button" id="download-html">Download HTML</button>
+  </div>
+
+  <script data-editor-only>
+    (() => {
+      const editToggle = document.getElementById('edit-toggle');
+      const downloadButton = document.getElementById('download-html');
+      const editableItems = [...document.querySelectorAll('[data-copy-editable]')];
+
+      editToggle.addEventListener('click', () => {
+        const enabled = editToggle.getAttribute('aria-pressed') !== 'true';
+        document.body.classList.toggle('edit-mode', enabled);
+        editToggle.setAttribute('aria-pressed', String(enabled));
+        editableItems.forEach((item) => {
+          if (enabled) {
+            item.setAttribute('contenteditable', 'true');
+            item.setAttribute('spellcheck', 'true');
+            item.setAttribute('tabindex', '0');
+          } else {
+            item.removeAttribute('contenteditable');
+            item.removeAttribute('spellcheck');
+            item.removeAttribute('tabindex');
+          }
+        });
+        editToggle.textContent = enabled ? 'Finish editing' : 'Edit text';
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!document.body.classList.contains('edit-mode')) return;
+        const editableLink = event.target.closest('a[data-copy-editable]');
+        if (editableLink) event.preventDefault();
+        const editableSummary = event.target.closest('summary');
+        if (editableSummary && editableSummary.querySelector('[contenteditable="true"]')) {
+          event.preventDefault();
+        }
+      }, true);
+
+      function downloadCleanHtml() {
+        const clone = document.documentElement.cloneNode(true);
+        clone.querySelectorAll('[data-editor-ui]').forEach((el) => el.remove());
+        clone.querySelectorAll('script[data-editor-only], style[data-editor-only]').forEach((el) => el.remove());
+        clone.querySelectorAll('[contenteditable], [spellcheck], [data-copy-editable], [data-editor-state], [tabindex]').forEach((el) => {
+          el.removeAttribute('contenteditable');
+          el.removeAttribute('spellcheck');
+          el.removeAttribute('data-copy-editable');
+          if (el.hasAttribute('tabindex')) el.removeAttribute('tabindex');
+          el.removeAttribute('data-editor-state');
+        });
+        clone.querySelectorAll('.is-editing, .edit-mode').forEach((el) => el.classList.remove('is-editing', 'edit-mode'));
+        clone.body?.classList.remove('edit-mode');
+        const html = '<!doctype html>\n' + clone.outerHTML;
+        const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Sirius-AI-Lab-Homepage.html';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      }
+      downloadButton.addEventListener('click', downloadCleanHtml);
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const supportsMouseHover = window.matchMedia &&
+        window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      if (!supportsMouseHover) return;
+
+      document.querySelectorAll('details[data-hover-disclosure]').forEach((details) => {
+        const summary = details.querySelector(':scope > summary');
+        if (!summary) return;
+
+        let isMouseHovering = false;
+        let wasOpenBeforeHover = false;
+        let mouseClickOverride = false;
+        let lastPointerType = 'mouse';
+
+        details.addEventListener('pointerenter', (event) => {
+          if (event.pointerType !== 'mouse') return;
+          if (document.body.classList.contains('edit-mode')) return;
+          lastPointerType = event.pointerType;
+          isMouseHovering = true;
+          wasOpenBeforeHover = details.open;
+          mouseClickOverride = false;
+          details.open = true;
+        });
+
+        details.addEventListener('pointerleave', (event) => {
+          if (event.pointerType !== 'mouse') return;
+          isMouseHovering = false;
+          if (!mouseClickOverride && !wasOpenBeforeHover) details.open = false;
+          wasOpenBeforeHover = false;
+          mouseClickOverride = false;
+        });
+
+        details.addEventListener('pointerdown', (event) => {
+          lastPointerType = event.pointerType;
+        }, true);
+
+        summary.addEventListener('click', (event) => {
+          const isMouseClick = event.detail > 0 && lastPointerType === 'mouse';
+          const isEditing = document.body.classList.contains('edit-mode') ||
+            summary.isContentEditable || Boolean(summary.querySelector('[contenteditable="true"]'));
+          if (isEditing) return;
+          if (event.detail === 0 && isMouseHovering) {
+            mouseClickOverride = true;
+            return;
+          }
+          if (!isMouseClick || !isMouseHovering) return;
+          event.preventDefault();
+          details.open = !details.open;
+          mouseClickOverride = true;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
