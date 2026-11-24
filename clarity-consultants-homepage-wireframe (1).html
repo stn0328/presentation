@@ -1,0 +1,192 @@
+<!doctype html>\n<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--ink:#111;--line:#111;--muted:#ededed;--soft:#f7f7f7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.58}
+main{width:min(1160px,calc(100% - 48px));margin:auto}
+section{padding:68px 0;border-bottom:2px solid var(--line)}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(38px,5.5vw,66px);line-height:1.06;letter-spacing:-1.8px;margin-bottom:24px}
+h2{font-size:clamp(28px,3.5vw,44px);line-height:1.12;letter-spacing:-.8px;margin-bottom:20px}
+h3{font-size:20px;line-height:1.25;margin-bottom:12px}
+p{margin-bottom:18px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:14px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;min-height:560px;padding-top:58px}
+.hero-copy{max-width:650px}
+.lead{font-size:19px;max-width:610px}
+.media{border:2px dashed #777;background:var(--soft);min-height:300px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:#555;font-size:13px;font-weight:700;letter-spacing:1px}
+.media.hero-media{min-height:390px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:2px solid #111;background:#111;color:#fff;text-decoration:none;font-weight:700;text-align:center}
+.cta.secondary{background:#fff;color:#111}
+.intro-grid,.split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.section-head{max-width:760px;margin-bottom:34px}
+.problem-list{padding:0;margin:22px 0 0;list-style:none;border-top:1px solid}
+.problem-list li{padding:13px 0;border-bottom:1px solid;font-weight:700}
+.services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.service-card,.tile,.step-card,.resource-card{border:2px solid #111;padding:22px;min-width:0}
+.service-card{display:flex;flex-direction:column}
+.service-card .service-link{margin-top:auto;padding-top:16px;font-weight:700}
+.service-card a,.text-link{color:#111;text-decoration:underline;text-underline-offset:3px}
+.service-card details{margin-top:8px}
+.service-card summary{font-weight:400}
+.service-card .accordion-panel{padding-top:12px}
+.number{font-size:13px;font-weight:700;letter-spacing:1px;margin-bottom:12px}
+.roadmap-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.tile p:last-child,.service-card p:last-child{margin-bottom:0}
+.book-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:center}
+.book-points{padding-left:22px}
+.book-points li{padding:5px 0}
+.cta-band{border:2px solid #111;padding:34px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.cta-band h2{margin-bottom:10px}
+.process-list{border-top:2px solid #111}
+.process-list details{border-bottom:1px solid #111}
+.process-list summary,.faq-list summary,.service-card summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;cursor:pointer;list-style:none;font-weight:700}
+.process-list summary::-webkit-details-marker,.faq-list summary::-webkit-details-marker,.service-card summary::-webkit-details-marker{display:none}
+.process-list summary:after,.faq-list summary:after,.service-card summary:after{content:"+";font-size:24px;line-height:1;flex:0 0 auto}
+.process-list details[open]>summary:after,.faq-list details[open]>summary:after,.service-card details[open]>summary:after{content:"−"}
+.accordion-panel{padding:0 42px 18px 0}
+.accordion-panel>:last-child{margin-bottom:0}
+.faq-list{border-top:2px solid #111}
+.faq-list details{border-bottom:1px solid #111}
+.faq-list summary{font-size:18px}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.resource-card{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center}
+.resource-card .media{min-height:145px}
+.final-cta{background:#f7f7f7;padding:40px;border:2px solid #111}
+.small-label{font-weight:700}
+[data-copy-editable][contenteditable="true"]{outline:2px dashed #777;outline-offset:3px}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #555;outline-offset:3px}
+#editor-toolbar{position:fixed;right:16px;bottom:16px;z-index:99;display:flex;gap:8px;padding:10px;background:#fff;border:1px solid #111;box-shadow:0 3px 18px #0002}
+#editor-toolbar button{border:1px solid #111;background:#111;color:#fff;padding:10px 13px;font-weight:700;cursor:pointer}
+#editor-toolbar button.secondary{background:#fff;color:#111}
+@media(max-width:850px){.hero,.intro-grid,.split,.book-split{grid-template-columns:1fr;gap:28px}.hero{min-height:0}.hero-media{min-height:280px!important}.services-grid,.roadmap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.resource-card{grid-template-columns:120px 1fr}}
+@media(max-width:580px){main{width:calc(100% - 30px)}section{padding:42px 0}.services-grid,.roadmap-grid,.resource-grid{grid-template-columns:1fr}.resource-card{grid-template-columns:1fr}.resource-card .media{min-height:180px}.cta-band{display:block;padding:24px}.cta-band .cta{width:100%;margin-top:14px}.actions{flex-direction:column}.actions .cta{width:100%}#editor-toolbar{left:10px;right:10px;bottom:10px;justify-content:center}#editor-toolbar button{flex:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main id="page-content">
+<section class="hero">
+<div class="hero-copy">
+<div class="eyebrow">Clarity Consultants</div>
+<h1>Business Growth Consultancy Designed Around Your Goals</h1>
+<p class="lead">We help UK businesses solve problems, improve performance and plan their next stage of <strong>business growth</strong>.</p>
+<div class="actions"><a class="cta" href="#contact">Book A Consultation</a><a class="cta secondary" href="#services">View Our Services</a></div>
+</div>
+<div class="media hero-media">IMAGE PLACEHOLDER</div>
+</section>
+
+<section>
+<div class="intro-grid">
+<div><div class="eyebrow">Your Growth Partner</div><h2>What Clarity Consultants Brings To Your Business</h2></div>
+<div><p>Clarity Consultants is a <strong>business growth consultancy</strong> for business owners who want better results. We help you understand what's holding your business back and what needs to change.</p><p>Our <strong>business growth consultants</strong> work directly with you. We focus on your goals, sales and operations. You get honest advice and clear steps to move your business forward.</p></div>
+</div>
+</section>
+
+<section>
+<div class="split">
+<div><div class="eyebrow">Common Business Problems</div><h2>Is Something Holding Your Business Back?</h2><p>Running a business is not always easy. Poor planning and weak management can limit <strong>business growth</strong>.</p><ul class="problem-list"><li>Unclear business goals</li><li>Falling sales</li><li>Poor daily operations</li><li>Missed opportunities</li></ul><div class="actions"><a class="cta" href="#contact">Discuss Your Challenges</a></div></div>
+<div class="media">IMAGE PLACEHOLDER</div>
+</div>
+</section>
+
+<section id="services">
+<div class="section-head"><div class="eyebrow">Support That Fits</div><h2>Find The Right Business Growth Services For You</h2><p>Not sure where to start? Tell us what your business needs. We'll help you find the right service.</p></div>
+<div class="services-grid">
+<article class="service-card"><div class="number">1.</div><h3>Business Growth Health Check</h3><details open=""><summary><span>Business Growth Health Check</span></summary><div class="accordion-panel"><p>Not sure what needs fixing? Review your business and find the areas that need more attention.</p></div></details><div class="service-link"><a href="https://www.clarityconsultants.ltd/workwithme">Take The Free Health Check</a></div></article>
+<article class="service-card"><div class="number">2.</div><h3>Growth Strategy Session</h3><details open=""><summary><span>Growth Strategy Session</span></summary><div class="accordion-panel"><p>Have a specific challenge? Get dedicated time to discuss it and agree on your next steps.</p></div></details><div class="service-link"><a href="https://www.clarityconsultants.ltd/growthstrategysession">Book A Growth Strategy Session</a></div></article>
+<article class="service-card"><div class="number">3.</div><h3>Growth Roadmap</h3><details><summary><span>Growth Roadmap</span></summary><div class="accordion-panel"><p>Need to look at the bigger picture? Review your business and get a clear Growth Action Plan.</p></div></details><div class="service-link"><a href="https://www.clarityconsultants.ltd/thegrowthroadmap">Explore The Growth Roadmap</a></div></article>
+<article class="service-card"><div class="number">4.</div><h3>Roadmap Action Day</h3><details><summary><span>Roadmap Action Day</span></summary><div class="accordion-panel"><p>Know what needs doing but struggle to find time? Set aside a working day to get things done.</p></div></details><div class="service-link"><a href="https://www.clarityconsultants.ltd/roadmapactionday">Book Your Action Day</a></div></article>
+<article class="service-card"><div class="number">5.</div><h3>Implementation Support</h3><details><summary><span>Implementation Support</span></summary><div class="accordion-panel"><p>Need help putting plans into practice? Work directly with Heather on your agreed business priorities.</p></div></details><div class="service-link"><a href="https://www.clarityconsultants.ltd/implementationsupport">Get Implementation Support</a></div></article>
+<article class="service-card"><div class="number">6.</div><h3>Growth Accountability</h3><details><summary><span>Growth Accountability</span></summary><div class="accordion-panel"><p>Finding it hard to stay on track? Get regular check-ins to review your actions and progress.</p></div></details><div class="service-link"><a href="https://www.clarityconsultants.ltd/growthaccountability">Get Growth Accountability</a></div></article>
+<article class="service-card"><div class="number">7.</div><h3>Growth Roadmap Review Session</h3><details><summary><span>Growth Roadmap Review Session</span></summary><div class="accordion-panel"><p>Has your business changed? Revisit your plan and agree on the priorities for your next stage.</p></div></details><div class="service-link"><a href="https://www.clarityconsultants.ltd/growthroadmapreviewsession">Review Your Growth Roadmap</a></div></article>
+<article class="service-card"><div class="number">8.</div><h3>LinkedIn For Business</h3><details><summary><span>LinkedIn For Business</span></summary><div class="accordion-panel"><p>Struggling to keep your company page active? Get regular LinkedIn content support for your business.</p></div></details><div class="service-link"><a href="https://www.clarityconsultants.ltd/linkedinforbusiness">Get LinkedIn Content Support</a></div></article>
+<article class="service-card"><div class="number">9.</div><h3>Training, Workshops And Speaking</h3><details><summary><span>Training, Workshops And Speaking</span></summary><div class="accordion-panel"><p>Need support for your team or event? Arrange practical training, workshops or speaking sessions with Heather.</p></div></details><div class="service-link"><a href="https://www.clarityconsultants.ltd/workwithme">Discuss Training And Speaking</a></div></article>
+</div>
+</section>
+
+<section>
+<div class="section-head"><div class="eyebrow">Your Business Roadmap</div><h2>Six Areas That Support Better Business Growth</h2><p>Strong <strong>business growth</strong> starts with the right foundations. Our <strong>business growth specialists</strong> focus on six areas that affect your company's performance.</p></div>
+<div class="roadmap-grid">
+<article class="tile"><div class="number">1.</div><h3>Business Health Assessment</h3><p>Find out where your business stands. Our <a class="text-link" href="https://www.clarityconsultants.ltd/businessgrowthhealthcheck">Business Health Check service</a> reviews performance and identifies areas that need attention.</p></article>
+<article class="tile"><div class="number">2.</div><h3>Business Planning And Direction</h3><p>Set clear goals for your company. Our <a class="text-link" href="https://www.clarityconsultants.ltd/thegrowthroadmap">Business Growth Strategy service</a> helps you plan your next steps and set priorities.</p></article>
+<article class="tile"><div class="number">3.</div><h3>Sales And Revenue</h3><p>Improve your sales performance. We review your sales process and identify missed revenue opportunities.</p></article>
+<article class="tile"><div class="number">4.</div><h3>Operations And Management</h3><p>Improve your daily operations. We review your processes and identify ways to manage work more effectively.</p></article>
+<article class="tile"><div class="number">5.</div><h3>Financial Performance</h3><p>Understand your business finances. We review costs, profits and financial performance to support better decisions.</p></article>
+<article class="tile"><div class="number">6.</div><h3>Implementation And Progress</h3><p>Put your plans into action. Our <strong>business growth advisors</strong> review progress and help keep your priorities on track.</p></article>
+</div>
+</section>
+
+<section>
+<div class="book-split">
+<div><div class="eyebrow">Practical Business Guidance</div><h2>The Growth Compass To Guide Your Business Growth</h2><p>The Growth Compass is a practical business book that helps you understand your business, set clear priorities and create a growth plan that fits your goals.</p><ul class="book-points"><li>Understand your strengths and business challenges.</li><li>Get clear on what your business needs next.</li><li>Turn your ideas into practical actions.</li><li>Build a growth plan at your own pace.</li></ul><a class="cta" href="https://www.clarityconsultants.ltd/thegrowcompass">Discover The Growth Compass</a></div>
+<div class="media">IMAGE PLACEHOLDER</div>
+</div>
+</section>
+
+<section>
+<div class="split">
+<div class="media">PROFILE IMAGE PLACEHOLDER</div>
+<div><div class="eyebrow">A Partner For Your Business</div><h2>Choose A Business Consultant Company That Understands Your Goals</h2><p>Clarity Consultants helps you find what's holding your business back. Our <strong>business growth consultants</strong> review your challenges and give you clear advice. We focus on better decisions, practical changes and real business results. You get direct support from people who understand business and care about your progress.</p><div class="actions"><a class="cta" href="#contact">About Our Company</a><a class="cta secondary" href="#contact">Talk To Us</a></div></div>
+</div>
+</section>
+
+<section>
+<div class="split">
+<div><div class="eyebrow">Better Business Performance</div><h2>Get Practical Support For Long-Term Business Growth</h2><p>Professional business support can make a real difference. Our <strong>business growth solutions</strong> give you expert guidance and a clear direction.</p><ul class="problem-list"><li>Clearer business goals and priorities</li><li>Better daily business management</li><li>Improved sales and profitability</li><li>Practical support for <strong>business growth</strong></li></ul><div class="actions"><a class="cta" href="#contact">Get Business Support</a></div></div>
+<div class="media">IMAGE PLACEHOLDER</div>
+</div>
+</section>
+
+<section>
+<div class="section-head"><div class="eyebrow">Our Process</div><h2>Four Steps To The Right Business Growth Solutions</h2><p>Our process is simple. We learn about your business, review its performance and agree on the next steps. Then we help you put the plan into action.</p></div>
+<div class="split">
+<div class="process-list">
+<details><summary><span>Step 1. Understand Your Business</span></summary><div class="accordion-panel"><p>We start with a conversation about your company. Tell us about your goals and current challenges. Our <strong>business growth consultants</strong> listen and ask questions. We want to understand your business before suggesting any changes.</p></div></details>
+<details><summary><span>Step 2. Review Your Performance</span></summary><div class="accordion-panel"><p>We review your sales, finances and daily operations. This helps us find problems, spot missed opportunities and understand what's affecting your business performance. You'll know which areas need attention.</p></div></details>
+<details><summary><span>Step 3. Plan Your Next Steps</span></summary><div class="accordion-panel"><p>We prepare a practical plan around your goals. We review your business, set clear priorities and define the actions needed. You know what needs to happen next and where to focus your attention.</p></div></details>
+<details><summary><span>Step 4. Put The Plan Into Action</span></summary><div class="accordion-panel"><p>We help you put the agreed actions into practice. Our <strong>business growth advisors</strong> review progress and discuss any problems. You get ongoing guidance to keep your business plans on track.</p></div></details>
+</div>
+<div class="media">PROCESS IMAGE PLACEHOLDER</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="cta-band"><div><div class="eyebrow">Let's Talk</div><h2>Looking For A Business Consultant To Help You Grow?</h2><p>Let's talk about your business goals. Tell us what's holding you back. We'll discuss how our <strong>business growth consultancy</strong> can help.</p></div><a class="cta" href="https://www.clarityconsultants.ltd/workwithme">Book A Consultation</a></div>
+</section>
+
+<section>
+<div class="split">
+<div><div class="eyebrow">Tools For Your Business</div><h2>Find Practical Resources For Your Business Growth</h2><p>Browse useful guides, digital resources and business support products from Clarity Consultants to help you build your knowledge and take practical steps in your business.</p><a class="cta" href="https://www.clarityconsultants.ltd/shop">Visit The Shop</a></div>
+<div class="media">RESOURCE IMAGE PLACEHOLDER</div>
+</div>
+</section>
+
+<section>
+<div class="section-head"><div class="eyebrow">FAQs</div></div>
+<div class="faq-list">
+<details open=""><summary><span>What does a business growth consultancy do?</span></summary><div class="accordion-panel"><p>A <strong>business growth consultancy</strong> helps business owners improve performance and plan their next steps. Clarity Consultants reviews your business and helps you focus on the areas that need attention.</p></div></details>
+<details open=""><summary><span>How Much Does A Business Consultant UK Cost?</span></summary><div class="accordion-panel"><p>Clarity Consultants offers a Growth Strategy Session for £150 + VAT. The full-day Growth Roadmap costs £650 + VAT. Other support options are available at different prices.</p></div></details>
+<details open=""><summary><span>Do you work with startups and established businesses?</span></summary><div class="accordion-panel"><p>Yes. Clarity Consultants supports new and established businesses. Our <strong>business consultant for startups</strong> service helps new owners plan their business. We also help established companies improve performance.</p></div></details>
+<details><summary><span>How long does it take to see results from business consultancy?</span></summary><div class="accordion-panel"><p>The time depends on your goals and the actions involved. Some changes can happen quickly, while others take longer. Our <strong>small business management consulting</strong> focuses on practical improvements that support steady progress.</p></div></details>
+<details><summary><span>What happens during a business strategy session?</span></summary><div class="accordion-panel"><p>A <a class="text-link" href="https://www.clarityconsultants.ltd/growthstrategysession">Business growth Strategy session</a> lasts 60 to 90 minutes. You discuss your business challenges with Heather and agree on practical next steps. A short questionnaire helps prepare for the meeting.</p></div></details>
+<details><summary><span>Can I book a one-to-one business consultation?</span></summary><div class="accordion-panel"><p>Yes. You can book a one-to-one consultation with Clarity Consultants. Our <strong>business consultant company</strong> provides online sessions through Zoom. You can discuss your goals and the support your business needs.</p></div></details>
+<details><summary><span>How can I find a business growth consultant in Glasgow?</span></summary><div class="accordion-panel"><p>Clarity Consultants is based at Central Chambers, Bothwell Street, Glasgow. If you need a <strong>business consultant UK</strong> service, you can also book online consultations from anywhere in the UK.</p></div></details>
+<details open=""><summary><span>Is there a business consultancy that helps with both strategy and implementation?</span></summary><div class="accordion-panel"><p>Yes. Clarity Consultants provides planning and implementation support. Our <strong>business growth company</strong> helps you put business plans into action. We focus on <strong>strategy and growth</strong> through practical guidance and ongoing support.</p></div></details>
+</div>
+</section>
+
+<section>
+<div class="final-cta"><div class="eyebrow">Let's Talk About Your Business</div><h2>Let's Talk About Your Business</h2><p>Tell us about your business goals. We'll discuss your challenges and the support you need. Let's plan your next steps together.</p><div class="actions"><a class="cta" href="https://www.clarityconsultants.ltd/workwithme">Book Your Consultation</a><a class="cta secondary" href="https://www.clarityconsultants.ltd/workwithme">Contact Our Team</a></div></div>
+</section>
+</main>
+
+
+
+
+
+</body></html>
